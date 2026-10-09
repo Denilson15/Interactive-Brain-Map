@@ -188,6 +188,43 @@ span.sec-t{cursor:default}
   .view{overflow:visible}
   h2{font-size:1.7rem}
 }
+
+.more-btn,.grab,#tab-browse{display:none}
+.tb-more{display:contents}
+@media (max-width:760px){
+  html,body{height:100%;overflow:hidden}
+  .app{display:block;height:100%;padding:0}
+  .top{position:fixed;z-index:6;top:calc(env(safe-area-inset-top,0px) + 10px);left:14px;right:14px;pointer-events:none}
+  .top h1{font-size:1.05rem;color:var(--stage-ink)}
+  .top p{display:none}
+  .left{position:fixed;inset:0;overflow:hidden;display:block}
+  .stage{position:absolute;inset:0;border-radius:0;min-height:0;height:100%}
+  .toolbar{top:calc(env(safe-area-inset-top,0px) + 42px);left:12px;right:12px}
+  .tb{padding:8px 11px;font-size:.74rem}
+  .more-btn{display:inline-flex}
+  .tb-more{display:none;position:absolute;top:44px;left:0;right:0;flex-direction:column;gap:8px;padding:12px;border-radius:12px;background:rgba(10,14,20,.94);border:1px solid rgba(255,255,255,.14);pointer-events:auto}
+  .tb-more.open{display:flex}
+  .tb-more .tb{display:flex;justify-content:space-between;width:100%}
+  .tb.spread input{width:62%}
+  .hint{display:none}
+  .condbar{top:calc(env(safe-area-inset-top,0px) + 88px);bottom:auto}
+  .lbl{font-size:.64rem}
+  .lbl span{padding:4px 7px}
+  .panel{position:fixed;left:0;right:0;bottom:0;z-index:10;height:150px;border-radius:18px 18px 0 0;border-bottom:0;box-shadow:0 -10px 30px rgba(0,0,0,.35);transition:height .28s cubic-bezier(.2,.8,.2,1);padding-bottom:env(safe-area-inset-bottom,0px)}
+  .panel.dragging{transition:none}
+  .grab{display:flex;justify-content:center;padding:9px 0 3px;cursor:grab;touch-action:none}
+  .grab span{width:42px;height:5px;border-radius:3px;background:var(--muted);opacity:.5}
+  #tab-browse{display:block}
+  .tab{padding:10px 9px 9px;font-size:.68rem}
+  .view{overflow:auto;padding:14px 16px 28px;overscroll-behavior:contain}
+  .chips{gap:4px}
+  .sec{grid-template-columns:1fr;gap:6px}
+  .sub-map{grid-column:1}
+  .chip{padding:6px 11px 6px 9px}
+  h2{font-size:1.55rem}
+  .closer{aspect-ratio:16/9}
+  .pop{left:12px!important;right:12px;width:auto;top:auto!important;bottom:calc(env(safe-area-inset-bottom,0px) + 12px);z-index:40}
+}
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
 </style>
 
@@ -204,11 +241,14 @@ span.sec-t{cursor:default}
       <div class="tip" id="tip" hidden></div>
       <div class="toolbar">
         <button class="tb" id="upBtn" title="Go up one level (Esc)">↑ Up a level</button>
+        <button class="tb more-btn" id="moreBtn" aria-expanded="false" aria-controls="tbMore">Controls ▾</button>
+        <div class="tb-more" id="tbMore">
         <label class="tb spread" for="spread">Spread <input id="spread" type="range" min="0" max="100" value="0"></label>
         <label class="tb spread" for="opac">Opacity <input id="opac" type="range" min="0" max="100" value="20"></label>
         <label class="tb spread" for="bright">Brightness <input id="bright" type="range" min="0" max="100" value="50"></label>
         <button class="tb" id="lblBtn" aria-pressed="true">Labels</button>
         <button class="tb" id="resetBtn">Reset</button>
+        </div>
       </div>
       <div class="hint" id="hint">Drag to rotate · scroll or pinch to zoom · click a section to open it · Esc goes back up</div>
       <div class="condbar" id="condbar" hidden></div>
@@ -217,12 +257,15 @@ span.sec-t{cursor:default}
   </section>
 
   <aside class="panel">
+    <div class="grab" id="grab" role="button" tabindex="0" aria-label="Resize panel"><span></span></div>
     <div class="tabs" role="tablist">
+      <button class="tab" role="tab" id="tab-browse" aria-selected="false">Browse</button>
       <button class="tab" role="tab" id="tab-region" aria-selected="true">Region</button>
       <button class="tab" role="tab" id="tab-psych" aria-selected="false">Psychology</button>
       <button class="tab" role="tab" id="tab-disease" aria-selected="false">Diseases</button>
       <button class="tab" role="tab" id="tab-gloss" aria-selected="false">Dictionary</button>
     </div>
+    <div class="view" id="view-browse" role="tabpanel" hidden><p class="eyebrow">Every section of the brain</p></div>
     <div class="view" id="view-region" role="tabpanel"></div>
     <div class="view" id="view-psych" role="tabpanel" hidden></div>
     <div class="view" id="view-disease" role="tabpanel" hidden></div>

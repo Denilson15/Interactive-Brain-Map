@@ -105,11 +105,21 @@ const LIGHTS=[]; scene.children.forEach(o=>{ if(o.isLight) LIGHTS.push([o,o.inte
 
 /* ---------- geometry ---------- */
 const G=(x,s)=>Math.exp(-(x/s)*(x/s));
-function folds(x,y,z){
-  const a=Math.sin(x*7.8+Math.sin(y*5.9+z*2.3)*2.3+Math.sin(z*4.1)*1.4);
-  const b=Math.sin(y*7.0+Math.sin(z*6.7+x*2.9)*2.1);
-  const c=Math.sin(z*6.2+Math.sin(x*6.4+y*3.6)*2.2);
-  return Math.pow(Math.abs(Math.sin((a+b+c)*1.3)),0.55);
+const PERM=(()=>{ const p=[...Array(256).keys()]; let s=1337; for(let i=255;i>0;i--){ s=(s*16807)%2147483647; const j=s%(i+1); const t=p[i]; p[i]=p[j]; p[j]=t; } return Uint8Array.from(p.concat(p)); })();
+function grad(h,x,y,z){ const u=h<8?x:y, v=h<4?y:(h===12||h===14?x:z); return ((h&1)?-u:u)+((h&2)?-v:v); }
+function noise3(x,y,z){ // improved Perlin noise
+  const X=Math.floor(x)&255,Y=Math.floor(y)&255,Z=Math.floor(z)&255; x-=Math.floor(x); y-=Math.floor(y); z-=Math.floor(z);
+  const f=t=>t*t*t*(t*(t*6-15)+10), u=f(x),v=f(y),w=f(z), L=(a,b,t)=>a+t*(b-a);
+  const A=PERM[X]+Y,AA=PERM[A]+Z,AB=PERM[A+1]+Z,B=PERM[X+1]+Y,BA=PERM[B]+Z,BB=PERM[B+1]+Z;
+  return L(L(L(grad(PERM[AA]&15,x,y,z),grad(PERM[BA]&15,x-1,y,z),u),L(grad(PERM[AB]&15,x,y-1,z),grad(PERM[BB]&15,x-1,y-1,z),u),v),
+           L(L(grad(PERM[AA+1]&15,x,y,z-1),grad(PERM[BA+1]&15,x-1,y,z-1),u),L(grad(PERM[AB+1]&15,x,y-1,z-1),grad(PERM[BB+1]&15,x-1,y-1,z-1),u),v),w);
+}
+function folds(x,y,z){ // broad rounded gyri separated by narrow sulci along the zero-lines of warped noise
+  const k=1.3, wx=x+0.35*noise3(x*k+3.1,y*k,z*k), wy=y+0.35*noise3(x*k,y*k+7.3,z*k), wz=z+0.35*noise3(x*k,y*k,z*k+11.7);
+  const f=4.1, n1=Math.abs(noise3(wx*f,wy*f*1.1,wz*f)), n2=Math.abs(noise3(wx*f*1.9+5,wy*f*1.9,wz*f*1.9));
+  const s1=1-smooth(0,0.17,n1), s2=1-smooth(0,0.09,n2);
+  const crown=smooth(0.17,0.5,n1);              // gentle rounding of each gyrus
+  return 1-(0.85*s1+0.3*s2*(1-s1))+0.12*crown;   // high = gyrus surface, low = inside a sulcus
 }
 function classifyCortex(X,Y,ly,lz){
   const zc=0.28-0.25*ly, ys=-0.16-0.1*lz, zpo=-0.72+0.12*ly, medial=X<-0.2;
@@ -146,7 +156,7 @@ function classifyCortex(X,Y,ly,lz){
   return lz>zc-0.42?'supramarginal':'angular';
 }
 function buildHemisphere(side){
-  const g=new THREE.SphereGeometry(1,240,170);
+  const g=new THREE.SphereGeometry(1,300,210);
   const p=g.attributes.position, n=p.count, info=new Float32Array(n*4);
   const A=0.64,B=0.8,C=1.18,OFF=0.37;
   for(let i=0;i<n;i++){
@@ -164,7 +174,7 @@ function buildHemisphere(side){
     const tw=medial?0:smooth(ys0+0.02,ys0-0.14,ly)*smooth(0.62,0.38,lz)*smooth(-0.8,-0.55,lz)*clamp(lat*2.2,0,1);
     let px=lx*sx, py=ly*sy, pz=lz;
     py-=0.07*tw; px+=side*0.045*tw; pz+=0.02*tw;
-    let d=0.05*(folds(lx+side*3,ly,lz)-0.6)*(medial?0.55:1);
+    let d=0.085*(folds(lx+side*3,ly,lz)-0.85)*(medial?0.6:1);
     const zc=0.28-0.25*ly; if(ly>-0.2) d-=0.06*G(lz-zc,0.04);
     const ys=ys0; if(!medial&&lz>-0.65&&lz<0.62) d-=0.1*G(ly-ys,0.045)*Math.min(1,lat*3);
     if(!medial&&lz>0.3&&lz<0.62) d-=0.05*G(ly-(ys-0.03),0.06)*Math.min(1,lat*3);
@@ -383,7 +393,9 @@ let mode='structure', sel='brain', selSide='L', cond=null, condMap={}, condWhole
 const openCond={psych:null,disease:null};
 const GHOST=new THREE.Color(0x8fa3bd), HOTC=new THREE.Color(HOT), WARMC=new THREE.Color(WARM);
 const viewSide=()=>camera.position.x<=0?'L':'R';
-const fit=()=>Math.max(1,1.15/(camera.aspect||1));
+const isMobile=()=>matchMedia('(max-width:760px)').matches;
+function visAspect(){ const w=stage.clientWidth||1,h=stage.clientHeight||1; if(!isMobile()) return w/h; const vh=Math.max(160,h-sheetH()-95); return w/vh; }
+const fit=()=>Math.max(1,1.15/visAspect());
 const selKey=()=>keyOf(sel,selSide);
 const isLeafNode=id=>!S[id].kids||!S[id].kids.length;
 function labelParent(){ return isLeafNode(sel)?(parentOf(sel,selSide)||'brain'):sel; }
@@ -432,7 +444,7 @@ function focusNode(id,side){
   const k=id==='brain'?0:isLeafNode(id)?0.75:0.5;
   const tgt=CENTER.clone().lerp(c,k);
   let dist=id==='brain'?HOME.distanceTo(CENTER)/fit():n.isHemi?4.2:Math.min(4.3,Math.max(2.3,1.6+r*3.4));
-  dist=dist*fit()*(1+spread*0.7);
+  dist=dist*fit()*(1+spread*0.7)*(isMobile()?1.3:1);
   goal={pos:tgt.clone().addScaledVector(d,dist),tgt};
   if(reduceMotion){ camera.position.copy(goal.pos); controls.target.copy(goal.tgt); goal=null; }
 }
@@ -444,7 +456,7 @@ function selectNode(id,side,opts){
   applyView(); renderRegion(); buildMini(id,selSide); renderMap();
   if(opts.focus!==false) focusNode(id,selSide);
   if(opts.tab!==false) showTab('region');
-  if(opts.scroll&&innerWidth<=900) document.querySelector('.panel').scrollIntoView({behavior:reduceMotion?'auto':'smooth',block:'start'});
+  if(opts.scroll) ensureOpen();
 }
 function goUp(){ if(sel==='brain') return; const p=parentOf(sel,selSide)||'brain'; selectNode(p,S[p].isHemi?S[p].side:selSide); }
 function setCondition(c){
@@ -457,18 +469,18 @@ function focusCondition(){
   if(b.isEmpty()) return;
   const ctr=b.getCenter(new V3()), dir=camera.position.clone().sub(controls.target).normalize();
   const tgt=CENTER.clone().lerp(ctr,0.5);
-  goal={pos:tgt.clone().addScaledVector(dir,4.4*fit()*(1+spread*0.7)),tgt};
+  goal={pos:tgt.clone().addScaledVector(dir,4.4*fit()*(1+spread*0.7)*(isMobile()?1.3:1)),tgt};
   if(reduceMotion){ camera.position.copy(goal.pos); controls.target.copy(goal.tgt); goal=null; }
 }
 function openCondition(key){
   const c=CONDS[key]; if(!c) return; hidePop();
   openCond[c.kind]=c; renderCondDetail(c);
-  showTab(c.kind); focusCondition();
+  showTab(c.kind); ensureOpen(); focusCondition();
 }
 function closeCondition(kind){ openCond[kind]=null; renderCondList(kind); showTab(kind); }
 
 /* ================= Tabs ================= */
-const VIEWS={region:'view-region',psych:'view-psych',disease:'view-disease',gloss:'view-gloss'};
+const VIEWS={browse:'view-browse',region:'view-region',psych:'view-psych',disease:'view-disease',gloss:'view-gloss'};
 function showTab(name){
   activeTab=name;
   for(const k in VIEWS){ document.getElementById('tab-'+k).setAttribute('aria-selected',String(k===name)); document.getElementById(VIEWS[k]).hidden=k!==name; }
@@ -476,7 +488,7 @@ function showTab(name){
   else if(name==='region'){ if(mode==='condition') mode='structure'; }
   applyView(); updateCondbar();
 }
-for(const k in VIEWS) document.getElementById('tab-'+k).addEventListener('click',()=>showTab(k));
+for(const k in VIEWS) document.getElementById('tab-'+k).addEventListener('click',()=>{ showTab(k); ensureOpen(); });
 const condbar=document.getElementById('condbar'), hint=document.getElementById('hint');
 function updateCondbar(){
   const on=mode==='condition'&&cond;
@@ -545,7 +557,9 @@ function updateLabels(){
     const a=anchorOf(o.id,o.side); if(!a) return;
     tmp.copy(a.p).addScaledVector(nodeOffset(o.id,o.side),spread).project(camera);
     if(tmp.z>1||Math.abs(tmp.x)>1.05||Math.abs(tmp.y)>1.05) return;
-    items.push({o,x:(tmp.x*0.5+0.5)*w,y:(-tmp.y*0.5+0.5)*h});
+    const yy=(-tmp.y*0.5+0.5)*h;
+    if(isMobile()&&(yy<(mode==='condition'?140:100)||yy>h-sheetH()-14)) return;
+    items.push({o,x:(tmp.x*0.5+0.5)*w,y:yy});
   });
   items.sort((a,b)=>a.y-b.y);
   const placed=[], now=new Set(), sk=selKey();
@@ -812,11 +826,44 @@ document.addEventListener('selectionchange',()=>{
   },380);
 });
 
+
+/* ================= Phone layout: bottom sheet + controls menu ================= */
+const panelEl=document.querySelector('.panel'), grab=document.getElementById('grab'), tabsEl=document.querySelector('.tabs');
+let snap='peek';
+function snapHeights(){ const H=window.innerHeight; return {peek:150,half:Math.round(H*0.52),full:H-64}; }
+function sheetH(){ if(!isMobile()) return 0; return drag?panelEl.getBoundingClientRect().height:snapHeights()[snap]; }
+function applyViewOffset(){
+  const w=stage.clientWidth,h=stage.clientHeight; if(!w||!h) return;
+  if(isMobile()){ const d=Math.round((sheetH()-70)/2); camera.setViewOffset(w,h,0,Math.max(0,d),w,h); } else camera.clearViewOffset();
+  camera.updateProjectionMatrix();
+}
+function setSnap(s){ snap=s; if(!isMobile()){ panelEl.style.height=''; applyViewOffset(); return; } panelEl.style.height=snapHeights()[s]+'px'; panelEl.dataset.snap=s; setTimeout(applyViewOffset,300); }
+function ensureOpen(){ if(isMobile()&&snap==='peek') setSnap('half'); }
+let drag=null;
+function dragStart(e){ if(!isMobile()) return; drag={y:e.clientY,h:panelEl.getBoundingClientRect().height,t:performance.now(),moved:false}; panelEl.classList.add('dragging'); }
+function dragMove(e){ if(!drag) return; const dy=e.clientY-drag.y; if(Math.abs(dy)>6) drag.moved=true; if(!drag.moved) return; const H=snapHeights(); panelEl.style.height=Math.max(H.peek,Math.min(H.full,drag.h-dy))+'px'; applyViewOffset(); }
+function dragEnd(e){ if(!drag) return; panelEl.classList.remove('dragging'); const d=drag; drag=null;
+  if(!d.moved){ if(e.target.closest('#grab')) setSnap(snap==='peek'?'half':snap==='half'?'full':'peek'); return; }
+  const cur=panelEl.getBoundingClientRect().height, H=snapHeights(), v=(e.clientY-d.y)/(performance.now()-d.t);
+  let best='peek'; if(v<-0.5) best=cur>H.half?'full':'half'; else if(v>0.5) best=cur<H.half?'peek':'half'; else { let bd=1e9; for(const k in H){ const dd=Math.abs(H[k]-cur); if(dd<bd){bd=dd;best=k;} } }
+  setSnap(best);
+}
+[grab,tabsEl].forEach(el=>el.addEventListener('pointerdown',e=>{ if(e.target.closest('.tab')&&el===tabsEl){ dragStart(e); return; } dragStart(e); }));
+window.addEventListener('pointermove',dragMove,{passive:true});
+window.addEventListener('pointerup',dragEnd); window.addEventListener('pointercancel',dragEnd);
+grab.addEventListener('keydown',e=>{ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); setSnap(snap==='peek'?'half':snap==='half'?'full':'peek'); } });
+const moreBtn=document.getElementById('moreBtn'), tbMore=document.getElementById('tbMore');
+moreBtn.addEventListener('click',()=>{ const o=!tbMore.classList.contains('open'); tbMore.classList.toggle('open',o); moreBtn.setAttribute('aria-expanded',String(o)); });
+canvas.addEventListener('pointerdown',()=>{ if(tbMore.classList.contains('open')){ tbMore.classList.remove('open'); moreBtn.setAttribute('aria-expanded','false'); } });
+const browseView=document.getElementById('view-browse'), chipsHome=document.querySelector('.left');
+function placeMap(){ const m=isMobile(); if(m&&mapEl.parentElement!==browseView) browseView.appendChild(mapEl); if(!m&&mapEl.parentElement!==chipsHome){ chipsHome.appendChild(mapEl); if(activeTab==='browse') showTab('region'); } setSnap(snap); }
+matchMedia('(max-width:760px)').addEventListener('change',placeMap);
+window.addEventListener('resize',()=>{ if(isMobile()&&!drag) panelEl.style.height=snapHeights()[snap]+'px'; });
 /* ================= Loop ================= */
 let firstSize=true;
 function resize(){
   const w=stage.clientWidth,h=stage.clientHeight; if(!w||!h) return;
-  renderer.setSize(w,h,false); camera.aspect=w/h; camera.updateProjectionMatrix();
+  renderer.setSize(w,h,false); camera.aspect=w/h; applyViewOffset();
   if(firstSize){ firstSize=false; HOME.sub(CENTER).multiplyScalar(fit()).add(CENTER); camera.position.copy(HOME); }
 }
 new ResizeObserver(resize).observe(stage); resize();
@@ -834,6 +881,7 @@ function tick(){
   requestAnimationFrame(tick);
 }
 document.getElementById('stats').textContent=`${ATLAS.subs.length} brain parts · ${PSYCH.length} disorders · ${DISEASES.length} diseases · ${DICT.length} dictionary entries`;
+placeMap();
 selectNode('brain','L',{focus:false});
 updateCondbar();
 tick();
