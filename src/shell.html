@@ -64,8 +64,12 @@ button{font:inherit;color:inherit}
 
 .panel{background:var(--surface);border:1px solid var(--line);border-radius:14px;display:flex;flex-direction:column;min-height:0;min-width:0}
 .tabs{display:flex;border-bottom:1px solid var(--line);padding:0 6px;overflow-x:auto;scrollbar-width:none}
-.tab{border:0;background:none;padding:12px 10px 10px;font-family:var(--mono);font-size:.72rem;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-1px;white-space:nowrap}
+.tab{border:0;background:none;padding:12px 8px 10px;font-family:var(--mono);font-size:.7rem;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-1px;white-space:nowrap}
 .tab[aria-selected="true"]{color:var(--ink);border-bottom-color:var(--accent)}
+.lang{margin-left:auto;display:flex;align-items:center;gap:0;padding:0 4px 0 10px;position:sticky;right:0;background:var(--surface)}
+.lang button{border:1px solid var(--line);background:none;font-family:var(--mono);font-size:.66rem;letter-spacing:.06em;padding:4px 8px;cursor:pointer;color:var(--muted)}
+.lang button:first-child{border-radius:6px 0 0 6px}.lang button:last-child{border-radius:0 6px 6px 0;border-left:0}
+.lang button[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
 .view{overflow:auto;padding:18px 20px 24px;min-height:0;flex:1}
 
 .eyebrow{font-family:var(--mono);font-size:.7rem;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);margin:0 0 4px;display:flex;align-items:center;gap:8px}
@@ -230,7 +234,7 @@ span.sec-t{cursor:default}
 
 <div class="app">
   <header class="top">
-    <h1>Interactive Brain Map</h1>
+    <h1 data-i18n="title">Interactive Brain Map</h1>
     <p id="stats"></p>
   </header>
 
@@ -240,17 +244,17 @@ span.sec-t{cursor:default}
       <div class="labels" id="labels"></div>
       <div class="tip" id="tip" hidden></div>
       <div class="toolbar">
-        <button class="tb" id="upBtn" title="Go up one level (Esc)">↑ Up a level</button>
-        <button class="tb more-btn" id="moreBtn" aria-expanded="false" aria-controls="tbMore">Controls ▾</button>
+        <button class="tb" id="upBtn" title="Go up one level (Esc)" data-i18n="up" data-i18n-title="upTitle">↑ Up a level</button>
+        <button class="tb more-btn" id="moreBtn" aria-expanded="false" aria-controls="tbMore" data-i18n="controls">Controls ▾</button>
         <div class="tb-more" id="tbMore">
-        <label class="tb spread" for="spread">Spread <input id="spread" type="range" min="0" max="100" value="0"></label>
-        <label class="tb spread" for="opac">Opacity <input id="opac" type="range" min="0" max="100" value="20"></label>
-        <label class="tb spread" for="bright">Brightness <input id="bright" type="range" min="0" max="100" value="50"></label>
-        <button class="tb" id="lblBtn" aria-pressed="true">Labels</button>
-        <button class="tb" id="resetBtn">Reset</button>
+        <label class="tb spread" for="spread"><span data-i18n="spread">Spread</span> <input id="spread" type="range" min="0" max="100" value="0"></label>
+        <label class="tb spread" for="opac"><span data-i18n="opacity">Opacity</span> <input id="opac" type="range" min="0" max="100" value="20"></label>
+        <label class="tb spread" for="bright"><span data-i18n="brightness">Brightness</span> <input id="bright" type="range" min="0" max="100" value="50"></label>
+        <button class="tb" id="lblBtn" aria-pressed="true" data-i18n="labels">Labels</button>
+        <button class="tb" id="resetBtn" data-i18n="reset">Reset</button>
         </div>
       </div>
-      <div class="hint" id="hint">Drag to rotate · scroll or pinch to zoom · click a section to open it · Esc goes back up</div>
+      <div class="hint" id="hint" data-i18n="hint">Drag to rotate · scroll or pinch to zoom · click a section to open it · Esc goes back up</div>
       <div class="condbar" id="condbar" hidden></div>
     </div>
     <div class="chips" id="chips"></div>
@@ -259,19 +263,20 @@ span.sec-t{cursor:default}
   <aside class="panel">
     <div class="grab" id="grab" role="button" tabindex="0" aria-label="Resize panel"><span></span></div>
     <div class="tabs" role="tablist">
-      <button class="tab" role="tab" id="tab-browse" aria-selected="false">Browse</button>
-      <button class="tab" role="tab" id="tab-region" aria-selected="true">Region</button>
-      <button class="tab" role="tab" id="tab-psych" aria-selected="false">Psychology</button>
-      <button class="tab" role="tab" id="tab-disease" aria-selected="false">Diseases</button>
-      <button class="tab" role="tab" id="tab-gloss" aria-selected="false">Dictionary</button>
+      <button class="tab" role="tab" id="tab-browse" aria-selected="false" data-i18n="tabBrowse">Browse</button>
+      <button class="tab" role="tab" id="tab-region" aria-selected="true" data-i18n="tabRegion">Region</button>
+      <button class="tab" role="tab" id="tab-psych" aria-selected="false" data-i18n="tabPsych">Psychology</button>
+      <button class="tab" role="tab" id="tab-disease" aria-selected="false" data-i18n="tabDisease">Diseases</button>
+      <button class="tab" role="tab" id="tab-gloss" aria-selected="false" data-i18n="tabGloss">Dictionary</button>
+      <div class="lang" role="group" aria-label="Language / Idioma"><button type="button" data-lang="en" aria-pressed="true">EN</button><button type="button" data-lang="es" aria-pressed="false">ES</button></div>
     </div>
-    <div class="view" id="view-browse" role="tabpanel" hidden><p class="eyebrow">Every section of the brain</p></div>
+    <div class="view" id="view-browse" role="tabpanel" hidden><p class="eyebrow" data-i18n="browseEyebrow">Every section of the brain</p></div>
     <div class="view" id="view-region" role="tabpanel"></div>
     <div class="view" id="view-psych" role="tabpanel" hidden></div>
     <div class="view" id="view-disease" role="tabpanel" hidden></div>
     <div class="view" id="view-gloss" role="tabpanel" hidden>
-      <label for="gq" class="eyebrow">Search terms, regions and conditions</label>
-      <input class="search" id="gq" type="search" placeholder="e.g. synapse, putamen, PTSD" autocomplete="off">
+      <label for="gq" class="eyebrow" data-i18n="glossSearch">Search terms, regions and conditions</label>
+      <input class="search" id="gq" type="search" placeholder="e.g. synapse, putamen, PTSD" data-i18n-ph="glossPh" autocomplete="off">
       <div class="filters" id="gfilters"></div>
       <div class="recent" id="recent"></div>
       <p class="count" id="gcount"></p>

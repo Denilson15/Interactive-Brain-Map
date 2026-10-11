@@ -57,14 +57,73 @@ Object.values(CONDS).forEach(c=>{ c.brain=c.brain.filter(b=>{ if(!S[b[0]]){ cons
 const LINKED={};
 Object.values(CONDS).forEach(c=>c.brain.forEach(([id,lv])=>{ (LINKED[id]=LINKED[id]||[]).push({c,lv}); }));
 
+/* ================= Language (English / Spanish) ================= */
+const ES=window.I18N_ES||{};
+const UI_EN={
+ title:'Interactive Brain Map', tabBrowse:'Browse', tabRegion:'Region', tabPsych:'Psychology', tabDisease:'Diseases', tabGloss:'Dictionary',
+ up:'↑ Up a level', upTitle:'Go up one level (Esc)', spread:'Spread', opacity:'Opacity', brightness:'Brightness', labels:'Labels', reset:'Reset', controls:'Controls ▾',
+ hint:'Drag to rotate · scroll or pinch to zoom · click a section to open it · Esc goes back up',
+ glossSearch:'Search terms, regions and conditions', glossPh:'e.g. synapse, putamen, PTSD', browseEyebrow:'Every section of the brain',
+ stats:'{p} brain parts · {d} disorders · {s} diseases · {e} dictionary entries',
+ primary:'Primary', alsoInvolved:'Also involved', backToAnatomy:'Back to anatomy',
+ hindbrain:'Hindbrain', otherParts:'Other parts', parts:'Parts', nParts:'{n} parts',
+ left:'Left', right:'Right', leftOf:'Left {name}', rightOf:'Right {name}', group:'Group',
+ labelOnModel:'Label on the model: {s}', where:'Where',
+ capLeaf:'Close-up: this part in color inside a see-through brain. Drag to turn it.', capGroup:'Close-up with each section in its own color. Drag to turn it.',
+ help:'Click a section on the model, its label, or a button under the model to go one level deeper. Click empty space or press Esc to go back up. Use Spread to pull the parts apart. Dotted words open a definition; you can also highlight any word to look it up.',
+ whatItDoes:'What it does', mainDivisions:'Main divisions', lobes:'Lobes', structures:'Structures', sections:'Sections',
+ clinical:'Clinical relevance', damaged:"When it's damaged", didYouKnow:'Did you know', gettingHelp:'Getting help',
+ linked:'Linked conditions', psychology:'Psychology', diseases:'Diseases', alsoIn:'Also in the {name}',
+ searchDisorders:'Search disorders', searchDiseases:'Search diseases', phPsych:'e.g. borderline, OCD, anxiety', phDisease:"e.g. Alzheimer's, stroke, tremor",
+ countOf:'{n} of {t} {noun}', disordersNoun:'disorders', diseasesNoun:'diseases', noMatch:'No {noun} match “{q}”.',
+ notePsych:'Organized by DSM-5-TR category. Choose a disorder to see its full write-up and the brain areas research links to it.',
+ noteDisease:'Choose a disease to see its full write-up and the brain areas it affects.',
+ allDisorders:'← All disorders', allDiseases:'← All diseases', alsoCalled:'Also called {s}',
+ secOverview:'Overview', secBrain:'Brain areas highlighted on the model', secSymptoms:'Signs and symptoms', secDiagnosis:'How it is diagnosed',
+ secTypesD:'Types and stages', secTypesP:'Types and presentations', secCauses:'Causes and risk factors', secTreatment:'Treatment', secCourse:'Course and outlook', secCommon:'How common',
+ condNote:"Brain findings describe average differences found in research groups. They can't diagnose an individual, and brain changes may be a cause, a consequence or both. This is a study reference, not medical advice.",
+ fAll:'All', fTerm:'Terms', fRegion:'Regions', fPsych:'Psychology', fDisease:'Disease', tTerm:'Term', tRegion:'Region', tPsych:'Psychology', tDisease:'Disease',
+ entriesOf:'{n} of {t} entries', nothingMatches:'Nothing matches “{q}”.', showOnModel:'Show on the model →', openEntry:'Open full entry →',
+ dictionary:'Dictionary', close:'Close ✕', seeInDict:'See in dictionary →', brainRegion:'Brain region', openHighlight:'Open full entry and highlight →',
+ notInDict:"This isn't in the dictionary. It's likely an everyday word rather than a brain or medical term.", browseDict:'Browse the dictionary →'
+};
+let lang='en';
+try{ const v=localStorage.getItem('ibm-lang'); if(v==='es'||v==='en') lang=v; }catch(e){}
+function t(k,vars){ let s=(lang==='es'&&ES.ui&&ES.ui[k])||UI_EN[k]||k; if(vars) for(const v in vars) s=s.split('{'+v+'}').join(vars[v]); return s; }
+const NODE_FIELDS=['name','short','kind','aka','where','summary','does','damage','clinical','fact'];
+const COND_FIELDS=['name','short','cat','aka','summary','overview','brain','symptoms','diagnosis','types','causes','treatment','course','prevalence','fact'];
+const clone=v=>v==null?v:JSON.parse(JSON.stringify(v));
+Object.values(S).forEach(n=>{ n._en={}; NODE_FIELDS.forEach(f=>{ if(n[f]!=null) n._en[f]=clone(n[f]); }); });
+Object.values(CONDS).forEach(c=>{ c._en={}; COND_FIELDS.forEach(f=>{ if(c[f]!=null) c._en[f]=clone(c[f]); }); c.helpFact=!!(c.fact&&c.fact.startsWith('If you')); });
+function overlayContent(){
+  const esN=(lang==='es'&&ES.nodes)||{}, esC=(lang==='es'&&ES.conds)||{}, cats=(lang==='es'&&ES.cats)||{};
+  Object.values(S).forEach(n=>{ NODE_FIELDS.forEach(f=>{ if(n._en[f]!=null) n[f]=clone(n._en[f]); }); const o=esN[n.id]; if(o) NODE_FIELDS.forEach(f=>{ if(o[f]!=null) n[f]=clone(o[f]); }); });
+  Object.values(CONDS).forEach(c=>{
+    COND_FIELDS.forEach(f=>{ if(c._en[f]!=null) c[f]=clone(c._en[f]); });
+    if(cats[c.cat]) c.cat=cats[c.cat];
+    const o=esC[c.key]; if(!o) return;
+    COND_FIELDS.forEach(f=>{ if(f!=='brain'&&f!=='cat'&&o[f]!=null) c[f]=clone(o[f]); });
+    if(o.brain) c.brain=c.brain.map(([id,lv,note])=>[id,lv,o.brain[id]||note]);
+  });
+}
+let GLOSS=[];
+function buildGlossary(){
+  const esG=(lang==='es'&&ES.glossary)||{};
+  GLOSS=GLOSSARY.map(([term,def,aka])=>{ const o=esG[term]; return o?[o[0],o[1],o[2]||[]]:[term,def,aka]; });
+}
+
 /* ================= Dictionary index ================= */
-const INDEX={}, TERMS={};
-const addKey=(k,v)=>{ k=k.toLowerCase(); if(!INDEX[k]) INDEX[k]=v; };
-Object.values(S).forEach(s=>{ if(s.isRoot||s.isHemi) return; addKey(s.name,{t:'s',id:s.id}); (s.aka||[]).forEach(a=>addKey(a,{t:'s',id:s.id})); });
-Object.values(CONDS).forEach(c=>{ addKey(c.name,{t:'c',id:c.key}); (c.aka||[]).forEach(a=>addKey(a,{t:'c',id:c.key})); });
-GLOSSARY.forEach(([t,d,aka])=>{ TERMS[t]={term:t,def:d,aka}; addKey(t,{t:'g',id:t}); aka.forEach(a=>addKey(a,{t:'g',id:t})); });
+let INDEX={}, TERMS={}, TERM_RE=/$^/;
 const escRe=s=>s.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
-const TERM_RE=new RegExp('(?<![A-Za-z0-9])('+Object.keys(INDEX).sort((a,b)=>b.length-a.length).map(k=>escRe(esc(k))).join('|')+')(?![A-Za-z0-9])','gi');
+function buildIndex(){
+  INDEX={}; TERMS={};
+  const addKey=(k,v)=>{ k=k.toLowerCase(); if(!INDEX[k]) INDEX[k]=v; };
+  Object.values(S).forEach(s=>{ if(s.isRoot||s.isHemi) return; addKey(s.name,{t:'s',id:s.id}); (s.aka||[]).forEach(a=>addKey(a,{t:'s',id:s.id})); });
+  Object.values(CONDS).forEach(c=>{ addKey(c.name,{t:'c',id:c.key}); (c.aka||[]).forEach(a=>addKey(a,{t:'c',id:c.key})); });
+  GLOSS.forEach(([tm,d,aka])=>{ TERMS[tm]={term:tm,def:d,aka}; addKey(tm,{t:'g',id:tm}); aka.forEach(a=>addKey(a,{t:'g',id:tm})); });
+  const W='A-Za-z0-9À-ÿ';
+  TERM_RE=new RegExp('(?<!['+W+'])('+Object.keys(INDEX).sort((a,b)=>b.length-a.length).map(k=>escRe(esc(k))).join('|')+')(?!['+W+'])','gi');
+}
 function linkify(text,seen){
   return esc(text||'').replace(TERM_RE,m=>{
     const e=INDEX[m.toLowerCase().replace(/&amp;/g,'&')]; if(!e) return m;
@@ -74,12 +133,13 @@ function linkify(text,seen){
   });
 }
 function lookup(raw){
-  let s=raw.toLowerCase().replace(/[’‘]/g,"'").replace(/[^a-z0-9'ε\/\- ]/g,' ').replace(/\s+/g,' ').trim().replace(/^'+|'+$/g,'');
+  let s=raw.toLowerCase().replace(/[’‘]/g,"'").replace(/[^a-z0-9À-ÿ'ε\/\- ]/g,' ').replace(/\s+/g,' ').trim().replace(/^'+|'+$/g,'');
   if(!s) return null;
   const tries=[s]; if(s.endsWith("'s")) tries.push(s.slice(0,-2)); if(s.endsWith('ies')) tries.push(s.slice(0,-3)+'y'); if(s.endsWith('es')) tries.push(s.slice(0,-2)); if(s.endsWith('s')) tries.push(s.slice(0,-1));
-  for(const t of tries){ if(INDEX[t]) return {e:INDEX[t],q:s}; }
+  for(const tr of tries){ if(INDEX[tr]) return {e:INDEX[tr],q:s}; }
   return {q:s};
 }
+overlayContent(); buildGlossary(); buildIndex();
 
 /* ================= Scene ================= */
 const stage=document.getElementById('stage'), canvas=document.getElementById('brain');
@@ -493,7 +553,7 @@ const condbar=document.getElementById('condbar'), hint=document.getElementById('
 function updateCondbar(){
   const on=mode==='condition'&&cond;
   condbar.hidden=!on; hint.hidden=!!on;
-  if(on) condbar.innerHTML=`<b>${esc(cond.short||cond.name)}</b><span class="k"><i style="background:${HOT}"></i>Primary</span><span class="k"><i style="background:${WARM}"></i>Also involved</span><button type="button" id="exitCond">Back to anatomy</button>`;
+  if(on) condbar.innerHTML=`<b>${esc(cond.short||cond.name)}</b><span class="k"><i style="background:${HOT}"></i>${t('primary')}</span><span class="k"><i style="background:${WARM}"></i>${t('alsoInvolved')}</span><button type="button" id="exitCond">${t('backToAnatomy')}</button>`;
 }
 condbar.addEventListener('click',e=>{ if(e.target.id==='exitCond') showTab('region'); });
 
@@ -612,15 +672,15 @@ function renderMap(){
       h+=`<div class="sub-map" style="--c:${open.color}">`;
       const groups=open.kids.filter(k=>k.isGroup), singles=open.kids.filter(k=>!k.isGroup);
       groups.forEach(g=>{ h+=`<div class="grp"><button type="button" class="grp-t" data-node="${g.id}" data-side="${g.lat?kidSide:''}" aria-pressed="${keyOf(g.id,kidSide)===sk}">${esc(g.name)}</button><div class="grp-row">${g.kids.map(l=>chip(l.id,l.lat?kidSide:null,l.short||l.name,l.color,inPath(keyOf(l.id,kidSide)),'sm')).join('')}</div></div>`; });
-      if(singles.length) h+=`<div class="grp">${groups.length?`<span class="grp-t plain">Other parts</span>`:`<span class="grp-t plain">Parts</span>`}<div class="grp-row">${singles.map(l=>chip(l.id,l.lat?kidSide:null,l.short||l.name,l.color,inPath(keyOf(l.id,kidSide)),'sm')).join('')}</div></div>`;
+      if(singles.length) h+=`<div class="grp">${groups.length?`<span class="grp-t plain">${t('otherParts')}</span>`:`<span class="grp-t plain">${t('parts')}</span>`}<div class="grp-row">${singles.map(l=>chip(l.id,l.lat?kidSide:null,l.short||l.name,l.color,inPath(keyOf(l.id,kidSide)),'sm')).join('')}</div></div>`;
       h+='</div>';
     }
     return h+'</div>';
   };
-  let h=sec('Left hemisphere','hemiL','L',S.hemiL.kids,'L',S.hemiL.color);
-  h+=sec('Right hemisphere','hemiR','R',S.hemiR.kids,'R',S.hemiR.color);
-  h+=sec('Deep structures','deep',null,S.deep.kids,null,S.deep.color);
-  h+=sec('Hindbrain',null,null,[S.cerebellum,S.brainstem],null,'#B58BD6');
+  let h=sec(S.hemiL.name,'hemiL','L',S.hemiL.kids,'L',S.hemiL.color);
+  h+=sec(S.hemiR.name,'hemiR','R',S.hemiR.kids,'R',S.hemiR.color);
+  h+=sec(S.deep.name,'deep',null,S.deep.kids,null,S.deep.color);
+  h+=sec(t('hindbrain'),null,null,[S.cerebellum,S.brainstem],null,'#B58BD6');
   mapEl.innerHTML=h;
 }
 mapEl.addEventListener('click',e=>{ const b=e.target.closest('[data-node]'); if(!b) return; const id=b.dataset.node; selectNode(id,b.dataset.side||(S[id].isHemi?S[id].side:selSide),{scroll:true}); });
@@ -661,7 +721,7 @@ function condChips(map,kind){
   return arr.map(({c,lv})=>`<button type="button" class="chip cond" data-cond="${c.key}" style="--c:${lv==='p'?'var(--hot)':'var(--warm)'}"><i></i>${esc(c.short||c.name)}</button>`).join('');
 }
 function subCard(c,side,current){
-  return `<button type="button" class="subcard" data-node="${c.id}" data-side="${c.isHemi?c.side:(c.lat?side:'')}" style="--c:${c.color}"${current?' aria-current="true"':''}><span class="nm"><i></i>${esc(c.name)}${c.isGroup?`<small>${c.kids.length} parts</small>`:''}</span><span class="ds">${esc(firstSentence(c.summary||''))}</span></button>`;
+  return `<button type="button" class="subcard" data-node="${c.id}" data-side="${c.isHemi?c.side:(c.lat?side:'')}" style="--c:${c.color}"${current?' aria-current="true"':''}><span class="nm"><i></i>${esc(c.name)}${c.isGroup?`<small>${t('nParts',{n:c.kids.length})}</small>`:''}</span><span class="ds">${esc(firstSentence(c.summary||''))}</span></button>`;
 }
 function crumbs(){
   const p=pathKeys(sel,selSide).reverse();
@@ -669,32 +729,32 @@ function crumbs(){
 }
 function renderRegion(){
   const st=S[sel], seen=new Set(['s:'+st.id]);
-  const sideName=(st.lat&&!st.isHemi)?(selSide==='L'?'Left':'Right'):'';
-  let kind=st.kind||(st.isGroup?S[st.topId].name+' · Group':(st.isLeaf?(S[st.topId].name+(groupOf[st.id]?' · '+S[groupOf[st.id]].name:'')):''));
+  const sideName=(st.lat&&!st.isHemi)?(selSide==='L'?t('left'):t('right')):'';
+  let kind=st.kind||(st.isGroup?S[st.topId].name+' · '+t('group'):(st.isLeaf?(S[st.topId].name+(groupOf[st.id]?' · '+S[groupOf[st.id]].name:'')):''));
   if(sideName) kind=sideName+' · '+kind;
   let h=crumbs();
   h+=`<p class="eyebrow" style="--c:${st.color}"><i></i>${esc(kind)}</p><h2>${esc(st.name)}</h2>`;
-  if(st.short&&st.short!==st.name) h+=`<p class="alias">Label on the model: ${esc(st.short)}</p>`;
-  if(st.where) h+=`<p class="where"><b>Where</b>${linkify(st.where,seen)}</p>`;
-  h+=`<div class="closer" id="closer"></div><p class="cap">${isLeafNode(sel)?'Close-up: this part in color inside a see-through brain. Drag to turn it.':'Close-up with each section in its own color. Drag to turn it.'}</p>`;
-  if(sel==='brain') h+=`<p class="helpline">Click a section on the model, its label, or a button under the model to go one level deeper. Click empty space or press Esc to go back up. Use Spread to pull the parts apart. Dotted words open a definition; you can also highlight any word to look it up.</p>`;
+  if(st.short&&st.short!==st.name) h+=`<p class="alias">${esc(t('labelOnModel',{s:st.short}))}</p>`;
+  if(st.where) h+=`<p class="where"><b>${t('where')}</b>${linkify(st.where,seen)}</p>`;
+  h+=`<div class="closer" id="closer"></div><p class="cap">${isLeafNode(sel)?t('capLeaf'):t('capGroup')}</p>`;
+  if(sel==='brain') h+=`<p class="helpline">${t('help')}</p>`;
   if(st.summary) h+=`<p class="summary">${linkify(st.summary,seen)}</p>`;
-  if(st.does) h+=`<h3>What it does</h3><ul class="fx" style="--c:${st.color}">${st.does.map(d=>`<li>${linkify(d,seen)}</li>`).join('')}</ul>`;
+  if(st.does) h+=`<h3>${t('whatItDoes')}</h3><ul class="fx" style="--c:${st.color}">${st.does.map(d=>`<li>${linkify(d,seen)}</li>`).join('')}</ul>`;
   if(st.kids&&st.kids.length){
-    const label=st.isRoot?'Main divisions':st.isHemi?'Lobes':st.isGroupRoot?'Structures':st.isGroup?'Parts':'Sections';
+    const label=st.isRoot?t('mainDivisions'):st.isHemi?t('lobes'):st.isGroupRoot?t('structures'):st.isGroup?t('parts'):t('sections');
     h+=`<h3>${label} <span class="n">${st.kids.length}</span></h3><div class="subgrid">${st.kids.map(c=>subCard(c,selSide,false)).join('')}</div>`;
   }
   const dmg=st.damage||st.clinical;
-  if(dmg) h+=`<h3>${st.clinical?'Clinical relevance':"When it's damaged"}</h3><p class="para">${linkify(dmg,seen)}</p>`;
-  if(st.fact) h+=`<div class="fact"><b>Did you know</b>${linkify(st.fact,seen)}</div>`;
+  if(dmg) h+=`<h3>${st.clinical?t('clinical'):t('damaged')}</h3><p class="para">${linkify(dmg,seen)}</p>`;
+  if(st.fact) h+=`<div class="fact"><b>${t('didYouKnow')}</b>${linkify(st.fact,seen)}</div>`;
   const L=linkedFor(st.id);
   if(L.size){
     const p=condChips(L,'psych'), d=condChips(L,'disease');
-    h+=`<h3>Linked conditions</h3>`;
-    if(p) h+=`<p class="key" style="margin-top:8px">Psychology</p><div class="links">${p}</div>`;
-    if(d) h+=`<p class="key" style="margin-top:10px">Diseases</p><div class="links">${d}</div>`;
+    h+=`<h3>${t('linked')}</h3>`;
+    if(p) h+=`<p class="key" style="margin-top:8px">${t('psychology')}</p><div class="links">${p}</div>`;
+    if(d) h+=`<p class="key" style="margin-top:10px">${t('diseases')}</p><div class="links">${d}</div>`;
   }
-  if(isLeafNode(sel)){ const par=S[parentOf(sel,selSide)]; if(par&&par.kids) h+=`<h3>Also in the ${esc(par.name.toLowerCase())}</h3><div class="subgrid">${par.kids.map(c=>subCard(c,selSide,c.id===st.id)).join('')}</div>`; }
+  if(isLeafNode(sel)){ const par=S[parentOf(sel,selSide)]; if(par&&par.kids) h+=`<h3>${esc(t('alsoIn',{name:lang==='es'?par.name:par.name.toLowerCase()}))}</h3><div class="subgrid">${par.kids.map(c=>subCard(c,selSide,c.id===st.id)).join('')}</div>`; }
   regionView.innerHTML=h; regionView.scrollTop=0;
   document.getElementById('closer').appendChild(mini); sizeMini();
 }
@@ -702,15 +762,15 @@ regionView.addEventListener('click',e=>{ const b=e.target.closest('[data-node]')
 
 /* ================= Condition panels ================= */
 function renderCondList(kind){
-  const view=document.getElementById(VIEWS[kind]), data=kind==='psych'?PSYCH:DISEASES, noun=kind==='psych'?'disorders':'diseases';
-  view.innerHTML=`<label class="eyebrow" for="q-${kind}">Search ${noun}</label><input class="search" id="q-${kind}" type="search" placeholder="${kind==='psych'?'e.g. borderline, OCD, anxiety':"e.g. Alzheimer's, stroke, tremor"}" autocomplete="off"><p class="count"></p><div class="clist"></div><p class="note">${kind==='psych'?'Organized by DSM-5-TR category. Choose a disorder to see its full write-up and the brain areas research links to it.':'Choose a disease to see its full write-up and the brain areas it affects.'}</p>`;
+  const view=document.getElementById(VIEWS[kind]), data=kind==='psych'?PSYCH:DISEASES, noun=kind==='psych'?t('disordersNoun'):t('diseasesNoun');
+  view.innerHTML=`<label class="eyebrow" for="q-${kind}">${kind==='psych'?t('searchDisorders'):t('searchDiseases')}</label><input class="search" id="q-${kind}" type="search" placeholder="${esc(kind==='psych'?t('phPsych'):t('phDisease'))}" autocomplete="off"><p class="count"></p><div class="clist"></div><p class="note">${kind==='psych'?t('notePsych'):t('noteDisease')}</p>`;
   const input=view.querySelector('.search'), list=view.querySelector('.clist'), count=view.querySelector('.count');
   const draw=()=>{
     const q=input.value.trim().toLowerCase();
-    const f=data.filter(c=>!q||c.name.toLowerCase().includes(q)||(c.aka||[]).some(a=>a.includes(q))||c.cat.toLowerCase().includes(q)||c.summary.toLowerCase().includes(q));
-    count.textContent=`${f.length} of ${data.length} ${noun}`;
+    const f=data.filter(c=>!q||c.name.toLowerCase().includes(q)||(c.aka||[]).some(a=>a.toLowerCase().includes(q))||c.cat.toLowerCase().includes(q)||c.summary.toLowerCase().includes(q));
+    count.textContent=t('countOf',{n:f.length,t:data.length,noun});
     const cats=[]; f.forEach(c=>{ if(!cats.includes(c.cat)) cats.push(c.cat); });
-    list.innerHTML=f.length?cats.map(cat=>`<h4>${esc(cat)}</h4><ul>${f.filter(c=>c.cat===cat).map(c=>`<li><button type="button" class="citem" data-cond="${c.key}"><span class="t">${esc(c.name)}${c.short&&c.short!==c.name&&!c.name.includes(c.short)?`<small>${esc(c.short)}</small>`:''}</span><span class="d">${esc(firstSentence(c.summary))}</span></button></li>`).join('')}</ul>`).join(''):`<p class="empty">No ${noun} match “${esc(input.value)}”.</p>`;
+    list.innerHTML=f.length?cats.map(cat=>`<h4>${esc(cat)}</h4><ul>${f.filter(c=>c.cat===cat).map(c=>`<li><button type="button" class="citem" data-cond="${c.key}"><span class="t">${esc(c.name)}${c.short&&c.short!==c.name&&!c.name.includes(c.short)?`<small>${esc(c.short)}</small>`:''}</span><span class="d">${esc(firstSentence(c.summary))}</span></button></li>`).join('')}</ul>`).join(''):`<p class="empty">${esc(t('noMatch',{noun,q:input.value}))}</p>`;
   };
   input.addEventListener('input',draw); draw();
 }
@@ -718,52 +778,56 @@ function section(title,body,open){ return `<details class="acc"${open?' open':''
 function renderCondDetail(c){
   const view=document.getElementById(VIEWS[c.kind]), seen=new Set(['c:'+c.key]);
   const areas=c.brain.slice().sort((a,b)=>a[1]===b[1]?0:a[1]==='p'?-1:1);
-  const P=t=>`<p class="para">${linkify(t,seen)}</p>`;
-  let h=`<button type="button" class="back" data-back="${c.kind}">← All ${c.kind==='psych'?'disorders':'diseases'}</button>`;
+  const P=x=>`<p class="para">${linkify(x,seen)}</p>`;
+  let h=`<button type="button" class="back" data-back="${c.kind}">${c.kind==='psych'?t('allDisorders'):t('allDiseases')}</button>`;
   h+=`<p class="eyebrow" style="--c:var(--hot)"><i></i>${esc(c.cat)}</p><h2>${esc(c.name)}</h2>`;
-  if(c.short&&c.short!==c.name&&!c.name.includes(c.short)) h+=`<p class="alias">Also called ${esc(c.short)}</p>`;
+  if(c.short&&c.short!==c.name&&!c.name.includes(c.short)) h+=`<p class="alias">${esc(t('alsoCalled',{s:c.short}))}</p>`;
   h+=`<div class="accs">`;
-  h+=section('Overview',(c.overview||[c.summary]).map(P).join(''),true);
-  let ab=`<div class="key"><span><i style="background:var(--hot)"></i>Primary</span><span><i style="background:var(--warm)"></i>Also involved</span></div><ul class="areas">`;
+  h+=section(t('secOverview'),(c.overview||[c.summary]).map(P).join(''),true);
+  let ab=`<div class="key"><span><i style="background:var(--hot)"></i>${t('primary')}</span><span><i style="background:var(--warm)"></i>${t('alsoInvolved')}</span></div><ul class="areas">`;
   areas.forEach(([id,lv,note])=>{ const st=S[id]; ab+=`<li><span class="sw" style="background:${lv==='p'?'var(--hot)':'var(--warm)'}"></span><button type="button" class="go" data-focus="${id}">${esc(st.name)}${st.isTop?'':`<small>${esc(S[st.topId].name)}</small>`}</button><p>${linkify(note,seen)}</p></li>`; });
   ab+=`</ul>`;
-  h+=section('Brain areas highlighted on the model',ab,true);
-  h+=section('Signs and symptoms',`<ul class="fx" style="--c:var(--hot)">${c.symptoms.map(s=>`<li>${linkify(s,seen)}</li>`).join('')}</ul>`,false);
-  if(c.diagnosis) h+=section('How it is diagnosed',[].concat(c.diagnosis).map(P).join(''),false);
-  if(c.types) h+=section(c.kind==='disease'?'Types and stages':'Types and presentations',[].concat(c.types).map(P).join(''),false);
-  h+=section('Causes and risk factors',[].concat(c.causes).map(P).join(''),false);
-  h+=section('Treatment',[].concat(c.treatment).map(P).join(''),false);
-  if(c.course) h+=section('Course and outlook',[].concat(c.course).map(P).join(''),false);
-  h+=section('How common',P(c.prevalence),false);
+  h+=section(t('secBrain'),ab,true);
+  h+=section(t('secSymptoms'),`<ul class="fx" style="--c:var(--hot)">${c.symptoms.map(s=>`<li>${linkify(s,seen)}</li>`).join('')}</ul>`,false);
+  if(c.diagnosis) h+=section(t('secDiagnosis'),[].concat(c.diagnosis).map(P).join(''),false);
+  if(c.types) h+=section(c.kind==='disease'?t('secTypesD'):t('secTypesP'),[].concat(c.types).map(P).join(''),false);
+  h+=section(t('secCauses'),[].concat(c.causes).map(P).join(''),false);
+  h+=section(t('secTreatment'),[].concat(c.treatment).map(P).join(''),false);
+  if(c.course) h+=section(t('secCourse'),[].concat(c.course).map(P).join(''),false);
+  h+=section(t('secCommon'),P(c.prevalence),false);
   h+=`</div>`;
-  if(c.fact) h+=`<div class="fact"><b>${c.fact.startsWith('If you')?'Getting help':'Did you know'}</b>${linkify(c.fact,seen)}</div>`;
-  h+=`<p class="note">Brain findings describe average differences found in research groups. They can't diagnose an individual, and brain changes may be a cause, a consequence or both. This is a study reference, not medical advice.</p>`;
+  if(c.fact) h+=`<div class="fact"><b>${c.helpFact?t('gettingHelp'):t('didYouKnow')}</b>${linkify(c.fact,seen)}</div>`;
+  h+=`<p class="note">${t('condNote')}</p>`;
   view.innerHTML=h; view.scrollTop=0;
 }
 renderCondList('psych'); renderCondList('disease');
 
 /* ================= Dictionary ================= */
-const DICT=[
-  ...GLOSSARY.map(([t,d,aka])=>({k:'g:'+t,name:t,def:d,aka,type:'Term'})),
+let DICT=[];
+function buildDict(){ DICT=[
+  ...GLOSS.map(([tm,d,aka])=>({k:'g:'+tm,name:tm,def:d,aka,type:'Term'})),
   ...Object.values(S).filter(s=>!s.isRoot).map(s=>({k:'s:'+s.id,name:s.name,def:firstSentence(s.summary||''),aka:s.aka||[],type:'Region',ref:s.id,sub:s.topId&&s.topId!==s.id?S[s.topId].name:''})),
   ...Object.values(CONDS).map(c=>({k:'c:'+c.key,name:c.name,def:firstSentence(c.summary),aka:c.aka||[],type:c.kind==='psych'?'Psychology':'Disease',ref:c.key}))
-].sort((a,b)=>a.name.localeCompare(b.name,undefined,{sensitivity:'base'}));
+].sort((a,b)=>a.name.localeCompare(b.name,lang,{sensitivity:'base'})); }
+buildDict();
 const gq=document.getElementById('gq'), glist=document.getElementById('glist'), gcount=document.getElementById('gcount'), gfil=document.getElementById('gfilters');
 const FILTERS=['All','Term','Region','Psychology','Disease']; let gFilter='All';
-gfil.innerHTML=FILTERS.map(f=>`<button type="button" class="chip" data-f="${f}" aria-pressed="${f==='All'}">${f==='All'?'All':f==='Term'?'Terms':f==='Region'?'Regions':f}</button>`).join('');
+const FLABEL={All:'fAll',Term:'fTerm',Region:'fRegion',Psychology:'fPsych',Disease:'fDisease'}, TLABEL={Term:'tTerm',Region:'tRegion',Psychology:'tPsych',Disease:'tDisease'};
+function renderFilters(){ gfil.innerHTML=FILTERS.map(f=>`<button type="button" class="chip" data-f="${f}" aria-pressed="${f===gFilter}">${t(FLABEL[f])}</button>`).join(''); }
+renderFilters();
 gfil.addEventListener('click',e=>{ const b=e.target.closest('[data-f]'); if(!b) return; gFilter=b.dataset.f; gfil.querySelectorAll('[data-f]').forEach(x=>x.setAttribute('aria-pressed',String(x===b))); renderGloss(); });
 const slug=k=>'g-'+k.replace(/[^a-z0-9]+/gi,'-');
 function renderGloss(hl){
   const q=gq.value.trim().toLowerCase();
-  const list=DICT.filter(e=>(gFilter==='All'||e.type===gFilter)&&(!q||e.name.toLowerCase().includes(q)||e.aka.some(a=>a.includes(q))||e.def.toLowerCase().includes(q)));
-  gcount.textContent=`${list.length} of ${DICT.length} entries`;
-  glist.innerHTML=list.length?list.map(e=>`<li id="${slug(e.k)}"${e.k===hl?' class="hl"':''}><span class="t">${esc(cap(e.name))}</span><span class="tag">${e.type}${e.sub?' · '+esc(e.sub):''}</span><p>${esc(e.def)}</p>${e.type==='Region'?`<button type="button" class="lnk" data-sub="${e.ref}">Show on the model →</button>`:e.type!=='Term'?`<button type="button" class="lnk" data-cond="${e.ref}">Open full entry →</button>`:''}</li>`).join(''):`<li class="empty">Nothing matches “${esc(gq.value)}”.</li>`;
+  const list=DICT.filter(e=>(gFilter==='All'||e.type===gFilter)&&(!q||e.name.toLowerCase().includes(q)||e.aka.some(a=>a.toLowerCase().includes(q))||e.def.toLowerCase().includes(q)));
+  gcount.textContent=t('entriesOf',{n:list.length,t:DICT.length});
+  glist.innerHTML=list.length?list.map(e=>`<li id="${slug(e.k)}"${e.k===hl?' class="hl"':''}><span class="t">${esc(cap(e.name))}</span><span class="tag">${t(TLABEL[e.type])}${e.sub?' · '+esc(e.sub):''}</span><p>${esc(e.def)}</p>${e.type==='Region'?`<button type="button" class="lnk" data-sub="${e.ref}">${t('showOnModel')}</button>`:e.type!=='Term'?`<button type="button" class="lnk" data-cond="${e.ref}">${t('openEntry')}</button>`:''}</li>`).join(''):`<li class="empty">${esc(t('nothingMatches',{q:gq.value}))}</li>`;
 }
 gq.addEventListener('input',()=>renderGloss());
 renderGloss();
 const recent=[], recentEl=document.getElementById('recent');
 function remember(term){ const i=recent.indexOf(term); if(i>=0) recent.splice(i,1); recent.unshift(term); recent.length=Math.min(recent.length,8);
-  recentEl.innerHTML=recent.map(t=>`<button class="chip" type="button" data-dict="g:${esc(t)}">${esc(cap(t))}</button>`).join(''); }
+  recentEl.innerHTML=recent.map(r=>`<button class="chip" type="button" data-dict="g:${esc(r)}">${esc(cap(r))}</button>`).join(''); }
 function openInGlossary(k){
   hidePop(); gq.value=''; gFilter='All'; gfil.querySelectorAll('[data-f]').forEach(x=>x.setAttribute('aria-pressed',String(x.dataset.f==='All')));
   showTab('gloss'); renderGloss(k);
@@ -779,19 +843,19 @@ function placePop(rect){
   let y=rect.bottom+8; if(y+ph>innerHeight-m) y=Math.max(m,rect.top-ph-8);
   pop.style.left=x+'px'; pop.style.top=y+'px';
 }
-const closeBtn='<button class="x" type="button" data-close>Close ✕</button>';
+const closeBtnH=()=>`<button class="x" type="button" data-close>${t('close')}</button>`;
 function showDef(res,rect){
   if(!res) return; popAnchor=rect; const e=res.e;
-  if(e&&e.t==='g'){ const t=TERMS[e.id]; remember(t.term);
-    pop.innerHTML=`<div class="row"><span class="kind">Dictionary</span>${closeBtn}</div><h4>${esc(cap(t.term))}</h4><p>${esc(t.def)}</p><div class="row"><button class="lnk" type="button" data-dict="g:${esc(t.term)}">See in dictionary →</button></div>`;
+  if(e&&e.t==='g'){ const tm=TERMS[e.id]; if(!tm) return; remember(tm.term);
+    pop.innerHTML=`<div class="row"><span class="kind">${t('dictionary')}</span>${closeBtnH()}</div><h4>${esc(cap(tm.term))}</h4><p>${esc(tm.def)}</p><div class="row"><button class="lnk" type="button" data-dict="g:${esc(tm.term)}">${t('seeInDict')}</button></div>`;
   } else if(e&&e.t==='s'){ const st=S[e.id]; const s2=(st.summary||'').match(/^(.*?[.!?])(\s+.*?[.!?])?(?=\s|$)/);
-    pop.innerHTML=`<div class="row"><span class="kind">Brain region${st.topId&&st.topId!==st.id?' · '+esc(S[st.topId].name):''}</span>${closeBtn}</div><h4>${esc(st.name)}</h4><p>${esc(s2?s2[0]:st.summary||'')}</p><div class="row"><button class="lnk" type="button" data-sub="${st.id}">Show on the model →</button></div>`;
+    pop.innerHTML=`<div class="row"><span class="kind">${t('brainRegion')}${st.topId&&st.topId!==st.id?' · '+esc(S[st.topId].name):''}</span>${closeBtnH()}</div><h4>${esc(st.name)}</h4><p>${esc(s2?s2[0]:st.summary||'')}</p><div class="row"><button class="lnk" type="button" data-sub="${st.id}">${t('showOnModel')}</button></div>`;
   } else if(e&&e.t==='c'){ const c=CONDS[e.id];
-    pop.innerHTML=`<div class="row"><span class="kind">${c.kind==='psych'?'Psychology':'Disease'} · ${esc(c.cat)}</span>${closeBtn}</div><h4>${esc(c.name)}</h4><p>${esc(firstSentence(c.summary))}</p><div class="row"><button class="lnk" type="button" data-cond="${c.key}">Open full entry and highlight →</button></div>`;
+    pop.innerHTML=`<div class="row"><span class="kind">${c.kind==='psych'?t('tPsych'):t('tDisease')} · ${esc(c.cat)}</span>${closeBtnH()}</div><h4>${esc(c.name)}</h4><p>${esc(firstSentence(c.summary))}</p><div class="row"><button class="lnk" type="button" data-cond="${c.key}">${t('openHighlight')}</button></div>`;
   } else {
     const q=res.q, words=q.split(' ').filter(w=>w.length>2);
-    const sugg=DICT.filter(d=>words.some(w=>d.name.toLowerCase().includes(w)||d.aka.some(a=>a.includes(w)))).slice(0,4);
-    pop.innerHTML=`<div class="row"><span class="kind">Dictionary</span>${closeBtn}</div><h4>“${esc(q)}”</h4><p>This isn't in the dictionary. It's likely an everyday word rather than a brain or medical term.</p>${sugg.length?`<div class="sugg">${sugg.map(d=>`<button class="chip" type="button" data-def="${esc(d.k)}">${esc(cap(d.name))}</button>`).join('')}</div>`:''}<div class="row"><button class="lnk" type="button" data-browse>Browse the dictionary →</button></div>`;
+    const sugg=DICT.filter(d=>words.some(w=>d.name.toLowerCase().includes(w)||d.aka.some(a=>a.toLowerCase().includes(w)))).slice(0,4);
+    pop.innerHTML=`<div class="row"><span class="kind">${t('dictionary')}</span>${closeBtnH()}</div><h4>“${esc(q)}”</h4><p>${t('notInDict')}</p>${sugg.length?`<div class="sugg">${sugg.map(d=>`<button class="chip" type="button" data-def="${esc(d.k)}">${esc(cap(d.name))}</button>`).join('')}</div>`:''}<div class="row"><button class="lnk" type="button" data-browse>${t('browseDict')}</button></div>`;
   }
   placePop(rect);
 }
@@ -801,6 +865,7 @@ function keyToRes(k){ const i=k.indexOf(':'); return {e:{t:k.slice(0,i),id:k.sli
 /* ================= Global clicks ================= */
 document.addEventListener('click',e=>{
   const t=e.target.closest('button'); if(!t) return;
+  if(t.dataset.lang){ applyLang(t.dataset.lang); return; }
   if(t.classList.contains('term')&&t.dataset.t){ e.preventDefault(); showDef({e:{t:t.dataset.t,id:t.dataset.id}},t.getBoundingClientRect()); return; }
   if(t.hasAttribute('data-close')){ hidePop(); return; }
   if(t.dataset.sub){ const id=t.dataset.sub; selectNode(id,S[id].isHemi?S[id].side:selSide,{scroll:true}); return; }
@@ -873,14 +938,31 @@ function tick(){
   if(hoverQueued){
     const e=hoverQueued; hoverQueued=null; const k=pickTarget(e);
     if(k!==hovered){ hovered=k; if(mode==='structure') applyView(); canvas.style.cursor=k?'pointer':''; }
-    if(k){ const rc=stage.getBoundingClientRect(); const {id,side}=parseKey(k); const nm=S[id].name; tip.hidden=false; tip.textContent=side?(side==='L'?'Left ':'Right ')+nm.charAt(0).toLowerCase()+nm.slice(1):nm; tip.style.left=(e.clientX-rc.left)+'px'; tip.style.top=(e.clientY-rc.top)+'px'; } else tip.hidden=true;
+    if(k){ const rc=stage.getBoundingClientRect(); const {id,side}=parseKey(k); const nm=S[id].name; tip.hidden=false; tip.textContent=side?t(side==='L'?'leftOf':'rightOf',{name:lang==='en'?nm.charAt(0).toLowerCase()+nm.slice(1):nm}):nm; tip.style.left=(e.clientX-rc.left)+'px'; tip.style.top=(e.clientY-rc.top)+'px'; } else tip.hidden=true;
   }
   renderer.render(scene,camera);
   updateLabels();
   if(activeTab==='region'&&mini.isConnected&&mini.clientWidth){ mCtl.update(); mR.render(mS,mC); }
   requestAnimationFrame(tick);
 }
-document.getElementById('stats').textContent=`${ATLAS.subs.length} brain parts · ${PSYCH.length} disorders · ${DISEASES.length} diseases · ${DICT.length} dictionary entries`;
+function setStatic(){
+  document.documentElement.lang=lang; document.title=t('title');
+  document.querySelectorAll('[data-i18n]').forEach(el=>{ el.textContent=t(el.dataset.i18n); });
+  document.querySelectorAll('[data-i18n-ph]').forEach(el=>{ el.placeholder=t(el.dataset.i18nPh); });
+  document.querySelectorAll('[data-i18n-title]').forEach(el=>{ el.title=t(el.dataset.i18nTitle); });
+  document.querySelectorAll('[data-lang]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.lang===lang)));
+  document.getElementById('stats').textContent=t('stats',{p:ATLAS.subs.length,d:PSYCH.length,s:DISEASES.length,e:DICT.length});
+}
+function applyLang(l){
+  if(l===lang) return; lang=l; try{ localStorage.setItem('ibm-lang',l); }catch(e){}
+  overlayContent(); buildGlossary(); buildIndex(); buildDict();
+  Object.keys(LBL).forEach(k=>{ LBL[k].remove(); delete LBL[k]; }); shown.clear();
+  recent.length=0; recentEl.innerHTML=''; hidePop();
+  setStatic(); renderFilters(); renderGloss(); renderRegion(); renderMap();
+  ['psych','disease'].forEach(k=>{ if(openCond[k]) renderCondDetail(openCond[k]); else renderCondList(k); });
+  updateCondbar();
+}
+setStatic();
 placeMap();
 selectNode('brain','L',{focus:false});
 updateCondbar();
