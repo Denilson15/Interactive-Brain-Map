@@ -2,7 +2,7 @@ import pathlib
 root=pathlib.Path(__file__).parent
 d=root/'src'
 shell=(d/'shell.html').read_text()
-files=['anatomy.js','hierarchy.js','psych.js','diseases.js','glossary.js','cond_ext.js']+sorted(p.name for p in d.glob('ext_*.js'))
+files=['anatomy.js','hierarchy.js','psych.js','diseases.js','glossary.js','cond_ext.js']+sorted(p.name for p in d.glob('ext_*.js'))+sorted(p.name for p in d.glob('es_*.js'))
 data='\n'.join('<script>\n'+(d/f).read_text()+'\n</script>' for f in files)
 body=shell.replace('<!--DATA-->',data).replace('<!--APP-->',(d/'app.js').read_text())
 head_end=body.index('</style>')+len('</style>')

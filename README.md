@@ -1,6 +1,6 @@
 # Interactive Brain Map
 
-A 3D study tool for neuroscience, anatomy, psychology and medicine. Explore the brain level by level (hemispheres → lobes → groups → parts), pull it apart with the Spread slider, adjust the hologram with the Opacity and Brightness sliders, and open 51 psychological disorders and 30 neurological diseases to see which brain areas they affect and why. Includes a 400+ entry dictionary.
+A 3D study tool for neuroscience, anatomy, psychology and medicine. Explore the brain level by level (hemispheres → lobes → groups → parts), pull it apart with the Spread slider, adjust the hologram with the Opacity and Brightness sliders, and open 51 psychological disorders and 30 neurological diseases to see which brain areas they affect and why. Includes a 400+ entry dictionary. Available in English and Spanish (EN / ES toggle at the top of the side panel; the choice is remembered).
 
 ## Run it
 Open `index.html` in a browser. No install needed (three.js loads from a CDN).
@@ -12,9 +12,13 @@ Open `index.html` in a browser. No install needed (three.js loads from a CDN).
 - `src/anatomy.js`, `src/hierarchy.js` – brain regions, groups and parts
 - `src/psych.js`, `src/diseases.js`, `src/ext_*.js` – condition content
 - `src/glossary.js` – dictionary terms
+- `src/es_*.js` – Spanish translations (interface, anatomy, conditions, dictionary), layered over the English content
 - `build.py` – combines `src/` into `index.html` (`python3 build.py`)
 
 ## Deploy with GitHub Pages
 Settings → Pages → Source: "Deploy from a branch" → `main` / root.
 
 The anatomy is simplified for teaching and the content is a study reference, not medical advice.
+
+## Content review status
+The English content and the Spanish translation were both produced without professional medical review. Treat both as drafts that still need checking by a qualified reviewer (and, for the Spanish, a native-speaking medical translator) before relying on them.
