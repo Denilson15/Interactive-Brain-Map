@@ -46,6 +46,7 @@ import {
 import {
     initRegionPanel,
     involvementSwatch,
+    refreshCloseUpCaption,
     renderRegion,
 } from "../ui/region-panel";
 import { initSectionMap, placeMap, renderMap } from "../ui/section-map";
@@ -344,6 +345,16 @@ function initToolbar(): void {
             "aria-pressed",
             String(state.showLabels),
         );
+    });
+    document.getElementById("oneColorBtn")!.addEventListener("click", (e) => {
+        state.oneColor = !state.oneColor;
+        (e.currentTarget as HTMLElement).setAttribute(
+            "aria-pressed",
+            String(state.oneColor),
+        );
+        applyView();
+        showCloseUp(state.sel, state.selSide);
+        refreshCloseUpCaption();
     });
     document.getElementById("resetBtn")!.addEventListener("click", () => {
         spreadInput.value = "0";

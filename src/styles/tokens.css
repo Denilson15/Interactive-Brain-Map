@@ -98,6 +98,8 @@
     --stage-accent: #9fc2ff;
     --stage-involve-primary: #ff6a57;
     --stage-involve-secondary: #ffb547;
+    /* "One color" mode for the model; mirrors ONE_COLOR in stage.ts. */
+    --model-one-color: #e5ad9e;
 
     color-scheme: light;
 }

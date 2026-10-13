@@ -17,6 +17,9 @@ const UI_EN = {
     opacity: "Opacity",
     brightness: "Brightness",
     labels: "Labels",
+    oneColor: "One color",
+    oneColorTitle: "Show the whole brain in one color",
+    capOneColor: "Close-up in one color. Drag to turn it.",
     reset: "Reset view",
     controls: "Controls",
     hint:

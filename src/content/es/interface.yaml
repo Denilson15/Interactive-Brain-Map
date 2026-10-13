@@ -12,6 +12,9 @@ spread: Separar
 opacity: Opacidad
 brightness: Brillo
 labels: Etiquetas
+oneColor: Un solo color
+oneColorTitle: Mostrar todo el cerebro de un solo color
+capOneColor: Primer plano en un solo color. Arrastra para girarlo.
 reset: Restablecer la vista
 controls: Controles
 hint: >-

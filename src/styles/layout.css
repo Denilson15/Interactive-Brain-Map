@@ -150,6 +150,27 @@ body {
 .toolbar-more > * {
     pointer-events: auto;
 }
+/* "One color" toggle: just a dot on larger screens, named in the menu.
+   The name stays available to screen readers either way. */
+.one-color {
+    width: 40px;
+    padding: 0;
+}
+.one-color-dot {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: var(--model-one-color);
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.35);
+}
+.one-color-label {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+}
 /* On larger screens the controls sit in the toolbar row. */
 .toolbar-more {
     display: contents;
@@ -710,6 +731,16 @@ button.map-title:hover {
     .toolbar-more .button {
         justify-content: flex-start;
         width: 100%;
+    }
+    .toolbar-more .one-color {
+        padding: 0 var(--space-4);
+    }
+    .toolbar-more .one-color-label {
+        position: static;
+        width: auto;
+        height: auto;
+        overflow: visible;
+        clip-path: none;
     }
     .toolbar-more .slider input {
         width: 60%;

@@ -120,6 +120,18 @@ function classification(node: StructureNode, side: Side): string[] {
     return tags;
 }
 
+/** Describes the close-up, which follows the "One color" setting. */
+function closeUpCaption(): string {
+    if (state.oneColor) return t("capOneColor");
+    return isLeafNode(state.sel) ? t("capLeaf") : t("capGroup");
+}
+
+/** Updates the close-up caption without re-rendering the panel. */
+export function refreshCloseUpCaption(): void {
+    const caption = regionView.querySelector(".closer-caption");
+    if (caption) caption.textContent = closeUpCaption();
+}
+
 export function renderRegion(): void {
     const { sel, selSide } = state;
     const node = S[sel];
@@ -151,8 +163,8 @@ export function renderRegion(): void {
             `${linkify(node.where, seen)}</p>`;
     }
     h +=
-        `<div class="closer" id="closer"></div><p class="meta closer-caption">` +
-        `${isLeafNode(sel) ? t("capLeaf") : t("capGroup")}</p>`;
+        `<div class="closer" id="closer"></div>` +
+        `<p class="meta closer-caption">${closeUpCaption()}</p>`;
     if (sel === "brain") h += `<p class="notice helpline">${t("help")}</p>`;
     if (node.summary) {
         h += `<p class="reading">${linkify(node.summary, seen)}</p>`;
