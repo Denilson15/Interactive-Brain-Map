@@ -16,7 +16,8 @@ rules only when a real need surfaces, not speculatively.
     decide. I am learning these tradeoffs — explain the "why," don't
     just pick.
 - Work in small, reviewable commits with clear, descriptive messages.
-- Use branches for new work; never edit live in a way I can't roll back.
+- Use branches for new work; never edit live in a way I can't roll
+    back.
 - Never break existing functionality. Verify the build passes and the
     app runs before calling a change done.
 - When you introduce a new tool, library, or pattern, add a one-line
@@ -67,8 +68,9 @@ rules only when a real need surfaces, not speculatively.
 - A landing/home experience that could convert a first-time visitor.
 - Trust signals: clarity, polish, no broken states.
 
-## Legal & compliance (California-based; not legal advice —
-## confirm with a lawyer before selling or collecting real user data)
+## Legal & compliance
+California-based. Not legal advice — confirm with a lawyer before
+selling or collecting real user data.
 - Privacy (CCPA/CPRA): if the site collects any personal data (emails,
     accounts, saved progress), users get rights to know, delete, and
     opt out. Add a privacy policy and terms before collecting anything.
@@ -78,8 +80,8 @@ rules only when a real need surfaces, not speculatively.
     Education tools touching schools may trigger additional
     student-privacy rules.
 - Accessibility as compliance: public sites in CA fall under the ADA
-    and the Unruh Act; inaccessible sites draw complaints. WCAG AA above
-    is protective, not just polish.
+    and the Unruh Act; inaccessible sites draw complaints. WCAG AA
+    above is protective, not just polish.
 - Asset licensing: any 3D models, textures, images, or data not made
     by me must have licenses permitting commercial use. Verify before
     selling.
@@ -87,6 +89,7 @@ rules only when a real need surfaces, not speculatively.
 ## Testing & reliability
 - Automated tests for core functionality so changes don't silently
     break features (e.g. Vitest for units, Playwright for end-to-end).
+    Scale testing to the project; a simple static page needs little.
 - Cross-browser and cross-device checks for anything GPU-dependent.
 
 ## Documentation
@@ -100,12 +103,16 @@ rules only when a real need surfaces, not speculatively.
 - Do not label code or READMEs as "made by AI" — it's redundant.
 
 ## Scope discipline
-- Ship one polished thing rather than half-building many. Resist adding
-    features mid-project; note new ideas for a later phase instead.
+- Ship one polished thing rather than half-building many. Resist
+    adding features mid-project; note new ideas for a later phase.
 
 ## Code style
 - 4-space indentation (4 spaces = one tab).
+- Max line length: 80 characters. Wrap code, comments, and Markdown
+    prose to stay under it.
 - Line breaks wherever they improve readability.
 - Clear names over clever ones; comment the non-obvious, not the
     obvious.
-- Type-safe where the language allows (prefer TypeScript over JS).
+- Use TypeScript when the project has real logic (state, data flow,
+    APIs, multiple contributors). Plain HTML/CSS/JS is fine for simple
+    static pages. Don't add a build step just for types.
