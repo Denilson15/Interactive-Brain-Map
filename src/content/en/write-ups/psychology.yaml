@@ -1,0 +1,2829 @@
+# Long-form write-ups for disorders, keyed by id. Loaded only when a
+# visitor opens a condition; fields replace the short versions.
+
+adhd:
+    overview:
+        - ADHD is a neurodevelopmental condition defined by a persistent pattern
+          of inattention, hyperactivity and impulsivity that is more severe than
+          expected for a person's age and gets in the way of school, work or
+          relationships. Symptoms must begin before age 12, show up in more than
+          one setting, and last at least six months.
+        - It is best understood as a difference in self-regulation rather than a
+          lack of knowledge or effort. People with ADHD usually know what they
+          should do; the difficulty is getting the brain to start, sustain and
+          stop behavior on demand, especially when a task is boring or the
+          reward is far away. The same brain can lock onto something highly
+          stimulating for hours, which is why "hyperfocus" and inattention can
+          coexist.
+        - ADHD frequently continues into adulthood, where hyperactivity often
+          turns into inner restlessness, and disorganization, time blindness and
+          emotional reactivity become the main problems. It commonly co-occurs
+          with anxiety, depression, learning disorders, autism and substance
+          use.
+    brain:
+        - area: dlpfc
+          level: primary
+          note:
+              Holds goals and instructions in working memory. In ADHD it is less
+              active during demanding tasks and matures later, so plans and
+              instructions "drop out" of mind, which shows up as forgetfulness,
+              losing track mid-task and difficulty organizing multi-step work.
+        - area: vlpfc
+          level: primary
+          note:
+              Acts as the brain's brake for stopping an action. Weaker right
+              VLPFC activation during stop-signal tasks means a response that
+              has already started is harder to cancel, producing blurting,
+              interrupting and acting before thinking.
+        - area: caudate
+          level: primary
+          note:
+              Part of the striatum that links the prefrontal cortex to action
+              selection. It is smaller in many children with ADHD and receives
+              less effective dopamine signaling, which weakens the loop that
+              keeps the brain engaged with the current goal. Stimulant
+              medications boost dopamine here.
+        - area: nacc
+          level: secondary
+          note:
+              Encodes how rewarding something is expected to be. In ADHD it
+              responds weakly to rewards that are delayed, so immediate rewards
+              win out, which helps explain procrastination and the pull of
+              phones and games over homework.
+        - area: acc
+          level: secondary
+          note:
+              Monitors errors and signals when more effort is needed. Reduced
+              error-related activity means mistakes and drifting attention are
+              noticed later, so careless errors pile up.
+        - area: pcc
+          level: secondary
+          note:
+              A hub of the default mode network, which should quiet down during
+              tasks. In ADHD it keeps intruding, so attention drifts into
+              daydreaming during lectures or reading.
+        - area: cerebhemi
+          level: secondary
+          note:
+              Supports timing and the automatic sequencing of behavior. Smaller
+              cerebellar volume reported in several studies may contribute to
+              poor time estimation and clumsiness.
+    symptoms:
+        - Difficulty sustaining attention on tasks that are not inherently
+          interesting
+        - Careless mistakes and overlooking details
+        - Losing things and forgetting appointments or tasks
+        - Poor time management and chronic lateness ("time blindness")
+        - Fidgeting, restlessness or feeling driven by a motor
+        - Talking excessively, interrupting and difficulty waiting a turn
+        - Strong preference for immediate rewards; procrastination
+        - Emotional reactivity and frustration intolerance
+        - Hyperfocus on highly engaging activities
+    diagnosis:
+        "Diagnosis is clinical: there is no blood test or brain scan for ADHD. A
+        clinician gathers a detailed history, uses standardized rating scales
+        from multiple informants (parents, teachers, partners), confirms
+        symptoms started in childhood and cause impairment in at least two
+        settings, and rules out other explanations such as sleep problems,
+        anxiety, depression, hearing or vision problems, thyroid disease or
+        learning disorders. Children need six or more symptoms in a domain;
+        people aged 17 and older need five."
+    types:
+        - "Predominantly inattentive presentation: mainly attention and
+          organization problems, without much hyperactivity. It is more often
+          missed, especially in girls and women."
+        - "Predominantly hyperactive-impulsive presentation: mainly restlessness
+          and impulsivity; more common in young children."
+        - "Combined presentation: significant symptoms in both domains. A
+          person's presentation can change over time."
+    causes:
+        - "ADHD is among the most heritable psychiatric conditions, with twin
+          studies estimating heritability around 70–80%. It is polygenic: many
+          common gene variants, including some involved in dopamine signaling,
+          each add a small amount of risk."
+        - Environmental factors that raise risk include preterm birth and low
+          birth weight, prenatal exposure to tobacco, alcohol or some
+          medications, lead exposure, and early severe deprivation. Parenting
+          style, screen time and sugar do not cause ADHD, though environment can
+          make symptoms better or worse.
+    treatment:
+        - Stimulant medications (methylphenidate and amphetamine formulations)
+          are the most effective treatment, helping about 70–80% of people. They
+          increase dopamine and norepinephrine signaling in prefrontal and
+          striatal circuits, strengthening attention and impulse control while
+          the medication is active.
+        - Non-stimulant options include atomoxetine and viloxazine
+          (norepinephrine reuptake inhibitors) and guanfacine and clonidine
+          (alpha-2 agonists that strengthen prefrontal signaling). These can
+          suit people who do not tolerate stimulants or who have tics or
+          substance use concerns.
+        - "Behavioral parent training is first-line for preschool children.
+          School supports (504 plans or IEPs), organizational skills training,
+          coaching and CBT for adults build routines and external structure:
+          planners, timers, breaking tasks into small steps and making rewards
+          more immediate."
+    course:
+        Symptoms often decline with age, especially hyperactivity, but around
+        half to two-thirds of children continue to have impairing symptoms as
+        adults. Untreated ADHD is associated with higher rates of school
+        dropout, accidents, job instability and substance use; treatment reduces
+        many of these risks. Many adults find ways to build on strengths such as
+        creativity, energy and the ability to hyperfocus.
+asd:
+    overview:
+        - Autism spectrum disorder is a lifelong neurodevelopmental difference
+          in how a person communicates, relates to others and processes the
+          world. Diagnosis requires persistent differences in social
+          communication and interaction, together with restricted or repetitive
+          behaviors, interests or sensory responses, present from early
+          childhood.
+        - "Autism is a spectrum in two senses: abilities vary enormously, from
+          people who need around-the-clock support and do not use spoken
+          language to people with advanced degrees who mainly struggle with
+          social expectations and sensory overload; and each person has their
+          own mix of strengths and challenges. Common strengths include
+          attention to detail, pattern recognition, honesty and deep expertise
+          in areas of interest."
+        - "Many autistic people and advocates favor a neurodiversity view:
+          autism is a natural variation in brain development, and much of the
+          disability comes from environments that do not accommodate it. Support
+          focuses on communication, independence, wellbeing and reducing
+          distress rather than making a person appear non-autistic."
+    brain:
+        - area: amygdala
+          level: secondary
+          note:
+              Flags socially and emotionally important information. Many
+              autistic children show unusually fast amygdala growth in early
+              childhood and different responses to faces and eye contact, which
+              may make eye contact feel uncomfortable and change which social
+              cues get noticed.
+        - area: stg
+          level: secondary
+          note:
+              The superior temporal sulcus decodes gaze direction, voices and
+              body movement. Atypical activity here may make it harder to read
+              intentions from subtle nonverbal signals in real time.
+        - area: fusiform
+          level: secondary
+          note:
+              Specializes in recognizing faces as a whole. Some studies find
+              reduced face-specific responses, with faces processed more like
+              objects, which can make recognizing people and expressions more
+              effortful.
+        - area: dmpfc
+          level: secondary
+          note:
+              Builds models of what others are thinking (theory of mind).
+              Different activation during these tasks fits with difficulty
+              guessing unspoken intentions, though autistic people often
+              understand each other well, a pattern called the "double empathy"
+              problem.
+        - area: antinsula
+          level: secondary
+          note:
+              Decides which internal and external signals are important.
+              Differences here are linked to sensory over- or
+              under-responsiveness and difficulty identifying one's own emotions
+              (alexithymia).
+        - area: cerebhemi
+          level: secondary
+          note:
+              The cerebellum shapes prediction and timing in movement, language
+              and social interaction. Reduced Purkinje cell numbers are one of
+              the most consistent post-mortem findings and may contribute to
+              motor clumsiness and difficulty adapting to unpredictable
+              situations.
+        - area: callosum
+          level: secondary
+          note:
+              Connects the hemispheres. A smaller corpus callosum and altered
+              long-range connectivity may favor detailed local processing over
+              integrating information across the brain.
+    symptoms:
+        - Differences in back-and-forth conversation and shared attention
+        - Less use or different use of eye contact, gestures and facial
+          expressions
+        - Difficulty understanding unwritten social rules or developing
+          friendships in typical ways
+        - Repetitive movements or speech, including stimming, which often helps
+          self-regulation
+        - Strong need for routine and distress at unexpected changes
+        - Intense, focused interests
+        - Sensory over- or under-sensitivity to sound, light, touch, taste,
+          smell or pain
+        - Meltdowns or shutdowns when overwhelmed
+    diagnosis:
+        Diagnosis is based on developmental history and direct observation,
+        often with tools such as the ADOS-2 and ADI-R. Screening is recommended
+        at 18 and 24 months, and reliable diagnosis is possible by age 2, though
+        many people, especially girls, women and those without intellectual
+        disability, are diagnosed much later. Clinicians specify the support
+        level needed (1–3) and whether there is intellectual or language
+        impairment. Hearing tests and genetic testing are commonly recommended.
+    types:
+        - "DSM-5 combined earlier labels, including Asperger syndrome and
+          pervasive developmental disorder, into a single autism spectrum
+          diagnosis. Instead of subtypes it uses support levels: Level 1
+          (requiring support), Level 2 (requiring substantial support) and Level
+          3 (requiring very substantial support), rated separately for social
+          communication and restricted or repetitive behaviors."
+    causes:
+        - Autism is highly heritable (estimates around 60–90%). Hundreds of
+          genes are involved, many affecting synapse formation and brain
+          development. About 10–20% of cases are linked to an identifiable
+          genetic change, such as fragile X syndrome, tuberous sclerosis or
+          specific copy-number variants.
+        - Factors associated with modestly higher likelihood include older
+          parental age, very preterm birth and some prenatal exposures such as
+          valproate. Very large studies have shown that vaccines do not cause
+          autism. Parenting style does not cause autism.
+    treatment:
+        - "There is no medication for autism itself. Support is individualized:
+          speech and language therapy (including augmentative and alternative
+          communication devices), occupational therapy for sensory and motor
+          needs, and developmental or naturalistic behavioral approaches in
+          early childhood."
+        - "Practical accommodations make a large difference: predictable
+          routines, visual schedules, quiet spaces, noise-reducing headphones,
+          clear direct communication and workplace adjustments. Co-occurring
+          conditions such as anxiety, depression, ADHD, epilepsy, sleep and
+          gastrointestinal problems are common and are treated in their own
+          right. Risperidone and aripiprazole are approved for severe
+          irritability."
+    course:
+        Autism is lifelong, but skills and needs change over time, and many
+        people develop strong coping strategies. Outcomes vary widely. Autistic
+        adults face high rates of anxiety, depression and unemployment, much of
+        it linked to lack of support and acceptance, which makes accommodation
+        and community important.
+tourette:
+    overview:
+        - Tourette's syndrome is the best-known tic disorder. It is diagnosed
+          when a person has had multiple motor tics and at least one vocal tic
+          for more than a year, starting before age 18, not caused by a
+          substance or another medical condition. Tics usually start around ages
+          5–7 and peak in severity around 10–12.
+        - "Tics are sudden, rapid, repetitive movements or sounds. They are not
+          fully voluntary, but they are not completely involuntary either: most
+          people feel a building urge before a tic and can suppress it briefly,
+          though this takes effort and the urge grows. Tics change over time,
+          wax and wane, and worsen with stress, excitement or fatigue."
+        - Most people with Tourette's also have at least one other condition,
+          most commonly ADHD, OCD, anxiety or learning difficulties, and these
+          often cause more impairment than the tics themselves.
+    brain:
+        - area: caudate
+          level: primary
+          note:
+              Part of the circuit that filters out unwanted movement programs. A
+              smaller caudate and abnormal cortico-striatal signaling let
+              fragments of movement or sound "leak through" as tics, and smaller
+              caudate volume in childhood has been linked to worse tics later.
+        - area: sma
+          level: primary
+          note:
+              Prepares self-initiated movements. It becomes active shortly
+              before each tic and is thought to generate the premonitory urge,
+              the feeling that something must be done.
+        - area: putamen
+          level: secondary
+          note:
+              Stores motor habits. Tics resemble overlearned habits, which may
+              explain why they become ingrained and why habit-based therapy
+              (CBIT) helps.
+        - area: antinsula
+          level: secondary
+          note:
+              Turns body sensations into feelings. It contributes to the
+              itch-like or pressure-like sensory part of the premonitory urge.
+        - area: gp
+          level: secondary
+          note:
+              The main output gate of the basal ganglia. Deep brain stimulation
+              here can reduce severe tics, showing that this output is part of
+              the tic-generating loop.
+        - area: thalamus
+          level: secondary
+          note:
+              Relays basal ganglia output back to the cortex. Thalamic nuclei
+              are another deep brain stimulation target, and the loop through
+              the thalamus is what lets tics repeat.
+    symptoms:
+        - "Simple motor tics: eye blinking, grimacing, head jerking, shoulder
+          shrugging"
+        - "Complex motor tics: touching, jumping, copying others' movements
+          (echopraxia)"
+        - "Simple vocal tics: sniffing, throat clearing, grunting"
+        - "Complex vocal tics: words, phrases, repeating others (echolalia) or
+          oneself (palilalia)"
+        - Coprolalia (socially inappropriate words) in a minority
+        - Premonitory urge before tics and relief afterward
+        - Ability to suppress tics briefly, often followed by a rebound
+    diagnosis:
+        Diagnosis is clinical, based on observing tics and the history of their
+        onset and duration. Videos recorded at home help because tics are often
+        suppressed in the doctor's office. Clinicians screen for ADHD, OCD and
+        anxiety, and may order tests only if another cause is suspected. Tic
+        disorders with only motor or only vocal tics are diagnosed as persistent
+        (chronic) motor or vocal tic disorder; tics for less than a year are
+        provisional tic disorder.
+    causes:
+        - Tourette's is strongly genetic, with heritability estimated around
+          70–80%, involving many genes. Risk factors include male sex (3–4 times
+          more common), maternal smoking, prenatal stress and low birth weight.
+          A possible link with streptococcal infection (PANDAS) remains
+          controversial.
+    treatment:
+        - Many people need only education, reassurance and an understanding
+          school or workplace. Comprehensive Behavioral Intervention for Tics
+          (CBIT) teaches awareness of the premonitory urge and a competing
+          response that is physically incompatible with the tic; it reduces tics
+          as effectively as many medications.
+        - "When medication is needed: alpha-2 agonists (guanfacine, clonidine)
+          are often tried first, especially with ADHD; dopamine-blocking drugs
+          such as aripiprazole, haloperidol and pimozide are more powerful but
+          have more side effects; VMAT2 inhibitors and botulinum toxin
+          injections help some people. Deep brain stimulation is reserved for
+          severe, treatment-resistant adult cases."
+    course:
+        Tics typically peak in early adolescence. By early adulthood, about a
+        third of people are tic-free and another third improve substantially,
+        though a minority continue to have significant tics. Co-occurring ADHD,
+        OCD and anxiety often need ongoing attention.
+dyslexia:
+    overview:
+        - Dyslexia is a specific learning disorder in which a person has
+          persistent difficulty with accurate and fluent word reading, decoding
+          and spelling, despite adequate intelligence, vision and teaching. It
+          is the most common learning disorder.
+        - "The core problem for most people is phonological: breaking spoken
+          words into their individual sounds and linking those sounds to
+          letters. Because reading depends on this mapping, words have to be
+          effortfully sounded out instead of recognized automatically, which
+          slows reading and uses up attention that would otherwise go to
+          understanding."
+        - Dyslexia is not a vision problem and has nothing to do with reading
+          letters backward, which is common in all young readers. Many people
+          with dyslexia have strong reasoning, oral language and big-picture
+          thinking, and listening comprehension is often much better than
+          reading comprehension.
+    brain:
+        - area: supramarginal
+          level: primary
+          note:
+              Part of the left temporoparietal network that links letters to
+              speech sounds. It is consistently underactive during reading in
+              dyslexia, matching the core phonological difficulty of sounding
+              out words.
+        - area: fusiform
+          level: primary
+          note:
+              Contains the visual word form area, which learns to recognize
+              familiar written words instantly. It responds weakly in dyslexia
+              because letter-sound links never became automatic, so even
+              familiar words are read slowly.
+        - area: broca
+          level: secondary
+          note:
+              Supports sounding out and articulating words. It is often more
+              active in dyslexic readers, likely compensating by subvocalizing
+              words.
+        - area: angular
+          level: secondary
+          note:
+              Connects written words to meaning. Weaker connections with visual
+              and language areas slow comprehension of written text.
+        - area: cerebhemi
+          level: secondary
+          note:
+              Helps make skills automatic. The debated cerebellar theory
+              proposes that reduced automatization contributes to slow,
+              effortful reading.
+    symptoms:
+        - Slow, effortful, inaccurate reading
+        - Difficulty sounding out unfamiliar words
+        - Persistent spelling errors
+        - Trouble with rhyming and splitting words into sounds in early
+          childhood
+        - Difficulty learning letter names and sounds
+        - Avoiding reading aloud
+        - Listening comprehension stronger than reading comprehension
+    diagnosis:
+        Assessment by an educational psychologist or specialist measures
+        phonological awareness, decoding of real and nonsense words, reading
+        fluency, spelling and comprehension, and compares them with oral
+        language and reasoning. Diagnosis requires difficulties that persist for
+        at least six months despite targeted help. Early screening in
+        kindergarten and first grade allows intervention before a child falls
+        behind.
+    causes:
+        - "Dyslexia is strongly familial: a child with an affected parent has a
+          much higher risk. Heritability is roughly 40–70%, involving many genes
+          that affect early brain development. Early speech and language delays
+          are a warning sign."
+    treatment:
+        - The most effective intervention is explicit, systematic, multisensory
+          instruction in phonics and phonological awareness, often called
+          structured literacy (for example Orton-Gillingham-based programs).
+          Starting early (kindergarten to second grade) gives the best results,
+          but older students and adults also improve.
+        - "Accommodations level the field: extra time, audiobooks and
+          text-to-speech, speech-to-text for writing, and reduced penalties for
+          spelling. Brain imaging studies show that successful reading
+          intervention increases activity in the left temporoparietal and
+          fusiform reading network."
+    course:
+        Dyslexia is lifelong, but with good instruction most people learn to
+        read accurately, though reading may remain slower than average. Early
+        identification reduces the risk of the low self-esteem and school
+        avoidance that often follow years of struggling.
+schizophrenia:
+    overview:
+        - Schizophrenia is a serious mental illness that affects perception,
+          thinking, motivation and the sense of what is real. It usually begins
+          in the late teens to early 30s, often after a prodrome of months to
+          years with social withdrawal, declining performance and unusual ideas.
+        - "Symptoms fall into three groups. Positive symptoms are experiences
+          added to normal life, such as hallucinations, delusions and
+          disorganized thinking. Negative symptoms are losses: reduced
+          motivation, pleasure, speech and emotional expression. Cognitive
+          symptoms include problems with attention, working memory and planning.
+          Negative and cognitive symptoms often affect daily life the most and
+          respond least to medication."
+        - Schizophrenia is not "split personality," and most people with it are
+          not violent; they are far more likely to be victims of violence. With
+          early, consistent treatment and support, many people have long periods
+          of recovery, work and maintain relationships.
+    brain:
+        - area: caudate
+          level: primary
+          note:
+              The associative striatum, mostly in the caudate, receives too much
+              dopamine in psychosis. This is thought to make ordinary events
+              feel strangely significant ("aberrant salience"), and delusions
+              develop as explanations for those experiences. Antipsychotics work
+              mainly by blocking dopamine D2 receptors here.
+        - area: dlpfc
+          level: primary
+          note:
+              "Holds and manipulates information in working memory. It is
+              underactive during demanding tasks (hypofrontality), partly from
+              too little dopamine signaling in the cortex, producing the
+              cognitive symptoms: trouble concentrating, planning and following
+              conversations."
+        - area: hippocampus
+          level: primary
+          note:
+              Hyperactivity in CA1 often appears early and may drive excess
+              dopamine release in the striatum. It also shrinks over the
+              illness, linked to memory problems.
+        - area: stg
+          level: primary
+          note:
+              Processes speech sounds. Reduced gray matter and spontaneous
+              activity here during hallucinations suggest the brain
+              misattributes its own inner speech to an external voice.
+        - area: latvent
+          level: primary
+          note:
+              Enlarged ventricles are among the oldest replicated findings. They
+              reflect reduced surrounding brain tissue rather than causing
+              symptoms.
+        - area: mdthal
+          level: secondary
+          note:
+              Relays and synchronizes information with the prefrontal cortex.
+              Reduced thalamocortical connectivity may disrupt the filtering of
+              sensory input and organized thought.
+        - area: vta
+          level: secondary
+          note:
+              The dopamine source for the mesolimbic and mesocortical pathways,
+              whose imbalance underlies positive and negative symptoms.
+        - area: acc
+          level: secondary
+          note:
+              Monitors conflict and errors. Reduced activity is linked to
+              difficulty recognizing that one's own perceptions or beliefs might
+              be mistaken.
+    symptoms:
+        - Hallucinations, most often hearing voices commenting or conversing
+        - Delusions such as being watched, followed, controlled or having
+          special powers
+        - Disorganized speech that jumps between topics
+        - Disorganized or unusual behavior
+        - Reduced motivation and social withdrawal
+        - Flat facial expression and speech
+        - Reduced pleasure (anhedonia)
+        - Problems with attention, memory and planning
+        - Reduced insight into being ill
+    diagnosis:
+        Diagnosis requires at least two core symptoms (delusions,
+        hallucinations, disorganized speech, grossly disorganized or catatonic
+        behavior, or negative symptoms) for a significant part of a month, with
+        at least one being delusions, hallucinations or disorganized speech, and
+        continuous signs of illness for at least six months. Clinicians rule out
+        substance-induced psychosis, mood disorders with psychotic features, and
+        medical causes such as brain tumors, autoimmune encephalitis and thyroid
+        disease, often with blood tests and brain imaging.
+    types:
+        - DSM-5 removed the older subtypes (paranoid, disorganized, catatonic,
+          undifferentiated) because they were unreliable. Related diagnoses on
+          the spectrum include brief psychotic disorder (under a month),
+          schizophreniform disorder (one to six months), schizoaffective
+          disorder and delusional disorder.
+    causes:
+        - Schizophrenia is highly heritable, around 80%. A person with an
+          affected identical twin has about a 40–50% risk, compared with under
+          1% in the general population. Hundreds of common variants add small
+          risks, and rare variants, such as the 22q11.2 deletion, add large
+          risks.
+        - "Environmental factors include pregnancy and birth complications,
+          prenatal infection or malnutrition, childhood adversity, migration and
+          urban upbringing, and heavy use of high-potency cannabis in
+          adolescence. The leading model is neurodevelopmental: early
+          vulnerability combined with changes during adolescent brain
+          maturation, including excessive synaptic pruning."
+    treatment:
+        - Antipsychotic medication is the foundation of treatment and reduces
+          positive symptoms and relapse risk. Clozapine is the most effective
+          option for treatment-resistant illness, which affects about a third of
+          people. Long-acting injectable forms help people who struggle with
+          daily pills.
+        - "Coordinated specialty care for first-episode psychosis combines
+          medication, CBT for psychosis, family education, supported employment
+          and education, and case management, and improves outcomes. Cognitive
+          remediation, social skills training and peer support help with
+          negative and cognitive symptoms. Physical health care matters: life
+          expectancy is reduced by 10–20 years, mostly due to heart disease and
+          smoking."
+    course:
+        The course varies. Roughly a quarter of people recover well, about half
+        have ongoing symptoms with periods of improvement and relapse, and
+        others have persistent disability. Shorter time to treatment, good
+        support and staying on treatment predict better outcomes.
+schizoaffective:
+    overview:
+        - Schizoaffective disorder combines symptoms of schizophrenia, such as
+          hallucinations or delusions, with major mood episodes of depression or
+          mania. To meet the diagnosis, psychotic symptoms must also occur for
+          at least two weeks without a mood episode, and mood episodes must be
+          present for the majority of the illness.
+        - It sits between schizophrenia and bipolar disorder, sharing genetic
+          risk and features with both, and the diagnosis can be unstable over
+          time. Outcomes tend to be somewhat better than in schizophrenia but
+          worse than in mood disorders with psychosis.
+    brain:
+        - area: dlpfc
+          level: secondary
+          note:
+              Shows the same reduced working-memory activity as in
+              schizophrenia, contributing to cognitive symptoms.
+        - area: hippocampus
+          level: secondary
+          note:
+              Volume reductions similar to schizophrenia and bipolar disorder
+              may contribute to memory problems and to the dopamine
+              dysregulation that drives psychosis.
+        - area: amygdala
+          level: secondary
+          note:
+              Altered emotional reactivity, as in mood disorders, may contribute
+              to the intense mood episodes.
+        - area: latvent
+          level: secondary
+          note:
+              Mild enlargement reflects reduced surrounding brain tissue, as in
+              schizophrenia.
+    symptoms:
+        - Hallucinations or delusions
+        - "Major depressive episodes: low mood, hopelessness, low energy"
+        - "Manic episodes (bipolar type): elevated or irritable mood, reduced
+          sleep, racing thoughts"
+        - Disorganized thinking
+        - Social and occupational decline
+    diagnosis:
+        The diagnosis depends on careful timing of psychotic and mood symptoms
+        over the whole illness, often requiring longitudinal observation and
+        records. Medical and substance-related causes are ruled out.
+    types:
+        - "Bipolar type: includes manic episodes, with or without depression."
+        - "Depressive type: only major depressive episodes."
+    causes:
+        - Genetic risk overlaps with both schizophrenia and bipolar disorder.
+          Environmental stressors and substance use can trigger episodes.
+    treatment:
+        - Treatment combines an antipsychotic (paliperidone is FDA-approved
+          specifically for this condition) with a mood stabilizer for the
+          bipolar type or an antidepressant for the depressive type.
+          Psychotherapy, family education, case management and vocational
+          support help long-term recovery.
+    course:
+        Usually long-term, with episodes of psychosis and mood disturbance.
+        Outcomes are generally intermediate between schizophrenia and bipolar
+        disorder, and many people achieve stable functioning with treatment.
+delusional:
+    overview:
+        - Delusional disorder involves one or more fixed, false beliefs lasting
+          at least a month, without the other major symptoms of schizophrenia
+          such as prominent hallucinations or disorganized speech. Outside the
+          delusion and its consequences, people often function surprisingly well
+          and may seem completely ordinary.
+        - Delusions are often plausible-sounding (non-bizarre), such as being
+          followed, cheated on or having a serious illness, which can make them
+          hard to recognize. People rarely see the belief as a symptom and
+          usually come to attention because of conflict, legal problems or
+          repeated medical visits.
+    brain:
+        - area: dlpfc
+          level: secondary
+          note:
+              Evaluates beliefs against evidence. Research suggests a "jumping
+              to conclusions" reasoning style and weaker belief updating, which
+              may let an initial suspicion harden into certainty (limited
+              studies).
+        - area: caudate
+          level: secondary
+          note:
+              As in other psychoses, excess striatal dopamine may make certain
+              events feel unusually meaningful, which a delusion then explains
+              (proposed).
+        - area: acc
+          level: secondary
+          note:
+              Monitors conflicting information. Reduced conflict monitoring may
+              make it easier to dismiss evidence against the belief (limited
+              evidence).
+    symptoms:
+        - A persistent, fixed belief that does not change with evidence
+        - Behavior consistent with the belief, such as investigating a partner
+          or contacting authorities
+        - Irritability or low mood related to the belief
+        - Little or no hallucination
+        - Otherwise intact functioning
+    diagnosis:
+        Clinicians confirm the belief has lasted at least a month, rule out
+        schizophrenia, mood disorders with psychosis, dementia and substance
+        use, and assess risk related to the belief.
+    types:
+        - "Persecutory: being conspired against or harmed (most common)."
+        - "Jealous: a partner is unfaithful."
+        - "Erotomanic: someone, often of higher status, is in love with the
+          person."
+        - "Grandiose: having great talent, knowledge or a special relationship."
+        - "Somatic: having a bodily defect or illness."
+        - Mixed or unspecified.
+    causes:
+        - Causes are not well understood. Risk factors include family history of
+          psychotic disorders or paranoid traits, social isolation, immigration,
+          hearing impairment and stressful life events.
+    treatment:
+        - Building a trusting relationship comes first, since confronting the
+          belief directly usually backfires. Antipsychotic medication helps many
+          people, and CBT can gently explore the evidence and reduce distress
+          and preoccupation.
+    course:
+        "The course varies: some people recover fully, while others have a
+        chronic course with fluctuations. Functioning is often better preserved
+        than in schizophrenia."
+bipolar:
+    overview:
+        - Bipolar disorder causes episodes of abnormally elevated or irritable
+          mood and energy (mania or hypomania) and, in most people, episodes of
+          major depression. Between episodes many people return to their usual
+          baseline, though some have ongoing milder symptoms.
+        - "Mania is more than a good mood: it involves a marked increase in
+          energy and activity with reduced need for sleep, racing thoughts,
+          rapid speech, inflated confidence and risky decisions that can damage
+          finances, relationships and health. Severe mania can include psychosis
+          and usually requires hospitalization. Depressive episodes are often
+          longer and are the main source of disability."
+        - Bipolar disorder usually starts in the late teens or twenties. It is
+          often misdiagnosed as depression at first, because people more often
+          seek help when depressed, which matters because antidepressants alone
+          can trigger mania.
+    brain:
+        - area: amygdala
+          level: primary
+          note:
+              Detects emotional significance. It is overreactive to emotional
+              stimuli in both mania and depression, amplifying emotional
+              responses and making mood harder to keep stable.
+        - area: vlpfc
+          level: primary
+          note:
+              Regulates emotion from the top down. Reduced activity weakens
+              control over the amygdala, so emotional reactions run unchecked,
+              especially during mood episodes.
+        - area: acc
+          level: primary
+          note:
+              The subgenual ACC regulates mood and links emotion to the body.
+              Reduced volume and altered activity are found in both bipolar
+              disorder and depression, linked to mood swings and depressive
+              episodes.
+        - area: nacc
+          level: secondary
+          note:
+              Drives reward seeking. Heightened reward sensitivity is thought to
+              contribute to the goal-driven, risk-taking behavior of mania; it
+              can rise before episodes.
+        - area: hippocampus
+          level: secondary
+          note:
+              Volume reductions are linked to memory problems; lithium treatment
+              is associated with larger hippocampal volume, possibly through
+              neuroprotective effects.
+        - area: callosum
+          level: secondary
+          note:
+              White matter connecting the hemispheres shows reduced integrity,
+              which may disrupt coordination between emotion and regulation
+              networks.
+    symptoms:
+        - "Mania: elevated, expansive or irritable mood for at least a week"
+        - Greatly reduced need for sleep without feeling tired
+        - Racing thoughts, rapid pressured speech, jumping between ideas
+        - Grandiosity and inflated self-esteem
+        - "Risky behavior: spending sprees, reckless driving, impulsive
+          decisions"
+        - "Hypomania: the same features, milder and shorter (at least 4 days),
+          without severe impairment"
+        - "Depression: low mood, loss of interest, fatigue, hopelessness,
+          changes in sleep and appetite"
+        - Psychotic symptoms in severe episodes
+    diagnosis:
+        Diagnosis is based on a careful history of mood episodes, often with
+        input from family, since people may not recognize hypomania. Mood charts
+        help. Clinicians rule out thyroid disease, substance-induced mood
+        changes and medications such as steroids. Bipolar I requires at least
+        one manic episode; bipolar II requires at least one hypomanic and one
+        major depressive episode, and no full mania.
+    types:
+        - "Bipolar I disorder: at least one manic episode; depressive episodes
+          are common but not required."
+        - "Bipolar II disorder: hypomanic and major depressive episodes, never
+          full mania. Not a milder disorder: depression often dominates."
+        - "Cyclothymic disorder: chronic fluctuating hypomanic and depressive
+          symptoms below the threshold of full episodes."
+        - Specifiers include rapid cycling (four or more episodes a year), mixed
+          features and seasonal pattern.
+    causes:
+        - Bipolar disorder is among the most heritable psychiatric disorders
+          (about 60–85%), with genetic overlap with schizophrenia and
+          depression. Triggers include sleep disruption and shift work,
+          stressful events, substance use, childbirth and antidepressants used
+          without a mood stabilizer.
+    treatment:
+        - Mood stabilizers are the foundation. Lithium is the gold standard and
+          reduces both mania and suicide risk; valproate and carbamazepine treat
+          mania; lamotrigine prevents depressive episodes. Several
+          antipsychotics (such as quetiapine, lurasidone, cariprazine and
+          olanzapine) treat mania or bipolar depression.
+        - Psychotherapy (CBT, family-focused therapy, interpersonal and social
+          rhythm therapy) and psychoeducation reduce relapses. Protecting sleep
+          and a regular daily routine are powerful preventive tools. Lithium and
+          valproate need blood monitoring, and valproate carries serious risks
+          in pregnancy.
+    course:
+        Bipolar disorder is usually lifelong but highly treatable. Without
+        treatment, episodes tend to become more frequent. Many people live full
+        lives with consistent treatment and early recognition of warning signs
+        such as reduced sleep.
+cyclothymia:
+    overview:
+        - Cyclothymic disorder involves at least two years (one year in children
+          and teens) of frequent periods of hypomanic and depressive symptoms
+          that never meet criteria for full episodes, with no more than two
+          months symptom-free at a time.
+        - Because the swings are milder, people may see them as personality
+          ("moody," "unpredictable") rather than a disorder, but the constant
+          instability can strain relationships and work. Around 15–50% of people
+          later develop bipolar I or II.
+    brain:
+        - area: amygdala
+          level: secondary
+          note:
+              Emotional overreactivity similar to bipolar disorder may drive
+              frequent mood shifts (limited direct research).
+        - area: vlpfc
+          level: secondary
+          note:
+              Weaker top-down regulation is proposed to allow mood to swing more
+              easily.
+    symptoms:
+        - Frequent shifts between elevated and low moods
+        - Periods of high energy, confidence and reduced sleep need
+        - Periods of low mood, low energy and pessimism
+        - Irritability
+        - Rarely more than two months without symptoms
+    diagnosis:
+        Diagnosed from a long-term history of symptoms, often with mood
+        charting, after ruling out full mood episodes, substances and medical
+        causes.
+    causes:
+        - Strong family links with bipolar disorder suggest shared genetic risk.
+    treatment:
+        - Psychotherapy, mood tracking and regular sleep and routines help most.
+          Mood stabilizers may be used, and antidepressants alone are used
+          cautiously because they can trigger hypomania.
+    course:
+        Usually chronic, beginning in adolescence or early adulthood, with a
+        significant risk of progressing to bipolar I or II.
+mdd:
+    overview:
+        - Major depressive disorder is a common, serious and treatable mood
+          disorder. It is diagnosed when, for at least two weeks, a person has
+          depressed mood or loss of interest and pleasure most of the day,
+          nearly every day, along with other symptoms that affect sleep,
+          appetite, energy, concentration, self-worth and thoughts about death.
+        - "Depression is a whole-body illness. It changes how the brain
+          processes reward, threat and memory, alters stress hormones, sleep and
+          inflammation, and slows thinking and movement. It is not the same as
+          ordinary sadness, and it is not a sign of weakness: people cannot
+          simply decide to snap out of it."
+        - It is one of the leading causes of disability worldwide. Episodes can
+          be single or recurrent, and the more episodes a person has, the higher
+          the risk of another, which makes continued treatment after recovery
+          important.
+    brain:
+        - area: acc
+          level: primary
+          note:
+              The subgenual ACC links emotion with bodily and stress responses.
+              It is overactive in depression and normalizes with successful
+              treatment; it has been a deep brain stimulation target in
+              treatment-resistant depression. Overactivity is linked to
+              persistent sadness and negative self-focus.
+        - area: dlpfc
+          level: primary
+          note:
+              Provides cognitive control over emotion. It is underactive,
+              especially on the left, which weakens the ability to shift
+              attention away from negative thoughts and contributes to poor
+              concentration and indecision. TMS treatment targets it.
+        - area: amygdala
+          level: primary
+          note:
+              Detects emotional threat. It overreacts to negative faces and
+              words and is slow to settle, biasing perception and memory toward
+              the negative; antidepressants reduce this bias early in treatment.
+        - area: hippocampus
+          level: primary
+          note:
+              Forms memories and helps shut off the stress response. Smaller
+              volume is linked to recurrent or chronic depression, probably
+              partly due to prolonged stress hormones; this may contribute to
+              memory problems and weaker stress regulation.
+        - area: nacc
+          level: secondary
+          note:
+              "Drives anticipation of reward. Blunted responses help explain
+              anhedonia: activities stop feeling worth doing."
+        - area: pvn
+          level: secondary
+          note:
+              Starts the stress-hormone cascade. An overactive HPA axis with
+              high cortisol is common, especially in severe depression, and may
+              damage the hippocampus over time.
+        - area: raphe
+          level: secondary
+          note:
+              The source of serotonin. Most antidepressants increase serotonin
+              signaling, though depression is not simply low serotonin;
+              downstream changes in plasticity seem more important.
+        - area: pcc
+          level: secondary
+          note:
+              A default mode network hub. Excessive connectivity with the
+              subgenual ACC is linked to rumination, repetitive dwelling on
+              problems.
+    symptoms:
+        - Depressed mood most of the day, nearly every day
+        - Markedly reduced interest or pleasure (anhedonia)
+        - Significant change in appetite or weight
+        - Insomnia or sleeping too much
+        - Slowed movement and speech, or agitation
+        - Fatigue and loss of energy
+        - Feelings of worthlessness or excessive guilt
+        - Difficulty thinking, concentrating or deciding
+        - Recurrent thoughts of death or suicide
+    diagnosis:
+        Diagnosis requires at least five of nine symptoms for two weeks,
+        including depressed mood or loss of interest, causing significant
+        distress or impairment. Clinicians use interviews and screening tools
+        such as the PHQ-9, ask about past manic or hypomanic episodes to rule
+        out bipolar disorder, assess suicide risk, and check for medical
+        contributors such as thyroid disease, anemia, vitamin deficiencies and
+        medications.
+    types:
+        - >-
+            Specifiers describe the pattern of an episode: with anxious
+            distress, with melancholic features (loss of pleasure in nearly
+            everything, early-morning waking, worse in the morning), with
+            atypical features (mood that brightens with good news, oversleeping,
+            increased appetite), with psychotic features, with peripartum onset
+            (during pregnancy or within four weeks after birth) and with
+            seasonal pattern.
+    causes:
+        - Depression arises from interacting factors. Genetics accounts for
+          roughly 35–40% of risk. Stressful life events, especially losses and
+          humiliations, childhood adversity and trauma, chronic illness, chronic
+          pain, social isolation, hormonal changes and some medications all
+          raise risk.
+        - The "chemical imbalance" explanation is now considered too simple.
+          Current models emphasize altered brain circuits, chronic stress
+          responses, inflammation and reduced neuroplasticity; antidepressants
+          likely work partly by restoring plasticity over weeks.
+    treatment:
+        - For mild to moderate depression, psychotherapy (CBT, behavioral
+          activation, interpersonal therapy) and antidepressants are similarly
+          effective; for more severe depression, the combination works best.
+          SSRIs and SNRIs are usually first-line; others include bupropion,
+          mirtazapine and vortioxetine. Medication typically takes 2–6 weeks to
+          work and is continued for at least 6–12 months after recovery.
+        - "For treatment-resistant depression: switching or augmenting
+          medications (for example with lithium or an atypical antipsychotic),
+          transcranial magnetic stimulation, esketamine nasal spray, and
+          electroconvulsive therapy, which is the most effective treatment for
+          severe or psychotic depression. Exercise, regular sleep and social
+          connection support recovery."
+    course:
+        Most episodes improve with treatment within months. About half of people
+        who have one episode will have another, and the risk rises with each
+        episode, but maintenance treatment and therapy skills substantially
+        reduce relapse. Anyone with thoughts of suicide should seek help
+        immediately.
+pdd:
+    overview:
+        - Persistent depressive disorder, formerly called dysthymia, is
+          depressed mood on most days for at least two years (one year in young
+          people), with at least two other depressive symptoms. Symptoms can be
+          milder than major depression, but their persistence makes them very
+          disabling, and many people come to think of low mood as simply part of
+          who they are.
+        - Major depressive episodes can occur on top of it, sometimes called
+          "double depression." Because it often begins in childhood or
+          adolescence, it can shape personality, relationships and career
+          choices.
+    brain:
+        - area: amygdala
+          level: secondary
+          note:
+              Heightened reactivity to negative emotion keeps the brain tuned
+              toward threat and disappointment over the long term.
+        - area: acc
+          level: secondary
+          note:
+              Altered activity similar to major depression is linked to
+              persistent low mood and negative self-focus.
+        - area: dlpfc
+          level: secondary
+          note:
+              Reduced regulation makes it harder to shift out of negative
+              thinking patterns.
+    symptoms:
+        - Low mood most days for years
+        - Low energy and fatigue
+        - Low self-esteem
+        - Poor concentration and indecision
+        - Hopelessness
+        - Changes in appetite or sleep
+        - Feeling that this is "just how I am"
+    diagnosis:
+        "Diagnosed by history: depressed mood for most of the day, more days
+        than not, for at least two years, never symptom-free for more than two
+        months, with impairment, after ruling out bipolar disorder and medical
+        causes."
+    causes:
+        - Genetics, chronic stress, early adversity and temperament all
+          contribute, similar to major depression. Early onset is common.
+    treatment:
+        - Combining psychotherapy with antidepressants tends to work better than
+          either alone. CBASP (Cognitive Behavioral Analysis System of
+          Psychotherapy) was developed specifically for chronic depression; CBT
+          and interpersonal therapy also help.
+    course:
+        Chronic and often long-lasting, but treatment can lead to remission,
+        sometimes revealing to people for the first time what their baseline
+        mood can be.
+pmdd:
+    overview:
+        - Premenstrual dysphoric disorder is a severe, cyclical mood disorder in
+          which symptoms appear in the week or so before menstruation, improve
+          within a few days after it starts and are minimal or absent in the
+          week after. It is much more disabling than typical premenstrual
+          syndrome.
+        - Hormone levels in people with PMDD are usually normal. Instead, the
+          brain appears unusually sensitive to normal rises and falls in
+          estrogen, progesterone and its neuroactive metabolite
+          allopregnanolone, which affects GABA signaling.
+    brain:
+        - area: amygdala
+          level: secondary
+          note:
+              Becomes more reactive in the late luteal phase, intensifying
+              irritability, anxiety and emotional reactions.
+        - area: hypothalamus
+          level: secondary
+          note:
+              Coordinates the menstrual cycle and responds to cyclical hormone
+              signals, which in PMDD trigger abnormal mood responses.
+        - area: raphe
+          level: secondary
+          note:
+              Supplies serotonin. Fast-acting benefit from SSRIs, sometimes
+              within days, suggests altered serotonin sensitivity across the
+              cycle.
+        - area: dlpfc
+          level: secondary
+          note:
+              Shows altered activity during emotion regulation in the luteal
+              phase, weakening control over mood.
+    symptoms:
+        - Marked mood swings or sudden sadness
+        - Irritability, anger or conflict
+        - Depressed mood or hopelessness
+        - Anxiety or tension
+        - Loss of interest, fatigue, trouble concentrating
+        - Changes in sleep and appetite, food cravings
+        - Physical symptoms such as breast tenderness and bloating
+    diagnosis:
+        Diagnosis requires daily symptom ratings across at least two cycles
+        showing the cyclical pattern, with at least five symptoms including a
+        core mood symptom, causing significant impairment.
+    causes:
+        - An abnormal brain response to normal hormone changes, with genetic
+          contributions, possibly involving the ESC/E(Z) gene complex that
+          regulates responses to sex hormones.
+    treatment:
+        - SSRIs are first-line and can work when taken only in the luteal phase.
+          Some hormonal contraceptives that suppress ovulation (such as those
+          containing drospirenone) help. CBT, exercise and stress reduction
+          support management. In severe cases, medications that suppress ovarian
+          function are used.
+    course:
+        Symptoms continue cyclically until menopause, sometimes worsening in the
+        late reproductive years, but treatment is effective for most people.
+sad:
+    overview:
+        - Major depression with seasonal pattern, often called seasonal
+          affective disorder, is depression that returns at the same time of
+          year, usually beginning in fall or winter and lifting in spring, for
+          at least two consecutive years. A less common summer pattern also
+          exists.
+        - It is more common at higher latitudes, where winter days are short.
+          The leading explanation is that reduced morning light shifts the
+          body's internal clock out of sync with sleep and daily life.
+    brain:
+        - area: scn
+          level: primary
+          note:
+              The master clock is reset each morning by light. With less
+              daylight, it drifts later relative to sleep, desynchronizing
+              hormones, alertness and mood.
+        - area: pineal
+          level: primary
+          note:
+              Releases melatonin in darkness. Winter can extend or shift
+              melatonin release, contributing to oversleeping and low energy.
+        - area: raphe
+          level: secondary
+          note:
+              Brain serotonin transporter activity rises in winter in some
+              studies, which would lower available serotonin and may contribute
+              to low mood.
+    symptoms:
+        - Low mood that returns in the darker months
+        - Oversleeping and difficulty waking
+        - Low energy and heaviness
+        - Craving carbohydrates and weight gain
+        - Social withdrawal ("hibernating")
+        - Improvement in spring and summer
+    diagnosis:
+        Requires a pattern of major depressive episodes tied to a season for at
+        least two years, with seasonal episodes outnumbering non-seasonal ones.
+    causes:
+        - Reduced daylight, genetic vulnerability and living farther from the
+          equator.
+    treatment:
+        - Bright light therapy each morning, typically 10,000 lux for 20–30
+          minutes, is first-line and often works within one to two weeks. CBT
+          adapted for seasonal depression has lasting benefits, and
+          antidepressants also help; bupropion started before winter can prevent
+          episodes.
+    course:
+        Episodes tend to recur each year but can be prevented or reduced by
+        starting treatment before the usual onset.
+gad:
+    overview:
+        - Generalized anxiety disorder is excessive, hard-to-control worry about
+          many everyday matters, such as health, work, money, family or minor
+          responsibilities, occurring on more days than not for at least six
+          months, together with physical tension and restlessness.
+        - "The worry in GAD is not usually about one specific threat. It shifts
+          from topic to topic and is driven by difficulty tolerating
+          uncertainty: worrying feels like preparation or protection, which
+          keeps the habit going even though it is exhausting. The body stays in
+          a low-grade state of alarm, producing muscle tension, fatigue and poor
+          sleep."
+    brain:
+        - area: amygdala
+          level: primary
+          note:
+              Detects possible threats. In GAD it reacts more strongly to
+              ambiguous or mildly negative information, so uncertain situations
+              register as dangerous and trigger worry.
+        - area: vlpfc
+          level: secondary
+          note:
+              Regulates the amygdala from the top down. Weaker coupling between
+              prefrontal regions and the amygdala means alarm signals are not
+              dampened, letting anxiety persist.
+        - area: acc
+          level: secondary
+          note:
+              Monitors conflict and threat. Altered activity may keep attention
+              locked on possible problems and make it hard to disengage from
+              worry.
+        - area: antinsula
+          level: secondary
+          note:
+              Creates feelings from body signals and predicts uncertainty.
+              Heightened activity amplifies awareness of tension and makes
+              uncertainty feel physically uncomfortable.
+        - area: bla
+          level: secondary
+          note:
+              Learns which cues predict danger. Fear learning in GAD generalizes
+              broadly, so many situations become linked with threat.
+    symptoms:
+        - Persistent, excessive worry that is hard to control
+        - Restlessness or feeling keyed up
+        - Easily fatigued
+        - Difficulty concentrating or mind going blank
+        - Irritability
+        - Muscle tension, headaches, stomach upset
+        - Sleep problems
+        - Seeking reassurance, over-preparing or avoiding uncertainty
+    diagnosis:
+        Diagnosis requires excessive worry on most days for six months with at
+        least three of six physical or cognitive symptoms (one in children),
+        causing distress or impairment. Screening tools like the GAD-7 help.
+        Clinicians rule out thyroid disease, caffeine or stimulant effects and
+        other anxiety or mood disorders.
+    causes:
+        - Genetics accounts for about 30% of risk and overlaps with depression.
+          A behaviorally inhibited temperament, stressful life events, childhood
+          adversity and learned beliefs that worry is useful all contribute.
+    treatment:
+        - "CBT is highly effective: it targets intolerance of uncertainty, tests
+          worry beliefs and uses exposure to uncertainty and worry postponement.
+          Applied relaxation and mindfulness-based approaches also help."
+        - SSRIs (escitalopram, sertraline) and SNRIs (venlafaxine, duloxetine)
+          are first-line medications; buspirone and pregabalin are alternatives.
+          Benzodiazepines work quickly but are generally limited to short-term
+          use because of tolerance and dependence.
+    course:
+        GAD tends to be chronic with ups and downs, often worsening under
+        stress, but most people improve substantially with treatment.
+panic:
+    overview:
+        - Panic disorder involves repeated, unexpected panic attacks, sudden
+          surges of intense fear that peak within minutes, together with at
+          least a month of persistent worry about having more attacks or changes
+          in behavior to avoid them.
+        - >-
+            During an attack, the body launches a full fight-or-flight response
+            without a real external threat: pounding heart, breathlessness,
+            dizziness, trembling and a sense of doom. Many people go to
+            emergency rooms believing they are having a heart attack. The
+            disorder is maintained by "fear of fear": body sensations themselves
+            become threatening, so noticing a fast heartbeat can trigger the
+            next attack.
+    brain:
+        - area: amygdala
+          level: primary
+          note:
+              The fear hub triggers the alarm response. In panic disorder it is
+              highly sensitive, so a small internal change can set off a full
+              fight-or-flight reaction.
+        - area: antinsula
+          level: primary
+          note:
+              Interprets body signals such as heartbeat and breathing. It tends
+              to read normal sensations as dangerous, which is the core of the
+              fear-of-fear cycle.
+        - area: lc
+          level: primary
+          note:
+              Releases norepinephrine across the brain. Bursts of activity drive
+              the racing heart, sweating and hyperalertness of an attack.
+        - area: midbrain
+          level: secondary
+          note:
+              The periaqueductal gray coordinates defensive responses like
+              escape. It may produce the urgent need to flee during attacks.
+        - area: hippocampus
+          level: secondary
+          note:
+              Links fear to places and contexts, which is why people begin
+              avoiding places where attacks have happened.
+        - area: pvn
+          level: secondary
+          note:
+              Starts stress-hormone release, contributing to exhaustion after
+              attacks.
+    symptoms:
+        - Pounding or racing heart, chest pain
+        - Shortness of breath or feeling of choking
+        - Trembling, sweating, chills or hot flushes
+        - Dizziness, nausea
+        - Numbness or tingling
+        - Feeling unreal or detached
+        - Fear of losing control, going crazy or dying
+        - Worry about future attacks and avoidance of triggers
+    diagnosis:
+        Requires recurrent unexpected attacks plus a month of worry or
+        avoidance. Heart, lung, thyroid and substance causes are ruled out,
+        often with an ECG and blood tests.
+    causes:
+        - Genetic vulnerability, high anxiety sensitivity, stressful life events
+          and stimulants such as caffeine. Attacks often first occur during a
+          period of stress.
+    treatment:
+        - CBT is first-line and very effective. It includes education about the
+          panic cycle, interoceptive exposure (deliberately producing sensations
+          like a fast heart rate by running in place or spinning until they lose
+          their threat) and situational exposure. SSRIs and SNRIs are first-line
+          medications.
+    course:
+        Untreated, panic disorder often becomes chronic and can lead to
+        agoraphobia and depression. With treatment, most people have large and
+        lasting improvement.
+socialanx:
+    overview:
+        - Social anxiety disorder is an intense, persistent fear of social or
+          performance situations in which a person might be scrutinized, judged
+          or embarrassed. The fear is out of proportion to the actual threat and
+          leads to avoidance or enduring situations with great distress.
+        - It is more than shyness. People may avoid speaking in class, eating in
+          public, making phone calls or meeting new people, which can limit
+          education, careers and relationships. Safety behaviors, like
+          rehearsing what to say or avoiding eye contact, feel protective but
+          keep the fear alive and focus attention inward.
+    brain:
+        - area: amygdala
+          level: primary
+          note:
+              Reacts strongly to faces, especially critical or angry ones, and
+              to the prospect of evaluation. This hyperreactivity makes social
+              situations feel threatening.
+        - area: antinsula
+          level: secondary
+          note:
+              Heightens awareness of bodily signs of anxiety, like blushing or a
+              shaky voice, which then become a source of fear.
+        - area: dmpfc
+          level: secondary
+          note:
+              Supports thinking about oneself and how others see you.
+              Overactivity is linked to excessive self-focus and imagining
+              negative judgments.
+        - area: acc
+          level: secondary
+          note:
+              Processes social pain such as rejection. Heightened sensitivity
+              makes perceived criticism feel especially painful.
+    symptoms:
+        - Fear of speaking, eating or performing in front of others
+        - Fear that others will notice blushing, sweating or trembling
+        - Avoiding social situations or enduring them with dread
+        - Replaying and criticizing interactions afterward
+        - Physical symptoms such as racing heart and nausea
+    diagnosis:
+        Requires marked fear of social situations for six months or more,
+        causing impairment. A "performance only" specifier applies when fear is
+        limited to speaking or performing.
+    causes:
+        - Behaviorally inhibited temperament, genetics, and experiences like
+          bullying, humiliation or critical parenting.
+    treatment:
+        - CBT with exposure to feared social situations and dropping safety
+          behaviors is first-line, often in groups. SSRIs and SNRIs are
+          first-line medications. Beta-blockers can blunt physical symptoms
+          before specific performances.
+    course:
+        Usually starts in adolescence and can be chronic without treatment, but
+        treatment is effective.
+phobia:
+    overview:
+        - A specific phobia is an intense, persistent fear of a particular
+          object or situation, such as heights, animals, flying, enclosed
+          spaces, needles or blood, that is out of proportion to the actual
+          danger and leads to avoidance.
+        - Phobias are the most common anxiety disorder and among the most
+          treatable. Most people know their fear is excessive, but knowing this
+          does not stop the reaction, because the fear response is driven by
+          fast emotional circuits rather than reasoning.
+    brain:
+        - area: amygdala
+          level: primary
+          note:
+              Triggers the immediate fear response on seeing the feared object,
+              often before conscious recognition.
+        - area: antinsula
+          level: primary
+          note:
+              Especially active in phobias involving disgust, such as spiders,
+              and blood-injection-injury phobias, where the body reaction
+              includes nausea or fainting.
+        - area: vmpfc
+          level: secondary
+          note:
+              Stores safety learning (fear extinction). Weak extinction allows
+              the fear to persist despite many safe encounters.
+    symptoms:
+        - Immediate fear or panic when facing the trigger
+        - Avoiding the trigger or enduring it with intense anxiety
+        - Anticipatory anxiety beforehand
+        - Fainting in blood-injection-injury phobia, from a sudden drop in heart
+          rate
+    diagnosis:
+        Requires marked, persistent fear for six months that is out of
+        proportion and causes distress or avoidance.
+    types:
+        - Animal (spiders, dogs, snakes).
+        - Natural environment (heights, storms, water).
+        - Blood-injection-injury.
+        - Situational (flying, elevators, enclosed spaces).
+        - Other (choking, vomiting, loud noises).
+    causes:
+        - Frightening experiences, watching others react with fear, receiving
+          threat information and an evolutionary readiness to fear certain
+          things.
+    treatment:
+        - "Exposure therapy is the treatment of choice: gradual, repeated
+          contact with the feared object until fear subsides. For some phobias,
+          a single prolonged session can work. Virtual reality exposure is
+          useful for flying or heights. Medication is rarely needed."
+    course:
+        Phobias often start in childhood and can persist for decades, but
+        exposure therapy produces lasting improvement for most people.
+agoraphobia:
+    overview:
+        - Agoraphobia is fear and avoidance of situations where escape might be
+          difficult or help unavailable if panic or embarrassing symptoms occur,
+          such as public transport, open spaces, shops, crowds or being outside
+          the home alone.
+        - It often develops after panic attacks, as people avoid more and more
+          places associated with them. In severe cases a person may be unable to
+          leave home.
+    brain:
+        - area: amygdala
+          level: primary
+          note:
+              Overactive threat responses make leaving safe places feel
+              dangerous.
+        - area: hippocampus
+          level: secondary
+          note:
+              Strongly links fear to places and contexts, spreading avoidance to
+              new situations.
+        - area: antinsula
+          level: secondary
+          note:
+              Heightened body awareness makes people fear that symptoms will
+              strike in public.
+    symptoms:
+        - Fear of public transport, open or enclosed spaces, lines or crowds
+        - Fear of being outside alone
+        - Needing a companion to go out
+        - Avoidance that progressively shrinks a person's world
+    diagnosis:
+        Requires fear in at least two of five situation types for six months,
+        with avoidance or need for a companion. It can be diagnosed with or
+        without panic disorder.
+    causes:
+        - Panic attacks, genetics, anxious temperament and stressful events.
+    treatment:
+        - CBT with gradual exposure to avoided situations, often supported by
+          SSRIs. Therapist-guided home visits or remote sessions help people who
+          cannot leave home.
+    course:
+        Can be chronic without treatment; exposure-based treatment produces
+        substantial improvement.
+sepanx:
+    overview:
+        - Separation anxiety disorder is excessive fear or anxiety about
+          separation from attachment figures, beyond what is developmentally
+          expected, lasting at least four weeks in children and six months in
+          adults.
+        - Some separation anxiety is normal in infants and toddlers. The
+          disorder involves persistent worry that something terrible will happen
+          to loved ones or that an event will separate them, leading to school
+          refusal, difficulty sleeping alone and physical complaints.
+    brain:
+        - area: amygdala
+          level: primary
+          note:
+              A heightened threat response to separation cues makes being apart
+              from loved ones feel dangerous.
+        - area: vmpfc
+          level: secondary
+          note:
+              Still developing in childhood, it normally helps calm fear;
+              immature regulation contributes to difficulty self-soothing.
+    symptoms:
+        - Distress when separation is expected or happens
+        - Persistent worry about harm to loved ones
+        - Refusing to go to school, work or sleep away from home
+        - Nightmares about separation
+        - Headaches or stomachaches before separations
+    diagnosis:
+        Based on interviews with the child and parents, confirming duration,
+        impairment and that fear exceeds developmental norms.
+    causes:
+        - Anxious temperament, genetics, stressful events such as a loss or
+          move, and sometimes overprotective patterns.
+    treatment:
+        - CBT with gradual separation practice and parent coaching. SSRIs for
+          severe cases.
+    course:
+        Many children improve, but it raises the risk of later anxiety
+        disorders, especially panic disorder.
+ocd:
+    overview:
+        - Obsessive-compulsive disorder involves obsessions, which are
+          intrusive, unwanted thoughts, images or urges that cause intense
+          anxiety or disgust, and compulsions, which are repetitive behaviors or
+          mental acts performed to neutralize that distress or prevent a feared
+          outcome.
+        - Compulsions bring short-term relief, which teaches the brain that the
+          ritual prevented disaster, so the cycle strengthens over time. OCD can
+          consume hours a day. Most people recognize that their thoughts are
+          excessive, but the feeling that something is wrong or incomplete
+          overrides that knowledge.
+        - Obsessions are not wishes or desires. People with OCD often have
+          intrusive thoughts about harming others or taboo topics precisely
+          because these thoughts are so upsetting to them.
+    brain:
+        - area: ofc
+          level: primary
+          note:
+              Assigns value and signals that something is wrong. In OCD it is
+              overactive, especially when triggered, producing a persistent
+              false alarm that something needs fixing.
+        - area: caudate
+          level: primary
+          note:
+              Normally filters which thoughts and actions get through.
+              Overactivity in OFC–caudate loops fails to shut off worry signals,
+              so obsessions keep returning. Successful treatment reduces caudate
+              activity.
+        - area: acc
+          level: primary
+          note:
+              Generates error signals. Excessive error signaling creates the
+              feeling that an action was not done right, driving checking and
+              repeating.
+        - area: thalamus
+          level: secondary
+          note:
+              Completes the cortico-striato-thalamo-cortical loop. Overactivity
+              in this loop keeps the cycle of obsession and compulsion running.
+        - area: putamen
+          level: secondary
+          note:
+              Supports habits. As compulsions repeat, control shifts toward
+              habit circuits, making rituals more automatic.
+    symptoms:
+        - Contamination fears and washing or cleaning
+        - Doubts about harm or mistakes and repeated checking
+        - Need for symmetry, order or "just right" feelings
+        - Unwanted taboo or violent thoughts and mental rituals
+        - Counting, repeating, praying or reviewing
+        - Reassurance seeking and avoidance of triggers
+    diagnosis:
+        Requires obsessions, compulsions or both that are time-consuming (over
+        an hour a day) or cause significant distress or impairment. Clinicians
+        assess insight and the Y-BOCS scale measures severity.
+    types:
+        - "Insight specifiers: good or fair insight, poor insight, and absent
+          insight or delusional beliefs."
+        - Tic-related OCD is a recognized specifier.
+    causes:
+        - OCD is moderately heritable (about 40–50%). Brain circuit differences,
+          stressful life events and, in some children, sudden onset after
+          infection (PANS/PANDAS, still debated) contribute.
+    treatment:
+        - "Exposure and response prevention (ERP) is the most effective therapy:
+          gradually facing triggers while resisting compulsions so the brain
+          learns that anxiety falls on its own. SSRIs, often at higher doses
+          than for depression, and clomipramine are effective medications;
+          augmentation with low-dose antipsychotics can help."
+        - For severe, treatment-resistant OCD, options include deep brain
+          stimulation, deep TMS (FDA-cleared for OCD) and, rarely, lesion
+          surgery such as cingulotomy or capsulotomy.
+    course:
+        Usually chronic with fluctuations, but most people improve substantially
+        with ERP and/or medication.
+bdd:
+    overview:
+        - In body dysmorphic disorder, a person is preoccupied with one or more
+          perceived flaws in appearance that are slight or not visible to
+          others, and performs repetitive behaviors such as mirror checking,
+          excessive grooming, skin picking or seeking reassurance.
+        - BDD causes severe distress and often social avoidance. Many people
+          seek cosmetic procedures, which rarely relieve the preoccupation.
+          Muscle dysmorphia, the belief that one's body is too small, is a
+          recognized form.
+    brain:
+        - area: ofc
+          level: secondary
+          note:
+              Overactive valuation circuits shared with OCD keep attention fixed
+              on the perceived defect.
+        - area: caudate
+          level: secondary
+          note:
+              Shared obsessive-compulsive circuitry may make checking and
+              grooming rituals hard to stop.
+        - area: fusiform
+          level: secondary
+          note:
+              People with BDD tend to process faces in fine detail rather than
+              as a whole, magnifying small features.
+        - area: v2v3
+          level: secondary
+          note:
+              An imbalance favoring detailed visual processing over global shape
+              may make minor flaws stand out.
+    symptoms:
+        - Preoccupation with a perceived flaw for hours a day
+        - Mirror checking or avoiding mirrors
+        - Excessive grooming, camouflaging with makeup or clothing
+        - Comparing appearance with others
+        - Seeking reassurance or cosmetic procedures
+        - Social avoidance
+    diagnosis:
+        Requires preoccupation with perceived flaws, repetitive behaviors and
+        significant distress, not better explained by an eating disorder.
+        Insight is rated.
+    causes:
+        - Genetics, perfectionism, detail-focused perception and experiences
+          such as teasing.
+    treatment:
+        - CBT tailored to BDD, including exposure and response prevention and
+          perceptual retraining, and SSRIs, often at high doses.
+    course:
+        Often chronic without treatment and linked to high rates of depression,
+        but treatment helps many people.
+hoarding:
+    overview:
+        - Hoarding disorder is persistent difficulty discarding possessions,
+          regardless of their actual value, because of a strong perceived need
+          to save them and distress at the thought of letting go. Clutter
+          accumulates until rooms cannot be used for their intended purpose.
+        - "It differs from collecting: items are not organized or displayed, and
+          the clutter causes distress, health and safety risks, and family
+          conflict. Insight is often limited."
+    brain:
+        - area: acc
+          level: primary
+          note:
+              Shows abnormal activity when people decide whether to discard
+              their own items, which may make the decision feel threatening.
+        - area: antinsula
+          level: primary
+          note:
+              Heightened emotional reaction during discarding decisions makes
+              letting go feel unbearable.
+        - area: dlpfc
+          level: secondary
+          note:
+              Difficulties with categorizing, planning and decision-making make
+              organizing and discarding hard.
+    symptoms:
+        - Great distress at discarding items
+        - Excessive acquiring
+        - Clutter blocking living spaces
+        - Indecisiveness and difficulty organizing
+    diagnosis:
+        Diagnosed by interview, home visits or photos, and rating scales such as
+        the Clutter Image Rating.
+    causes:
+        - Strong family history, indecisiveness, and stressful or traumatic
+          events.
+    treatment:
+        - Specialized CBT for hoarding builds skills in sorting, decision-making
+          and resisting acquiring. Home-based help and community supports are
+          often needed.
+    course: Often starts in adolescence and worsens with age.
+trich:
+    overview:
+        - Trichotillomania (hair pulling) and excoriation disorder (skin
+          picking) are body-focused repetitive behaviors. People repeatedly pull
+          hair or pick skin, causing hair loss or skin damage, and make repeated
+          attempts to stop.
+        - The behavior can be automatic, happening while reading or watching TV
+          without awareness, or focused, done deliberately to relieve tension or
+          an urge. It often brings a sense of relief or satisfaction followed by
+          shame.
+    brain:
+        - area: putamen
+          level: secondary
+          note:
+              Habit circuits drive the automatic, repetitive nature of the
+              behavior.
+        - area: acc
+          level: secondary
+          note:
+              Altered self-monitoring makes it harder to notice and stop the
+              behavior.
+        - area: cerebhemi
+          level: secondary
+          note:
+              Gray matter differences have been reported in some studies (role
+              unclear).
+    symptoms:
+        - Repeated hair pulling or skin picking
+        - Tension before and relief during the behavior
+        - Automatic episodes without awareness
+        - Visible hair loss or skin damage
+        - Shame and hiding the effects
+    diagnosis: Clinical diagnosis after ruling out dermatological causes.
+    causes:
+        - Genetics, differences in habit and reward circuits, and the behavior's
+          role in regulating boredom or stress.
+    treatment:
+        - Habit reversal training and the comprehensive behavioral model (ComB).
+          N-acetylcysteine has some evidence.
+    course: Often begins around puberty and can be chronic.
+ptsd:
+    overview:
+        - "Post-traumatic stress disorder can develop after experiencing or
+          witnessing an actual or threatened death, serious injury or sexual
+          violence. Symptoms last more than a month and fall into four clusters:
+          intrusive re-experiencing, avoidance, negative changes in thoughts and
+          mood, and changes in arousal and reactivity."
+        - "In PTSD, the brain's threat system stays stuck in danger mode: the
+          trauma memory is stored as a vivid sensory fragment that can be
+          triggered by reminders, rather than as an ordinary memory placed in
+          the past. Most people exposed to trauma do not develop PTSD; recovery
+          is the most common outcome."
+    brain:
+        - area: amygdala
+          level: primary
+          note:
+              The threat detector is hyperreactive to trauma reminders and even
+              neutral cues, driving flashbacks, panic and hypervigilance.
+        - area: vmpfc
+          level: primary
+          note:
+              Normally stores safety learning and calms the amygdala. In PTSD it
+              is underactive, so fear extinction fails and the brain keeps
+              treating safe situations as dangerous.
+        - area: hippocampus
+          level: primary
+          note:
+              Places memories in time and context. Smaller volume and weaker
+              function make it harder to tell "then" from "now" and safe
+              contexts from dangerous ones, so reminders trigger fear anywhere.
+        - area: acc
+          level: secondary
+          note:
+              Reduced volume and regulation contribute to difficulty controlling
+              emotional responses.
+        - area: antinsula
+          level: secondary
+          note: Heightened body-based anxiety and emotional awareness of threat.
+        - area: lc
+          level: secondary
+          note:
+              High norepinephrine output drives hyperarousal, startle and
+              nightmares; prazosin, which blocks one norepinephrine effect, can
+              reduce nightmares.
+        - area: pvn
+          level: secondary
+          note:
+              Altered stress-hormone regulation; cortisol responses are often
+              abnormal.
+    symptoms:
+        - Intrusive memories, flashbacks and nightmares
+        - Intense distress or body reactions to reminders
+        - Avoiding thoughts, places or people linked to the trauma
+        - Persistent negative beliefs, blame, guilt or shame
+        - Emotional numbness and detachment
+        - Hypervigilance and exaggerated startle
+        - Irritability, trouble concentrating and sleeping
+    diagnosis:
+        Requires trauma exposure plus symptoms in all four clusters for more
+        than a month causing impairment. The PCL-5 and CAPS-5 are commonly used.
+        A dissociative subtype exists.
+    types:
+        - "With dissociative symptoms: depersonalization or derealization."
+        - "With delayed expression: full criteria met six months or more after
+          the event."
+        - Complex PTSD (in ICD-11) adds problems with emotion regulation,
+          self-concept and relationships after prolonged trauma.
+    causes:
+        - Risk is higher with interpersonal violence, repeated or prolonged
+          trauma, earlier trauma, lack of support afterward, ongoing stress and
+          genetic vulnerability.
+    treatment:
+        - "Trauma-focused psychotherapies are first-line: prolonged exposure,
+          cognitive processing therapy and EMDR. They help the brain reprocess
+          the memory and relearn safety."
+        - SSRIs (sertraline, paroxetine) and venlafaxine are first-line
+          medications. Prazosin may reduce nightmares for some people. Newer
+          approaches under study include MDMA-assisted therapy, which the FDA
+          declined to approve in 2024.
+    course:
+        Many people recover within months; for others, PTSD can last years.
+        Effective treatment helps a large share of people even after long
+        illness.
+asd_stress:
+    overview:
+        - Acute stress disorder involves PTSD-like symptoms beginning 3 days to
+          1 month after a traumatic event. It often includes dissociation, such
+          as feeling in a daze. Many people recover; some go on to develop PTSD.
+    brain:
+        - area: amygdala
+          level: primary
+          note:
+              Acute threat activation following trauma keeps the alarm system
+              on.
+        - area: hippocampus
+          level: secondary
+          note:
+              High stress hormones disrupt how the memory is encoded,
+              contributing to fragmented recall.
+    symptoms:
+        - Intrusive memories
+        - Dissociation, numbness or daze
+        - Avoidance
+        - Anxiety, poor sleep and hyperarousal
+    diagnosis:
+        Requires nine or more symptoms from intrusion, negative mood,
+        dissociation, avoidance and arousal categories, lasting 3 days to 1
+        month.
+    causes:
+        - Trauma exposure, with risk factors similar to PTSD.
+    treatment:
+        - Brief trauma-focused CBT can prevent PTSD. Single-session
+          psychological debriefing is not recommended because it can increase
+          risk.
+    course: Resolves within a month for many; about half go on to develop PTSD.
+did:
+    overview:
+        - Dissociative identity disorder involves two or more distinct identity
+          states, each with its own sense of self and agency, and recurrent gaps
+          in memory for everyday events, personal information or trauma. It is
+          understood as a response to severe, repeated childhood trauma in which
+          dissociation was a way to survive.
+        - "DID remains debated: some researchers argue it can be shaped by
+          suggestion or social expectations. Most clinicians who specialize in
+          trauma recognize it as a real, though rare and often misdiagnosed,
+          condition."
+    brain:
+        - area: hippocampus
+          level: secondary
+          note:
+              Smaller volume is reported, possibly reflecting chronic early
+              stress, and may relate to memory gaps.
+        - area: amygdala
+          level: secondary
+          note:
+              Smaller volume and altered emotional reactivity are reported in
+              some studies.
+        - area: precuneus
+          level: secondary
+          note:
+              Changes in self-awareness networks have been observed between
+              identity states.
+        - area: dlpfc
+          level: secondary
+          note:
+              Altered prefrontal control may contribute to memory and identity
+              disruptions (limited research).
+    symptoms:
+        - Distinct identity states with different traits, voices or memories
+        - Memory gaps for everyday events and personal history
+        - Finding unexplained items or writing
+        - Depersonalization and derealization
+        - Co-occurring PTSD, depression and self-harm
+    diagnosis:
+        Requires specialized assessment, often with structured interviews such
+        as the SCID-D, and careful differentiation from psychosis, borderline
+        personality disorder and seizures.
+    causes:
+        - Severe, chronic early trauma combined with a high capacity for
+          dissociation and lack of supportive caregiving.
+    treatment:
+        - "Long-term, phase-oriented psychotherapy: safety and stabilization,
+          then processing traumatic memories, then integration or cooperation
+          among identity states."
+    course: Usually chronic, but many people improve with specialized treatment.
+dpdr:
+    overview:
+        - "People with depersonalization/derealization disorder repeatedly feel
+          detached from their own mind, body or feelings, as if observing
+          themselves from outside, or feel that the world is unreal, foggy or
+          dreamlike. Reality testing stays intact: they know the experience is
+          not literally true."
+        - Brief episodes are common under stress or sleep deprivation; the
+          disorder involves persistent or recurrent episodes that cause
+          distress.
+    brain:
+        - area: antinsula
+          level: primary
+          note:
+              Generates the felt sense of emotions and the body. Reduced
+              activity matches the experience of emotional numbness and feeling
+              disconnected from oneself.
+        - area: vlpfc
+          level: secondary
+          note:
+              Overactive prefrontal inhibition of limbic responses is thought to
+              dampen emotional feelings, a kind of overcorrection.
+        - area: angular
+          level: secondary
+          note:
+              The temporoparietal junction supports the sense of being located
+              in one's own body; altered activity is linked to out-of-body-like
+              experiences.
+    symptoms:
+        - Feeling like an outside observer of yourself
+        - Emotional and physical numbness
+        - Surroundings seem flat, distant or artificial
+        - Distorted sense of time
+        - Distress about the experience
+    diagnosis:
+        Requires persistent or recurrent episodes with intact reality testing,
+        after ruling out substances, seizures and other disorders.
+    causes:
+        - Severe stress, childhood emotional abuse, anxiety, and drug
+          experiences such as cannabis can trigger it.
+    treatment:
+        - Psychotherapy (CBT, grounding skills), reducing anxiety and treating
+          co-occurring conditions. No medication is specifically approved.
+    course: Often chronic, though it can fluctuate and improve.
+ssd:
+    overview:
+        - Somatic symptom disorder involves one or more distressing physical
+          symptoms, which may or may not have a medical explanation, together
+          with excessive thoughts, feelings or behaviors about them, such as
+          persistent worry about their seriousness or spending large amounts of
+          time and energy on them.
+        - The symptoms are real, not imagined. The disorder lies in how
+          attention, interpretation and worry amplify them and take over daily
+          life.
+    brain:
+        - area: antinsula
+          level: secondary
+          note:
+              Amplifies attention to body signals, making normal sensations feel
+              more intense.
+        - area: acc
+          level: secondary
+          note: Heightens the emotional distress attached to bodily sensations.
+        - area: amygdala
+          level: secondary
+          note: Interprets sensations as threatening, increasing worry.
+    symptoms:
+        - Distressing symptoms such as pain or fatigue
+        - Persistent worry about their seriousness
+        - Frequent medical visits and tests
+        - Symptoms dominating daily life
+    diagnosis:
+        Diagnosed by the excessive response to symptoms lasting six months, not
+        by the absence of a medical explanation.
+    causes:
+        - Heightened body sensitivity, anxiety and depression, past illness
+          experiences and stress.
+    treatment:
+        - CBT, regular scheduled visits with one doctor and treatment of
+          co-occurring anxiety or depression.
+    course: Often chronic, but CBT can reduce distress and improve functioning.
+fnd:
+    overview:
+        - Functional neurological disorder causes real neurological symptoms,
+          such as weakness, tremor, seizures, walking problems or numbness, that
+          result from a problem with how the brain functions rather than
+          structural damage. It is often described as a "software" rather than
+          "hardware" problem.
+        - FND is common and genuinely disabling. Symptoms are not faked or
+          imagined, and many people have no identifiable psychological trigger.
+          Diagnosis is based on positive clinical signs, not just normal tests.
+    brain:
+        - area: angular
+          level: secondary
+          note:
+              The temporoparietal junction contributes to the sense of agency.
+              Reduced activity may explain why movements feel involuntary.
+        - area: sma
+          level: secondary
+          note:
+              Altered movement preparation may disrupt normal voluntary control.
+        - area: amygdala
+          level: secondary
+          note:
+              Increased emotional reactivity may hijack motor control circuits.
+        - area: antinsula
+          level: secondary
+          note: Altered body awareness may change how symptoms are experienced.
+    symptoms:
+        - Limb weakness or paralysis
+        - Functional (dissociative) seizures
+        - Tremor, jerks or unusual gait
+        - Numbness or sensory loss
+        - Speech or swallowing problems
+    diagnosis:
+        Neurologists identify positive signs such as Hoover's sign for
+        functional weakness and use video EEG for functional seizures.
+    causes:
+        - Physical injury, illness, stress, trauma and attention focused on the
+          body, often in combination.
+    treatment:
+        - A clear explanation of the diagnosis is the first step. Specialized
+          physiotherapy, occupational therapy and CBT help retrain brain
+          function.
+    course: Variable; earlier diagnosis and treatment improve outcomes.
+anorexia:
+    overview:
+        - Anorexia nervosa is a serious eating disorder characterized by
+          restriction of energy intake leading to significantly low body weight
+          for a person's age and health, an intense fear of gaining weight or
+          behaviors that prevent weight gain, and a disturbed experience of body
+          shape or denial of the seriousness of low weight.
+        - It affects every organ system, including the heart, bones, hormones
+          and brain, and has one of the highest mortality rates of any
+          psychiatric condition. Starvation itself changes thinking, making it
+          more rigid and food-focused, which helps keep the illness going. Full
+          recovery is possible, especially with early treatment.
+    brain:
+        - area: antinsula
+          level: primary
+          note:
+              Integrates hunger, taste and body signals into feelings. Altered
+              activity may blunt hunger signals and change how food and the body
+              feel, contributing to restriction and distorted body experience.
+        - area: caudate
+          level: secondary
+          note:
+              Part of the reward and habit system. Altered dopamine responses
+              may make restriction feel rewarding and food less so, and
+              restriction can become a habit.
+        - area: dlpfc
+          level: secondary
+          note:
+              Supports self-control. Heightened prefrontal control is linked to
+              the ability to override hunger and to rigid, perfectionistic
+              thinking.
+        - area: ofc
+          level: secondary
+          note:
+              Represents the reward value of food. Altered responses may reduce
+              the pleasure of eating.
+        - area: hypothalamus
+          level: secondary
+          note:
+              Regulates appetite and reproductive hormones. Starvation disrupts
+              these systems, causing loss of periods and other hormone changes.
+    symptoms:
+        - Restriction of food intake
+        - Intense fear of weight gain
+        - Distorted body image
+        - Denial of the seriousness of low weight
+        - Rigid food rituals
+        - Excessive exercise in some
+        - "Physical effects: low heart rate, dizziness, feeling cold, loss of
+          periods, bone loss"
+    diagnosis:
+        Clinicians assess weight history, eating behaviors, beliefs about weight
+        and shape, and medical status, including heart rhythm, electrolytes and
+        bone health. Severity is graded by body mass index in adults and
+        percentiles in young people.
+    types:
+        - "Restricting type: weight loss mainly through dieting, fasting or
+          excessive exercise."
+        - "Binge-eating/purging type: recurrent binge eating or purging
+          behaviors."
+    causes:
+        - Genetics accounts for about 50–60% of risk, and recent studies suggest
+          metabolic as well as psychiatric genetic factors. Temperament
+          (perfectionism, anxiety, harm avoidance), dieting, and cultural
+          pressures about thinness contribute.
+    treatment:
+        - Medical stabilization and nutritional restoration are essential.
+          Family-based treatment is the most effective approach for adolescents.
+          For adults, specialized therapies such as CBT-E, MANTRA and specialist
+          supportive clinical management are used.
+        - No medication treats anorexia directly, though co-occurring conditions
+          may be treated. Many brain changes improve with weight restoration.
+    course:
+        The course varies; many people recover fully, some have relapses and a
+        minority have a chronic course. Early treatment improves outcomes.
+bulimia:
+    overview:
+        - Bulimia nervosa involves recurrent episodes of binge eating with a
+          sense of loss of control, followed by compensatory behaviors to
+          prevent weight gain, at least once a week for three months, with
+          self-worth heavily based on body shape and weight.
+        - People with bulimia are often at a normal weight, which can make the
+          disorder easy to miss. Episodes are usually secret and accompanied by
+          shame. Repeated purging can cause dangerous electrolyte imbalances and
+          dental damage.
+    brain:
+        - area: vlpfc
+          level: primary
+          note:
+              Supports inhibitory control. Reduced activity may make it harder
+              to stop once a binge starts.
+        - area: ofc
+          level: secondary
+          note: Altered food-reward valuation may increase the drive to binge.
+        - area: antinsula
+          level: secondary
+          note:
+              Altered taste and body-signal processing may affect hunger and
+              fullness cues.
+        - area: nacc
+          level: secondary
+          note: Altered reward responses to food may reinforce the binge cycle.
+    symptoms:
+        - Recurrent binge episodes with loss of control
+        - Compensatory behaviors
+        - Self-evaluation driven by shape and weight
+        - Secrecy and shame
+        - Swollen cheeks, dental erosion, electrolyte problems
+    diagnosis:
+        Requires binge and compensatory episodes at least weekly for three
+        months, with self-evaluation overly influenced by weight and shape.
+    causes:
+        - Genetics, dieting, low self-esteem, emotion regulation difficulties
+          and cultural pressures.
+    treatment:
+        - CBT-E is the leading treatment. Fluoxetine is FDA-approved for
+          bulimia.
+    course: Many people improve with treatment, though relapse can occur.
+bed:
+    overview:
+        - Binge-eating disorder involves recurrent binge episodes with a sense
+          of loss of control and marked distress, without the regular
+          compensatory behaviors of bulimia. It is the most common eating
+          disorder.
+        - Binges often follow stress, negative emotions or restrictive dieting
+          and are followed by shame and guilt, which can trigger the next binge.
+    brain:
+        - area: nacc
+          level: primary
+          note:
+              Shows heightened responses to food cues, increasing the drive to
+              eat.
+        - area: ofc
+          level: secondary
+          note: Altered reward valuation of food.
+        - area: vlpfc
+          level: secondary
+          note:
+              Reduced inhibitory control makes it harder to stop eating once
+              started.
+    symptoms:
+        - Eating unusually large amounts in a short period
+        - Feeling out of control while eating
+        - Eating rapidly, when not hungry or until uncomfortably full
+        - Eating alone due to embarrassment
+        - Shame and guilt afterward
+    diagnosis:
+        Requires binge episodes at least weekly for three months with marked
+        distress.
+    causes:
+        - Genetics, dieting, stress, depression and difficulties regulating
+          emotion.
+    treatment:
+        - CBT is first-line. Lisdexamfetamine is FDA-approved for moderate to
+          severe binge-eating disorder.
+    course: Often chronic but responsive to treatment.
+insomnia:
+    overview:
+        - Insomnia disorder is persistent difficulty falling asleep, staying
+          asleep or waking too early, at least three nights a week for three
+          months, despite enough opportunity to sleep, causing daytime fatigue,
+          mood problems or impaired functioning.
+        - "It is understood as a state of hyperarousal: the brain and body stay
+          too alert at night. Over time, worrying about sleep and spending long
+          hours awake in bed teach the brain to associate the bed with
+          wakefulness, which keeps insomnia going even after the original
+          trigger is gone."
+    brain:
+        - area: lateralhyp
+          level: secondary
+          note:
+              Arousal systems such as orexin stay too active at night, keeping
+              the brain awake.
+        - area: thalamus
+          level: secondary
+          note:
+              Normally gates sensory input and deactivates at sleep onset.
+              Reduced deactivation may let the brain stay alert.
+        - area: acc
+          level: secondary
+          note:
+              Heightened activity is linked to a racing, worried mind at
+              bedtime.
+        - area: amygdala
+          level: secondary
+          note: Heightened emotional arousal makes it harder to wind down.
+    symptoms:
+        - Trouble falling or staying asleep
+        - Waking too early
+        - Daytime fatigue and sleepiness
+        - Poor concentration and irritability
+        - Worry about sleep
+    diagnosis:
+        Based on sleep history and sleep diaries; sleep studies are used if
+        sleep apnea or other disorders are suspected.
+    causes:
+        - Hyperarousal, stress, irregular schedules, anxiety and depression,
+          pain and learned links between bed and wakefulness.
+    treatment:
+        - CBT-I (stimulus control, sleep restriction, cognitive work and sleep
+          hygiene) is first-line and outperforms sleeping pills over the long
+          term. Medications are generally for short-term use.
+    course: Can be chronic but responds well to CBT-I.
+narcolepsy:
+    overview:
+        - "Narcolepsy is a chronic neurological sleep disorder in which the
+          brain cannot properly regulate sleep and wakefulness. It causes
+          overwhelming daytime sleepiness, and in type 1, cataplexy: sudden
+          muscle weakness triggered by strong emotions such as laughter."
+        - "Features of REM sleep intrude into waking: muscle paralysis appears
+          as cataplexy and sleep paralysis, and dream imagery appears as
+          hallucinations when falling asleep or waking."
+    brain:
+        - area: lateralhyp
+          level: primary
+          note:
+              Orexin neurons stabilize wakefulness. Their loss in type 1
+              narcolepsy leaves the sleep–wake switch unstable, so people slip
+              into sleep or REM-like states during the day.
+        - area: pons
+          level: secondary
+          note:
+              Controls REM sleep and its muscle paralysis. Without orexin, this
+              paralysis can switch on while awake, causing cataplexy and sleep
+              paralysis.
+        - area: amygdala
+          level: secondary
+          note:
+              Strong emotions activate the amygdala, which can trigger cataplexy
+              through brainstem circuits.
+    symptoms:
+        - Excessive daytime sleepiness and sudden sleep attacks
+        - Cataplexy (type 1)
+        - Sleep paralysis
+        - Vivid hallucinations when falling asleep or waking
+        - Fragmented nighttime sleep
+    diagnosis:
+        Overnight sleep study followed by a multiple sleep latency test; low
+        orexin in spinal fluid confirms type 1.
+    types:
+        - "Type 1: with cataplexy and/or low orexin."
+        - "Type 2: without cataplexy, normal orexin."
+    causes:
+        - Type 1 is caused by loss of orexin neurons, probably through an
+          autoimmune attack in people with the HLA-DQB1*06:02 gene variant.
+    treatment:
+        - Modafinil, solriamfetol, pitolisant and stimulants for sleepiness;
+          sodium oxybate for sleepiness and cataplexy; scheduled naps.
+    course: Lifelong, but symptoms are manageable with treatment.
+aud:
+    overview:
+        - Alcohol use disorder is a problematic pattern of drinking marked by
+          loss of control, craving and continued use despite harm. It ranges
+          from mild to severe and involves lasting changes in the brain's
+          reward, stress and self-control systems.
+        - "Addiction is often described in three repeating stages: binge and
+          intoxication (driven by reward), withdrawal and negative feelings
+          (driven by stress systems), and preoccupation and anticipation (driven
+          by weakened prefrontal control). Over time, people drink less for
+          pleasure and more to relieve withdrawal and distress."
+    brain:
+        - area: nacc
+          level: primary
+          note:
+              The reward hub adapts to repeated alcohol-induced dopamine surges,
+              so cues linked to drinking trigger strong craving while ordinary
+              rewards feel less satisfying.
+        - area: vta
+          level: primary
+          note:
+              Alcohol increases dopamine release from VTA neurons, the initial
+              reinforcing effect that drives repeated use.
+        - area: dlpfc
+          level: primary
+          note:
+              Supports self-control and planning. Weakened top-down control
+              makes it harder to resist drinking despite intentions.
+        - area: antinsula
+          level: secondary
+          note: Turns body states into felt urges, contributing to craving.
+        - area: ofc
+          level: secondary
+          note:
+              Altered valuation makes alcohol seem more valuable than other
+              rewards.
+        - area: vermis
+          level: secondary
+          note:
+              Long-term heavy use shrinks the cerebellum, especially the vermis,
+              causing unsteady gait.
+        - area: hippocampus
+          level: secondary
+          note:
+              Alcohol disrupts memory formation (blackouts), and heavy long-term
+              use reduces volume.
+        - area: mammillary
+          level: secondary
+          note:
+              Thiamine deficiency can cause Wernicke-Korsakoff syndrome,
+              damaging these memory structures.
+    symptoms:
+        - Drinking more or longer than intended
+        - Unsuccessful efforts to cut down
+        - Craving
+        - Tolerance
+        - "Withdrawal: shaking, sweating, anxiety, insomnia; in severe cases
+          seizures or delirium tremens"
+        - Continued drinking despite problems
+        - Giving up activities
+    diagnosis:
+        Based on 11 DSM-5 criteria; severity is mild (2–3), moderate (4–5) or
+        severe (6+). The AUDIT questionnaire is a common screening tool.
+    causes:
+        - Genetics (about 50% heritable), early first use, stress, trauma,
+          mental health conditions and social environment.
+    treatment:
+        - Medications include naltrexone, acamprosate and disulfiram.
+          Counseling, CBT, motivational interviewing and mutual-help groups
+          support recovery. Withdrawal from heavy long-term drinking can be
+          dangerous and may need medical supervision.
+    course:
+        Often chronic and relapsing, but many people recover, especially with
+        treatment.
+oud:
+    overview:
+        - Opioid use disorder is a chronic, treatable condition involving
+          compulsive use of opioids such as heroin, fentanyl or prescription
+          painkillers despite harm. Physical dependence develops quickly, and
+          withdrawal is intensely unpleasant, which powerfully drives continued
+          use.
+        - The current overdose crisis is driven mainly by illicitly manufactured
+          fentanyl, which is extremely potent. Medications for opioid use
+          disorder are highly effective and cut overdose deaths substantially,
+          yet they remain underused.
+    brain:
+        - area: vta
+          level: primary
+          note:
+              Opioids inhibit the brakes on VTA dopamine neurons, releasing a
+              surge of dopamine that produces euphoria and reinforces use.
+        - area: nacc
+          level: primary
+          note:
+              Repeated surges reshape the reward hub, building intense craving
+              and cue-driven urges.
+        - area: lc
+          level: secondary
+          note:
+              Opioids suppress the locus coeruleus; during withdrawal it
+              rebounds into overactivity, causing anxiety, sweating and
+              agitation.
+        - area: medulla
+          level: secondary
+          note:
+              The breathing centers are highly sensitive to opioids; overdose
+              kills mainly by stopping breathing.
+        - area: antinsula
+          level: secondary
+          note: Turns withdrawal discomfort into craving.
+        - area: ofc
+          level: secondary
+          note: Altered decision-making favors drug use over other rewards.
+    symptoms:
+        - Strong cravings
+        - Tolerance
+        - "Withdrawal: aches, sweating, diarrhea, anxiety, insomnia"
+        - Loss of control over use
+        - Continued use despite harm
+        - Overdose risk
+    diagnosis: Based on DSM-5 criteria similar to alcohol use disorder.
+    causes:
+        - Exposure to opioids, genetics, chronic pain, trauma, mental health
+          conditions and social factors.
+    treatment:
+        - Buprenorphine, methadone and extended-release naltrexone reduce
+          overdose deaths and support recovery. Naloxone reverses overdoses.
+          Counseling and recovery support help.
+    course:
+        Chronic and relapsing, but long-term medication treatment greatly
+        improves survival and recovery.
+stimulant:
+    overview:
+        - Stimulant use disorder involves problematic use of cocaine,
+          methamphetamine or other stimulants, with craving, binge patterns and
+          continued use despite harm. Stimulants produce intense euphoria and
+          energy followed by a crash of exhaustion and low mood.
+        - Heavy use can cause paranoia and psychosis, heart attacks, strokes
+          and, increasingly, overdoses when stimulants are contaminated with
+          fentanyl.
+    brain:
+        - area: nacc
+          level: primary
+          note:
+              Stimulants block dopamine reuptake or force its release, flooding
+              the reward hub with dopamine and producing intense euphoria and
+              craving.
+        - area: vta
+          level: primary
+          note:
+              Dopamine circuitry adapts with repeated use, reducing the brain's
+              response to natural rewards.
+        - area: caudate
+          level: secondary
+          note: Use shifts from goal-directed to habit-driven.
+        - area: ofc
+          level: secondary
+          note: Altered valuation and reduced activity during withdrawal.
+        - area: acc
+          level: secondary
+          note: Weaker error monitoring and control.
+    symptoms:
+        - Binge patterns of use
+        - Intense craving
+        - Paranoia or psychosis with heavy use
+        - Crash of exhaustion and low mood
+        - Weight loss and sleep disruption
+    diagnosis: Based on DSM-5 criteria similar to other substance use disorders.
+    causes:
+        - Genetics, early exposure, trauma, mental health conditions and
+          environment.
+    treatment:
+        - Contingency management has the strongest evidence. CBT also helps.
+          There are no FDA-approved medications yet.
+    course: Chronic and relapsing, but recovery is common with treatment.
+gambling:
+    overview:
+        - Gambling disorder is persistent, problematic gambling causing
+          significant distress or harm. It is the only behavioral addiction in
+          the main DSM-5 diagnostic section.
+        - It activates the same reward circuits as drugs. Unpredictable wins and
+          near-misses are especially powerful, and chasing losses drives
+          escalating bets and debt.
+    brain:
+        - area: nacc
+          level: primary
+          note:
+              Responds strongly to wins and near-misses, reinforcing continued
+              gambling.
+        - area: vmpfc
+          level: secondary
+          note: Altered valuation of risky choices.
+        - area: ofc
+          level: secondary
+          note: Altered decision-making.
+        - area: antinsula
+          level: secondary
+          note:
+              Near-miss effects activate the insula, increasing the urge to
+              continue.
+    symptoms:
+        - Needing to bet more for excitement
+        - Restlessness when trying to stop
+        - Chasing losses
+        - Lying to hide gambling
+        - Jeopardizing relationships or work
+        - Relying on others for money
+    diagnosis: Requires four or more of nine DSM-5 criteria within a year.
+    causes:
+        - Genetics, impulsivity, early wins, easy access, and rarely dopamine
+          agonist medications used for Parkinson's disease.
+    treatment:
+        - CBT has the best support; naltrexone has some evidence. Self-exclusion
+          programs and support groups help.
+    course: Can be chronic, but many people recover.
+bpd:
+    overview:
+        - Borderline personality disorder is a long-standing pattern of intense
+          and unstable emotions, unstable relationships and self-image, and
+          impulsivity. Emotions rise quickly, run hot and take a long time to
+          settle. It usually emerges in adolescence or early adulthood.
+        - A widely used model describes BPD as the result of high biological
+          emotional sensitivity meeting an environment that invalidated or
+          punished emotions. People with BPD often experience intense fear of
+          abandonment and may react strongly to perceived rejection. Self-harm
+          and suicidal behavior are common and serious.
+        - BPD is highly treatable, and long-term studies show that most people
+          improve substantially over time.
+    brain:
+        - area: amygdala
+          level: primary
+          note:
+              Detects emotional threat. In BPD it reacts more strongly to social
+              cues like a neutral face or a delayed reply, and takes longer to
+              settle afterward. Together with weaker prefrontal calming, this
+              helps explain fast, intense mood shifts and fear of abandonment.
+        - area: vlpfc
+          level: primary
+          note:
+              Regulates emotion from the top down. Reduced activity weakens the
+              brake on emotional reactions, so feelings escalate quickly.
+        - area: acc
+          level: primary
+          note:
+              Monitors conflict and helps regulate emotion and impulses. Reduced
+              activity and volume are linked to difficulty pausing before acting
+              on strong feelings.
+        - area: ofc
+          level: secondary
+          note:
+              Altered activity is linked to impulsivity and difficulty weighing
+              consequences.
+        - area: hippocampus
+          level: secondary
+          note:
+              Smaller volume, often associated with early trauma, may affect
+              emotional memory and stress regulation.
+        - area: antinsula
+          level: secondary
+          note:
+              Heightened sensitivity to social exclusion makes rejection feel
+              especially painful.
+    symptoms:
+        - Intense fear of abandonment
+        - Unstable, intense relationships swinging between idealization and
+          devaluation
+        - Unstable sense of identity
+        - Impulsive behaviors
+        - Recurrent self-harm or suicidal behavior
+        - Rapid mood shifts lasting hours to days
+        - Chronic emptiness
+        - Intense, hard-to-control anger
+        - Stress-related paranoia or dissociation
+    diagnosis:
+        Requires at least five of nine criteria, beginning by early adulthood
+        and present across contexts. Clinicians rule out bipolar disorder, PTSD
+        and substance effects, which often co-occur.
+    causes:
+        - Biological emotional sensitivity (heritability about 40%) combined
+          with an invalidating environment, childhood trauma, neglect or
+          unstable attachments.
+    treatment:
+        - Dialectical behavior therapy (DBT), teaching emotion regulation,
+          distress tolerance, mindfulness and relationship skills, has the
+          strongest evidence. Mentalization-based treatment, schema therapy and
+          transference-focused psychotherapy also work. Medication can help
+          specific symptoms but is not a primary treatment.
+    course:
+        "Outcomes are better than once thought: in long-term studies, most
+        people with BPD no longer meet the diagnostic criteria after 10 years,
+        though some difficulties may persist."
+aspd:
+    overview:
+        - Antisocial personality disorder is a long-standing pattern of
+          disregarding and violating the rights of others, beginning with
+          conduct problems before age 15 and diagnosed only in adults.
+          Psychopathy is a related but narrower research concept that adds
+          shallow emotion and a marked lack of empathy and remorse.
+        - Not everyone with ASPD is violent or has psychopathic traits, and the
+          disorder is heavily overrepresented in prisons, where up to around
+          half of inmates may meet criteria.
+    brain:
+        - area: amygdala
+          level: primary
+          note:
+              Reduced response to fear and others' distress, especially in
+              people with psychopathic traits, weakens the emotional signals
+              that normally discourage harming others.
+        - area: vmpfc
+          level: primary
+          note:
+              Reduced activity and volume are linked to poor moral
+              decision-making and failure to learn from punishment.
+        - area: ofc
+          level: primary
+          note: Reduced gray matter is linked to impulsivity and poor judgment.
+        - area: acc
+          level: secondary
+          note:
+              Weaker error monitoring makes it harder to adjust behavior after
+              mistakes.
+        - area: nacc
+          level: secondary
+          note: Heightened reward sensitivity may drive risk-taking.
+    symptoms:
+        - Repeated rule- or law-breaking
+        - Deceitfulness and manipulation
+        - Impulsivity and failure to plan
+        - Irritability and aggression
+        - Reckless disregard for safety
+        - Irresponsibility
+        - Lack of remorse
+    diagnosis:
+        Requires age 18 or older, evidence of conduct disorder before 15, and at
+        least three of seven criteria.
+    causes:
+        - Genetics, childhood conduct disorder, abuse or neglect, and harsh or
+          inconsistent parenting.
+    treatment:
+        - Difficult to treat. Approaches focus on co-occurring substance use,
+          anger management and CBT-based programs. Early intervention for
+          childhood conduct problems is most promising.
+    course: Antisocial behavior often decreases after age 40.
+npd:
+    overview:
+        - Narcissistic personality disorder is a pervasive pattern of
+          grandiosity, need for admiration and lack of empathy. Beneath the
+          confident surface, self-esteem is often fragile and highly sensitive
+          to criticism, which can trigger shame, rage or withdrawal.
+        - Researchers distinguish grandiose narcissism (bold, entitled) and
+          vulnerable narcissism (insecure, hypersensitive), which often coexist
+          in the same person.
+    brain:
+        - area: antinsula
+          level: primary
+          note:
+              Reduced gray matter in the left anterior insula is linked to lower
+              empathy, which may make it harder to feel what others feel.
+        - area: dmpfc
+          level: secondary
+          note:
+              Altered self-related processing may contribute to an inflated or
+              unstable self-image.
+        - area: acc
+          level: secondary
+          note:
+              Altered response to social exclusion may underlie sensitivity to
+              criticism.
+    symptoms:
+        - Inflated sense of importance
+        - Fantasies of success or power
+        - Need for excessive admiration
+        - Sense of entitlement
+        - Exploiting others
+        - Lack of empathy
+        - Envy and arrogance
+    diagnosis:
+        Requires at least five of nine criteria beginning by early adulthood.
+    causes:
+        - Genetics and childhood experiences, including both excessive praise
+          and harsh criticism.
+    treatment:
+        - Long-term psychotherapy such as transference-focused psychotherapy or
+          schema therapy.
+    course: Often stable, though some traits soften with age.
+avpd:
+    overview:
+        - Avoidant personality disorder is a pervasive pattern of social
+          inhibition, feelings of inadequacy and extreme sensitivity to
+          criticism, leading to avoidance of social contact despite wanting it.
+          It overlaps heavily with severe social anxiety disorder.
+    brain:
+        - area: amygdala
+          level: primary
+          note:
+              Heightened threat response to social cues overlaps with social
+              anxiety.
+        - area: antinsula
+          level: secondary
+          note: Heightened social pain.
+        - area: dmpfc
+          level: secondary
+          note: Self-focused evaluation.
+    diagnosis:
+        Requires at least four of seven criteria beginning by early adulthood.
+    causes:
+        - Shy temperament, genetics and experiences of rejection.
+    treatment:
+        - CBT and schema therapy; SSRIs may help with anxiety.
+    course: Often chronic, but therapy can lead to substantial improvement.
+ocpd:
+    overview:
+        - OCPD is a pervasive preoccupation with orderliness, perfectionism and
+          control at the expense of flexibility and efficiency. Unlike OCD,
+          there are usually no true obsessions or compulsions, and people see
+          their standards as correct rather than distressing.
+    brain:
+        - area: dlpfc
+          level: secondary
+          note: Altered cognitive control (limited research).
+        - area: caudate
+          level: secondary
+          note: Some overlap with OCD circuitry has been proposed.
+        - area: ofc
+          level: secondary
+          note: Rigid valuation (limited research).
+    diagnosis:
+        Requires at least four of eight criteria beginning by early adulthood.
+    causes:
+        - Genetics and temperament; it often runs in families.
+    treatment:
+        - CBT and psychodynamic therapy.
+    course: Often stable over time.
+stpd:
+    overview:
+        - Schizotypal personality disorder involves social and interpersonal
+          deficits, acute discomfort in close relationships, and odd beliefs,
+          perceptions or behavior. It shares genetic risk with schizophrenia but
+          without sustained psychosis.
+    brain:
+        - area: stg
+          level: secondary
+          note:
+              Smaller left superior temporal gyrus, similar to schizophrenia,
+              may relate to unusual perceptions.
+        - area: dlpfc
+          level: secondary
+          note: Mild working memory and prefrontal changes.
+        - area: latvent
+          level: secondary
+          note: Mild ventricular enlargement in some studies.
+    diagnosis:
+        Requires at least five of nine criteria beginning by early adulthood.
+    causes:
+        - Shares genetic risk with schizophrenia.
+    treatment:
+        - Psychotherapy and social skills training; low-dose antipsychotics for
+          some symptoms.
+    course: Usually stable; a minority develop schizophrenia.
+ppd:
+    overview:
+        - Paranoid personality disorder is a pervasive distrust and
+          suspiciousness of others, interpreting their motives as harmful,
+          without the fixed delusions of psychosis.
+    brain:
+        - area: amygdala
+          level: secondary
+          note:
+              Heightened threat detection is proposed; direct imaging research
+              is limited.
+    diagnosis:
+        Requires at least four of seven criteria beginning by early adulthood.
+    causes:
+        - Possible genetic links with schizophrenia, and early adversity.
+    treatment:
+        - Psychotherapy focused on building trust.
+    course: Often chronic.
+szpd:
+    overview:
+        - Schizoid personality disorder is a pervasive pattern of detachment
+          from social relationships and a restricted range of emotional
+          expression. People prefer solitary activities and seem indifferent to
+          praise or criticism.
+    brain:
+        - area: nacc
+          level: secondary
+          note:
+              Reduced social reward response is proposed; brain imaging research
+              is very limited.
+    diagnosis:
+        Requires at least four of seven criteria beginning by early adulthood.
+    causes:
+        - Genetic links to the schizophrenia spectrum are suspected.
+    treatment:
+        - People rarely seek treatment; psychotherapy can help when they do.
+    course: Usually stable.
+hpd:
+    overview:
+        - Histrionic personality disorder is a pattern of excessive emotionality
+          and attention-seeking, with a need to be the center of attention.
+    brain:
+        - area: amygdala
+          level: secondary
+          note:
+              Heightened emotional reactivity is proposed; almost no imaging
+              research exists.
+    diagnosis:
+        Requires at least five of eight criteria beginning by early adulthood.
+    causes:
+        - Genetics and early experiences; little research exists.
+    treatment:
+        - Psychotherapy.
+    course: Traits may soften with age.
+dpd:
+    overview:
+        - Dependent personality disorder is a pervasive, excessive need to be
+          taken care of, leading to submissive, clinging behavior and fear of
+          separation.
+    brain:
+        - area: amygdala
+          level: secondary
+          note:
+              Heightened anxiety about separation is proposed; imaging research
+              is very limited.
+    diagnosis:
+        Requires at least five of eight criteria beginning by early adulthood.
+    causes:
+        - Overprotective or authoritarian parenting, anxious temperament and
+          chronic illness in childhood.
+    treatment:
+        - Psychotherapy focused on building independence and assertiveness.
+    course: Can improve with therapy.
+conduct:
+    overview:
+        - Conduct disorder is a repetitive pattern in children or teens of
+          violating the basic rights of others or major social rules, such as
+          aggression, destroying property, deceit and serious rule-breaking.
+        - A subgroup with callous-unemotional traits (limited guilt, empathy and
+          concern about performance) tends to have more severe and persistent
+          problems and different underlying brain patterns.
+    brain:
+        - area: amygdala
+          level: primary
+          note:
+              Reduced response to others' distress, especially with
+              callous-unemotional traits, weakens the signals that normally
+              discourage harming others.
+        - area: vmpfc
+          level: secondary
+          note: Reduced activity during decision-making.
+        - area: antinsula
+          level: secondary
+          note: Altered empathy and emotional awareness.
+        - area: ofc
+          level: secondary
+          note: Reduced sensitivity to punishment.
+    diagnosis:
+        Requires at least three of 15 criteria in the past year. Specifiers
+        include childhood- vs adolescent-onset and limited prosocial emotions.
+    causes:
+        - Genetics, harsh or inconsistent parenting, abuse, neighborhood
+          violence and peer influence.
+    treatment:
+        - Parent management training, multisystemic therapy and school-based
+          programs work best when started early.
+    course:
+        Many improve by adulthood, but childhood onset raises the risk of
+        antisocial personality disorder.
+ied:
+    overview:
+        - Intermittent explosive disorder involves recurrent, impulsive
+          outbursts of verbal or physical aggression that are far out of
+          proportion to the trigger and are not planned.
+    brain:
+        - area: amygdala
+          level: primary
+          note:
+              Overactive response to angry faces and provocation fuels rapid
+              rage.
+        - area: ofc
+          level: primary
+          note:
+              Reduced regulation of anger responses means the brake engages too
+              late.
+        - area: acc
+          level: secondary
+          note: Weaker control over impulsive reactions.
+    diagnosis:
+        Requires frequent verbal outbursts (twice weekly for three months) or
+        three damaging outbursts within a year, starting after age 6.
+    causes:
+        - Genetics, exposure to violence in childhood and serotonin system
+          differences.
+    treatment:
+        - CBT focused on anger regulation; SSRIs.
+    course: Often begins in adolescence and can be chronic.
+delirium:
+    overview:
+        - Delirium is an acute, fluctuating disturbance in attention and
+          awareness that develops over hours to days, usually caused by an
+          underlying medical condition, infection, surgery, medication or
+          substance withdrawal. It is a medical emergency.
+        - It can be hyperactive (agitated), hypoactive (quiet and withdrawn,
+          easily missed) or mixed. Delirium increases the risk of long-term
+          cognitive decline and death, especially in older adults.
+    brain:
+        - area: thalamus
+          level: secondary
+          note: Disrupted arousal and attention gating.
+        - area: dlpfc
+          level: secondary
+          note: Disrupted attention networks.
+        - area: pcc
+          level: secondary
+          note: Altered default mode network connectivity.
+    diagnosis:
+        Bedside tools such as the CAM (Confusion Assessment Method) help detect
+        it; the cause is found through exam, labs and medication review.
+    causes:
+        - Infection, surgery, dehydration, medications, alcohol withdrawal and
+          organ failure. Older age and dementia raise risk.
+    treatment:
+        - Find and treat the cause; keep the person oriented, mobile and
+          sleeping well; avoid unnecessary sedatives.
+    course:
+        Often resolves when the cause is treated, but may leave lasting
+        cognitive effects.

@@ -1,0 +1,2467 @@
+# Spanish text for regions, groups and parts, keyed by id.
+
+brain:
+    name: Cerebro humano
+    kind: Encéfalo completo
+    where:
+        Dentro del cráneo, apoyado sobre el tronco encefálico, que continúa
+        hacia abajo como la médula espinal.
+    summary:
+        "El cerebro adulto pesa entre 1,3 y 1,4 kg y contiene unos 86 mil
+        millones de neuronas y una cantidad similar de células gliales. Está
+        organizado en capas: dos hemisferios cerebrales con una corteza externa
+        plegada, estructuras profundas bajo ellos que se encargan de la emoción,
+        la memoria, la selección de movimientos y la regulación del cuerpo, y un
+        rombencéfalo (cerebelo y tronco encefálico) que te mantiene en
+        equilibrio, coordinado y con vida."
+    does:
+        - Percibe e interpreta el mundo
+        - Planifica y controla el movimiento
+        - Almacena recuerdos y aprende
+        - Genera emociones, motivación y pensamiento
+        - Regula la respiración, la frecuencia cardiaca, las hormonas y el sueño
+    fact:
+        El cerebro representa cerca del 2 % del peso corporal, pero consume
+        alrededor del 20 % de la energía del cuerpo en reposo.
+hemiL:
+    name: Hemisferio izquierdo
+    kind: Cerebro · Hemisferio
+    where:
+        La mitad izquierda del cerebro, separada de la derecha por la cisura
+        longitudinal y unida a ella por el cuerpo calloso.
+    summary:
+        "El hemisferio izquierdo controla y percibe el lado derecho del cuerpo.
+        En cerca del 95 % de las personas diestras y en la mayoría de las
+        zurdas, es dominante para el lenguaje: producir el habla, la gramática,
+        la lectura y la escritura. También suele liderar el análisis detallado y
+        secuencial, como los procedimientos aritméticos y las secuencias motoras
+        finas de la mano derecha."
+    does:
+        - Movimiento y sensibilidad del lado derecho del cuerpo
+        - Lenguaje en la mayoría de las personas
+        - Lectura, escritura y procedimientos aritméticos
+        - Visión de la mitad derecha del campo visual
+    damage:
+        Un ictus en el hemisferio izquierdo suele causar debilidad en el lado
+        derecho y afasia, un trastorno del lenguaje, como la afasia de Broca o
+        de Wernicke.
+    fact:
+        La idea popular de personas "de cerebro izquierdo" lógicas y "de cerebro
+        derecho" creativas no está respaldada por la neuroimagen; ambos
+        hemisferios trabajan juntos en casi todo.
+hemiR:
+    name: Hemisferio derecho
+    kind: Cerebro · Hemisferio
+    where:
+        La mitad derecha del cerebro, separada de la izquierda por la cisura
+        longitudinal y unida a ella por el cuerpo calloso.
+    summary:
+        El hemisferio derecho controla y percibe el lado izquierdo del cuerpo.
+        Suele liderar la atención espacial a ambos lados del espacio, el
+        reconocimiento de caras, la lectura del tono emocional de la voz
+        (prosodia) y la comprensión del contexto, el humor y las metáforas en el
+        lenguaje.
+    does:
+        - Movimiento y sensibilidad del lado izquierdo del cuerpo
+        - Atención y conciencia espacial
+        - Reconocimiento de caras
+        - Tono emocional del habla y de la expresión facial
+        - Visión de la mitad izquierda del campo visual
+    damage:
+        "Un ictus en el hemisferio derecho suele causar debilidad en el lado
+        izquierdo y heminegligencia: la persona ignora el lado izquierdo del
+        espacio, a veces sin darse cuenta de que algo va mal."
+    fact:
+        En pacientes con cerebro dividido, el hemisferio derecho puede reconocer
+        un objeto que solo él ve, pero no puede nombrarlo, porque el habla suele
+        depender del hemisferio izquierdo.
+deep:
+    name: Estructuras profundas
+    kind: Estructuras subcorticales y límbicas
+    aka:
+        - estructuras profundas
+        - estructuras subcorticales
+    where:
+        Ocultas bajo la corteza en el centro del cerebro, alrededor de los
+        ventrículos.
+    summary:
+        Las estructuras profundas incluyen el tálamo y el hipotálamo, los
+        ganglios basales, las estructuras límbicas (hipocampo y amígdala), el
+        cuerpo calloso y los ventrículos llenos de líquido. Transmiten y filtran
+        información, seleccionan acciones, forman recuerdos, generan emociones y
+        regulan el cuerpo. Muchas afecciones psiquiátricas y neurológicas se
+        centran en ellas.
+    does:
+        - Transmitir la información sensorial a la corteza
+        - Seleccionar acciones y formar hábitos
+        - Formar recuerdos y respuestas emocionales
+        - Regular hormonas, hambre, temperatura y sueño
+        - Conectar los dos hemisferios
+    fact:
+        Al estar ocultas, la mayoría de estas estructuras solo podían estudiarse
+        después de la muerte hasta que la resonancia magnética se generalizó en
+        la década de 1980.
+g_pfc:
+    name: Corteza prefrontal
+    short: Corteza prefrontal
+    aka:
+        - corteza prefrontal
+    where:
+        La parte delantera del lóbulo frontal, por delante de las áreas motoras.
+    summary:
+        La corteza prefrontal es el centro ejecutivo del cerebro. Sus partes
+        externas (laterales) se ocupan de la memoria de trabajo, la
+        planificación y el control; sus partes inferiores e internas vinculan la
+        emoción y el valor con las decisiones y la conducta social. Es la parte
+        de la corteza de evolución más reciente, termina de madurar hacia
+        mediados de los 20 años y está implicada en casi todas las afecciones
+        psiquiátricas.
+    does:
+        - Función ejecutiva y planificación
+        - Memoria de trabajo
+        - Toma de decisiones y juicio
+        - Regulación de las emociones
+        - Conducta social y personalidad
+    clinical:
+        El daño prefrontal puede dejar intacta la inteligencia pero arruinar el
+        juicio, la planificación y la conducta social. Se observa una actividad
+        prefrontal reducida o alterada en la depresión, la esquizofrenia, el
+        TDAH, las adicciones y muchas otras afecciones.
+g_motor:
+    name: Áreas motoras
+    short: Áreas motoras
+    aka:
+        - áreas motoras
+    where:
+        La franja posterior del lóbulo frontal, justo por delante del surco
+        central.
+    summary:
+        Las áreas motoras planifican, preparan y ejecutan el movimiento
+        voluntario. La corteza premotora y el área motora suplementaria
+        planifican y secuencian los movimientos; la corteza motora primaria
+        envía las órdenes finales a la médula espinal.
+    does:
+        - Planificar el movimiento
+        - Secuenciar el movimiento
+        - Enviar órdenes de movimiento a los músculos
+    clinical:
+        El daño causa debilidad o pérdida de movimiento en el lado opuesto del
+        cuerpo, o dificultad para planificar movimientos aprendidos (apraxia).
+g_ipl:
+    name: Lobulillo parietal inferior
+    short: Parietal inferior
+    aka:
+        - lobulillo parietal inferior
+    where:
+        La parte inferior del lóbulo parietal, por debajo del surco
+        intraparietal.
+    summary:
+        El lobulillo parietal inferior es un área de asociación de alto nivel
+        donde confluyen el tacto, la visión, la audición y el lenguaje.
+        Participa en la lectura, la aritmética, el uso de herramientas, la
+        atención y la comprensión de las acciones de otras personas. Es mucho
+        más grande en los humanos que en otros primates.
+    does:
+        - Lenguaje y lectura
+        - Aritmética
+        - Planificación de gestos y uso de herramientas
+        - Atención espacial
+    clinical:
+        El daño puede causar apraxia, síndrome de Gerstmann en el lado izquierdo
+        o heminegligencia en el derecho.
+g_auditory:
+    name: Áreas auditivas y del lenguaje
+    short: Auditivas y lenguaje
+    aka:
+        - áreas auditivas y del lenguaje
+    where: La parte superior del lóbulo temporal, a lo largo del surco lateral.
+    summary:
+        Esta franja convierte el sonido en significado. La corteza auditiva
+        primaria analiza el tono y el ritmo, la circunvolución temporal superior
+        que la rodea reconoce los sonidos del habla, las voces y la música, y el
+        área de Wernicke conecta las palabras con su significado.
+    does:
+        - Audición
+        - Reconocimiento del habla
+        - Comprensión del lenguaje
+        - Percepción musical
+    clinical:
+        El daño en el lado izquierdo puede causar afasia de Wernicke. La
+        actividad anormal aquí se relaciona con las alucinaciones auditivas de
+        la esquizofrenia.
+g_ventral:
+    name: Corteza temporal lateral y ventral
+    short: Temporal lateral y ventral
+    aka:
+        - corteza temporal ventral
+    where:
+        La superficie externa media e inferior y la cara inferior del lóbulo
+        temporal.
+    summary:
+        Estas áreas almacenan conocimiento y reconocen qué son las cosas. La
+        circunvolución temporal media guarda el significado de palabras y
+        conceptos; la circunvolución temporal inferior y la fusiforme forman el
+        final de la vía visual ventral del "qué", que reconoce objetos, caras y
+        palabras escritas.
+    does:
+        - Conocimiento semántico
+        - Reconocimiento de objetos
+        - Reconocimiento de caras
+        - Lectura de palabras
+    clinical:
+        El daño puede causar agnosia visual o prosopagnosia; se atrofian en la
+        demencia semántica.
+g_mtl:
+    name: Corteza temporal medial
+    short: Temporal medial
+    aka:
+        - lóbulo temporal medial
+        - corteza temporal medial
+    where:
+        La cara inferior interna del lóbulo temporal, envolviendo el hipocampo.
+    summary:
+        La corteza temporal medial es la puerta entre el resto de la corteza y
+        el hipocampo. Aporta al sistema de memoria información sobre lugares,
+        escenas, objetos y contexto, y alberga el sistema de navegación de las
+        células de rejilla.
+    does:
+        - Enviar información al hipocampo
+        - Reconocimiento de escenas y lugares
+        - Navegación
+    clinical:
+        Es una de las primeras áreas dañadas en la enfermedad de Alzheimer y un
+        sitio frecuente de crisis en la epilepsia del lóbulo temporal.
+g_early:
+    name: Corteza visual temprana
+    short: Visual temprana
+    aka:
+        - corteza visual temprana
+    where: La parte posterior y la superficie externa del lóbulo occipital.
+    summary:
+        "La corteza visual temprana, de V1 a V3, construye los primeros mapas de
+        lo que ven los ojos: bordes, orientación, contraste, contornos y
+        profundidad. Todo lo que ves pasa por estas áreas antes de enviarse a
+        regiones especializadas."
+    does:
+        - Detección de bordes y contornos
+        - Mapa del campo visual
+        - Percepción de la profundidad
+    clinical:
+        El daño causa ceguera en las partes correspondientes del campo visual.
+g_special:
+    name: Áreas visuales especializadas
+    short: Visuales especializadas
+    aka:
+        - áreas visuales especializadas
+    where: La cara inferior (V4) y la cara externa (V5/MT) del lóbulo occipital.
+    summary:
+        "Más allá de la corteza visual temprana, áreas especializadas procesan
+        rasgos concretos: V4 se ocupa del color y la forma, y V5/MT del
+        movimiento."
+    does:
+        - Percepción del color
+        - Percepción del movimiento
+    clinical:
+        El daño causa pérdida selectiva de la visión del color (acromatopsia) o
+        del movimiento (acinetopsia).
+g_medocc:
+    name: Circunvoluciones occipitales mediales
+    short: Occipital medial
+    aka:
+        - circunvoluciones occipitales mediales
+    where:
+        La cara interna del lóbulo occipital, por encima y por debajo del surco
+        calcarino.
+    summary:
+        La cuña, por encima del surco calcarino, y la circunvolución lingual,
+        por debajo, contienen las partes de la corteza visual que representan la
+        mitad inferior y la mitad superior del campo visual, respectivamente.
+    does:
+        - Campo visual inferior (cuña)
+        - Campo visual superior (circunvolución lingual)
+    clinical: El daño causa la pérdida de un cuarto del campo visual.
+g_striatum:
+    name: Cuerpo estriado
+    short: Estriado
+    aka:
+        - estriado
+        - cuerpo estriado
+    where:
+        "La gran región de entrada de los ganglios basales: el caudado, el
+        putamen y el núcleo accumbens."
+    summary:
+        El cuerpo estriado recibe información de casi toda la corteza y dopamina
+        del mesencéfalo. Su parte dorsal (caudado y putamen) sostiene la acción
+        dirigida a metas y los hábitos; su parte ventral (núcleo accumbens)
+        sostiene la recompensa y la motivación.
+    does:
+        - Recibir la información cortical que entra a los ganglios basales
+        - Aprendizaje de hábitos y habilidades
+        - Recompensa y motivación
+    clinical:
+        Es central en la enfermedad de Parkinson (pérdida de dopamina), la
+        enfermedad de Huntington (pérdida neuronal), el TOC, el síndrome de
+        Tourette y las adicciones.
+g_relay:
+    name: Núcleos de relevo sensorial y motor
+    short: Núcleos de relevo
+    aka:
+        - núcleos de relevo
+    where: Las partes inferior y posterior del tálamo.
+    summary:
+        "Estos núcleos transmiten corrientes concretas de información: los
+        núcleos ventrales llevan tacto, dolor y circuitos motores, el geniculado
+        lateral lleva la visión y el geniculado medial la audición."
+    does:
+        - Relevo del tacto y el dolor
+        - Relevo de circuitos motores
+        - Relevo de la visión y la audición
+    clinical:
+        El daño causa pérdida de la sensibilidad correspondiente en el lado
+        opuesto, o dolor crónico.
+g_neuromod:
+    name: Núcleos neuromoduladores
+    short: Neuromoduladores
+    aka:
+        - núcleos neuromoduladores
+    where:
+        Pequeños grupos dentro del mesencéfalo, la protuberancia y el bulbo
+        raquídeo.
+    summary:
+        Estos núcleos diminutos envían fibras de largo alcance por todo el
+        cerebro y fijan su estado general. El área tegmental ventral aporta
+        dopamina, el locus coeruleus noradrenalina y los núcleos del rafe
+        serotonina, que moldean la motivación, el alerta, el estado de ánimo y
+        el sueño.
+    does:
+        - Dopamina para la recompensa y la motivación
+        - Noradrenalina para el alerta y la vigilia
+        - Serotonina para el estado de ánimo y el sueño
+    clinical:
+        La mayoría de los medicamentos psiquiátricos actúan sobre los sistemas
+        químicos que producen estos núcleos.
+frontal:
+    name: Lóbulo frontal
+    kind: Corteza cerebral · Lóbulo
+    aka:
+        - lóbulo frontal
+        - lóbulos frontales
+    where:
+        La parte delantera de cada hemisferio, detrás de la frente, hasta el
+        surco central.
+    summary:
+        "El lóbulo frontal es el lóbulo más grande de la corteza cerebral y el
+        centro de planificación del cerebro. Su corteza prefrontal sostiene la
+        función ejecutiva: fijar metas, sopesar opciones, mantener datos en la
+        memoria de trabajo y frenar impulsos. A lo largo de su borde posterior,
+        la corteza motora primaria envía las señales que inician el movimiento
+        voluntario."
+    does:
+        - Planificación, juicio y toma de decisiones
+        - Memoria de trabajo y atención
+        - Inicio del movimiento voluntario
+        - Producción del habla mediante el área de Broca, normalmente en el
+          hemisferio izquierdo
+        - Personalidad y conducta social
+    damage:
+        El daño puede cambiar la personalidad, el juicio y el autocontrol. En
+        1848 una barra de hierro atravesó el lóbulo frontal del capataz
+        ferroviario Phineas Gage. Sobrevivió, pero quienes lo conocían decían
+        que ya no era el mismo. El daño en el área de Broca causa un tipo de
+        afasia en que el habla es lenta y costosa mientras la comprensión se
+        conserva en gran parte.
+    fact:
+        La corteza prefrontal es una de las últimas áreas cerebrales en madurar,
+        normalmente hacia mediados de los 20 años.
+parietal:
+    name: Lóbulo parietal
+    kind: Corteza cerebral · Lóbulo
+    aka:
+        - lóbulo parietal
+        - lóbulos parietales
+    where:
+        La parte superior y posterosuperior de cada hemisferio, entre el surco
+        central y el lóbulo occipital.
+    summary:
+        El lóbulo parietal convierte la sensación en bruto en una percepción de
+        tu cuerpo y del espacio que lo rodea. La corteza somatosensorial recibe
+        señales de tacto, temperatura, dolor y propiocepción de todo el cuerpo.
+        Las áreas situadas detrás combinan esas señales con la visión y la
+        audición para que puedas alcanzar objetos, calcular distancias y
+        orientarte.
+    does:
+        - Percepción del tacto, la temperatura y el dolor
+        - Propiocepción, el sentido de la posición del cuerpo
+        - Conciencia espacial y navegación
+        - Guiar los movimientos de alcance y agarre
+        - Lectura, escritura y aritmética
+    damage:
+        "El daño en el lóbulo parietal derecho puede causar heminegligencia: una
+        persona puede comer solo del lado derecho del plato o afeitarse solo la
+        mitad de la cara. El daño en el izquierdo puede alterar la lectura, la
+        escritura y el cálculo."
+    fact:
+        La vía dorsal de la visión sube hasta el lóbulo parietal, por eso se la
+        llama la vía del "dónde" del cerebro.
+temporal:
+    name: Lóbulo temporal
+    kind: Corteza cerebral · Lóbulo
+    aka:
+        - lóbulo temporal
+        - lóbulos temporales
+    where:
+        La parte lateral inferior de cada hemisferio, por debajo del surco
+        lateral, aproximadamente detrás de las sienes y las orejas.
+    summary:
+        El lóbulo temporal se ocupa del sonido, el lenguaje y la memoria. La
+        corteza auditiva distingue el tono, el ritmo y los sonidos del habla, y
+        el área de Wernicke ayuda a entender el significado de las palabras. En
+        su cara inferior, la circunvolución fusiforme reconoce caras y objetos,
+        y en su cara interna se encuentran el hipocampo y la amígdala del
+        sistema límbico.
+    does:
+        - Audición y procesamiento del sonido
+        - Comprensión del lenguaje mediante el área de Wernicke
+        - Reconocimiento de caras y objetos
+        - Formación de nuevos recuerdos, con el hipocampo
+        - Reacciones emocionales, con la amígdala
+    damage:
+        La epilepsia del lóbulo temporal es el tipo más común de epilepsia
+        focal, y sus crisis pueden traer déjà vu, olores extraños o una emoción
+        intensa repentina. El daño en el área de Wernicke causa una afasia en la
+        que el habla fluye con facilidad pero tiene poco sentido.
+    fact:
+        "Algunas personas con daño en la circunvolución fusiforme desarrollan
+        ceguera facial: ven una cara con claridad, pero no saben de quién es."
+occipital:
+    name: Lóbulo occipital
+    kind: Corteza cerebral · Lóbulo
+    aka:
+        - lóbulo occipital
+        - lóbulos occipitales
+    where: La parte más posterior del cerebro, por encima del cerebelo.
+    summary:
+        El lóbulo occipital se dedica casi por completo a la visión. Las señales
+        de los ojos pasan por el tálamo hasta la corteza visual primaria, que
+        detecta bordes, ángulos y contraste. Las áreas vecinas añaden color,
+        movimiento y forma, y luego envían los resultados hacia delante por la
+        vía dorsal, que calcula dónde están las cosas, y la vía ventral, que
+        identifica qué son.
+    does:
+        - Recibir la información visual de los ojos
+        - Detectar bordes, líneas y contraste
+        - Procesar el color y el movimiento
+        - Enviar la información visual a otros lóbulos
+    damage:
+        "El daño en la corteza visual primaria causa ceguera en parte del campo
+        visual aunque los ojos estén sanos. Algunos pacientes muestran visión
+        ciega: señalan correctamente objetos que dicen no poder ver."
+    fact:
+        "Cada hemisferio ve la mitad opuesta del mundo: tu lóbulo occipital
+        izquierdo procesa todo lo que está a la derecha de donde miras."
+cingulate:
+    name: Corteza cingulada
+    kind: Corteza límbica · Cara medial
+    aka:
+        - corteza cingulada
+        - circunvolución cingulada
+        - cíngulo
+    where:
+        En la pared interna (medial) de cada hemisferio, rodeando la parte
+        superior del cuerpo calloso como un cinturón.
+    summary:
+        La corteza cingulada es una banda curva de corteza que vincula la
+        emoción, la motivación, el dolor y la atención con la acción. Su parte
+        anterior, la corteza cingulada anterior, detecta conflictos y errores y
+        ayuda a decidir cuánto esfuerzo merece una tarea. Su parte posterior, la
+        corteza cingulada posterior, es un nodo central de la red neuronal por
+        defecto, activa cuando sueñas despierto, recuerdas tu pasado o piensas
+        en ti mismo.
+    does:
+        - Detectar errores y metas en conflicto
+        - Conciencia y regulación emocional
+        - La sensación desagradable del dolor
+        - Motivación y esfuerzo
+        - Reflexión sobre uno mismo y memoria autobiográfica
+    damage:
+        "El daño bilateral en la cingulada anterior puede causar apatía grave y,
+        en casos extremos, mutismo acinético: la persona está despierta pero
+        rara vez se mueve o habla. La actividad cingulada anormal aparece en la
+        depresión, el TOC, el dolor crónico y el TEPT. Unos pocos centros aún
+        usan la cingulotomía quirúrgica para el TOC grave y resistente al
+        tratamiento y para el dolor."
+    fact: Su nombre viene del latín cingulum, que significa "cinturón" o "faja".
+insula:
+    name: Ínsula
+    kind: Corteza cerebral · Lóbulo oculto
+    aka:
+        - ínsula
+        - corteza insular
+    where:
+        Plegada en lo profundo del surco lateral, cubierta por partes de los
+        lóbulos frontal, parietal y temporal.
+    summary:
+        "La ínsula, a veces llamada el quinto lóbulo, es una isla oculta de
+        corteza. Es el centro principal de la interocepción, tu percepción de lo
+        que ocurre dentro del cuerpo: latidos, respiración, hambre, náuseas y
+        dolor. Combina esas señales con la emoción, por eso sentimientos como el
+        asco, la ansiedad y el deseo intenso se sienten en el cuerpo. También
+        contiene la corteza gustativa primaria."
+    does:
+        - Interocepción, percibir el estado interno del cuerpo
+        - Gusto
+        - Sentir asco
+        - Conciencia emocional y empatía
+        - Deseos intensos e impulsos
+        - Parte de la red de saliencia
+    damage:
+        Un estudio de 2007 halló que los fumadores cuyo ictus dañó la ínsula
+        tenían muchas más probabilidades de dejar de fumar con facilidad; a
+        menudo decían que las ganas de fumar simplemente desaparecieron. El daño
+        en la ínsula también puede alterar el gusto y el reconocimiento del
+        asco. Su hiperactividad se relaciona con los trastornos de ansiedad.
+    fact:
+        También se llama ínsula de Reil, por el anatomista Johann Christian
+        Reil, que la describió en 1809.
+cerebellum:
+    name: Cerebelo
+    kind: Rombencéfalo
+    aka:
+        - cerebelo
+    where:
+        Bajo el lóbulo occipital, en la parte posterior del cráneo, detrás del
+        tronco encefálico.
+    summary:
+        El cerebelo, "pequeño cerebro" en latín, afina el movimiento. Compara lo
+        que querías hacer con lo que tu cuerpo hace realmente y corrige los
+        errores sobre la marcha, lo que da coordinación fluida, equilibrio y
+        sincronía. También impulsa el aprendizaje motor, por eso la práctica
+        vuelve automática una habilidad, y apoya la atención, el lenguaje y la
+        emoción mediante circuitos con la corteza.
+    does:
+        - Coordinación y precisión del movimiento
+        - Equilibrio y postura
+        - Sincronía y ritmo
+        - Aprendizaje motor
+        - Apoyo a la atención y el lenguaje
+    damage:
+        "El daño causa ataxia: marcha inestable, movimientos de alcance
+        temblorosos y habla arrastrada. A diferencia del cerebro, cada mitad del
+        cerebelo controla el mismo lado del cuerpo. El alcohol altera
+        temporalmente el cerebelo, por eso las pruebas de alcoholemia en
+        carretera piden caminar en línea recta."
+    fact:
+        Ocupa cerca del 10 % del volumen cerebral, pero contiene aproximadamente
+        el 80 % de sus neuronas, la mayoría diminutas células granulares.
+brainstem:
+    name: Tronco encefálico
+    kind: Mesencéfalo y rombencéfalo
+    aka:
+        - tronco encefálico
+        - tronco cerebral
+    where: El tallo en la base del cerebro que lo conecta con la médula espinal.
+    summary:
+        El tronco encefálico te mantiene con vida. Sus tres partes, el
+        mesencéfalo, la protuberancia y el bulbo raquídeo, controlan funciones
+        autónomas como la respiración, la frecuencia cardiaca y la presión
+        arterial. Casi todas las señales entre el cerebro y el cuerpo pasan por
+        él, y 10 de los 12 pares de nervios craneales nacen aquí. Pequeños
+        núcleos en su interior abastecen a todo el cerebro de dopamina,
+        noradrenalina y serotonina, y su formación reticular te mantiene
+        despierto y alerta.
+    does:
+        - Respiración, frecuencia cardiaca y presión arterial
+        - Transmitir señales entre el cerebro y la médula espinal
+        - Sueño, vigilia y alerta
+        - Reflejos como tragar, toser y parpadear
+        - Producir los principales neuromoduladores del cerebro
+    damage:
+        El daño en el tronco encefálico suele poner en peligro la vida porque
+        controla la respiración y los latidos. Un ictus en la protuberancia
+        puede causar síndrome de enclaustramiento, en el que la persona está
+        plenamente consciente pero solo puede comunicarse moviendo los ojos.
+    fact:
+        Tragar, toser, estornudar y las arcadas los coordina el bulbo raquídeo.
+basalganglia:
+    name: Ganglios basales
+    kind: Estructura profunda · Núcleos subcorticales
+    aka:
+        - ganglios basales
+        - núcleos basales
+    where:
+        Un grupo de núcleos en lo profundo de cada hemisferio, alrededor del
+        tálamo, con la sustancia negra más abajo, en el mesencéfalo.
+    summary:
+        Los ganglios basales son núcleos conectados que actúan como guardianes
+        de la acción. Reciben información de casi toda la corteza, eligen qué
+        movimientos, pensamientos o hábitos permitir y suprimen el resto, y
+        devuelven el resultado a la corteza a través del tálamo. La dopamina de
+        la sustancia negra y del área tegmental ventral ajusta este sistema, lo
+        que lo hace central para el movimiento, los hábitos, la recompensa y la
+        motivación.
+    does:
+        - Iniciar los movimientos deseados y frenar los no deseados
+        - Formar hábitos y rutinas
+        - Recompensa, motivación y aprendizaje por refuerzo
+        - Aprendizaje procedimental
+        - Controlar la velocidad y el vigor del movimiento
+    damage:
+        La pérdida de neuronas dopaminérgicas en la sustancia negra causa la
+        enfermedad de Parkinson, con lentitud, rigidez y temblor. La pérdida de
+        neuronas en el caudado y el putamen causa la enfermedad de Huntington,
+        con movimientos incontrolados. Los circuitos de los ganglios basales
+        también intervienen en el TOC, el síndrome de Tourette y las adicciones.
+    fact:
+        El cuerpo estriado debe su nombre ("cuerpo rayado") a las bandas de
+        sustancia blanca que lo atraviesan.
+thalamus:
+    name: Tálamo
+    kind: Estructura profunda · Diencéfalo
+    aka:
+        - tálamo
+        - tálamos
+    where:
+        "El centro del cerebro: una masa ovalada a cada lado de la línea media,
+        por encima del tronco encefálico."
+    summary:
+        El tálamo es el principal relevo del cerebro. La información de todos
+        los sentidos excepto el olfato pasa por él antes de llegar a la corteza,
+        y cada uno de sus núcleos transmite señales a un área cortical concreta.
+        También transmite circuitos motores de los ganglios basales y el
+        cerebelo, y ayuda a controlar la atención, el sueño y la consciencia.
+    does:
+        - Transmitir la visión, la audición, el tacto y el gusto a la corteza
+        - Filtrar lo que llega a la conciencia
+        - Sueño y alerta
+        - Conectar el cerebelo y los ganglios basales con la corteza motora
+    damage:
+        Un ictus en el tálamo puede causar entumecimiento, dolor persistente o
+        problemas de memoria. El daño bilateral puede causar coma, porque altera
+        la consciencia.
+    fact:
+        Durante el sueño profundo, el tálamo produce ráfagas llamadas husos del
+        sueño, que ayudan a consolidar los recuerdos.
+hypothalamus:
+    name: Hipotálamo
+    kind: Estructura profunda · Diencéfalo
+    aka:
+        - hipotálamo
+        - hipotalámico
+    where:
+        Justo debajo del tálamo, en la base del cerebro, directamente sobre la
+        hipófisis.
+    summary:
+        Del tamaño de una almendra, el hipotálamo es el centro de control de la
+        homeostasis. Regula la temperatura corporal, el hambre, la sed y el
+        horario del sueño, y dirige la hipófisis, que gobierna gran parte del
+        sistema endocrino mediante hormonas. También desencadena la respuesta de
+        lucha o huida.
+    does:
+        - Temperatura corporal
+        - Hambre y sed
+        - Sueño y ritmo circadiano
+        - Control de la hipófisis y las hormonas
+        - Respuestas al estrés
+    damage:
+        El daño puede causar hambre descontrolada, alteraciones del sueño,
+        problemas para regular la temperatura o trastornos hormonales como la
+        diabetes insípida, en la que el cuerpo no puede retener agua.
+    fact: Representa menos del 1 % del peso del cerebro.
+hippocampus:
+    name: Hipocampo
+    kind: Estructura profunda · Sistema límbico
+    aka:
+        - hipocampo
+        - hipocampos
+        - formación hipocampal
+    where:
+        Dentro de la parte interna (medial) del lóbulo temporal; una estructura
+        curva en cada hemisferio.
+    summary:
+        Llamado así por la palabra griega para caballito de mar debido a su
+        forma, el hipocampo convierte las experiencias cotidianas en memoria a
+        largo plazo. Es esencial para la memoria declarativa, como lo que
+        desayunaste esta mañana, y para la consolidación de la memoria durante
+        el sueño. Sus células de lugar también construyen un mapa mental que te
+        ayuda a orientarte. Su salida viaja por un haz arqueado llamado fórnix.
+    does:
+        - Formar nuevos recuerdos de hechos y sucesos
+        - Consolidación de la memoria
+        - Memoria espacial y navegación
+        - Vincular los recuerdos al lugar y el momento en que ocurrieron
+    damage:
+        Es una de las primeras áreas afectadas por la enfermedad de Alzheimer. A
+        un paciente conocido como H.M. le extirparon ambos hipocampos en 1953
+        para tratar su epilepsia. Después no pudo formar nuevos recuerdos
+        declarativos, aunque sí podía aprender nuevas habilidades motoras.
+    fact:
+        Se observó que los taxistas de Londres, que memorizan miles de calles,
+        tenían la parte posterior del hipocampo más grande que el promedio.
+amygdala:
+    name: Amígdala
+    kind: Estructura profunda · Sistema límbico
+    aka:
+        - amígdala
+        - amígdalas
+    where:
+        En lo profundo de la parte anterior del lóbulo temporal, justo delante
+        del hipocampo; una en cada hemisferio.
+    summary:
+        La amígdala, "almendra" en griego, es el detector de amenazas del
+        cerebro. Juzga rápidamente si algo es peligroso o importante y pone en
+        marcha la respuesta de lucha o huida a través del hipotálamo y el tronco
+        encefálico. También etiqueta los recuerdos con emoción, por eso los
+        sucesos aterradores se recuerdan tan vívidamente.
+    does:
+        - Detectar amenazas y producir miedo
+        - Iniciar la respuesta de lucha o huida
+        - Memoria emocional
+        - Leer la emoción en las caras
+    damage:
+        Las personas con daño en ambas amígdalas pueden sentir poco miedo y
+        tener dificultad para reconocer el miedo en otras caras. Una amígdala
+        hiperactiva se relaciona con los trastornos de ansiedad y el TEPT.
+    fact:
+        Puede reaccionar ante una amenaza antes de que seas consciente de
+        haberla visto.
+callosum:
+    name: Cuerpo calloso
+    kind: Estructura profunda · Sustancia blanca
+    aka:
+        - cuerpo calloso
+    where:
+        En lo profundo del centro del cerebro, formando un arco que cruza la
+        línea media bajo la corteza.
+    summary:
+        El cuerpo calloso es el mayor haz de sustancia blanca del cerebro,
+        formado por unos 200 millones de axones. Une áreas equivalentes de los
+        hemisferios izquierdo y derecho para que puedan compartir información y
+        funcionar como uno solo.
+    does:
+        - Compartir información entre hemisferios
+        - Coordinar los movimientos de ambas manos
+        - Unir las dos mitades del campo visual
+    damage:
+        A veces se secciona quirúrgicamente para frenar la propagación de una
+        epilepsia grave. Los estudios de estos pacientes con cerebro dividido
+        mostraron que un hemisferio puede saber cosas que el otro no. Algunas
+        personas nacen sin él y se adaptan sorprendentemente bien.
+    fact: Su nombre en latín significa "cuerpo duro".
+ventricles:
+    name: Ventrículos
+    kind: Estructura profunda · Sistema de líquido
+    aka:
+        - ventrículos
+        - sistema ventricular
+    where:
+        "Cuatro espacios conectados y llenos de líquido en el centro del
+        cerebro: dos ventrículos laterales, el tercer ventrículo y el cuarto
+        ventrículo."
+    summary:
+        Los ventrículos son cavidades huecas llenas de líquido cefalorraquídeo
+        (LCR). El plexo coroideo que los recubre produce alrededor de medio
+        litro de LCR al día. Fluye desde los ventrículos laterales a través del
+        tercer y cuarto ventrículo y sale alrededor del cerebro y la médula
+        espinal, donde amortigua el cerebro, elimina desechos y mantiene estable
+        su entorno químico.
+    does:
+        - Producir y hacer circular el líquido cefalorraquídeo
+        - Amortiguar el cerebro ante golpes
+        - Eliminar productos de desecho
+        - Hacer que el cerebro flote, reduciendo su peso efectivo
+    damage:
+        Si el flujo de LCR se bloquea o no se absorbe, los ventrículos se
+        dilatan, una afección llamada hidrocefalia. Los ventrículos agrandados
+        también son un hallazgo frecuente en la esquizofrenia y en enfermedades
+        que reducen el tejido cerebral, como el Alzheimer.
+    fact:
+        El volumen total de LCR es de solo unos 150 mL, así que se renueva
+        aproximadamente tres o cuatro veces al día.
+m1:
+    name: Corteza motora primaria
+    short: Corteza motora (M1)
+    aka:
+        - corteza motora primaria
+        - corteza motora
+        - m1
+    where:
+        La circunvolución precentral, la franja justo delante del surco central.
+    summary:
+        "M1 envía órdenes por el haz corticoespinal hasta la médula espinal para
+        mover los músculos del lado opuesto del cuerpo. Está organizada como un
+        homúnculo motor: las piernas cerca de la línea media superior, luego el
+        tronco, los brazos y las manos, y la cara en la parte más baja. Las
+        manos, los labios y la lengua ocupan áreas muy grandes porque necesitan
+        un control fino."
+    does:
+        - Ejecutar el movimiento voluntario
+        - Controlar la fuerza y la dirección del movimiento
+        - Movimientos finos de los dedos, los labios y la lengua
+    clinical:
+        Un ictus aquí causa debilidad o parálisis en el lado opuesto del cuerpo
+        (hemiparesia). Sus motoneuronas superiores degeneran en la ELA.
+    fact:
+        Wilder Penfield cartografió el homúnculo motor estimulando suavemente la
+        corteza de pacientes despiertos durante cirugías de epilepsia.
+premotor:
+    name: Corteza premotora
+    short: Corteza premotora
+    aka:
+        - corteza premotora
+        - campos oculares frontales
+    where:
+        Justo delante de la corteza motora primaria, en la superficie externa
+        del lóbulo frontal.
+    summary:
+        La corteza premotora planifica y prepara los movimientos antes de que
+        ocurran, sobre todo los guiados por lo que ves u oyes, como estirar la
+        mano para atrapar una pelota. Contiene los campos oculares frontales,
+        que dirigen los movimientos oculares voluntarios, y neuronas espejo, que
+        se activan tanto al actuar como al ver a otra persona hacer la misma
+        acción.
+    does:
+        - Planificar y preparar el movimiento
+        - Movimientos guiados por la vista y el oído
+        - Movimientos oculares voluntarios (campos oculares frontales)
+        - Comprender las acciones de los demás
+    clinical:
+        El daño puede causar apraxia, dificultad para realizar movimientos
+        aprendidos aunque la fuerza sea normal.
+sma:
+    name: Área motora suplementaria
+    short: AMS
+    aka:
+        - área motora suplementaria
+        - ams
+    where:
+        En la pared interna del lóbulo frontal, delante del área de la pierna de
+        la corteza motora. La vista de corte medial la muestra.
+    summary:
+        El AMS planifica los movimientos que inicias por voluntad propia, y no
+        en respuesta al entorno, así como las secuencias de movimientos, como un
+        pasaje de piano ensayado. También coordina los dos lados del cuerpo. Su
+        actividad aumenta antes de que las personas digan haber decidido
+        moverse, una señal llamada potencial de preparación.
+    does:
+        - Movimientos iniciados por uno mismo
+        - Secuenciar movimientos
+        - Coordinar ambas manos
+        - Prepararse para moverse
+    clinical:
+        El daño puede causar el síndrome del AMS, una dificultad temporal para
+        iniciar el movimiento o el habla que suele recuperarse en semanas.
+        También interviene en la urgencia previa a los tics en el síndrome de
+        Tourette.
+    fact:
+        Los experimentos de Benjamin Libet de 1983 sobre el potencial de
+        preparación desataron décadas de debate sobre el libre albedrío.
+dlpfc:
+    name: Corteza prefrontal dorsolateral
+    short: CPFDL
+    aka:
+        - corteza prefrontal dorsolateral
+        - cpfdl
+    where:
+        La superficie externa superior de la parte delantera del lóbulo frontal.
+    summary:
+        La CPFDL es el núcleo de la función ejecutiva. Mantiene y manipula
+        información en la memoria de trabajo, planifica los pasos hacia una
+        meta, cambia de estrategia cuando cambian las reglas y ejerce control
+        descendente sobre la atención y la emoción. Es una de las regiones que
+        más tarda en madurar y una de las más desarrolladas en los humanos.
+    does:
+        - Memoria de trabajo
+        - Planificar y organizar
+        - Flexibilidad cognitiva
+        - Razonamiento abstracto
+        - Control descendente de la atención
+    clinical:
+        La actividad reducida de la CPFDL se relaciona con la depresión, la
+        esquizofrenia y el TDAH. La estimulación magnética transcraneal (EMT)
+        para la depresión suele dirigirse a la CPFDL izquierda.
+    fact:
+        El Test de Clasificación de Tarjetas de Wisconsin, en el que la regla de
+        clasificación cambia en secreto, es una prueba clásica de la función de
+        la CPFDL.
+vlpfc:
+    name: Corteza prefrontal ventrolateral
+    short: CPFVL
+    aka:
+        - corteza prefrontal ventrolateral
+        - cpfvl
+        - circunvolución frontal inferior
+    where:
+        La superficie externa inferior del lóbulo frontal, delante y alrededor
+        del área de Broca (la circunvolución frontal inferior).
+    summary:
+        La CPFVL te ayuda a detener acciones y pensamientos que ya no son
+        apropiados, una habilidad llamada inhibición de respuesta, sobre todo en
+        el hemisferio derecho. También ayuda a elegir el significado de las
+        palabras, a recuperar recuerdos a propósito y a reevaluar situaciones
+        emocionales, como reinterpretar un contratiempo para que duela menos.
+    does:
+        - Detener una acción (inhibición de respuesta)
+        - Elegir entre palabras o ideas en competencia
+        - Reevaluar las emociones
+        - Recuperar recuerdos a propósito
+    clinical:
+        Un control más débil de la CPFVL se relaciona con la impulsividad en el
+        TDAH, el trastorno límite de la personalidad y las adicciones.
+broca:
+    name: Área de Broca
+    short: Área de Broca
+    aka:
+        - área de broca
+        - broca
+    where:
+        La parte posterior de la circunvolución frontal inferior, justo delante
+        del área motora de la cara. Dominante para el lenguaje en el hemisferio
+        izquierdo en la mayoría de las personas.
+    summary:
+        El área de Broca ayuda a convertir las ideas en habla fluida. Organiza
+        la gramática y el orden de las palabras y trabaja con la corteza motora
+        para planificar los movimientos de los labios, la lengua y la laringe.
+        También ayuda a comprender oraciones complejas. Un haz de fibras llamado
+        fascículo arqueado la conecta con el área de Wernicke.
+    does:
+        - Producir un habla fluida
+        - Gramática y estructura de las oraciones
+        - Planificar los movimientos del habla
+        - Comprender oraciones complejas
+    clinical:
+        "El daño causa afasia de Broca (expresiva): habla lenta y costosa, con
+        omisión de palabras pequeñas, mientras la comprensión se conserva
+        relativamente bien. Las personas suelen ser conscientes de sus errores."
+    fact:
+        Lleva el nombre de Paul Broca, quien en 1861 estudió a un paciente
+        apodado "Tan" porque era casi la única sílaba que podía decir.
+ofc:
+    name: Corteza orbitofrontal
+    short: COF
+    aka:
+        - corteza orbitofrontal
+        - cof
+        - orbitofrontal
+    where:
+        La cara inferior del lóbulo frontal, justo encima de las cuencas de los
+        ojos (órbitas).
+    summary:
+        La COF calcula cuánto vale algo en este momento combinando el gusto, el
+        olfato, la vista y la experiencia previa. Actualiza esos valores cuando
+        cambian los resultados, como cuando tu comida favorita deja de resultar
+        gratificante al estar lleno. Esto la hace importante para las decisiones
+        flexibles, aprender de recompensas y castigos y la conducta social.
+    does:
+        - Juzgar el valor de las recompensas
+        - Actualizar las decisiones cuando cambian los resultados
+        - Combinar olfato y gusto en el sabor
+        - Toma de decisiones social y emocional
+    clinical:
+        El daño puede causar conducta impulsiva y socialmente inapropiada y
+        malas decisiones pese a una inteligencia intacta. La hiperactividad en
+        los circuitos orbitofrontales-estriatales es uno de los hallazgos más
+        consistentes en el TOC.
+vmpfc:
+    name: Corteza prefrontal ventromedial
+    short: CPFvm
+    aka:
+        - corteza prefrontal ventromedial
+        - cpfvm
+    where:
+        La parte inferior de la pared interna en la zona delantera del lóbulo
+        frontal. La vista de corte medial la muestra.
+    summary:
+        La CPFvm vincula la emoción con la toma de decisiones. Representa lo
+        buenas o malas que se sienten las opciones, ayuda a calmar la amígdala
+        durante la extinción del miedo y sostiene el juicio moral y social. La
+        hipótesis del marcador somático de Antonio Damasio propone que usa
+        señales emocionales del cuerpo para guiar las decisiones.
+    does:
+        - Toma de decisiones basada en la emoción
+        - Calmar las respuestas de miedo
+        - Juicio moral y social
+        - Pensar en uno mismo
+    clinical:
+        La lesión de Phineas Gage dañó sobre todo esta área. Las personas con
+        daño en la CPFvm suelen tomar decisiones arriesgadas y perjudiciales en
+        la vida real aunque puedan razonar los problemas en las pruebas. Un
+        control más débil de la CPFvm sobre la amígdala se relaciona con el TEPT
+        y la ansiedad.
+    fact:
+        En la Iowa Gambling Task, las personas con daño en la CPFvm siguen
+        eligiendo mazos de cartas arriesgados incluso después de perder
+        repetidamente.
+dmpfc:
+    name: Corteza prefrontal dorsomedial
+    short: CPFdm
+    aka:
+        - corteza prefrontal dorsomedial
+        - cpfdm
+        - corteza prefrontal medial
+    where:
+        La pared interna superior del lóbulo frontal, delante del área motora
+        suplementaria.
+    summary:
+        La CPFdm te ayuda a pensar en la mente de otras personas, lo que se
+        llama teoría de la mente, y en ti mismo. Forma parte de la red neuronal
+        por defecto y trabaja con la corteza cingulada anterior para vigilar los
+        conflictos y ajustar la conducta.
+    does:
+        - >-
+            Teoría de la mente: entender las creencias e intenciones de los
+            demás
+        - Reflexión sobre uno mismo
+        - Juicio social
+        - Vigilar y ajustar la conducta
+    clinical:
+        Se han descrito diferencias en la actividad de la CPFdm durante tareas
+        sociales en el autismo y la esquizofrenia.
+fpole:
+    name: Polo frontal
+    short: Polo frontal
+    aka:
+        - polo frontal
+    where: La punta delantera del lóbulo frontal (área 10 de Brodmann).
+    summary:
+        El polo frontal es una de las partes de evolución más reciente del
+        cerebro humano. Te permite mantener en mente una meta principal mientras
+        trabajas en una submeta, comparar varios planes y pensar sobre tu propio
+        pensamiento (metacognición).
+    does:
+        - Manejar varias metas a la vez
+        - Explorar opciones nuevas en vez de las conocidas
+        - Metacognición
+        - Planificar el futuro
+    fact:
+        El área 10 es proporcionalmente más grande en los humanos que en otros
+        simios.
+olfactory:
+    name: Bulbo olfatorio
+    short: Bulbo olfatorio
+    aka:
+        - bulbo olfatorio
+        - bulbos olfatorios
+    where:
+        Un pequeño bulbo bajo cada lóbulo frontal, apoyado en una fina lámina de
+        hueso sobre la nariz.
+    summary:
+        Los bulbos olfatorios son el primer relevo del olfato. Los receptores
+        olfativos de la nariz envían axones a través de diminutos orificios del
+        cráneo hasta los bulbos, que pasan las señales directamente a la corteza
+        olfativa, la amígdala y la corteza entorrinal. El olfato es el único
+        sentido que no pasa primero por el tálamo, lo que podría explicar por
+        qué los olores despiertan recuerdos emocionales tan intensos.
+    does:
+        - Recibir las señales olfativas de la nariz
+        - Organizar los olores en patrones
+        - Enviar información olfativa a áreas de emoción y memoria
+    clinical:
+        La pérdida del olfato suele aparecer años antes de los síntomas motores
+        de la enfermedad de Parkinson y es un signo temprano de la enfermedad de
+        Alzheimer. Un golpe en la cabeza puede desgarrar las fibras olfativas y
+        causar pérdida permanente del olfato.
+    fact:
+        Las fibras nerviosas que lo alimentan forman el par craneal I, el nervio
+        olfatorio.
+s1:
+    name: Corteza somatosensorial primaria
+    short: Somatosensorial (S1)
+    aka:
+        - corteza somatosensorial primaria
+        - corteza somatosensorial
+        - s1
+    where:
+        La circunvolución poscentral, la franja justo detrás del surco central.
+    summary:
+        S1 recibe señales de tacto, presión, vibración, temperatura, dolor y
+        posición del cuerpo del lado opuesto, transmitidas por el tálamo. Está
+        organizada como un homúnculo sensorial que refleja la franja motora de
+        delante. Las zonas con más receptores, como las yemas de los dedos y los
+        labios, ocupan más espacio.
+    does:
+        - Tacto y textura
+        - Localizar el dolor y la temperatura
+        - Propiocepción
+        - Reconocer objetos por el tacto
+    clinical:
+        El daño causa entumecimiento o pérdida del tacto fino en el lado
+        opuesto. Tras una amputación el mapa corporal se reorganiza, lo que
+        podría contribuir a las sensaciones del miembro fantasma.
+    fact:
+        Tocar la cara de algunas personas amputadas produce sensaciones en la
+        mano ausente, porque las áreas de la cara y la mano son vecinas en el
+        mapa.
+spl:
+    name: Lobulillo parietal superior
+    short: Parietal superior
+    aka:
+        - lobulillo parietal superior
+    where:
+        La parte superior del lóbulo parietal, por encima del surco
+        intraparietal.
+    summary:
+        El lobulillo parietal superior construye la percepción de dónde está tu
+        cuerpo en el espacio y usa la visión para guiar el alcance y el agarre.
+        Forma parte de la vía visual dorsal del "dónde/cómo" y ayuda a desplazar
+        la atención espacial.
+    does:
+        - Alcance guiado por la vista
+        - Esquema corporal
+        - Atención espacial
+        - Rotación mental
+    clinical:
+        "El daño puede causar ataxia óptica: errar los objetivos al intentar
+        alcanzarlos aunque la visión y la fuerza sean normales."
+supramarginal:
+    name: Circunvolución supramarginal
+    short: Supramarginal
+    aka:
+        - circunvolución supramarginal
+    where:
+        La parte inferior del lóbulo parietal, rodeando el extremo posterior del
+        surco lateral.
+    summary:
+        Parte del lobulillo parietal inferior, la circunvolución supramarginal
+        vincula los sonidos con la ortografía, sostiene la memoria de trabajo
+        fonológica (repetirte un número de teléfono) y ayuda a planificar el uso
+        de herramientas y los gestos. También te ayuda a distinguir tus propias
+        emociones de las de otras personas.
+    does:
+        - Procesar los sonidos del habla
+        - Memoria de trabajo verbal
+        - Planificar gestos aprendidos
+        - Separar lo propio de lo ajeno en la empatía
+    clinical:
+        El daño, sobre todo en el lado izquierdo, puede causar afasia de
+        conducción (dificultad para repetir palabras) y apraxia ideomotora.
+angular:
+    name: Circunvolución angular
+    short: Circunvolución angular
+    aka:
+        - circunvolución angular
+        - unión temporoparietal
+    where:
+        La parte posteroinferior del lóbulo parietal, cerca de donde se unen los
+        lóbulos parietal, temporal y occipital.
+    summary:
+        La circunvolución angular es un nodo que conecta el lenguaje, los
+        números, el espacio y la memoria. Ayuda a vincular las palabras escritas
+        con su significado, recuperar datos matemáticos, entender metáforas y
+        recordar con detalle sucesos pasados. Junto con la corteza vecina forma
+        la unión temporoparietal, importante para la sensación de propiedad del
+        cuerpo y la comprensión de otras mentes.
+    does:
+        - Lectura y significado de las palabras
+        - Datos aritméticos
+        - Metáforas y combinación de conceptos
+        - Recordar sucesos pasados
+    clinical:
+        "El daño en el lado izquierdo puede causar el síndrome de Gerstmann:
+        dificultad para escribir, hacer cálculos, distinguir izquierda y derecha
+        y nombrar los dedos. La estimulación eléctrica cerca de la
+        circunvolución angular derecha ha provocado experiencias
+        extracorporales."
+precuneus:
+    name: Precuña
+    short: Precuña
+    aka:
+        - precuña
+        - precúneo
+    where:
+        La pared interna del lóbulo parietal, justo delante del lóbulo
+        occipital. La vista de corte medial la muestra.
+    summary:
+        La precuña es una de las regiones más conectadas y con mayor consumo de
+        energía de la corteza. Sostiene la imaginación visual, el recuerdo de
+        experiencias personales y la conciencia de uno mismo, y es un nodo
+        central de la red neuronal por defecto.
+    does:
+        - Imaginación mental
+        - Memoria autobiográfica
+        - Conciencia de uno mismo
+        - Desplazar la atención espacial
+    clinical:
+        Es una de las primeras áreas corticales en mostrar menor metabolismo y
+        acumulación de amiloide en la enfermedad de Alzheimer. Su actividad
+        disminuye en el sueño profundo y bajo anestesia.
+    fact: A veces se la llama el "ojo de la mente" del cerebro.
+a1:
+    name: Corteza auditiva primaria
+    short: Corteza auditiva (A1)
+    aka:
+        - corteza auditiva primaria
+        - corteza auditiva
+        - a1
+        - circunvolución de heschl
+    where:
+        En la circunvolución de Heschl, en la cara superior del lóbulo temporal,
+        oculta dentro del surco lateral.
+    summary:
+        A1 recibe la información sonora del núcleo geniculado medial del tálamo.
+        Sus neuronas se ordenan por frecuencia (de forma tonotópica), como un
+        teclado de piano. Detecta el tono, la intensidad y la sincronía, y pasa
+        los resultados a las áreas circundantes que reconocen el habla, la
+        música y los sonidos cotidianos.
+    does:
+        - Análisis del tono y la frecuencia
+        - Sincronía y ritmo del sonido
+        - Localizar sonidos, junto con el otro hemisferio
+        - Procesamiento temprano de los sonidos del habla
+    clinical:
+        Como cada oído envía señales a ambos hemisferios, el daño en un solo
+        lado rara vez causa sordera. El daño en ambos lados puede causar sordera
+        cortical. También interviene en el tinnitus y las alucinaciones
+        auditivas.
+stg:
+    name: Circunvolución temporal superior
+    short: Temporal superior
+    aka:
+        - circunvolución temporal superior
+        - surco temporal superior
+    where:
+        La circunvolución superior del lóbulo temporal, a lo largo del surco
+        lateral.
+    summary:
+        La circunvolución temporal superior contiene la corteza auditiva y las
+        áreas que la rodean. Reconoce los sonidos del habla y la música, y el
+        surco que tiene debajo, el surco temporal superior, responde a caras,
+        mirada, voces y movimiento corporal, lo que la hace importante para la
+        percepción social.
+    does:
+        - Reconocer los sonidos del habla
+        - Percepción musical
+        - Percibir la mirada, las caras y las voces
+        - Percepción social
+    clinical:
+        El menor volumen y la actividad anormal de la circunvolución temporal
+        superior izquierda están entre los hallazgos más replicados en la
+        esquizofrenia y se relacionan con las alucinaciones auditivas. Se
+        describen diferencias en el surco temporal superior en el autismo.
+wernicke:
+    name: Área de Wernicke
+    short: Área de Wernicke
+    aka:
+        - área de wernicke
+        - wernicke
+    where:
+        La parte posterior de la circunvolución temporal superior, normalmente
+        en el hemisferio izquierdo.
+    summary:
+        El área de Wernicke conecta los sonidos de las palabras con su
+        significado. Es esencial para comprender el lenguaje hablado y escrito y
+        para elegir las palabras adecuadas al hablar.
+    does:
+        - Comprender el lenguaje hablado
+        - Comprender el lenguaje escrito
+        - Elegir las palabras
+        - Supervisar el propio habla
+    clinical:
+        El daño causa afasia de Wernicke (receptiva). El habla es fluida y
+        gramatical pero llena de palabras equivocadas o inventadas, y la persona
+        a menudo no se da cuenta de que algo va mal.
+    fact: Carl Wernicke la describió en 1874, cuando tenía 26 años.
+mtg:
+    name: Circunvolución temporal media
+    short: Temporal media
+    aka:
+        - circunvolución temporal media
+    where: La banda media de la superficie externa del lóbulo temporal.
+    summary:
+        La circunvolución temporal media almacena y recupera el significado de
+        las palabras y el conocimiento general sobre el mundo. También ayuda a
+        comprender acciones, y su extremo posterior trabaja con el área de
+        movimiento V5.
+    does:
+        - Significado de las palabras
+        - Memoria semántica
+        - Comprender acciones
+        - Comprensión lectora
+    clinical:
+        Se afecta en la demencia semántica, una forma de demencia
+        frontotemporal, junto con el polo temporal.
+itg:
+    name: Circunvolución temporal inferior
+    short: Temporal inferior
+    aka:
+        - circunvolución temporal inferior
+        - corteza temporal inferior
+    where: La banda inferior de la superficie externa del lóbulo temporal.
+    summary:
+        La circunvolución temporal inferior es el final de la vía visual ventral
+        del "qué". Sus neuronas responden a objetos completos y categorías, sin
+        importar su tamaño o ángulo de visión.
+    does:
+        - Reconocimiento de objetos
+        - Memoria visual
+        - Reconocer categorías
+    clinical:
+        "El daño puede causar agnosia visual: ver un objeto con claridad sin
+        poder reconocerlo."
+fusiform:
+    name: Circunvolución fusiforme
+    short: Circunvolución fusiforme
+    aka:
+        - circunvolución fusiforme
+        - área fusiforme de las caras
+        - área de la forma visual de las palabras
+    where: La cara inferior de los lóbulos temporal y occipital.
+    summary:
+        "La circunvolución fusiforme contiene zonas especializadas: el área
+        fusiforme de las caras responde con fuerza a los rostros, y el área de
+        la forma visual de las palabras, en el hemisferio izquierdo, responde a
+        las palabras escritas. También ayuda a los expertos a distinguir
+        diferencias finas dentro de una categoría, como especies de aves o
+        modelos de coches."
+    does:
+        - Reconocimiento de caras
+        - Leer palabras escritas
+        - Reconocimiento visual experto
+    clinical:
+        El daño causa prosopagnosia (ceguera facial). Algunas personas nacen con
+        prosopagnosia del desarrollo, que se estima en torno al 2 % de la
+        población.
+tpole:
+    name: Polo temporal
+    short: Polo temporal
+    aka:
+        - polo temporal
+        - polos temporales
+    where: La punta delantera del lóbulo temporal.
+    summary:
+        El polo temporal vincula el conocimiento sobre personas y cosas con la
+        emoción. Ayuda a reconocer a personas conocidas, recordar sus nombres y
+        sostiene la comprensión social y emocional.
+    does:
+        - Reconocer a personas conocidas
+        - Nombrar
+        - Conocimiento social y emocional
+    clinical:
+        La atrofia de los polos temporales es característica de la demencia
+        semántica, en la que las personas pierden gradualmente el significado de
+        las palabras y los objetos.
+parahippocampal:
+    name: Circunvolución parahipocampal
+    short: Parahipocampal
+    aka:
+        - circunvolución parahipocampal
+        - área parahipocampal de lugares
+    where: La cara inferior interna del lóbulo temporal, junto al hipocampo.
+    summary:
+        La circunvolución parahipocampal rodea el hipocampo y ayuda a reconocer
+        escenas y lugares. Su área parahipocampal de lugares responde con fuerza
+        a imágenes de edificios, habitaciones y paisajes. También aporta
+        contexto al hipocampo para la memoria.
+    does:
+        - Reconocer escenas y lugares
+        - Navegación
+        - Memoria del contexto
+    clinical:
+        "El daño puede causar desorientación topográfica: perderse en lugares
+        conocidos."
+entorhinal:
+    name: Corteza entorrinal
+    short: Corteza entorrinal
+    aka:
+        - corteza entorrinal
+        - entorrinal
+    where:
+        La parte anterior de la circunvolución parahipocampal, en la cara
+        interna del lóbulo temporal.
+    summary:
+        La corteza entorrinal es la principal puerta de entrada y salida del
+        hipocampo. Contiene células de rejilla, que se activan siguiendo un
+        patrón hexagonal mientras te desplazas y actúan como el sistema de
+        coordenadas del cerebro. Junto con las células de lugar del hipocampo
+        forman el sistema de navegación del cerebro.
+    does:
+        - Principal entrada al hipocampo
+        - Células de rejilla para la navegación
+        - Formación de recuerdos
+        - Sentido del tiempo dentro de las experiencias
+    clinical:
+        Es una de las primeras áreas donde aparecen ovillos de tau en la
+        enfermedad de Alzheimer, lo que podría explicar por qué perderse es un
+        síntoma temprano.
+    fact:
+        May-Britt y Edvard Moser compartieron el Premio Nobel de Fisiología o
+        Medicina de 2014 con John O'Keefe por descubrir las células de rejilla y
+        de lugar.
+v1:
+    name: Corteza visual primaria
+    short: Corteza visual (V1)
+    aka:
+        - corteza visual primaria
+        - corteza visual
+        - v1
+        - corteza estriada
+    where:
+        A lo largo del surco calcarino en la pared interna del lóbulo occipital,
+        envolviendo el polo occipital.
+    summary:
+        V1 es la primera parada cortical de la visión y recibe información del
+        núcleo geniculado lateral del tálamo. Contiene un mapa preciso del campo
+        visual opuesto, en el que el centro de la visión ocupa una gran parte.
+        Sus neuronas detectan bordes con orientaciones concretas, el contraste y
+        de qué ojo procede cada señal.
+    does:
+        - Detectar bordes y su orientación
+        - Cartografiar el campo visual
+        - Contraste y detalle fino
+        - Combinar la información de ambos ojos
+    clinical:
+        El daño causa ceguera en la parte correspondiente del campo visual, como
+        la hemianopsia homónima tras un ictus. Se cree que el aura de la migraña
+        se debe a una onda lenta de actividad que se propaga por la corteza
+        visual.
+    fact:
+        También se llama corteza estriada por una franja blanca visible, la
+        estría de Gennari.
+cuneus:
+    name: Cuña
+    short: Cuña
+    aka:
+        - cuña
+        - cúneo
+    where:
+        El área en forma de cuña por encima del surco calcarino, en la cara
+        interna del lóbulo occipital.
+    summary:
+        La cuña contiene las partes de V1 y V2 que representan la mitad inferior
+        del campo visual y contribuye al procesamiento visual básico y a la
+        atención.
+    does:
+        - Campo visual inferior
+        - Procesamiento visual básico
+        - Atención visual
+    clinical:
+        El daño causa la pérdida del cuarto inferior del campo visual del lado
+        opuesto (cuadrantanopsia).
+lingual:
+    name: Circunvolución lingual
+    short: Circunvolución lingual
+    aka:
+        - circunvolución lingual
+    where:
+        Por debajo del surco calcarino, en la cara interna e inferior del lóbulo
+        occipital.
+    summary:
+        La circunvolución lingual procesa la mitad superior del campo visual y
+        contribuye a reconocer letras y almacenar recuerdos visuales.
+    does:
+        - Campo visual superior
+        - Procesamiento de letras y palabras
+        - Memoria visual
+    clinical:
+        El daño causa la pérdida del cuarto superior del campo visual del lado
+        opuesto.
+v2v3:
+    name: Corteza de asociación visual
+    short: V2 / V3
+    aka:
+        - corteza de asociación visual
+        - corteza extraestriada
+        - v2
+        - v3
+    where: La superficie externa del lóbulo occipital, alrededor de V1.
+    summary:
+        Estas áreas toman los bordes de V1 y los convierten en contornos,
+        texturas, profundidad y la distinción entre figura y fondo. Envían los
+        resultados a la vía dorsal hacia el lóbulo parietal y a la vía ventral
+        hacia el lóbulo temporal.
+    does:
+        - Contornos y formas
+        - Profundidad a partir de ambos ojos
+        - Textura
+        - Separar los objetos del fondo
+    clinical:
+        La actividad anormal en la corteza de asociación visual se relaciona con
+        alucinaciones visuales, como las de la demencia con cuerpos de Lewy y el
+        síndrome de Charles Bonnet.
+v4:
+    name: V4 (área del color)
+    short: V4
+    aka:
+        - v4
+    where:
+        La cara inferior del lóbulo occipital, junto a la circunvolución
+        fusiforme.
+    summary:
+        V4 forma parte de la vía ventral y se especializa en el color y la
+        forma. Es responsable de la constancia del color, que hace que un
+        plátano siga viéndose amarillo al sol o a la sombra.
+    does:
+        - Percepción del color
+        - Constancia del color
+        - Forma y curvatura
+        - Atención a rasgos visuales
+    clinical:
+        "El daño causa acromatopsia cerebral: el mundo se ve en tonos de gris."
+v5:
+    name: V5/MT (área del movimiento)
+    short: V5/MT
+    aka:
+        - v5
+    where:
+        La superficie externa cerca de donde se unen los lóbulos occipital y
+        temporal.
+    summary:
+        V5, también llamada MT, se especializa en el movimiento. Sus neuronas
+        responden a la dirección y la velocidad del movimiento, lo que te
+        permite seguir objetos en movimiento y calcular lo rápido que se acercan
+        las cosas. Forma parte de la vía dorsal.
+    does:
+        - Dirección y velocidad del movimiento
+        - Seguir objetos en movimiento
+        - Guiar los ojos para seguir el movimiento
+    clinical:
+        El daño bilateral causa acinetopsia, ceguera al movimiento. Una paciente
+        famosa decía que servir té se veía como un glaciar congelado, así que no
+        sabía cuándo estaba llena la taza.
+    fact:
+        La "ilusión de la cascada", en la que las rocas inmóviles parecen subir
+        después de mirar una cascada, se atribuye a la adaptación de las
+        neuronas sensibles al movimiento.
+acc:
+    name: Corteza cingulada anterior
+    short: CCA
+    aka:
+        - corteza cingulada anterior
+        - cingulada anterior
+        - cca
+        - cca subgenual
+        - cingulada subgenual
+    where:
+        La parte delantera de la circunvolución cingulada, rodeando la parte
+        anterior del cuerpo calloso.
+    summary:
+        La CCA supervisa el desempeño, detecta errores y conflictos entre
+        respuestas competidoras y avisa cuando se necesita más control. También
+        procesa el lado emocional y desagradable del dolor y sopesa si una
+        recompensa vale el esfuerzo. Su parte más baja, la CCA subgenual, bajo
+        la parte delantera del cuerpo calloso, está muy ligada al estado de
+        ánimo.
+    does:
+        - Detectar errores y conflictos
+        - El lado emocional del dolor
+        - Esfuerzo y motivación
+        - Regulación emocional
+        - Sentir el rechazo social
+    clinical:
+        La hiperactividad de la CCA subgenual se relaciona con la depresión, y
+        ha sido diana de la estimulación cerebral profunda en la depresión
+        resistente al tratamiento. Las alteraciones de la CCA también se
+        relacionan con el TOC, el TEPT y el dolor crónico.
+    fact:
+        Estudios de imagen hallaron que quedar excluido de un simple juego de
+        pasarse la pelota activa la CCA, lo que sugiere un solapamiento entre el
+        dolor social y el físico.
+pcc:
+    name: Corteza cingulada posterior
+    short: CCP
+    aka:
+        - corteza cingulada posterior
+        - cingulada posterior
+        - ccp
+    where:
+        La parte posterior de la circunvolución cingulada, por encima de la
+        parte trasera del cuerpo calloso.
+    summary:
+        La CCP es un nodo central de la red neuronal por defecto. Está más
+        activa en reposo, al divagar, al recordar experiencias personales e
+        imaginar el futuro, y se calma cuando te concentras en una tarea
+        exigente.
+    does:
+        - Divagación y ensoñación
+        - Memoria autobiográfica
+        - Pensar en uno mismo
+        - Vigilar el entorno
+    clinical:
+        El menor metabolismo en la CCP es un signo temprano de la enfermedad de
+        Alzheimer en la PET. Se describe una conectividad alterada en la
+        depresión, el TDAH y el autismo.
+antinsula:
+    name: Ínsula anterior
+    short: Ínsula anterior
+    aka:
+        - ínsula anterior
+    where: La mitad delantera de la ínsula, bajo el opérculo frontal.
+    summary:
+        La ínsula anterior convierte las señales del cuerpo en sentimientos. Es
+        un nodo clave de la red de saliencia, que decide qué merece atención y
+        alterna el cerebro entre el pensamiento dirigido hacia dentro y las
+        tareas dirigidas hacia fuera. Se activa con el asco, la empatía, la
+        incertidumbre y el deseo intenso.
+    does:
+        - Conciencia emocional
+        - Asco
+        - Empatía
+        - Dirigir la atención a lo importante
+        - Deseo intenso
+    clinical:
+        Una ínsula anterior hiperactiva se relaciona con la ansiedad y el
+        pánico. Se describen cambios en las adicciones, los trastornos de la
+        conducta alimentaria y la demencia frontotemporal.
+postinsula:
+    name: Ínsula posterior
+    short: Ínsula posterior
+    aka:
+        - ínsula posterior
+    where:
+        La mitad trasera de la ínsula, bajo los opérculos parietal y temporal.
+    summary:
+        "La ínsula posterior recibe las señales en bruto del cuerpo:
+        temperatura, dolor, picor, latidos, el estado del intestino y el tacto
+        suave. También contiene gran parte de la corteza gustativa primaria."
+    does:
+        - Interocepción
+        - Gusto
+        - Intensidad del dolor y la temperatura
+        - Sensaciones de los órganos internos
+    clinical:
+        El daño puede alterar la sensibilidad al dolor y la temperatura y el
+        gusto. Las crisis que se originan aquí pueden causar sensación de ahogo
+        u hormigueo.
+vermis:
+    name: Vermis
+    short: Vermis
+    aka:
+        - vermis
+        - vermis cerebeloso
+    where: La estrecha franja central que une las dos mitades del cerebelo.
+    summary:
+        "El vermis controla la línea media del cuerpo: postura, equilibrio,
+        marcha y movimientos oculares. También se conecta con áreas límbicas y
+        podría intervenir en la emoción."
+    does:
+        - Postura y equilibrio
+        - Marcha
+        - Movimientos oculares
+    clinical:
+        "El daño causa ataxia troncal: marcha amplia e inestable y balanceo al
+        sentarse o estar de pie. El consumo intenso y prolongado de alcohol
+        suele dañar primero la parte anterior del vermis."
+cerebhemi:
+    name: Hemisferios cerebelosos
+    short: Hemisferios
+    aka:
+        - hemisferios cerebelosos
+        - hemisferio cerebeloso
+    where: Las dos grandes partes laterales del cerebelo.
+    summary:
+        Los hemisferios cerebelosos coordinan los movimientos de las
+        extremidades del mismo lado del cuerpo. Sus partes externas forman
+        circuitos con la corteza prefrontal y parietal a través del tálamo y
+        ayudan con la sincronía, la planificación, el lenguaje y la memoria de
+        trabajo, no solo con el movimiento.
+    does:
+        - Coordinar brazos y piernas
+        - Planificar movimientos de varias articulaciones
+        - Sincronía
+        - Apoyo al pensamiento y el lenguaje
+    clinical:
+        El daño causa torpeza en el mismo lado de la lesión, temblor intencional
+        y dismetría (pasarse o quedarse corto al alcanzar un objetivo). El
+        síndrome cognitivo-afectivo cerebeloso puede causar problemas de
+        planificación, lenguaje y emoción.
+flocculo:
+    name: Lóbulo floculonodular
+    short: Floculonodular
+    aka:
+        - lóbulo floculonodular
+        - flóculo
+    where:
+        Los pequeños lóbulos en la cara inferior del cerebelo, orientados hacia
+        el tronco encefálico.
+    summary:
+        Es la parte más antigua del cerebelo y está conectada con los órganos
+        del equilibrio del oído interno. Te mantiene en equilibrio y estabiliza
+        la mirada mientras mueves la cabeza (reflejo vestíbulo-ocular).
+    does:
+        - Equilibrio
+        - Mirada estable durante el movimiento de la cabeza
+        - Control de los movimientos oculares
+    clinical:
+        El daño causa vértigo, inestabilidad al estar de pie y nistagmo
+        (movimientos oculares involuntarios en sacudidas).
+dentate:
+    name: Núcleo dentado
+    short: Núcleo dentado
+    aka:
+        - núcleo dentado
+        - núcleos cerebelosos profundos
+    where: Oculto en lo profundo de cada hemisferio cerebeloso.
+    summary:
+        Es el mayor de los núcleos cerebelosos profundos y la principal salida
+        de los hemisferios cerebelosos. Envía señales a través del tálamo a la
+        corteza motora y prefrontal para planificar y sincronizar los
+        movimientos y apoyar el pensamiento.
+    does:
+        - Principal salida de los hemisferios cerebelosos
+        - Planificación y sincronía del movimiento
+        - Apoyo a la cognición
+    clinical:
+        El daño contribuye al temblor y la ataxia. Se afecta en la ataxia de
+        Friedreich, algunas ataxias espinocerebelosas y la parálisis
+        supranuclear progresiva.
+midbrain:
+    name: Mesencéfalo
+    short: Mesencéfalo
+    aka:
+        - mesencéfalo
+        - sustancia gris periacueductal
+    where: La sección superior del tronco encefálico, justo debajo del tálamo.
+    summary:
+        El mesencéfalo contiene en su cara posterior los colículos superiores
+        para los reflejos visuales y los inferiores para la audición, y en su
+        cara anterior grandes vías motoras procedentes de la corteza. La
+        sustancia gris periacueductal, alrededor de su conducto central,
+        controla el dolor y reacciones defensivas como quedarse paralizado. Los
+        pares craneales III y IV, que mueven los ojos, nacen aquí.
+    does:
+        - Movimientos oculares y reflejos pupilares
+        - Orientarse hacia estímulos visuales y sonoros
+        - Control del dolor y reacciones defensivas
+        - Relevo de las vías motoras
+    clinical:
+        El daño puede causar problemas de movimiento ocular y visión doble. La
+        atrofia del mesencéfalo es característica de la parálisis supranuclear
+        progresiva.
+pons:
+    name: Protuberancia
+    short: Protuberancia
+    aka:
+        - protuberancia
+        - puente troncoencefálico
+    where:
+        La sección media abultada del tronco encefálico, delante del cerebelo.
+    summary:
+        'La protuberancia ("puente") transmite señales de la corteza al cerebelo
+        y contiene los núcleos de los pares craneales V a VIII: sensibilidad
+        facial, masticación, expresión facial, movimiento ocular y audición.
+        Ayuda a fijar el ritmo respiratorio y tiene un papel central en el sueño
+        REM, incluida la parálisis muscular que te impide actuar los sueños.'
+    does:
+        - Relevo de la corteza al cerebelo
+        - Sensibilidad facial y masticación
+        - Sueño REM
+        - Ritmo respiratorio
+    clinical:
+        Un ictus en la parte anterior de la protuberancia puede causar síndrome
+        de enclaustramiento. Corregir demasiado rápido un sodio en sangre muy
+        bajo puede dañarla (desmielinización osmótica).
+medulla:
+    name: Bulbo raquídeo
+    short: Bulbo raquídeo
+    aka:
+        - bulbo raquídeo
+        - médula oblonga
+        - bulbo
+    where:
+        La parte más baja del tronco encefálico, que se une a la médula espinal.
+    summary:
+        El bulbo raquídeo contiene los centros que controlan la frecuencia
+        cardiaca, la presión arterial y la respiración, además de reflejos como
+        tragar, toser, estornudar y vomitar. La mayoría de las fibras motoras
+        cruzan al lado opuesto aquí, en la decusación piramidal, y por eso cada
+        lado del cerebro controla el lado opuesto del cuerpo.
+    does:
+        - Frecuencia cardiaca y presión arterial
+        - Respiración
+        - Reflejos de deglución, tos y vómito
+        - Cruce de las vías motoras
+    clinical:
+        La sobredosis de opioides mata principalmente al suprimir los centros
+        respiratorios de aquí. El síndrome bulbar lateral (de Wallenberg) tras
+        un ictus causa vértigo, dificultad para tragar y pérdida cruzada de la
+        sensibilidad al dolor.
+vta:
+    name: Área tegmental ventral
+    short: ATV
+    aka:
+        - área tegmental ventral
+        - atv
+    where:
+        Un pequeño grupo en la parte anterior del mesencéfalo, cerca de la línea
+        media.
+    summary:
+        "El ATV es un grupo de neuronas dopaminérgicas del mesencéfalo. Envía
+        dopamina al núcleo accumbens (vía mesolímbica) y a la corteza prefrontal
+        (vía mesocortical). Sus neuronas señalan errores de predicción de
+        recompensa: se activan más cuando algo sale mejor de lo esperado y menos
+        cuando sale peor."
+    does:
+        - Recompensa y motivación
+        - Aprender de las recompensas
+        - Aporte de dopamina a la corteza prefrontal
+    clinical:
+        Casi todas las drogas adictivas aumentan la liberación de dopamina de
+        las neuronas del ATV en el núcleo accumbens. La dopamina mesolímbica
+        alterada se relaciona con la psicosis en la esquizofrenia.
+lc:
+    name: Locus coeruleus
+    short: Locus coeruleus
+    aka:
+        - locus coeruleus
+        - locus cerúleo
+    where: Un diminuto núcleo par en la parte posterior de la protuberancia.
+    summary:
+        El locus coeruleus ("mancha azul") es la principal fuente de
+        noradrenalina del cerebro. Envía fibras a casi todo el cerebro, ajusta
+        el nivel de alerta, la vigilia y la concentración, e impulsa la
+        respuesta al estrés.
+    does:
+        - Alerta y vigilia
+        - Atención y vigilancia
+        - Respuestas de estrés y alarma
+    clinical:
+        Está hiperactivo en el pánico, el TEPT y la abstinencia de opioides. Es
+        uno de los primeros sitios en acumular tau, años antes de los síntomas
+        del Alzheimer, y pierde neuronas en la enfermedad de Parkinson.
+    fact:
+        Se ve de color negro azulado en el tejido cerebral por el pigmento
+        neuromelanina.
+raphe:
+    name: Núcleos del rafe
+    short: Núcleos del rafe
+    aka:
+        - núcleos del rafe
+        - rafe
+    where:
+        Una columna de núcleos a lo largo de la línea media del tronco
+        encefálico.
+    summary:
+        Los núcleos del rafe son la principal fuente de serotonina del cerebro y
+        la médula espinal. La serotonina del rafe influye en el estado de ánimo,
+        el sueño, el apetito, el dolor y el control de los impulsos.
+    does:
+        - Producción de serotonina
+        - Regulación del estado de ánimo
+        - Ciclos de sueño-vigilia
+        - Control del dolor
+    clinical:
+        Los ISRS, los antidepresivos más comunes, actúan sobre la serotonina
+        liberada por las neuronas del rafe.
+caudate:
+    name: Núcleo caudado
+    short: Caudado
+    aka:
+        - núcleo caudado
+        - caudado
+    where:
+        Un núcleo en forma de C que se curva a lo largo de la pared del
+        ventrículo lateral, con una cabeza grande en la parte delantera.
+    summary:
+        Parte del cuerpo estriado, el caudado se conecta sobre todo con la
+        corteza prefrontal y sostiene el aprendizaje dirigido a metas, la
+        planificación y el aprendizaje a partir de la retroalimentación.
+    does:
+        - Conducta dirigida a metas
+        - Aprender de la retroalimentación
+        - Planificación
+        - Apoyo a la memoria de trabajo
+    clinical:
+        Se atrofia de forma temprana y grave en la enfermedad de Huntington, lo
+        que hace que los ventrículos laterales cercanos se vean agrandados en
+        las imágenes. La hiperactividad del caudado se relaciona con el TOC.
+putamen:
+    name: Putamen
+    short: Putamen
+    aka:
+        - putamen
+    where:
+        Un núcleo grande y redondeado en la parte externa de los ganglios
+        basales, bajo la ínsula.
+    summary:
+        Parte del cuerpo estriado, el putamen se conecta sobre todo con la
+        corteza motora y premotora. Ayuda a controlar el movimiento y es central
+        para el aprendizaje motor y los hábitos.
+    does:
+        - Control del movimiento
+        - Aprendizaje motor
+        - Hábitos
+    clinical:
+        Pierde su aporte de dopamina en la enfermedad de Parkinson y se daña en
+        las enfermedades de Huntington y de Wilson. Es un sitio frecuente de
+        hemorragia por hipertensión arterial.
+gp:
+    name: Globo pálido
+    short: Globo pálido
+    aka:
+        - globo pálido
+        - pálido
+    where: Justo por dentro del putamen, hacia la línea media.
+    summary:
+        El globo pálido es la principal estación de salida de los ganglios
+        basales. Su parte interna inhibe constantemente el tálamo; cuando el
+        estriado la silencia, el tálamo se libera y el movimiento puede
+        producirse. Su parte externa ayuda a afinar este equilibrio.
+    does:
+        - Principal salida de los ganglios basales
+        - Liberar o frenar el movimiento
+        - Regular la amplitud del movimiento
+    clinical:
+        La estimulación cerebral profunda del globo pálido interno trata la
+        enfermedad de Parkinson y la distonía. A menudo se daña en la
+        intoxicación por monóxido de carbono.
+nacc:
+    name: Núcleo accumbens
+    short: Núcleo accumbens
+    aka:
+        - núcleo accumbens
+        - accumbens
+        - estriado ventral
+    where:
+        En la parte delantera e inferior del cuerpo estriado, donde se unen el
+        caudado y el putamen.
+    summary:
+        El núcleo accumbens es el nodo central del circuito de recompensa.
+        Recibe dopamina del ATV e información de la corteza prefrontal, la
+        amígdala y el hipocampo, y convierte la motivación en acción. Responde a
+        la comida, la conexión social, la música, el dinero y las drogas.
+    does:
+        - Anticipación de la recompensa y el placer
+        - Motivación
+        - Aprendizaje por refuerzo
+    clinical:
+        Los cambios aquí son centrales en las adicciones. Una respuesta de
+        recompensa atenuada se relaciona con la anhedonia en la depresión.
+stn:
+    name: Núcleo subtalámico
+    short: NST
+    aka:
+        - núcleo subtalámico
+        - nst
+    where: Un pequeño núcleo en forma de lente justo debajo del tálamo.
+    summary:
+        "El núcleo subtalámico actúa como freno: ayuda a detener acciones y a
+        hacer una pausa antes de actuar cuando una decisión es difícil."
+    does:
+        - Detener acciones
+        - Hacer una pausa en decisiones difíciles
+        - Regular la salida de los ganglios basales
+    clinical:
+        El daño puede causar hemibalismo, movimientos violentos de lanzamiento
+        de las extremidades del lado opuesto. Es la diana más frecuente de la
+        estimulación cerebral profunda en la enfermedad de Parkinson.
+sn:
+    name: Sustancia negra
+    short: Sustancia negra
+    aka:
+        - sustancia negra
+    where: Una banda oscura en la parte anterior del mesencéfalo.
+    summary:
+        Su parte compacta contiene neuronas dopaminérgicas que se proyectan al
+        estriado (vía nigroestriada), lo que permite un movimiento fluido y bien
+        graduado. Su parte reticulada es una estación de salida similar al globo
+        pálido interno.
+    does:
+        - Aporte de dopamina al estriado
+        - Iniciar y graduar el movimiento
+        - Aprendizaje por recompensa
+    clinical:
+        Los síntomas motores del Parkinson suelen aparecer solo después de
+        perder una gran parte de estas neuronas dopaminérgicas, a menudo
+        estimada entre el 50 y el 80 %.
+    fact:
+        Su nombre significa "sustancia negra" por el pigmento neuromelanina de
+        sus neuronas.
+antthal:
+    name: Núcleo anterior
+    short: Núcleo anterior
+    aka:
+        - núcleo anterior
+        - núcleo anterior del tálamo
+        - tálamo anterior
+    where: La punta delantera del tálamo.
+    summary:
+        Forma parte del circuito de Papez para la memoria. Recibe información de
+        los cuerpos mamilares y la envía a la corteza cingulada. También
+        contiene células de dirección de la cabeza que registran hacia dónde
+        miras.
+    does:
+        - Memoria episódica
+        - Sentido de la orientación
+    clinical:
+        Se daña en el síndrome de Korsakoff. Es diana de la estimulación
+        cerebral profunda en la epilepsia farmacorresistente.
+mdthal:
+    name: Núcleo mediodorsal
+    short: Mediodorsal
+    aka:
+        - núcleo mediodorsal
+        - tálamo mediodorsal
+    where: La parte superior interna del tálamo.
+    summary:
+        El núcleo mediodorsal está muy conectado con la corteza prefrontal y
+        sostiene la memoria de trabajo, la toma de decisiones y la regulación
+        emocional.
+    does:
+        - Comunicación con la corteza prefrontal
+        - Memoria de trabajo
+        - Toma de decisiones
+    clinical:
+        Se describe menor volumen y conectividad en la esquizofrenia. Su daño
+        contribuye a la pérdida de memoria en el síndrome de Korsakoff.
+ventthal:
+    name: Grupo nuclear ventral
+    short: Núcleos ventrales
+    aka:
+        - grupo nuclear ventral
+        - núcleo ventral posterior
+        - núcleo ventral lateral
+        - vim
+    where: La parte inferior externa del tálamo.
+    summary:
+        Este grupo incluye los núcleos ventral anterior y ventral lateral, que
+        transmiten los circuitos motores de los ganglios basales y el cerebelo a
+        la corteza motora, y los núcleos ventrales posteriores, que transmiten
+        el tacto, el dolor y la temperatura del cuerpo y la cara a la corteza
+        somatosensorial.
+    does:
+        - Relevo de los circuitos motores a la corteza
+        - Relevo del tacto, el dolor y la temperatura
+    clinical:
+        Los ictus aquí pueden causar el síndrome de Dejerine-Roussy, un dolor
+        intenso en el lado opuesto del cuerpo. El núcleo ventral intermedio
+        (VIM) es diana de tratamiento para el temblor esencial.
+pulvinar:
+    name: Pulvinar
+    short: Pulvinar
+    aka:
+        - pulvinar
+    where: El extremo posterior grande y redondeado del tálamo.
+    summary:
+        El pulvinar conecta las áreas visuales con la corteza parietal y frontal
+        y ayuda a dirigir la atención visual y filtrar distracciones.
+    does:
+        - Atención visual
+        - Filtrar distracciones
+        - Conectar la corteza visual y de asociación
+    clinical:
+        El daño puede causar problemas de atención en el lado opuesto del
+        espacio.
+lgn:
+    name: Núcleo geniculado lateral
+    short: NGL
+    aka:
+        - núcleo geniculado lateral
+        - ngl
+    where: Una pequeña protuberancia en la parte posteroinferior del tálamo.
+    summary:
+        Es la estación de relevo de la visión. Recibe las señales del tracto
+        óptico y las envía a la corteza visual primaria a través de las
+        radiaciones ópticas. Cada NGL transmite la mitad opuesta del campo
+        visual de ambos ojos, organizada en seis capas.
+    does:
+        - Relevo de la visión a V1
+        - Mantener separadas las señales de cada ojo
+mgn:
+    name: Núcleo geniculado medial
+    short: NGM
+    aka:
+        - núcleo geniculado medial
+        - ngm
+    where:
+        Una pequeña protuberancia en la parte posteroinferior del tálamo, por
+        dentro del NGL.
+    summary:
+        "Es la estación de relevo de la audición: envía la información sonora
+        del colículo inferior del mesencéfalo a la corteza auditiva primaria."
+    does:
+        - Relevo del sonido a la corteza auditiva
+pineal:
+    name: Glándula pineal
+    short: Glándula pineal
+    aka:
+        - glándula pineal
+        - pineal
+        - epitálamo
+    where:
+        Una diminuta glándula en forma de piña en la línea media, justo detrás
+        del tálamo, parte del epitálamo.
+    summary:
+        La glándula pineal libera melatonina, sobre todo de noche. La
+        información sobre la luz le llega indirectamente desde el núcleo
+        supraquiasmático, de modo que la oscuridad aumenta la melatonina y la
+        luz la suprime, lo que ayuda a fijar el ciclo de sueño-vigilia.
+    does:
+        - Liberar melatonina
+        - Indicar al cuerpo que es de noche
+    clinical:
+        Los tumores pineales pueden bloquear el flujo de LCR y causar
+        hidrocefalia, o comprimir el mesencéfalo y alterar la mirada hacia
+        arriba (síndrome de Parinaud).
+    fact: René Descartes la llamó la sede principal del alma.
+scn:
+    name: Núcleo supraquiasmático
+    short: NSQ
+    aka:
+        - núcleo supraquiasmático
+        - nsq
+    where:
+        En la parte delantera del hipotálamo, justo encima del quiasma óptico.
+    summary:
+        Es el reloj maestro del cuerpo. Células especiales de la retina
+        sensibles a la luz le informan de la luz del día, y mantiene
+        sincronizados los demás relojes del cuerpo en un ciclo de unas 24 horas.
+    does:
+        - Fijar los ritmos circadianos
+        - Sincronizar la liberación de melatonina
+        - Ajustar los relojes del cuerpo a la luz del día
+    clinical:
+        La alteración de las señales del reloj contribuye al desfase horario,
+        los problemas de sueño por trabajo por turnos y los trastornos del ritmo
+        circadiano, y podría intervenir en la depresión estacional.
+pvn:
+    name: Núcleo paraventricular
+    short: NPV
+    aka:
+        - núcleo paraventricular
+        - npv
+    where:
+        A lo largo de la pared del tercer ventrículo, en la parte superior del
+        hipotálamo.
+    summary:
+        "El NPV pone en marcha el eje HHA: libera CRH, que indica a la hipófisis
+        que libere ACTH, que a su vez indica a las glándulas suprarrenales que
+        liberen cortisol. También produce oxitocina y vasopresina."
+    does:
+        - Iniciar la cascada de hormonas del estrés
+        - Producir oxitocina y vasopresina
+        - Regular el apetito y la presión arterial
+    clinical:
+        Un eje HHA hiperactivo se encuentra en muchas personas con depresión e
+        interviene en la ansiedad y el TEPT.
+arcuate:
+    name: Núcleo arqueado
+    short: Arqueado
+    aka:
+        - núcleo arqueado
+    where: En la base del hipotálamo, junto al tallo hipofisario.
+    summary:
+        El núcleo arqueado lee hormonas de la sangre, como la leptina de la
+        grasa y la grelina del estómago, y controla el hambre y el gasto de
+        energía. También ayuda a controlar la liberación de hormona del
+        crecimiento y prolactina.
+    does:
+        - Señales de hambre y saciedad
+        - Balance energético
+        - Control de las hormonas hipofisarias
+    clinical:
+        El daño en esta zona puede causar un aumento de peso grave (obesidad
+        hipotalámica).
+lateralhyp:
+    name: Hipotálamo lateral
+    short: Hipotálamo lateral
+    aka:
+        - hipotálamo lateral
+    where: La parte externa del hipotálamo a cada lado.
+    summary:
+        El hipotálamo lateral promueve el hambre, la alerta y la motivación.
+        Contiene las neuronas que producen orexina (también llamada
+        hipocretina), que te mantienen despierto y estabilizan el cambio entre
+        sueño y vigilia.
+    does:
+        - Vigilia (orexina)
+        - Hambre
+        - Motivación
+    clinical: La pérdida de neuronas de orexina causa la narcolepsia tipo 1.
+mammillary:
+    name: Cuerpos mamilares
+    short: Cuerpos mamilares
+    aka:
+        - cuerpos mamilares
+        - cuerpo mamilar
+    where:
+        Dos pequeñas protuberancias redondas en la parte posterior de la cara
+        inferior del hipotálamo.
+    summary:
+        Los cuerpos mamilares reciben información del hipocampo a través del
+        fórnix y la pasan al tálamo anterior, formando parte del circuito de
+        Papez para la memoria.
+    does:
+        - Relevo de señales de memoria
+        - Memoria espacial
+    clinical:
+        Se atrofian en el síndrome de Wernicke-Korsakoff, causado por déficit de
+        tiamina (vitamina B1), que provoca una pérdida grave de memoria.
+pituitary:
+    name: Hipófisis
+    short: Hipófisis
+    aka:
+        - hipófisis
+        - glándula pituitaria
+        - pituitaria
+    where:
+        Colgando bajo el hipotálamo de un tallo, en un hueco óseo llamado silla
+        turca.
+    summary:
+        A menudo llamada la glándula maestra, la hipófisis libera hormonas que
+        controlan la tiroides, las glándulas suprarrenales, el crecimiento, la
+        reproducción, la producción de leche y el balance de agua. Su parte
+        anterior está controlada por hormonas liberadoras del hipotálamo; su
+        parte posterior libera oxitocina y vasopresina producidas en el
+        hipotálamo.
+    does:
+        - Liberar hormonas que controlan otras glándulas
+        - Crecimiento
+        - Balance de agua
+    clinical:
+        Los adenomas hipofisarios son tumores frecuentes, normalmente benignos.
+        Pueden liberar exceso de hormona o comprimir el quiasma óptico situado
+        encima y causar pérdida de la visión periférica.
+ca:
+    name: Asta de Amón (CA1–CA3)
+    short: CA1–CA3
+    aka:
+        - asta de amón
+        - cuerno de amón
+        - ca1
+        - ca3
+    where:
+        La principal capa enrollada de neuronas que forma el cuerpo del
+        hipocampo.
+    summary:
+        Los campos CA son los circuitos centrales del hipocampo. CA3 tiene
+        muchas conexiones consigo misma, lo que le permite completar un recuerdo
+        entero a partir de una pista parcial. CA1 compara la información nueva
+        con los recuerdos almacenados y envía el resultado al subículo y la
+        corteza.
+    does:
+        - Almacenar patrones de memoria
+        - Completar recuerdos a partir de pistas
+        - Comparar información nueva y almacenada
+    clinical:
+        Las neuronas de CA1 son especialmente vulnerables a la falta de oxígeno;
+        un paro cardiaco breve puede dañarlas y causar pérdida de memoria
+        duradera. La esclerosis hipocampal, la cicatrización de CA1 y CA3, es la
+        causa más frecuente de epilepsia del lóbulo temporal farmacorresistente.
+dg:
+    name: Giro dentado
+    short: Giro dentado
+    aka:
+        - giro dentado
+        - circunvolución dentada
+    where:
+        Una banda en forma de C dentro del enrollamiento de los campos CA, en la
+        cara interna del hipocampo.
+    summary:
+        El giro dentado es el punto de entrada de las señales de la corteza
+        entorrinal. Realiza la separación de patrones, que mantiene
+        diferenciadas experiencias similares, como dónde aparcaste hoy frente a
+        ayer. Es uno de los pocos lugares donde pueden formarse neuronas nuevas
+        en adultos, aunque aún se debate cuánto ocurre en los humanos.
+    does:
+        - Separación de patrones
+        - Punto de entrada de la información cortical
+        - Neurogénesis adulta
+    clinical:
+        En estudios con animales, el estrés crónico reduce la formación de
+        neuronas nuevas aquí, mientras que el ejercicio y los antidepresivos la
+        aumentan.
+subiculum:
+    name: Subículo
+    short: Subículo
+    aka:
+        - subículo
+    where:
+        El borde inferior del hipocampo, donde se une a la circunvolución
+        parahipocampal.
+    summary:
+        "Es la principal salida del hipocampo: envía la información procesada a
+        la corteza entorrinal, los cuerpos mamilares y otras áreas. También
+        ayuda a regular la respuesta al estrés."
+    does:
+        - Principal salida del hipocampo
+        - Señales espaciales
+        - Regulación del estrés
+    clinical: Se afecta de forma temprana en la enfermedad de Alzheimer.
+fornix:
+    name: Fórnix
+    short: Fórnix
+    aka:
+        - fórnix
+        - trígono cerebral
+    where:
+        Un haz arqueado que va desde la parte posterior de cada hipocampo, por
+        debajo del cuerpo calloso, hasta los cuerpos mamilares.
+    summary:
+        El fórnix es un haz de sustancia blanca en forma de C que lleva las
+        señales del hipocampo a los cuerpos mamilares y otras áreas. Es la
+        principal vía de salida del hipocampo en el circuito de Papez.
+    does:
+        - Transportar la salida del hipocampo
+        - Conectar las estructuras de la memoria
+    clinical:
+        El daño en el fórnix, por ejemplo durante una cirugía cerca del tercer
+        ventrículo, puede causar amnesia grave.
+    fact: Fórnix significa "arco" en latín.
+bla:
+    name: Complejo basolateral
+    short: Basolateral
+    aka:
+        - complejo basolateral
+        - amígdala basolateral
+    where: La parte inferior externa de la amígdala.
+    summary:
+        Es el lado de entrada de la amígdala. Recibe información de todos los
+        sentidos, el tálamo y la corteza, y aprende qué señales predicen peligro
+        o recompensa, como en el condicionamiento del miedo.
+    does:
+        - Condicionamiento del miedo
+        - Vincular señales con resultados
+        - Memoria emocional
+    clinical:
+        El aprendizaje del miedo hiperactivo aquí es un modelo principal de los
+        trastornos de ansiedad y el TEPT.
+cea:
+    name: Núcleo central
+    short: Núcleo central
+    aka:
+        - núcleo central de la amígdala
+        - amígdala central
+    where: La parte superior interna de la amígdala.
+    summary:
+        "Es la principal salida de la amígdala. Desencadena las respuestas de
+        miedo a través del hipotálamo y el tronco encefálico: quedarse
+        paralizado, corazón acelerado, respiración rápida y liberación de
+        hormonas del estrés."
+    does:
+        - Desencadenar las respuestas corporales de miedo
+        - Paralización
+        - Sobresalto
+    clinical: Impulsa los síntomas físicos del miedo y la ansiedad.
+medamyg:
+    name: Núcleo medial
+    short: Núcleo medial
+    aka:
+        - amígdala medial
+    where: La cara interna de la amígdala.
+    summary:
+        El núcleo medial recibe señales olfativas y de feromonas e influye en
+        conductas sociales como la agresión y la crianza. La mayor parte de lo
+        que se sabe procede de estudios con animales.
+    does:
+        - Señales olfativas sociales
+        - Conducta social y de crianza
+        - Agresión
+rostrum:
+    name: Rostro
+    short: Rostro
+    aka:
+        - rostro del cuerpo calloso
+    where: La fina punta anteroinferior del cuerpo calloso.
+    summary:
+        El rostro conecta las partes inferiores de los dos lóbulos frontales,
+        incluida la corteza orbitofrontal.
+    does:
+        - Conectar las regiones orbitofrontales
+genu:
+    name: Rodilla
+    short: Rodilla
+    aka:
+        - rodilla del cuerpo calloso
+    where: La curva hacia delante en la parte anterior del cuerpo calloso.
+    summary:
+        La rodilla lleva fibras entre la corteza prefrontal izquierda y la
+        derecha.
+    does:
+        - Conectar las cortezas prefrontales
+        - Coordinar la planificación entre hemisferios
+    clinical:
+        Su integridad suele estudiarse con resonancia de difusión en la
+        esquizofrenia, el trastorno bipolar y el TDAH.
+ccbody:
+    name: Tronco del cuerpo calloso
+    short: Tronco
+    aka:
+        - tronco del cuerpo calloso
+    where: La larga sección media del cuerpo calloso.
+    summary:
+        El tronco conecta la corteza motora, premotora y somatosensorial de
+        ambos lados, además de partes de los lóbulos parietales.
+    does:
+        - Coordinar ambos lados del cuerpo
+        - Compartir la información táctil
+    clinical: Se afecta con frecuencia por las placas de la esclerosis múltiple.
+splenium:
+    name: Esplenio
+    short: Esplenio
+    aka:
+        - esplenio
+    where: El extremo posterior grueso del cuerpo calloso.
+    summary:
+        El esplenio conecta los lóbulos occipitales y partes de los lóbulos
+        temporal y parietal, y comparte la información visual entre hemisferios.
+    does:
+        - Conectar las cortezas visuales
+        - Unir las dos mitades del campo visual
+    clinical:
+        "El daño aquí junto con daño en la corteza visual izquierda puede causar
+        alexia sin agrafia: la persona puede escribir pero no leer lo que acaba
+        de escribir."
+latvent:
+    name: Ventrículos laterales
+    short: Ventrículos laterales
+    aka:
+        - ventrículos laterales
+        - ventrículo lateral
+    where:
+        Una cavidad en forma de C en cada hemisferio, con astas que llegan a los
+        lóbulos frontal, occipital y temporal.
+    summary:
+        Son los ventrículos más grandes. La mayor parte del LCR la produce aquí
+        el plexo coroideo y luego fluye por pequeñas aberturas hacia el tercer
+        ventrículo.
+    does:
+        - Producir la mayor parte del LCR
+        - Contener y hacer circular el LCR
+    clinical:
+        Se agrandan en la hidrocefalia y cuando el tejido circundante se
+        atrofia, como en las enfermedades de Alzheimer y Huntington. Un ligero
+        agrandamiento es un hallazgo bien replicado en la esquizofrenia.
+thirdvent:
+    name: Tercer ventrículo
+    short: Tercer ventrículo
+    aka:
+        - tercer ventrículo
+    where:
+        Una estrecha hendidura en la línea media entre las dos mitades del
+        tálamo.
+    summary:
+        El LCR entra al tercer ventrículo desde los ventrículos laterales y sale
+        por el acueducto cerebral. El hipotálamo forma su suelo y sus paredes
+        inferiores.
+    does:
+        - Pasar el LCR al acueducto
+    clinical:
+        Un quiste coloide puede bloquearlo de repente y causar una hidrocefalia
+        peligrosa.
+aqueduct:
+    name: Acueducto cerebral
+    short: Acueducto
+    aka:
+        - acueducto cerebral
+        - acueducto de silvio
+    where: Un conducto estrecho que atraviesa el mesencéfalo.
+    summary: El acueducto cerebral conecta el tercer y el cuarto ventrículo.
+    does:
+        - Llevar el LCR a través del mesencéfalo
+    clinical:
+        Al ser tan estrecho, es el sitio más frecuente de obstrucción que causa
+        hidrocefalia (estenosis del acueducto).
+fourthvent:
+    name: Cuarto ventrículo
+    short: Cuarto ventrículo
+    aka:
+        - cuarto ventrículo
+    where:
+        Una cavidad en forma de tienda entre el tronco encefálico y el cerebelo.
+    summary:
+        El LCR sale del cuarto ventrículo por pequeñas aberturas para bañar el
+        exterior del cerebro y la médula espinal.
+    does:
+        - Liberar el LCR alrededor del cerebro y la médula espinal
+    clinical:
+        Tumores infantiles como el meduloblastoma suelen crecer cerca de él y
+        bloquear el flujo de LCR.

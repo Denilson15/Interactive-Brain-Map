@@ -1,0 +1,891 @@
+{
+    "brain@L": [
+        "hemiL@L",
+        "hemiR@R",
+        "deep@L",
+        "cerebellum@L",
+        "brainstem@L"
+    ],
+    "hemiL@L": [
+        "frontal@L",
+        "parietal@L",
+        "temporal@L",
+        "occipital@L",
+        "insula@L",
+        "cingulate@L"
+    ],
+    "hemiR@R": [
+        "frontal@R",
+        "parietal@R",
+        "temporal@R",
+        "occipital@R",
+        "insula@R",
+        "cingulate@R"
+    ],
+    "deep@L": [
+        "basalganglia@L",
+        "thalamus@L",
+        "hypothalamus@L",
+        "hippocampus@L",
+        "amygdala@L",
+        "callosum@L",
+        "ventricles@L"
+    ],
+    "cerebellum@L": [
+        "vermis@L",
+        "cerebhemi@L",
+        "flocculo@L",
+        "dentate@L"
+    ],
+    "brainstem@L": [
+        "midbrain@L",
+        "pons@L",
+        "medulla@L",
+        "g_neuromod@L"
+    ],
+    "frontal@L": [
+        "g_motor@L",
+        "g_pfc@L",
+        "broca@L",
+        "olfactory@L"
+    ],
+    "parietal@L": [
+        "s1@L",
+        "spl@L",
+        "g_ipl@L",
+        "precuneus@L"
+    ],
+    "temporal@L": [
+        "g_auditory@L",
+        "g_ventral@L",
+        "tpole@L",
+        "g_mtl@L"
+    ],
+    "occipital@L": [
+        "g_early@L",
+        "g_medocc@L",
+        "g_special@L"
+    ],
+    "insula@L": [
+        "antinsula@L",
+        "postinsula@L"
+    ],
+    "cingulate@L": [
+        "acc@L",
+        "pcc@L"
+    ],
+    "frontal@R": [
+        "g_motor@R",
+        "g_pfc@R",
+        "broca@R",
+        "olfactory@R"
+    ],
+    "parietal@R": [
+        "s1@R",
+        "spl@R",
+        "g_ipl@R",
+        "precuneus@R"
+    ],
+    "temporal@R": [
+        "g_auditory@R",
+        "g_ventral@R",
+        "tpole@R",
+        "g_mtl@R"
+    ],
+    "occipital@R": [
+        "g_early@R",
+        "g_medocc@R",
+        "g_special@R"
+    ],
+    "insula@R": [
+        "antinsula@R",
+        "postinsula@R"
+    ],
+    "cingulate@R": [
+        "acc@R",
+        "pcc@R"
+    ],
+    "basalganglia@L": [
+        "g_striatum@L",
+        "gp@L",
+        "stn@L",
+        "sn@L"
+    ],
+    "thalamus@L": [
+        "antthal@L",
+        "mdthal@L",
+        "g_relay@L",
+        "pulvinar@L",
+        "pineal@L"
+    ],
+    "hypothalamus@L": [
+        "scn@L",
+        "pvn@L",
+        "arcuate@L",
+        "lateralhyp@L",
+        "mammillary@L",
+        "pituitary@L"
+    ],
+    "hippocampus@L": [
+        "ca@L",
+        "dg@L",
+        "subiculum@L",
+        "fornix@L"
+    ],
+    "amygdala@L": [
+        "bla@L",
+        "cea@L",
+        "medamyg@L"
+    ],
+    "callosum@L": [
+        "rostrum@L",
+        "genu@L",
+        "ccbody@L",
+        "splenium@L"
+    ],
+    "ventricles@L": [
+        "latvent@L",
+        "thirdvent@L",
+        "aqueduct@L",
+        "fourthvent@L"
+    ],
+    "vermis@L": [
+        "vermis@L",
+        "cerebhemi@L",
+        "flocculo@L",
+        "dentate@L"
+    ],
+    "cerebhemi@L": [
+        "vermis@L",
+        "cerebhemi@L",
+        "flocculo@L",
+        "dentate@L"
+    ],
+    "flocculo@L": [
+        "vermis@L",
+        "cerebhemi@L",
+        "flocculo@L",
+        "dentate@L"
+    ],
+    "dentate@L": [
+        "vermis@L",
+        "cerebhemi@L",
+        "flocculo@L",
+        "dentate@L"
+    ],
+    "midbrain@L": [
+        "midbrain@L",
+        "pons@L",
+        "medulla@L",
+        "g_neuromod@L"
+    ],
+    "pons@L": [
+        "midbrain@L",
+        "pons@L",
+        "medulla@L",
+        "g_neuromod@L"
+    ],
+    "medulla@L": [
+        "midbrain@L",
+        "pons@L",
+        "medulla@L",
+        "g_neuromod@L"
+    ],
+    "g_neuromod@L": [
+        "vta@L",
+        "lc@L",
+        "raphe@L"
+    ],
+    "g_motor@L": [
+        "m1@L",
+        "premotor@L",
+        "sma@L"
+    ],
+    "g_pfc@L": [
+        "dlpfc@L",
+        "vlpfc@L",
+        "ofc@L",
+        "vmpfc@L",
+        "dmpfc@L",
+        "fpole@L"
+    ],
+    "broca@L": [
+        "g_motor@L",
+        "g_pfc@L",
+        "broca@L",
+        "olfactory@L"
+    ],
+    "olfactory@L": [
+        "g_motor@L",
+        "g_pfc@L",
+        "broca@L",
+        "olfactory@L"
+    ],
+    "s1@L": [
+        "s1@L",
+        "spl@L",
+        "g_ipl@L",
+        "precuneus@L"
+    ],
+    "spl@L": [
+        "s1@L",
+        "spl@L",
+        "g_ipl@L",
+        "precuneus@L"
+    ],
+    "g_ipl@L": [
+        "supramarginal@L",
+        "angular@L"
+    ],
+    "precuneus@L": [
+        "s1@L",
+        "spl@L",
+        "g_ipl@L",
+        "precuneus@L"
+    ],
+    "g_auditory@L": [
+        "a1@L",
+        "stg@L",
+        "wernicke@L"
+    ],
+    "g_ventral@L": [
+        "mtg@L",
+        "itg@L",
+        "fusiform@L"
+    ],
+    "tpole@L": [
+        "g_auditory@L",
+        "g_ventral@L",
+        "tpole@L",
+        "g_mtl@L"
+    ],
+    "g_mtl@L": [
+        "parahippocampal@L",
+        "entorhinal@L"
+    ],
+    "g_early@L": [
+        "v1@L",
+        "v2v3@L"
+    ],
+    "g_medocc@L": [
+        "cuneus@L",
+        "lingual@L"
+    ],
+    "g_special@L": [
+        "v4@L",
+        "v5@L"
+    ],
+    "antinsula@L": [
+        "antinsula@L",
+        "postinsula@L"
+    ],
+    "postinsula@L": [
+        "antinsula@L",
+        "postinsula@L"
+    ],
+    "acc@L": [
+        "acc@L",
+        "pcc@L"
+    ],
+    "pcc@L": [
+        "acc@L",
+        "pcc@L"
+    ],
+    "g_motor@R": [
+        "m1@R",
+        "premotor@R",
+        "sma@R"
+    ],
+    "g_pfc@R": [
+        "dlpfc@R",
+        "vlpfc@R",
+        "ofc@R",
+        "vmpfc@R",
+        "dmpfc@R",
+        "fpole@R"
+    ],
+    "broca@R": [
+        "g_motor@R",
+        "g_pfc@R",
+        "broca@R",
+        "olfactory@R"
+    ],
+    "olfactory@R": [
+        "g_motor@R",
+        "g_pfc@R",
+        "broca@R",
+        "olfactory@R"
+    ],
+    "s1@R": [
+        "s1@R",
+        "spl@R",
+        "g_ipl@R",
+        "precuneus@R"
+    ],
+    "spl@R": [
+        "s1@R",
+        "spl@R",
+        "g_ipl@R",
+        "precuneus@R"
+    ],
+    "g_ipl@R": [
+        "supramarginal@R",
+        "angular@R"
+    ],
+    "precuneus@R": [
+        "s1@R",
+        "spl@R",
+        "g_ipl@R",
+        "precuneus@R"
+    ],
+    "g_auditory@R": [
+        "a1@R",
+        "stg@R",
+        "wernicke@R"
+    ],
+    "g_ventral@R": [
+        "mtg@R",
+        "itg@R",
+        "fusiform@R"
+    ],
+    "tpole@R": [
+        "g_auditory@R",
+        "g_ventral@R",
+        "tpole@R",
+        "g_mtl@R"
+    ],
+    "g_mtl@R": [
+        "parahippocampal@R",
+        "entorhinal@R"
+    ],
+    "g_early@R": [
+        "v1@R",
+        "v2v3@R"
+    ],
+    "g_medocc@R": [
+        "cuneus@R",
+        "lingual@R"
+    ],
+    "g_special@R": [
+        "v4@R",
+        "v5@R"
+    ],
+    "antinsula@R": [
+        "antinsula@R",
+        "postinsula@R"
+    ],
+    "postinsula@R": [
+        "antinsula@R",
+        "postinsula@R"
+    ],
+    "acc@R": [
+        "acc@R",
+        "pcc@R"
+    ],
+    "pcc@R": [
+        "acc@R",
+        "pcc@R"
+    ],
+    "g_striatum@L": [
+        "caudate@L",
+        "putamen@L",
+        "nacc@L"
+    ],
+    "gp@L": [
+        "g_striatum@L",
+        "gp@L",
+        "stn@L",
+        "sn@L"
+    ],
+    "stn@L": [
+        "g_striatum@L",
+        "gp@L",
+        "stn@L",
+        "sn@L"
+    ],
+    "sn@L": [
+        "g_striatum@L",
+        "gp@L",
+        "stn@L",
+        "sn@L"
+    ],
+    "antthal@L": [
+        "antthal@L",
+        "mdthal@L",
+        "g_relay@L",
+        "pulvinar@L",
+        "pineal@L"
+    ],
+    "mdthal@L": [
+        "antthal@L",
+        "mdthal@L",
+        "g_relay@L",
+        "pulvinar@L",
+        "pineal@L"
+    ],
+    "g_relay@L": [
+        "ventthal@L",
+        "lgn@L",
+        "mgn@L"
+    ],
+    "pulvinar@L": [
+        "antthal@L",
+        "mdthal@L",
+        "g_relay@L",
+        "pulvinar@L",
+        "pineal@L"
+    ],
+    "pineal@L": [
+        "antthal@L",
+        "mdthal@L",
+        "g_relay@L",
+        "pulvinar@L",
+        "pineal@L"
+    ],
+    "scn@L": [
+        "scn@L",
+        "pvn@L",
+        "arcuate@L",
+        "lateralhyp@L",
+        "mammillary@L",
+        "pituitary@L"
+    ],
+    "pvn@L": [
+        "scn@L",
+        "pvn@L",
+        "arcuate@L",
+        "lateralhyp@L",
+        "mammillary@L",
+        "pituitary@L"
+    ],
+    "arcuate@L": [
+        "scn@L",
+        "pvn@L",
+        "arcuate@L",
+        "lateralhyp@L",
+        "mammillary@L",
+        "pituitary@L"
+    ],
+    "lateralhyp@L": [
+        "scn@L",
+        "pvn@L",
+        "arcuate@L",
+        "lateralhyp@L",
+        "mammillary@L",
+        "pituitary@L"
+    ],
+    "mammillary@L": [
+        "scn@L",
+        "pvn@L",
+        "arcuate@L",
+        "lateralhyp@L",
+        "mammillary@L",
+        "pituitary@L"
+    ],
+    "pituitary@L": [
+        "scn@L",
+        "pvn@L",
+        "arcuate@L",
+        "lateralhyp@L",
+        "mammillary@L",
+        "pituitary@L"
+    ],
+    "ca@L": [
+        "ca@L",
+        "dg@L",
+        "subiculum@L",
+        "fornix@L"
+    ],
+    "dg@L": [
+        "ca@L",
+        "dg@L",
+        "subiculum@L",
+        "fornix@L"
+    ],
+    "subiculum@L": [
+        "ca@L",
+        "dg@L",
+        "subiculum@L",
+        "fornix@L"
+    ],
+    "fornix@L": [
+        "ca@L",
+        "dg@L",
+        "subiculum@L",
+        "fornix@L"
+    ],
+    "bla@L": [
+        "bla@L",
+        "cea@L",
+        "medamyg@L"
+    ],
+    "cea@L": [
+        "bla@L",
+        "cea@L",
+        "medamyg@L"
+    ],
+    "medamyg@L": [
+        "bla@L",
+        "cea@L",
+        "medamyg@L"
+    ],
+    "rostrum@L": [
+        "rostrum@L",
+        "genu@L",
+        "ccbody@L",
+        "splenium@L"
+    ],
+    "genu@L": [
+        "rostrum@L",
+        "genu@L",
+        "ccbody@L",
+        "splenium@L"
+    ],
+    "ccbody@L": [
+        "rostrum@L",
+        "genu@L",
+        "ccbody@L",
+        "splenium@L"
+    ],
+    "splenium@L": [
+        "rostrum@L",
+        "genu@L",
+        "ccbody@L",
+        "splenium@L"
+    ],
+    "latvent@L": [
+        "latvent@L",
+        "thirdvent@L",
+        "aqueduct@L",
+        "fourthvent@L"
+    ],
+    "thirdvent@L": [
+        "latvent@L",
+        "thirdvent@L",
+        "aqueduct@L",
+        "fourthvent@L"
+    ],
+    "aqueduct@L": [
+        "latvent@L",
+        "thirdvent@L",
+        "aqueduct@L",
+        "fourthvent@L"
+    ],
+    "fourthvent@L": [
+        "latvent@L",
+        "thirdvent@L",
+        "aqueduct@L",
+        "fourthvent@L"
+    ],
+    "vta@L": [
+        "vta@L",
+        "lc@L",
+        "raphe@L"
+    ],
+    "lc@L": [
+        "vta@L",
+        "lc@L",
+        "raphe@L"
+    ],
+    "raphe@L": [
+        "vta@L",
+        "lc@L",
+        "raphe@L"
+    ],
+    "m1@L": [
+        "m1@L",
+        "premotor@L",
+        "sma@L"
+    ],
+    "premotor@L": [
+        "m1@L",
+        "premotor@L",
+        "sma@L"
+    ],
+    "sma@L": [
+        "m1@L",
+        "premotor@L",
+        "sma@L"
+    ],
+    "dlpfc@L": [
+        "dlpfc@L",
+        "vlpfc@L",
+        "ofc@L",
+        "vmpfc@L",
+        "dmpfc@L",
+        "fpole@L"
+    ],
+    "vlpfc@L": [
+        "dlpfc@L",
+        "vlpfc@L",
+        "ofc@L",
+        "vmpfc@L",
+        "dmpfc@L",
+        "fpole@L"
+    ],
+    "ofc@L": [
+        "dlpfc@L",
+        "vlpfc@L",
+        "ofc@L",
+        "vmpfc@L",
+        "dmpfc@L",
+        "fpole@L"
+    ],
+    "vmpfc@L": [
+        "dlpfc@L",
+        "vlpfc@L",
+        "ofc@L",
+        "vmpfc@L",
+        "dmpfc@L",
+        "fpole@L"
+    ],
+    "dmpfc@L": [
+        "dlpfc@L",
+        "vlpfc@L",
+        "ofc@L",
+        "vmpfc@L",
+        "dmpfc@L",
+        "fpole@L"
+    ],
+    "fpole@L": [
+        "dlpfc@L",
+        "vlpfc@L",
+        "ofc@L",
+        "vmpfc@L",
+        "dmpfc@L",
+        "fpole@L"
+    ],
+    "supramarginal@L": [
+        "supramarginal@L",
+        "angular@L"
+    ],
+    "angular@L": [
+        "supramarginal@L",
+        "angular@L"
+    ],
+    "a1@L": [
+        "a1@L",
+        "stg@L",
+        "wernicke@L"
+    ],
+    "stg@L": [
+        "a1@L",
+        "stg@L",
+        "wernicke@L"
+    ],
+    "wernicke@L": [
+        "a1@L",
+        "stg@L",
+        "wernicke@L"
+    ],
+    "mtg@L": [
+        "mtg@L",
+        "itg@L",
+        "fusiform@L"
+    ],
+    "itg@L": [
+        "mtg@L",
+        "itg@L",
+        "fusiform@L"
+    ],
+    "fusiform@L": [
+        "mtg@L",
+        "itg@L",
+        "fusiform@L"
+    ],
+    "parahippocampal@L": [
+        "parahippocampal@L",
+        "entorhinal@L"
+    ],
+    "entorhinal@L": [
+        "parahippocampal@L",
+        "entorhinal@L"
+    ],
+    "v1@L": [
+        "v1@L",
+        "v2v3@L"
+    ],
+    "v2v3@L": [
+        "v1@L",
+        "v2v3@L"
+    ],
+    "cuneus@L": [
+        "cuneus@L",
+        "lingual@L"
+    ],
+    "lingual@L": [
+        "cuneus@L",
+        "lingual@L"
+    ],
+    "v4@L": [
+        "v4@L",
+        "v5@L"
+    ],
+    "v5@L": [
+        "v4@L",
+        "v5@L"
+    ],
+    "m1@R": [
+        "m1@R",
+        "premotor@R",
+        "sma@R"
+    ],
+    "premotor@R": [
+        "m1@R",
+        "premotor@R",
+        "sma@R"
+    ],
+    "sma@R": [
+        "m1@R",
+        "premotor@R",
+        "sma@R"
+    ],
+    "dlpfc@R": [
+        "dlpfc@R",
+        "vlpfc@R",
+        "ofc@R",
+        "vmpfc@R",
+        "dmpfc@R",
+        "fpole@R"
+    ],
+    "vlpfc@R": [
+        "dlpfc@R",
+        "vlpfc@R",
+        "ofc@R",
+        "vmpfc@R",
+        "dmpfc@R",
+        "fpole@R"
+    ],
+    "ofc@R": [
+        "dlpfc@R",
+        "vlpfc@R",
+        "ofc@R",
+        "vmpfc@R",
+        "dmpfc@R",
+        "fpole@R"
+    ],
+    "vmpfc@R": [
+        "dlpfc@R",
+        "vlpfc@R",
+        "ofc@R",
+        "vmpfc@R",
+        "dmpfc@R",
+        "fpole@R"
+    ],
+    "dmpfc@R": [
+        "dlpfc@R",
+        "vlpfc@R",
+        "ofc@R",
+        "vmpfc@R",
+        "dmpfc@R",
+        "fpole@R"
+    ],
+    "fpole@R": [
+        "dlpfc@R",
+        "vlpfc@R",
+        "ofc@R",
+        "vmpfc@R",
+        "dmpfc@R",
+        "fpole@R"
+    ],
+    "supramarginal@R": [
+        "supramarginal@R",
+        "angular@R"
+    ],
+    "angular@R": [
+        "supramarginal@R",
+        "angular@R"
+    ],
+    "a1@R": [
+        "a1@R",
+        "stg@R",
+        "wernicke@R"
+    ],
+    "stg@R": [
+        "a1@R",
+        "stg@R",
+        "wernicke@R"
+    ],
+    "wernicke@R": [
+        "a1@R",
+        "stg@R",
+        "wernicke@R"
+    ],
+    "mtg@R": [
+        "mtg@R",
+        "itg@R",
+        "fusiform@R"
+    ],
+    "itg@R": [
+        "mtg@R",
+        "itg@R",
+        "fusiform@R"
+    ],
+    "fusiform@R": [
+        "mtg@R",
+        "itg@R",
+        "fusiform@R"
+    ],
+    "parahippocampal@R": [
+        "parahippocampal@R",
+        "entorhinal@R"
+    ],
+    "entorhinal@R": [
+        "parahippocampal@R",
+        "entorhinal@R"
+    ],
+    "v1@R": [
+        "v1@R",
+        "v2v3@R"
+    ],
+    "v2v3@R": [
+        "v1@R",
+        "v2v3@R"
+    ],
+    "cuneus@R": [
+        "cuneus@R",
+        "lingual@R"
+    ],
+    "lingual@R": [
+        "cuneus@R",
+        "lingual@R"
+    ],
+    "v4@R": [
+        "v4@R",
+        "v5@R"
+    ],
+    "v5@R": [
+        "v4@R",
+        "v5@R"
+    ],
+    "caudate@L": [
+        "caudate@L",
+        "putamen@L",
+        "nacc@L"
+    ],
+    "putamen@L": [
+        "caudate@L",
+        "putamen@L",
+        "nacc@L"
+    ],
+    "nacc@L": [
+        "caudate@L",
+        "putamen@L",
+        "nacc@L"
+    ],
+    "ventthal@L": [
+        "ventthal@L",
+        "lgn@L",
+        "mgn@L"
+    ],
+    "lgn@L": [
+        "ventthal@L",
+        "lgn@L",
+        "mgn@L"
+    ],
+    "mgn@L": [
+        "ventthal@L",
+        "lgn@L",
+        "mgn@L"
+    ]
+}
