@@ -1,0 +1,127 @@
+/*
+ * Design tokens: the only place raw colors, sizes and spacing live.
+ * Components use these variables; nothing else hard-codes values.
+ *
+ * Direction: a calm reference work. The interface stays quiet so the
+ * 3D model and the region colors (which carry meaning) stand out.
+ */
+
+:root {
+    /* ---------- Typography ---------- */
+
+    /* Interface and headings: a grotesque with optical sizes. */
+    --font-ui:
+        "Bricolage Grotesque Variable", "Bricolage Grotesque", ui-sans-serif,
+        system-ui, sans-serif;
+    /* Long reading text: a text serif. */
+    --font-reading:
+        "Source Serif 4 Variable", "Source Serif 4", Georgia, "Times New Roman",
+        serif;
+
+    /*
+     * One scale, from the classical sizes of print typography
+     * (13, 14, 16, 18, 21, 24, 36, 48 px). Nothing smaller than 13px.
+     */
+    --text-caption: 0.8125rem; /* 13px: captions, meta, tags */
+    --text-ui: 0.875rem; /* 14px: buttons, chips, tabs, labels */
+    --text-base: 1rem; /* 16px: interface body, list titles */
+    --text-reading: 1.125rem; /* 18px: paragraphs of study text */
+    --text-title-sm: 1.3125rem; /* 21px: card and popover titles */
+    --text-title: clamp(1.5rem, 1.2rem + 1.4vw, 2.25rem); /* 24-36px */
+    --text-display: clamp(2.25rem, 1.6rem + 2.8vw, 3rem); /* 36-48px */
+
+    --leading-tight: 1.15; /* headings */
+    --leading-ui: 1.4; /* interface text */
+    --leading-reading: 1.6; /* serif paragraphs */
+
+    --weight-regular: 400;
+    --weight-medium: 500;
+    --weight-bold: 700;
+
+    /* ---------- Spacing: a 4px grid ---------- */
+    --space-1: 4px;
+    --space-2: 8px;
+    --space-3: 12px;
+    --space-4: 16px;
+    --space-5: 24px;
+    --space-6: 32px;
+    --space-7: 48px;
+    --space-8: 64px;
+
+    /* ---------- Shape and depth ---------- */
+    --radius-sm: 6px; /* inputs, small controls */
+    --radius-md: 10px; /* buttons, cards, callouts */
+    --radius-lg: 16px; /* panels, the 3D stage */
+    --radius-full: 999px; /* chips, pills */
+
+    --border-width: 1px;
+    --tap-target: 44px; /* minimum touch target */
+
+    /* ---------- Motion ---------- */
+    --duration-fast: 120ms;
+    --duration-base: 220ms;
+    --duration-slow: 360ms;
+    --ease-out: cubic-bezier(0.2, 0.8, 0.2, 1);
+
+    /* ---------- Color: light theme ---------- */
+    --color-page: #eef1f4; /* behind everything */
+    --color-surface: #fbfcfd; /* panels */
+    --color-sunken: #f2f4f7; /* cards and callouts inside panels */
+    --color-text: #141a22;
+    --color-text-muted: #556070;
+    --color-border: #d6dce3;
+    --color-border-strong: #808a98; /* control edges: 3:1 */
+    --color-accent: #2f4bc2; /* links, selection, focus */
+    --color-accent-hover: #233a9c;
+    --color-accent-soft: #e3e8fb; /* selected backgrounds, notices */
+    --color-on-accent: #ffffff;
+    --color-focus: #2f4bc2;
+    --shadow-raised: 0 18px 40px -16px rgba(14, 20, 32, 0.32);
+    --shadow-sheet: 0 -10px 30px rgba(0, 0, 0, 0.3);
+
+    /*
+     * Condition involvement on the model. Primary and secondary also
+     * differ in shape (filled vs ring), never by color alone.
+     */
+    --color-involve-primary: #d63a28;
+    --color-involve-secondary: #c47a0a;
+
+    /* ---------- Color: the 3D stage (always dark) ---------- */
+    --stage-bg: #161c24;
+    --stage-bg-glow: #283447;
+    --stage-text: #e8edf3;
+    --stage-text-muted: #aeb7c2;
+    --stage-overlay: rgba(10, 14, 20, 0.82); /* controls over the model */
+    --stage-line: rgba(255, 255, 255, 0.16);
+    --stage-line-strong: rgba(255, 255, 255, 0.36); /* 3:1 on stage */
+    --stage-hover: rgba(255, 255, 255, 0.08);
+    --stage-accent: #9fc2ff;
+    --stage-involve-primary: #ff6a57;
+    --stage-involve-secondary: #ffb547;
+
+    color-scheme: light;
+}
+
+/* ---------- Color: dark theme ---------- */
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+        --color-page: #0c1015;
+        --color-surface: #141a21;
+        --color-sunken: #0f141a;
+        --color-text: #e6ebf1;
+        --color-text-muted: #9aa5b3;
+        --color-border: #28313c;
+        --color-border-strong: #646f7d;
+        --color-accent: #9db0ff;
+        --color-accent-hover: #c0ccff;
+        --color-accent-soft: #1d2547;
+        --color-on-accent: #0c1015;
+        --color-focus: #9db0ff;
+        --color-involve-primary: #ff6a57;
+        --color-involve-secondary: #ffb547;
+        --shadow-raised: 0 18px 40px -16px rgba(0, 0, 0, 0.6);
+        --stage-bg: #090c11;
+        --stage-bg-glow: #1c2533;
+        color-scheme: dark;
+    }
+}
