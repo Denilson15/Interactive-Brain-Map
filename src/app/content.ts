@@ -97,7 +97,8 @@ let writeUps: Promise<Record<string, ConditionExtension>> | null = null;
 
 /**
  * Downloads the long-form condition write-ups once, keyed like
- * CONDS ("psych:adhd"); later calls reuse the same download.
+ * CONDS ("psych:adhd"); later calls reuse the same download. A failed
+ * download is forgotten, so the next call tries again.
  */
 export function loadWriteUps(): Promise<Record<string, ConditionExtension>> {
     writeUps ??= import("../content/write-ups").then((files) => {
@@ -110,12 +111,16 @@ export function loadWriteUps(): Promise<Record<string, ConditionExtension>> {
         add("disease", files.diseases);
         return out;
     });
+    writeUps.catch(() => (writeUps = null));
     return writeUps;
 }
 
 let spanish: Promise<SpanishData> | null = null;
 
-/** Downloads the Spanish content once; later calls reuse it. */
+/**
+ * Downloads the Spanish content once; later calls reuse it. A failed
+ * download is forgotten, so the next call tries again.
+ */
 export function loadSpanish(): Promise<SpanishData> {
     spanish ??= import("../content/spanish").then((files) => {
         const terms = files.glossary as Record<string, TermFile>;
@@ -132,6 +137,7 @@ export function loadSpanish(): Promise<SpanishData> {
             ),
         };
     });
+    spanish.catch(() => (spanish = null));
     return spanish;
 }
 

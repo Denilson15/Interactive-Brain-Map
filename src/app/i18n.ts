@@ -118,6 +118,35 @@ const UI_EN = {
         "This isn't in the dictionary. It's likely an everyday word " +
         "rather than a brain or medical term.",
     browseDict: "Browse the dictionary →",
+    loadingTitle: "Loading the 3D brain",
+    loadingNote: "You can read and search while it loads.",
+    errWebglTitle: "The 3D view can't start on this device",
+    errWebglBody:
+        "Your browser didn't allow WebGL, which draws the model. " +
+        "Everything else works: choose a region from the list, open a " +
+        "condition or search the dictionary.",
+    errWebglFix:
+        "To see the model, turn on hardware acceleration in your browser " +
+        "settings or open this page in another browser.",
+    errBuildTitle: "The 3D model didn't finish building",
+    errBuildBody:
+        "Reload the page to try again. The lists, conditions and " +
+        "dictionary still work.",
+    errLostTitle: "The 3D view was paused by your device",
+    errLostBody:
+        "This can happen when a device runs low on memory. It may come " +
+        "back on its own; if not, reload the page.",
+    tryAgain: "Try again",
+    reloadPage: "Reload page",
+    dismiss: "Dismiss",
+    // Shown in both languages: the Spanish text is what failed to load.
+    errSpanish:
+        "Spanish couldn't be downloaded, so the page stays in English. " +
+        "Check your connection and try again. / No se pudo descargar el " +
+        "español. Revisa tu conexión e inténtalo de nuevo.",
+    errWriteUp:
+        "The full write-up couldn't be downloaded, so this is the short " +
+        "version. Check your connection and open the condition again.",
 };
 
 export type UiKey = keyof typeof UI_EN;
@@ -141,10 +170,18 @@ export function currentLang(): Lang {
     return lang;
 }
 
-/** Switches language and remembers the choice on this device. */
-export function setLang(next: Lang, spanish: SpanishData | null): void {
+/**
+ * Switches language and, unless `remember` is false, remembers the
+ * choice on this device.
+ */
+export function setLang(
+    next: Lang,
+    spanish: SpanishData | null,
+    remember = true,
+): void {
     lang = next;
     spanishUi = spanish?.ui ?? {};
+    if (!remember) return;
     try {
         localStorage.setItem(STORAGE_KEY, next);
     } catch {

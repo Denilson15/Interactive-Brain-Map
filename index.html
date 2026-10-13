@@ -12,7 +12,7 @@
         />
         <title>Interactive Brain Map</title>
     </head>
-    <body>
+    <body data-stage="loading">
         <div class="app">
             <header class="top">
                 <h1 data-i18n="title">Interactive Brain Map</h1>
@@ -92,6 +92,36 @@
                         section to open it · Esc goes back up
                     </div>
                     <div class="condbar" id="condbar" hidden></div>
+                    <!-- Shown from the first paint until the model is built.
+                         Replaced by #stageError if the 3D view can't run. -->
+                    <div class="stage-status" id="stageStatus" role="status">
+                        <p class="stage-status-title" id="stageStatusTitle">
+                            <span data-i18n="loadingTitle"
+                                >Loading the 3D brain</span
+                            >
+                        </p>
+                        <progress
+                            id="stageProgress"
+                            max="100"
+                            value="0"
+                            aria-labelledby="stageStatusTitle"
+                        ></progress>
+                        <p class="stage-status-note" data-i18n="loadingNote">
+                            You can read and search while it loads.
+                        </p>
+                        <noscript>
+                            <p class="stage-status-note">
+                                The 3D brain needs JavaScript. Turn it on in
+                                your browser settings to explore the model.
+                            </p>
+                        </noscript>
+                    </div>
+                    <div
+                        class="stage-status stage-error"
+                        id="stageError"
+                        role="alert"
+                        hidden
+                    ></div>
                 </div>
                 <div class="chips" id="chips"></div>
             </section>
@@ -172,6 +202,7 @@
                         </button>
                     </div>
                 </div>
+                <p class="notice" id="notice" role="status" hidden></p>
                 <div class="view" id="view-browse" role="tabpanel" hidden>
                     <p class="eyebrow" data-i18n="browseEyebrow">
                         Every section of the brain

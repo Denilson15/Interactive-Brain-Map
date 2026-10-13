@@ -41,6 +41,7 @@ import {
     anchorOf,
     bbox,
     buildModel,
+    type BuildProgress,
     centerOf,
     facingOf,
     meshesOf,
@@ -60,6 +61,8 @@ export interface StageCallbacks {
     onSelect(id: string, side: Side): void;
     /** Empty space was clicked while exploring anatomy. */
     onEmptyClick(): void;
+    /** The device dropped (true) or restored (false) the 3D context. */
+    onContextLost(lost: boolean): void;
 }
 
 let stageEl: HTMLElement;
@@ -73,6 +76,23 @@ const lights: [Light, number][] = [];
 /** Where the camera is flying to, if it is moving. */
 let goal: { pos: Vector3; tgt: Vector3 } | null = null;
 let callbacks: StageCallbacks;
+/** True once WebGL is running and the model is built. */
+let ready = false;
+
+export function isStageReady(): boolean {
+    return ready;
+}
+
+/** Why the 3D view couldn't start: no WebGL, or the build failed. */
+export class StageError extends Error {
+    constructor(
+        readonly reason: "webgl" | "build",
+        cause: unknown,
+    ) {
+        super(reason === "webgl" ? "WebGL unavailable" : "Model build failed");
+        this.cause = cause;
+    }
+}
 
 function addLights(target: Scene): void {
     target.add(new HemisphereLight(0xffffff, 0x3a4556, 0.8));
@@ -236,6 +256,7 @@ export function setBrightness(multiplier: number): void {
 }
 
 function startCameraMove(pos: Vector3, tgt: Vector3): void {
+    if (!ready) return;
     goal = { pos, tgt };
     if (prefersReducedMotion) {
         camera.position.copy(pos);
@@ -246,11 +267,13 @@ function startCameraMove(pos: Vector3, tgt: Vector3): void {
 
 /** Flies the camera back to the starting view. */
 export function flyHome(): void {
+    if (!ready) return;
     goal = { pos: HOME.clone(), tgt: CENTER.clone() };
 }
 
 /** Flies the camera to frame a structure. */
 export function focusNode(id: string, side: Side): void {
+    if (!ready) return;
     const node = S[id];
     const sd = node.lat || node.isHemi ? side : null;
     const c = centerOf(id, sd)
@@ -273,6 +296,7 @@ export function focusNode(id: string, side: Side): void {
 
 /** Frames all brain areas of the highlighted condition. */
 export function focusCondition(): void {
+    if (!ready) return;
     const box = new Box3();
     for (const m of MESHES) {
         if (state.condMap[m.userData.leaf]) {
@@ -518,6 +542,7 @@ let closeUpGroup = new Group();
 
 /** Shows a structure in color inside a faint, see-through brain. */
 export function showCloseUp(id: string, side: Side): void {
+    if (!ready) return;
     closeUpScene.remove(closeUpGroup);
     closeUpGroup = new Group();
     const node = S[id];
@@ -550,6 +575,7 @@ export function showCloseUp(id: string, side: Side): void {
 }
 
 export function sizeCloseUp(): void {
+    if (!ready) return;
     const w = closeUpCanvas.clientWidth;
     const h = closeUpCanvas.clientHeight;
     if (w && h) {
@@ -642,16 +668,48 @@ function tick(): void {
     requestAnimationFrame(tick);
 }
 
-/** Creates the renderers, builds the model and wires pointer input. */
-export function initStage(handlers: StageCallbacks): void {
-    callbacks = handlers;
+/** Finds the stage elements. Works even if WebGL is unavailable. */
+export function bindStageElements(): void {
     stageEl = document.getElementById("stage")!;
     canvas = document.getElementById("brain") as HTMLCanvasElement;
     labelsEl = document.getElementById("labels")!;
     tip = document.getElementById("tip")!;
+}
 
-    renderer = new WebGLRenderer({ canvas, antialias: true, alpha: true });
-    renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
+function createRenderer(target: HTMLCanvasElement): WebGLRenderer {
+    try {
+        const r = new WebGLRenderer({
+            canvas: target,
+            antialias: true,
+            alpha: true,
+        });
+        r.setPixelRatio(Math.min(devicePixelRatio, 2));
+        return r;
+    } catch (cause) {
+        throw new StageError("webgl", cause);
+    }
+}
+
+/**
+ * Starts WebGL, builds the model (reporting progress) and wires pointer
+ * input. Throws a StageError if the 3D view can't run.
+ */
+export async function initStage(
+    handlers: StageCallbacks,
+    progress: BuildProgress,
+): Promise<void> {
+    callbacks = handlers;
+    renderer = createRenderer(canvas);
+    closeUpRenderer = createRenderer(closeUpCanvas);
+    canvas.addEventListener("webglcontextlost", (e) => {
+        // Lets three.js restore the context when the device allows it.
+        e.preventDefault();
+        callbacks.onContextLost(true);
+    });
+    canvas.addEventListener("webglcontextrestored", () =>
+        callbacks.onContextLost(false),
+    );
+
     camera.position.copy(HOME);
     controls = new OrbitControls(camera, canvas);
     controls.enableDamping = true;
@@ -666,15 +724,13 @@ export function initStage(handlers: StageCallbacks): void {
         }
     }
 
-    buildModel(scene);
+    try {
+        await buildModel(scene, progress);
+    } catch (cause) {
+        throw new StageError("build", cause);
+    }
 
     // Close-up viewer: a second renderer sharing the same geometry.
-    closeUpRenderer = new WebGLRenderer({
-        canvas: closeUpCanvas,
-        antialias: true,
-        alpha: true,
-    });
-    closeUpRenderer.setPixelRatio(Math.min(devicePixelRatio, 2));
     addLights(closeUpScene);
     closeUpControls = new OrbitControls(closeUpCamera, closeUpCanvas);
     closeUpControls.enablePan = false;
@@ -729,6 +785,10 @@ export function initStage(handlers: StageCallbacks): void {
 
     new ResizeObserver(resize).observe(stageEl);
     resize();
+    // Compile the shaders now rather than stalling the first frame.
+    renderer.compile(scene, camera);
+    await progress(1);
+    ready = true;
 }
 
 /** Starts the render loop. */

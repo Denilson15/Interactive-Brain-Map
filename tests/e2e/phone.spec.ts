@@ -42,3 +42,17 @@ test.describe("phone layout", () => {
         expect(heights[2]).toBeLessThan(heights[1]);
     });
 });
+
+test.describe("phone layout without WebGL", () => {
+    test.use({ withoutWebGL: true, viewport: { width: 412, height: 420 } });
+
+    test("the message and its button stay above the sheet", async ({ app }) => {
+        // A short screen, like a phone at 200% zoom: the message scrolls
+        // inside its card, and keyboard focus brings the button into view.
+        const button = app.getByRole("button", { name: "Try again" });
+        await button.focus();
+        const buttonBox = (await button.boundingBox())!;
+        const sheetBox = (await app.locator(".panel").boundingBox())!;
+        expect(buttonBox.y + buttonBox.height).toBeLessThanOrEqual(sheetBox.y);
+    });
+});

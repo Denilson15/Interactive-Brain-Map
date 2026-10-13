@@ -144,17 +144,33 @@ type Vec3 = [number, number, number];
 const mirror = (points: Vec3[], s: number): Vec3[] =>
     points.map((a) => [a[0] * s, a[1], a[2]]);
 
-/** Builds all meshes into the scene and links them to the tree. */
-export function buildModel(target: Scene): void {
+/**
+ * Reports how much of the model is built (0-1) and gives the browser a
+ * chance to paint and handle input before the next step.
+ */
+export type BuildProgress = (fraction: number) => Promise<void>;
+
+/**
+ * Builds all meshes into the scene and links them to the tree. Runs in
+ * steps; the two hemispheres are by far the slowest.
+ */
+export async function buildModel(
+    target: Scene,
+    progress: BuildProgress,
+): Promise<void> {
     scene = target;
 
-    bothSides((s, SD) => {
+    const hemisphere = (s: number, SD: Side): void => {
         const { geos, medialShare } = buildHemisphere(s);
         for (const k in geos) {
             addMesh(k, geos[k], SD, "cortex");
             if (s < 0) S[k].medial = medialShare[k] > 0.6;
         }
-    });
+    };
+    hemisphere(-1, "L");
+    await progress(0.38);
+    hemisphere(1, "R");
+    await progress(0.76);
     bothSides((s, SD) => {
         addMesh(
             "olfactory",
@@ -187,6 +203,7 @@ export function buildModel(target: Scene): void {
         ),
     );
     buildCerebellum();
+    await progress(0.86);
     bothSides((s, SD) =>
         addMesh(
             "dentate",
@@ -472,6 +489,7 @@ export function buildModel(target: Scene): void {
         "inner",
     );
 
+    await progress(0.92);
     linkMeshesToTree();
     computeSpreadOffsets();
 }

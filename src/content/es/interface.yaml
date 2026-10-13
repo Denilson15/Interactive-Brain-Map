@@ -116,3 +116,27 @@ notInDict:
     Esto no está en el diccionario. Probablemente es una palabra común y no un
     término cerebral o médico.
 browseDict: Explorar el diccionario →
+loadingTitle: Cargando el cerebro en 3D
+loadingNote: Puedes leer y buscar mientras se carga.
+errWebglTitle: La vista 3D no puede iniciarse en este dispositivo
+errWebglBody: >-
+    Tu navegador no permitió WebGL, que dibuja el modelo. Todo lo demás
+    funciona: elige una región de la lista, abre una afección o busca en el
+    diccionario.
+errWebglFix: >-
+    Para ver el modelo, activa la aceleración por hardware en la configuración
+    del navegador o abre esta página en otro navegador.
+errBuildTitle: El modelo 3D no terminó de construirse
+errBuildBody: >-
+    Recarga la página para intentarlo de nuevo. Las listas, las afecciones y el
+    diccionario siguen funcionando.
+errLostTitle: Tu dispositivo pausó la vista 3D
+errLostBody: >-
+    Puede pasar cuando el dispositivo tiene poca memoria. Puede volver por sí
+    sola; si no, recarga la página.
+tryAgain: Intentar de nuevo
+reloadPage: Recargar la página
+dismiss: Cerrar
+errWriteUp: >-
+    No se pudo descargar la descripción completa, así que esta es la versión
+    breve. Revisa tu conexión y vuelve a abrir la afección.

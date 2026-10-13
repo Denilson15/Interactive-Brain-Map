@@ -1,8 +1,10 @@
 // Wires the app together: selection, tabs, language, the toolbar, and
 // the shared click handling for links inside the panels.
 import {
+    StageError,
     applySpread,
     applyView,
+    bindStageElements,
     flyHome,
     focusCondition,
     focusNode,
@@ -45,6 +47,17 @@ import {
 } from "../ui/popover";
 import { initRegionPanel, renderRegion } from "../ui/region-panel";
 import { initSectionMap, placeMap, renderMap } from "../ui/section-map";
+import {
+    clearStageProblem,
+    initStageStatus,
+    nextPaint,
+    refreshStageStatusText,
+    reportProgress,
+    showModelReady,
+    showNotice,
+    showStageProblem,
+    stageState,
+} from "../ui/stage-status";
 import {
     CONDS,
     DISEASES,
@@ -140,26 +153,37 @@ function setCondition(c: Condition): void {
     }
 }
 
-/** Loads and merges the long write-ups the first time they're needed. */
-async function ensureWriteUps(): Promise<void> {
-    if (hasWriteUps()) return;
-    const writeUps = await loadWriteUps();
-    if (hasWriteUps()) return;
+/**
+ * Loads and merges the long write-ups the first time they're needed.
+ * Returns false if they couldn't be downloaded; the short summaries are
+ * still there, so callers carry on with those.
+ */
+async function ensureWriteUps(): Promise<boolean> {
+    if (hasWriteUps()) return true;
+    let writeUps;
+    try {
+        writeUps = await loadWriteUps();
+    } catch {
+        return false;
+    }
+    if (hasWriteUps()) return true;
     mergeWriteUps(writeUps);
     // Merged text is English; lay the current language back over it.
     applyContentLanguage(spanishContent);
+    return true;
 }
 
 export async function openCondition(key: string): Promise<void> {
     const c = CONDS[key];
     if (!c) return;
-    await ensureWriteUps();
+    const complete = await ensureWriteUps();
     hidePopover();
     state.openCond[c.kind] = c;
     renderConditionDetail(c);
     showTab(c.kind);
     ensureSheetOpen();
     focusCondition();
+    if (!complete) showNotice(t("errWriteUp"));
 }
 
 function closeCondition(kind: ConditionKind): void {
@@ -253,13 +277,25 @@ function applyContent(es: SpanishData | null): void {
     buildDictionary(glossary);
 }
 
+/** Set when a saved Spanish preference couldn't be honored at start. */
+let showNoticeWhenReady = false;
+
 /** The language the visitor last asked for, while Spanish downloads. */
 let requestedLang: Lang = currentLang();
 
 async function switchLanguage(lang: Lang): Promise<void> {
     if (lang === currentLang() && lang === requestedLang) return;
     requestedLang = lang;
-    const es = lang === "es" ? await loadSpanish() : null;
+    let es: SpanishData | null = null;
+    if (lang === "es") {
+        try {
+            es = await loadSpanish();
+        } catch {
+            requestedLang = currentLang();
+            showNotice(t("errSpanish"));
+            return;
+        }
+    }
     // Ignore a download that finished after the visitor switched back.
     if (requestedLang !== lang) return;
     setLang(lang, es);
@@ -268,6 +304,7 @@ async function switchLanguage(lang: Lang): Promise<void> {
     clearRecentTerms();
     hidePopover();
     setStaticText();
+    refreshStageStatusText();
     renderFilters();
     renderGlossary();
     renderRegion();
@@ -401,20 +438,45 @@ function handleDocumentClick(e: MouseEvent): void {
 }
 
 /** Builds the app from loaded content and starts rendering. */
+/** Shows the model for whatever the visitor picked while it loaded. */
+function showSelectionOnModel(): void {
+    if (state.activeTab === "psych" || state.activeTab === "disease") {
+        showTab(state.activeTab);
+        if (state.mode === "condition") focusCondition();
+    } else {
+        applyView();
+        if (state.sel !== "brain") focusNode(state.sel, state.selSide);
+    }
+    showCloseUp(state.sel, state.selSide);
+}
+
+/**
+ * Starts the app: text and panels first, so the page is usable at once,
+ * then the 3D model behind a progress bar. If the 3D view can't run,
+ * the panels keep working and the stage explains why.
+ */
 export async function startApp(core: CoreContent): Promise<void> {
     content = core;
     buildStructureTree(core.atlas, core.hierarchy);
     buildConditions(core.psych, core.diseases);
 
-    const es = currentLang() === "es" ? await loadSpanish() : null;
+    let es: SpanishData | null = null;
+    if (currentLang() === "es") {
+        try {
+            es = await loadSpanish();
+        } catch {
+            // Show English this time, but keep the saved preference.
+            setLang("en", null, false);
+            requestedLang = "en";
+            showNoticeWhenReady = true;
+        }
+    }
     useSpanishUi(es);
     applyContent(es);
 
+    initStageStatus();
+    bindStageElements();
     initBottomSheet();
-    initStage({
-        onSelect: (id, side) => selectNode(id, side, { scroll: true }),
-        onEmptyClick: goUp,
-    });
     initRegionPanel(selectFromButton);
     initSectionMap(selectFromButton);
     initDictionaryPanel();
@@ -447,7 +509,30 @@ export async function startApp(core: CoreContent): Promise<void> {
     relayout();
     selectNode("brain", "L", { focus: false });
     updateConditionBar();
-    startRendering();
+    if (showNoticeWhenReady) showNotice(t("errSpanish"));
+
+    // Let the text paint before the slow part: building the 3D model.
+    await nextPaint();
+    try {
+        await initStage(
+            {
+                onSelect: (id, side) => selectNode(id, side, { scroll: true }),
+                onEmptyClick: goUp,
+                onContextLost: (lost) => {
+                    if (lost) showStageProblem("contextLost");
+                    else if (stageState() === "error") clearStageProblem();
+                },
+            },
+            reportProgress,
+        );
+        showModelReady();
+        showSelectionOnModel();
+        startRendering();
+    } catch (error) {
+        const reason = error instanceof StageError ? error.reason : "build";
+        console.error("3D view unavailable:", error);
+        showStageProblem(reason);
+    }
 
     // Fetch the condition write-ups once the page is idle, so opening a
     // condition is instant without delaying the first view.

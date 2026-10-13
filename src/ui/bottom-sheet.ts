@@ -20,6 +20,14 @@ export function sheetHeight(): number {
     return drag ? panelEl.getBoundingClientRect().height : snapHeights()[snap];
 }
 
+/**
+ * Publishes the sheet height as --sheet-h so stage overlays (like the
+ * loading and error messages) can stay in the visible area above it.
+ */
+function publishHeight(height: number): void {
+    document.documentElement.style.setProperty("--sheet-h", height + "px");
+}
+
 function nextSnap(): Snap {
     return snap === "peek" ? "half" : snap === "half" ? "full" : "peek";
 }
@@ -33,6 +41,7 @@ function setSnap(next: Snap): void {
     }
     panelEl.style.height = snapHeights()[next] + "px";
     panelEl.dataset.snap = next;
+    publishHeight(snapHeights()[next]);
     // Re-center the model once the height transition (280ms) is done.
     setTimeout(applyViewOffset, 300);
 }
@@ -64,8 +73,9 @@ function dragMove(e: PointerEvent): void {
     if (Math.abs(dy) > 6) drag.moved = true;
     if (!drag.moved) return;
     const H = snapHeights();
-    panelEl.style.height =
-        Math.max(H.peek, Math.min(H.full, drag.h - dy)) + "px";
+    const height = Math.max(H.peek, Math.min(H.full, drag.h - dy));
+    panelEl.style.height = height + "px";
+    publishHeight(height);
     applyViewOffset();
 }
 
@@ -117,6 +127,7 @@ export function initBottomSheet(): void {
     window.addEventListener("resize", () => {
         if (isPhoneLayout() && !drag) {
             panelEl.style.height = snapHeights()[snap] + "px";
+            publishHeight(snapHeights()[snap]);
         }
     });
 }

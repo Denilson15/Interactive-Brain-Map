@@ -12,6 +12,26 @@ function recordExternalRequests(page: Page, external: string[]): void {
     });
 }
 
+/** Makes every WebGL request fail, as on a device without WebGL. */
+function disableWebGL(): void {
+    const original = HTMLCanvasElement.prototype.getContext;
+    HTMLCanvasElement.prototype.getContext = function (
+        this: HTMLCanvasElement,
+        type: string,
+        ...rest: unknown[]
+    ) {
+        if (/webgl/i.test(type)) return null;
+        return (original as Function).call(this, type, ...rest);
+    } as typeof original;
+}
+
+type Options = {
+    /** Start the page as if the device had no WebGL. */
+    withoutWebGL: boolean;
+    /** Make requests for matching files fail (e.g. a lazy chunk). */
+    failDownloads: RegExp | null;
+};
+
 type Fixtures = {
     // Uncaught exceptions on the page. Every test asserts this stays empty.
     pageErrors: string[];
@@ -20,14 +40,23 @@ type Fixtures = {
     app: Page;
 };
 
-export const test = base.extend<Fixtures>({
+export const test = base.extend<Fixtures & Options>({
+    withoutWebGL: [false, { option: true }],
+    failDownloads: [null, { option: true }],
     pageErrors: async ({}, use) => {
         await use([]);
     },
     consoleWarnings: async ({}, use) => {
         await use([]);
     },
-    app: async ({ page, pageErrors, consoleWarnings }, use) => {
+    app: async (
+        { page, pageErrors, consoleWarnings, withoutWebGL, failDownloads },
+        use,
+    ) => {
+        if (withoutWebGL) await page.addInitScript(disableWebGL);
+        if (failDownloads) {
+            await page.route(failDownloads, (route) => route.abort());
+        }
         page.on("pageerror", (error) => pageErrors.push(error.message));
         page.on("console", (message) => {
             if (message.type() === "warning") {
@@ -37,7 +66,8 @@ export const test = base.extend<Fixtures>({
         const external: string[] = [];
         recordExternalRequests(page, external);
         await page.goto("/");
-        // window.__atlas is set at the very end of app start-up.
+        // window.__atlas is set once start-up has finished: the model is
+        // ready, or the stage is showing why it can't be.
         await page.waitForFunction(() => "__atlas" in window, null, {
             timeout: 60_000,
         });

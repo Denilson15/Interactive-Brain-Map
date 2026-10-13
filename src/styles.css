@@ -227,3 +227,134 @@ span.sec-t{cursor:default}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
 html,body{margin:0}*{box-sizing:border-box}[hidden]{display:none!important}
+
+/* ---------- Loading and error states of the 3D stage ---------- */
+:root {
+    /* Readable on the dark stage in both light and dark mode. */
+    --stage-accent: #9fc2ff;
+    --stage-muted: rgba(232, 237, 243, 0.78);
+}
+.stage-status {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: min(34ch, calc(100% - 32px));
+    padding: 20px 22px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: color-mix(in srgb, var(--stage) 88%, transparent);
+    color: var(--stage-ink);
+    z-index: 5;
+}
+.stage-status-title {
+    margin: 0 0 12px;
+    font-family: var(--display);
+    font-weight: 500;
+    font-size: 1.15rem;
+    line-height: 1.25;
+}
+.stage-status-note {
+    margin: 12px 0 0;
+    font-size: 0.95rem;
+    line-height: 1.45;
+    color: var(--stage-muted);
+}
+.stage-error .stage-status-title {
+    margin-bottom: 0;
+}
+.stage-status progress {
+    display: block;
+    width: 100%;
+    height: 6px;
+    /* The outline shows the bar's full length at 3:1 contrast, so how
+       much is left to load is visible, not just what's done. */
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: 3px;
+    background: rgba(255, 255, 255, 0.14);
+    -webkit-appearance: none;
+    appearance: none;
+}
+.stage-status progress::-webkit-progress-bar {
+    background: rgba(255, 255, 255, 0.14);
+    border-radius: 2px;
+}
+.stage-status progress::-webkit-progress-value {
+    background: var(--stage-accent);
+    border-radius: 2px;
+}
+.stage-status progress::-moz-progress-bar {
+    background: var(--stage-accent);
+    border-radius: 2px;
+}
+.stage-action {
+    margin-top: 16px;
+    min-height: 44px;
+    padding: 8px 16px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    background: none;
+    color: var(--stage-ink);
+    font-family: var(--body);
+    font-size: 0.95rem;
+    cursor: pointer;
+}
+.stage-action:hover {
+    background: rgba(255, 255, 255, 0.08);
+}
+/* The 3D controls do nothing until the model is ready. */
+body:not([data-stage="ready"]) .toolbar,
+body:not([data-stage="ready"]) .hint,
+body:not([data-stage="ready"]) .condbar,
+body:not([data-stage="ready"]) .labels {
+    display: none;
+}
+body[data-stage="error"] #brain,
+body[data-stage="error"] .closer,
+body[data-stage="error"] .cap {
+    display: none;
+}
+
+/* A message above the panel, e.g. when a download fails. */
+.notice {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin: 12px 14px 0;
+    padding: 10px 12px;
+    border-radius: 8px;
+    background: var(--accent-soft);
+    font-size: 0.92rem;
+    line-height: 1.45;
+}
+.notice span {
+    flex: 1;
+}
+.notice button {
+    border: 0;
+    background: none;
+    padding: 2px 4px;
+    min-height: 24px;
+    color: var(--accent);
+    font: inherit;
+    text-decoration: underline;
+    cursor: pointer;
+}
+@media (max-width: 760px) {
+    /* The sheet covers the bottom; keep the message near the top. */
+    .stage-status {
+        top: calc(env(safe-area-inset-top, 0px) + 64px);
+        transform: translateX(-50%);
+        /* Stay above the sheet; scroll inside if the text is taller
+           (e.g. at 200% zoom). */
+        max-height: calc(
+            100% - env(safe-area-inset-top, 0px) - 64px -
+                var(--sheet-h, 150px) - 16px
+        );
+        overflow-y: auto;
+    }
+}
+/* The default accent focus ring is too dark to see on the stage. */
+.stage :focus-visible {
+    outline-color: var(--stage-accent);
+}
