@@ -50,7 +50,9 @@ npm run test:e2e
 The same tests run on GitHub Actions for every push and pull request.
 
 ## Deploy with GitHub Pages
-Settings → Pages → Source: "Deploy from a branch" → `main` / root.
+Every push to `main` builds the site and publishes `dist/` through the
+Deploy workflow in `.github/workflows/deploy.yml`. One-time setup:
+Settings → Pages → Source: **GitHub Actions**.
 
 The anatomy is simplified for teaching and the content is a study reference, not medical advice.
 
