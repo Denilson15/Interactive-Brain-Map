@@ -3,8 +3,7 @@ node_modules/
 package-lock.json
 playwright-report/
 test-results/
-# Legacy sources, replaced by TypeScript modules and YAML content later
-# in this migration.
+# Legacy content scripts, converted to YAML in the next commit.
 src/*.js
 # Rewritten from scratch in the design-system step.
 src/styles.css

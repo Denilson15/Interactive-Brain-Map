@@ -29,14 +29,25 @@ npm run preview   # serve the built site from dist/
 
 ## Project layout
 - `index.html` – page markup; Vite builds it into `dist/`
-- `src/main.ts` – entry point; loads content, then the app
+- `src/main.ts` – entry point: fonts and styles, then content, then app
 - `src/styles.css` – all styles
-- `src/app.js` – 3D model, interaction and UI logic
-- `src/anatomy.js`, `src/hierarchy.js` – brain regions, groups and parts
-- `src/psych.js`, `src/diseases.js`, `src/ext_*.js` – condition content
-- `src/glossary.js` – dictionary terms
-- `src/es_*.js` – Spanish translations (interface, anatomy, conditions,
-  dictionary), layered over the English content
+- `src/app/` – app logic without 3D:
+  - `structures.ts` – the region tree (hemispheres → regions → groups →
+    parts) and the keys that tell left and right apart
+  - `conditions.ts` – disorders and diseases and the areas they involve
+  - `content.ts` – loads content; switches it between English and Spanish
+  - `i18n.ts` – interface text and the current language
+  - `dictionary-index.ts` – finds terms in text and looks up highlights
+  - `controller.ts` – selection, tabs, toolbar and language switching
+  - `state.ts`, `types.ts`, `util.ts` – shared state, types and helpers
+- `src/scene/` – the 3D model:
+  - `procedural.ts` – generates the brain geometry (no model files)
+  - `model.ts` – builds the meshes, label anchors and spread offsets
+  - `stage.ts` – renderer, camera, highlighting, picking, labels
+- `src/ui/` – the panels: region, conditions, dictionary, popover,
+  section map and the phone bottom sheet
+- `src/*.js` – the content (regions, conditions, dictionary) and its
+  Spanish translation (`es_*.js`); Spanish loads only when chosen
 
 ## Run the tests
 End-to-end tests use [Playwright](https://playwright.dev), which drives a
