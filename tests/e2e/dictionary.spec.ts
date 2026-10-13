@@ -24,14 +24,15 @@ test.describe("dictionary and definitions", () => {
         await expect(app.locator("#glist .empty")).toBeVisible();
     });
 
-    test("a dotted term opens a definition that Escape closes",
-        async ({ app }) => {
-            const term = app.locator("#view-region .term").first();
-            await term.click();
-            const popover = app.locator("#pop");
-            await expect(popover).toBeVisible();
-            await expect(popover.locator("h4")).not.toBeEmpty();
-            await app.keyboard.press("Escape");
-            await expect(popover).toBeHidden();
-        });
+    test("a dotted term opens a definition that Escape closes", async ({
+        app,
+    }) => {
+        const term = app.locator("#view-region .term").first();
+        await term.click();
+        const popover = app.locator("#pop");
+        await expect(popover).toBeVisible();
+        await expect(popover.locator("h4")).not.toBeEmpty();
+        await app.keyboard.press("Escape");
+        await expect(popover).toBeHidden();
+    });
 });

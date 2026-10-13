@@ -1,5 +1,5 @@
-# Runs the end-to-end tests on every push and pull request, and checks
-# that the committed index.html matches a fresh build of src/.
+# Checks every push and pull request: formatting, type-checking, and the
+# end-to-end tests against a production build.
 name: Test
 
 on:
@@ -17,11 +17,10 @@ jobs:
                   node-version: 22
                   cache: npm
             - run: npm ci
-            - name: Check index.html is up to date with src/
-              run: |
-                  python3 build.py
-                  git diff --exit-code index.html
+            - run: npm run format:check
+            - run: npm run typecheck
             - run: npx playwright install --with-deps chromium
+            # Builds the site, serves it with vite preview, runs the tests.
             - run: npm run test:e2e
             - uses: actions/upload-artifact@v4
               if: failure()

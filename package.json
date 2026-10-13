@@ -4,11 +4,17 @@
     "private": true,
     "description": "Interactive 3D brain atlas for study and teaching.",
     "scripts": {
-        "build": "python3 build.py",
+        "dev": "vite",
+        "build": "tsc -p . && vite build",
+        "preview": "vite preview",
+        "typecheck": "tsc -p .",
+        "format": "prettier --write .",
+        "format:check": "prettier --check .",
         "test:e2e": "playwright test"
     },
     "devDependencies": {
         "@playwright/test": "1.56.1",
+        "@types/node": "22.20.5",
         "@types/three": "0.128.0",
         "prettier": "3.9.10",
         "typescript": "7.0.2",

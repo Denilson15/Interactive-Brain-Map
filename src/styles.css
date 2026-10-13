@@ -1,8 +1,4 @@
-<title>Interactive Brain Map</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
-<style>
+
 /* Layout: atlas plate — a dark specimen stage on the left, a reading panel with four tabs on the right; stacks on phones */
 :root{
   --bg:#ECEFF3; --surface:#F8FAFC; --ink:#151B24; --muted:#5B6574; --line:#D2D9E1;
@@ -230,66 +226,4 @@ span.sec-t{cursor:default}
   .pop{left:12px!important;right:12px;width:auto;top:auto!important;bottom:calc(env(safe-area-inset-bottom,0px) + 12px);z-index:40}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
-</style>
-
-<div class="app">
-  <header class="top">
-    <h1 data-i18n="title">Interactive Brain Map</h1>
-    <p id="stats"></p>
-  </header>
-
-  <section class="left">
-    <div class="stage" id="stage">
-      <canvas id="brain" aria-label="Rotatable 3D model of the human brain"></canvas>
-      <div class="labels" id="labels"></div>
-      <div class="tip" id="tip" hidden></div>
-      <div class="toolbar">
-        <button class="tb" id="upBtn" title="Go up one level (Esc)" data-i18n="up" data-i18n-title="upTitle">↑ Up a level</button>
-        <button class="tb more-btn" id="moreBtn" aria-expanded="false" aria-controls="tbMore" data-i18n="controls">Controls ▾</button>
-        <div class="tb-more" id="tbMore">
-        <label class="tb spread" for="spread"><span data-i18n="spread">Spread</span> <input id="spread" type="range" min="0" max="100" value="0"></label>
-        <label class="tb spread" for="opac"><span data-i18n="opacity">Opacity</span> <input id="opac" type="range" min="0" max="100" value="20"></label>
-        <label class="tb spread" for="bright"><span data-i18n="brightness">Brightness</span> <input id="bright" type="range" min="0" max="100" value="50"></label>
-        <button class="tb" id="lblBtn" aria-pressed="true" data-i18n="labels">Labels</button>
-        <button class="tb" id="resetBtn" data-i18n="reset">Reset</button>
-        </div>
-      </div>
-      <div class="hint" id="hint" data-i18n="hint">Drag to rotate · scroll or pinch to zoom · click a section to open it · Esc goes back up</div>
-      <div class="condbar" id="condbar" hidden></div>
-    </div>
-    <div class="chips" id="chips"></div>
-  </section>
-
-  <aside class="panel">
-    <div class="grab" id="grab" role="button" tabindex="0" aria-label="Resize panel"><span></span></div>
-    <div class="tabs" role="tablist">
-      <button class="tab" role="tab" id="tab-browse" aria-selected="false" data-i18n="tabBrowse">Browse</button>
-      <button class="tab" role="tab" id="tab-region" aria-selected="true" data-i18n="tabRegion">Region</button>
-      <button class="tab" role="tab" id="tab-psych" aria-selected="false" data-i18n="tabPsych">Psychology</button>
-      <button class="tab" role="tab" id="tab-disease" aria-selected="false" data-i18n="tabDisease">Diseases</button>
-      <button class="tab" role="tab" id="tab-gloss" aria-selected="false" data-i18n="tabGloss">Dictionary</button>
-      <div class="lang" role="group" aria-label="Language / Idioma"><button type="button" data-lang="en" aria-pressed="true">EN</button><button type="button" data-lang="es" aria-pressed="false">ES</button></div>
-    </div>
-    <div class="view" id="view-browse" role="tabpanel" hidden><p class="eyebrow" data-i18n="browseEyebrow">Every section of the brain</p></div>
-    <div class="view" id="view-region" role="tabpanel"></div>
-    <div class="view" id="view-psych" role="tabpanel" hidden></div>
-    <div class="view" id="view-disease" role="tabpanel" hidden></div>
-    <div class="view" id="view-gloss" role="tabpanel" hidden>
-      <label for="gq" class="eyebrow" data-i18n="glossSearch">Search terms, regions and conditions</label>
-      <input class="search" id="gq" type="search" placeholder="e.g. synapse, putamen, PTSD" data-i18n-ph="glossPh" autocomplete="off">
-      <div class="filters" id="gfilters"></div>
-      <div class="recent" id="recent"></div>
-      <p class="count" id="gcount"></p>
-      <ul class="gl" id="glist"></ul>
-    </div>
-  </aside>
-</div>
-
-<div class="pop" id="pop" role="dialog" aria-live="polite" hidden></div>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
-<!--DATA-->
-<script>
-<!--APP-->
-</script>
+html,body{margin:0}*{box-sizing:border-box}[hidden]{display:none!important}

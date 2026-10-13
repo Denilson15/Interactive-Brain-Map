@@ -1,29 +1,27 @@
 import { test, expect, regionHeading } from "./fixtures";
 
 test.describe("model controls and language", () => {
-    test("labels toggle hides and shows the model labels",
-        async ({ app }) => {
-            const button = app.locator("#lblBtn");
-            await expect(app.locator(".lbl:visible").first()).toBeVisible();
-            await button.click();
-            await expect(button).toHaveAttribute("aria-pressed", "false");
-            await expect(app.locator(".lbl:visible")).toHaveCount(0);
-            await button.click();
-            await expect(app.locator(".lbl:visible").first()).toBeVisible();
-        });
+    test("labels toggle hides and shows the model labels", async ({ app }) => {
+        const button = app.locator("#lblBtn");
+        await expect(app.locator(".lbl:visible").first()).toBeVisible();
+        await button.click();
+        await expect(button).toHaveAttribute("aria-pressed", "false");
+        await expect(app.locator(".lbl:visible")).toHaveCount(0);
+        await button.click();
+        await expect(app.locator(".lbl:visible").first()).toBeVisible();
+    });
 
-    test("sliders adjust the model and Reset returns home",
-        async ({ app }) => {
-            for (const id of ["#spread", "#opac", "#bright"]) {
-                await app.locator(id).fill("80");
-            }
-            await app.evaluate(() =>
-                (window as any).__atlas.selectNode("putamen", "L"),
-            );
-            await app.locator("#resetBtn").click();
-            await expect(app.locator("#spread")).toHaveValue("0");
-            await expect(regionHeading(app)).toHaveText("Human brain");
-        });
+    test("sliders adjust the model and Reset returns home", async ({ app }) => {
+        for (const id of ["#spread", "#opac", "#bright"]) {
+            await app.locator(id).fill("80");
+        }
+        await app.evaluate(() =>
+            (window as any).__atlas.selectNode("putamen", "L"),
+        );
+        await app.locator("#resetBtn").click();
+        await expect(app.locator("#spread")).toHaveValue("0");
+        await expect(regionHeading(app)).toHaveText("Human brain");
+    });
 
     test("Spanish is applied everywhere and remembered", async ({ app }) => {
         await app.locator('[data-lang="es"]').click();

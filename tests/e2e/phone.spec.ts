@@ -9,8 +9,9 @@ test.describe("phone layout", () => {
         // On phones the section map lives in the Browse tab.
         await app.locator("#tab-browse").click();
         const browse = app.locator("#view-browse");
-        await expect(browse.locator('[data-node="hemiL"]').first())
-            .toBeVisible();
+        await expect(
+            browse.locator('[data-node="hemiL"]').first(),
+        ).toBeVisible();
         expect((await sheet.boundingBox())!.height).toBeGreaterThan(
             startHeight,
         );

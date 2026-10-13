@@ -1,6 +1,7 @@
 import { defineConfig, devices } from "@playwright/test";
 
-// End-to-end tests run against the built index.html served over HTTP.
+// End-to-end tests run against the production build (vite build) served
+// by vite preview, so they test exactly what gets deployed.
 // WebGL runs on SwiftShader (software rendering) so tests work on CI
 // machines without a GPU. It is slow, which is why timeouts are generous.
 export default defineConfig({
@@ -12,9 +13,7 @@ export default defineConfig({
     fullyParallel: true,
     forbidOnly: !!process.env.CI,
     retries: 0,
-    reporter: process.env.CI
-        ? [["list"], ["html", { open: "never" }]]
-        : "list",
+    reporter: process.env.CI ? [["list"], ["html", { open: "never" }]] : "list",
     use: {
         baseURL: "http://127.0.0.1:4173",
         launchOptions: {
@@ -41,8 +40,8 @@ export default defineConfig({
         },
     ],
     webServer: {
-        command: "python3 -m http.server 4173 --bind 127.0.0.1",
-        url: "http://127.0.0.1:4173/index.html",
+        command: "npm run build && npm run preview",
+        url: "http://127.0.0.1:4173/",
         reuseExistingServer: !process.env.CI,
     },
 });
