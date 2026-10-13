@@ -119,19 +119,21 @@ export function renderGlossary(highlight?: string): void {
         .map((e) => {
             const link =
                 e.type === "Region"
-                    ? `<button type="button" class="lnk" data-sub="${e.ref}">` +
+                    ? `<button type="button" class="button button--quiet" data-sub="${e.ref}">` +
                       `${t("showOnModel")}</button>`
                     : e.type !== "Term"
-                      ? `<button type="button" class="lnk" ` +
+                      ? `<button type="button" class="button button--quiet" ` +
                         `data-cond="${e.ref}">${t("openEntry")}</button>`
                       : "";
             return (
                 `<li id="${slug(e.k)}"` +
-                `${e.k === highlight ? ' class="hl"' : ""}>` +
-                `<span class="t">${esc(capitalize(e.name))}</span>` +
-                `<span class="tag">${t(TYPE_LABEL[e.type])}` +
-                `${e.sub ? " · " + esc(e.sub) : ""}</span>` +
-                `<p>${esc(e.def)}</p>${link}</li>`
+                `${e.k === highlight ? ' class="is-highlighted"' : ""}>` +
+                `<span class="dictionary-term">${esc(capitalize(e.name))}</span>` +
+                `<span class="tags"><span class="tag">` +
+                `${t(TYPE_LABEL[e.type])}</span>` +
+                `${e.sub ? `<span class="tag">${esc(e.sub)}</span>` : ""}` +
+                `</span>` +
+                `<p class="dictionary-text">${esc(e.def)}</p>${link}</li>`
             );
         })
         .join("");

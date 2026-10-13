@@ -22,7 +22,7 @@ test.describe("region hierarchy", () => {
                     if (heading !== node.name) {
                         found.push(`${id}@${side}: heading "${heading}"`);
                     }
-                    const crumbs = view.querySelectorAll(".crumbs > *");
+                    const crumbs = view.querySelectorAll(".breadcrumbs li");
                     const last = crumbs[crumbs.length - 1]?.textContent;
                     if (last !== node.name) {
                         found.push(`${id}@${side}: crumb "${last}"`);
@@ -51,9 +51,7 @@ test.describe("region hierarchy", () => {
                 if (key in result) continue;
                 selectNode(id, side, { focus: false });
                 const cards = [
-                    ...document.querySelectorAll(
-                        "#view-region .subgrid .subcard",
-                    ),
+                    ...document.querySelectorAll("#view-region .cards .card"),
                 ] as HTMLElement[];
                 result[key] = cards.map(
                     (card) =>
@@ -101,7 +99,7 @@ test.describe("region hierarchy", () => {
         // Levels 2-4: lobe, group, part, from the cards in the panel.
         for (const id of ["frontal", "g_pfc", "dlpfc"]) {
             await app
-                .locator(`#view-region .subcard[data-node="${id}"]`)
+                .locator(`#view-region .card[data-node="${id}"]`)
                 .first()
                 .click();
             await expect(regionHeading(app)).toHaveText(names[id]);
@@ -120,7 +118,7 @@ test.describe("region hierarchy", () => {
         await app.keyboard.press("Escape");
         await expect(regionHeading(app)).toHaveText(names.frontal);
         await app
-            .locator("#view-region .crumbs button")
+            .locator("#view-region .breadcrumbs button")
             .filter({ hasText: names.brain })
             .click();
         await expect(regionHeading(app)).toHaveText(names.brain);
@@ -139,7 +137,7 @@ test.describe("region hierarchy", () => {
         await expect(regionHeading(app)).toHaveText(names.deep);
         for (const id of ["basalganglia", "g_striatum", "caudate"]) {
             await app
-                .locator(`#view-region .subcard[data-node="${id}"]`)
+                .locator(`#view-region .card[data-node="${id}"]`)
                 .first()
                 .click();
             await expect(regionHeading(app)).toHaveText(names[id]);
@@ -148,7 +146,7 @@ test.describe("region hierarchy", () => {
         await app.locator('#chips [data-node="cerebellum"]').first().click();
         await expect(regionHeading(app)).toHaveText(names.cerebellum);
         await app
-            .locator('#view-region .subcard[data-node="vermis"]')
+            .locator('#view-region .card[data-node="vermis"]')
             .first()
             .click();
         await expect(regionHeading(app)).toHaveText(names.vermis);

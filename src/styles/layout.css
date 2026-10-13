@@ -1,0 +1,782 @@
+/*
+ * Page layout and app-specific pieces: the header, the 3D stage and its
+ * overlays, the section map, the side panel and the phone bottom sheet.
+ * Uses only tokens (tokens.css) and component classes (components.css).
+ */
+
+html,
+body {
+    height: 100%;
+}
+
+/* ---------- Page grid ---------- */
+.app {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 440px;
+    grid-template-rows: auto minmax(0, 1fr);
+    gap: var(--space-4) var(--space-5);
+    height: 100%;
+    padding: var(--space-4) var(--space-5);
+}
+
+/* ---------- Header ---------- */
+.app-header {
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-4);
+}
+.app-brand {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: var(--space-1) var(--space-4);
+    min-width: 0;
+}
+.brand {
+    margin: 0;
+    font-size: var(--text-title-sm);
+    font-weight: var(--weight-bold);
+    line-height: var(--leading-tight);
+    letter-spacing: -0.01em;
+}
+.stats {
+    margin: 0;
+    font-size: var(--text-caption);
+    color: var(--color-text-muted);
+}
+
+/* ---------- Workspace: stage and section map ---------- */
+.workspace {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+    min-width: 0;
+    min-height: 0;
+    overflow-y: auto;
+}
+.stage {
+    position: relative;
+    flex: 1 0 auto;
+    min-height: max(420px, 64vh);
+    overflow: hidden;
+    border-radius: var(--radius-lg);
+    background: radial-gradient(
+        120% 90% at 50% 40%,
+        var(--stage-bg-glow) 0%,
+        var(--stage-bg) 70%
+    );
+    color: var(--stage-text);
+    touch-action: none;
+}
+.stage canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+/* The default accent focus ring is too dark to see on the stage. */
+.stage :focus-visible {
+    outline-color: var(--stage-accent);
+}
+
+/* Labels floating over the model (positioned by stage.ts). */
+.labels {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+}
+.lbl {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    padding: 0;
+    border: 0;
+    background: none;
+    color: var(--stage-text);
+    font-size: var(--text-caption);
+    white-space: nowrap;
+    cursor: pointer;
+    pointer-events: auto;
+}
+.lbl .swatch {
+    box-shadow:
+        0 0 0 2px rgba(0, 0, 0, 0.55),
+        0 0 0 3px var(--swatch);
+}
+.lbl > span:last-child {
+    padding: 3px var(--space-2);
+    border: var(--border-width) solid var(--stage-line);
+    border-radius: var(--radius-sm);
+    background: var(--stage-overlay);
+}
+.lbl.flip {
+    flex-direction: row-reverse;
+}
+.lbl:hover > span:last-child,
+.lbl.on > span:last-child {
+    border-color: transparent;
+    background: var(--swatch);
+    color: var(--stage-bg);
+}
+.tip {
+    position: absolute;
+    padding: 3px var(--space-2);
+    border-radius: var(--radius-sm);
+    background: var(--stage-text);
+    color: var(--stage-bg);
+    font-size: var(--text-caption);
+    white-space: nowrap;
+    transform: translate(12px, 12px);
+    pointer-events: none;
+}
+
+/* Controls over the model. */
+.toolbar {
+    position: absolute;
+    top: var(--space-3);
+    left: var(--space-3);
+    right: var(--space-3);
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+    pointer-events: none;
+}
+.toolbar > *,
+.toolbar-more > * {
+    pointer-events: auto;
+}
+/* On larger screens the controls sit in the toolbar row. */
+.toolbar-more {
+    display: contents;
+}
+.more-button {
+    display: none;
+}
+.stage-hint {
+    position: absolute;
+    left: var(--space-4);
+    right: var(--space-4);
+    bottom: var(--space-3);
+    margin: 0;
+    font-size: var(--text-caption);
+    color: var(--stage-text-muted);
+    pointer-events: none;
+}
+/* Which condition is shown, and what the colors mean. */
+.stage-legend {
+    position: absolute;
+    left: var(--space-3);
+    right: var(--space-3);
+    bottom: var(--space-3);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--space-2) var(--space-4);
+    padding: var(--space-2) var(--space-3);
+    border: var(--border-width) solid var(--stage-line);
+    border-radius: var(--radius-md);
+    background: var(--stage-overlay);
+    font-size: var(--text-caption);
+}
+.stage-legend-name {
+    font-size: var(--text-base);
+    font-weight: var(--weight-bold);
+}
+.stage-legend-key {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+}
+.stage-legend .swatch--primary {
+    background: var(--stage-involve-primary);
+}
+.stage-legend .swatch--secondary {
+    box-shadow: inset 0 0 0 2.5px var(--stage-involve-secondary);
+}
+.stage-legend .button {
+    margin-left: auto;
+    min-height: 32px;
+}
+
+/* Loading and error states (see stage-status.ts). */
+.stage-status {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 5;
+    width: min(36ch, calc(100% - var(--space-6)));
+    padding: var(--space-5);
+    border: var(--border-width) solid var(--stage-line);
+    border-radius: var(--radius-lg);
+    background: var(--stage-overlay);
+    transform: translate(-50%, -50%);
+}
+.stage-status-title {
+    margin: 0 0 var(--space-3);
+    font-size: var(--text-title-sm);
+    font-weight: var(--weight-medium);
+    line-height: var(--leading-tight);
+}
+.stage-error .stage-status-title {
+    margin-bottom: 0;
+}
+.stage-status-note {
+    margin: var(--space-3) 0 0;
+    font-family: var(--font-reading);
+    font-size: var(--text-base);
+    line-height: 1.5;
+    color: var(--stage-text-muted);
+}
+.stage-status progress {
+    display: block;
+    width: 100%;
+    height: 6px;
+    /* The outline shows the bar's full length at 3:1 contrast, so how
+       much is left to load is visible, not just what's done. */
+    border: var(--border-width) solid var(--stage-line-strong);
+    border-radius: 3px;
+    background: var(--stage-hover);
+    -webkit-appearance: none;
+    appearance: none;
+}
+.stage-status progress::-webkit-progress-bar {
+    border-radius: 3px;
+    background: var(--stage-hover);
+}
+.stage-status progress::-webkit-progress-value {
+    border-radius: 3px;
+    background: var(--stage-accent);
+}
+.stage-status progress::-moz-progress-bar {
+    border-radius: 3px;
+    background: var(--stage-accent);
+}
+.stage-status .stage-action {
+    margin-top: var(--space-4);
+}
+/* The 3D controls do nothing until the model is ready. */
+body:not([data-stage="ready"]) .toolbar,
+body:not([data-stage="ready"]) .stage-hint,
+body:not([data-stage="ready"]) .stage-legend,
+body:not([data-stage="ready"]) .labels {
+    display: none;
+}
+body[data-stage="error"] #brain,
+body[data-stage="error"] .closer,
+body[data-stage="error"] .closer-caption {
+    display: none;
+}
+
+/* ---------- Section map under the stage ---------- */
+.section-map {
+    display: flex;
+    flex-direction: column;
+}
+.map-section {
+    display: grid;
+    grid-template-columns: 160px minmax(0, 1fr);
+    gap: var(--space-2) var(--space-4);
+    align-items: start;
+    padding: var(--space-3) 0;
+    border-top: var(--border-width) solid var(--color-border);
+}
+.map-section:first-child {
+    border-top: 0;
+}
+.map-heading {
+    margin: 0;
+    padding-top: 6px;
+    font-size: var(--text-ui);
+    font-weight: var(--weight-medium);
+}
+.map-title {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    padding: 0;
+    border: 0;
+    background: none;
+    color: var(--color-text-muted);
+    font-weight: inherit;
+    text-align: left;
+}
+button.map-title {
+    cursor: pointer;
+}
+.map-title::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    flex: none;
+    border-radius: 3px;
+    background: var(--swatch);
+}
+.map-title[aria-pressed="true"],
+.map-section.is-open .map-title {
+    color: var(--color-text);
+}
+button.map-title:hover {
+    color: var(--color-accent);
+}
+.map-parts {
+    grid-column: 2;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    padding: var(--space-2) 0 var(--space-1) var(--space-4);
+    border-left: 2px solid var(--swatch);
+}
+.map-group {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+}
+.map-group-title,
+.map-group-label {
+    align-self: flex-start;
+    padding: 0;
+    border: 0;
+    background: none;
+    font-size: var(--text-ui);
+    font-weight: var(--weight-medium);
+}
+.map-group-title {
+    cursor: pointer;
+}
+.map-group-title:hover {
+    color: var(--color-accent);
+}
+.map-group-title[aria-pressed="true"] {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+.map-group-label {
+    color: var(--color-text-muted);
+}
+.chip-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+}
+.chip--small {
+    min-height: 28px;
+    padding: 2px var(--space-3) 2px var(--space-2);
+    font-size: var(--text-caption);
+}
+
+/* ---------- Side panel ---------- */
+.panel {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    min-height: 0;
+    border: var(--border-width) solid var(--color-border);
+    border-radius: var(--radius-lg);
+    background: var(--color-surface);
+}
+.panel > .tabs {
+    padding: 0 var(--space-3);
+    border-bottom: var(--border-width) solid var(--color-border);
+}
+.panel > .notice {
+    margin: var(--space-3) var(--space-4) 0;
+}
+.grab,
+#tab-browse {
+    display: none;
+}
+.view {
+    flex: 1;
+    min-height: 0;
+    overflow: auto;
+    padding: var(--space-5) var(--space-5) var(--space-6);
+}
+.view > .title {
+    margin-top: var(--space-1);
+}
+
+/* Region panel. */
+.alias {
+    margin: calc(-1 * var(--space-2)) 0 var(--space-3);
+}
+.where {
+    margin: 0 0 var(--space-4);
+    font-size: var(--text-ui);
+    color: var(--color-text-muted);
+}
+.where-label {
+    font-weight: var(--weight-bold);
+    color: var(--color-text);
+}
+.closer {
+    position: relative;
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+    border-radius: var(--radius-md);
+    background: var(--stage-bg);
+}
+.closer canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.closer-caption {
+    margin: var(--space-2) 0 var(--space-5);
+}
+.helpline {
+    margin: 0 0 var(--space-5);
+}
+.section-title .meta {
+    display: inline;
+    margin-left: var(--space-1);
+    font-weight: var(--weight-regular);
+}
+.subsection-title {
+    margin: var(--space-4) 0 var(--space-2);
+    font-size: var(--text-ui);
+    font-weight: var(--weight-medium);
+    color: var(--color-text-muted);
+}
+.involvement-key {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    margin: 0 0 var(--space-2);
+}
+.involvement-key .swatch:not(:first-child) {
+    margin-left: var(--space-3);
+}
+
+/* Words that open a definition. */
+.term {
+    padding: 0;
+    border: 0;
+    background: none;
+    font: inherit;
+    color: inherit;
+    cursor: help;
+    text-decoration: underline dotted var(--color-accent);
+    text-decoration-thickness: 1.5px;
+    text-underline-offset: 3px;
+}
+.term:hover {
+    color: var(--color-accent);
+}
+/* Structure and condition names link elsewhere: solid underline. */
+.term.st,
+.term.cd {
+    cursor: pointer;
+    text-decoration-style: solid;
+    text-decoration-thickness: 1px;
+}
+.term.cd {
+    text-decoration-color: var(--color-involve-primary);
+}
+
+/* Condition panels. */
+.count {
+    margin: var(--space-2) 0 0;
+}
+.list-heading {
+    margin: var(--space-5) 0 var(--space-1);
+    font-size: var(--text-ui);
+    font-weight: var(--weight-bold);
+    color: var(--color-text-muted);
+}
+.panel-note {
+    margin-top: var(--space-5);
+}
+.back {
+    margin: 0 0 var(--space-3);
+}
+.empty {
+    margin-top: var(--space-4);
+    color: var(--color-text-muted);
+}
+.accordions {
+    margin-top: var(--space-4);
+}
+.areas {
+    display: grid;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.areas li {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: 2px var(--space-3);
+    padding: var(--space-3) 0;
+    border-top: var(--border-width) solid var(--color-border);
+}
+.areas li:first-child {
+    border-top: 0;
+}
+.areas .swatch {
+    grid-row: span 2;
+    margin-top: 5px;
+}
+.area-name {
+    justify-self: start;
+    padding: 0;
+    border: 0;
+    background: none;
+    font-size: var(--text-base);
+    font-weight: var(--weight-medium);
+    text-align: left;
+    cursor: pointer;
+}
+.area-name:hover {
+    color: var(--color-accent);
+}
+.area-note {
+    margin: 0;
+    font-family: var(--font-reading);
+    font-size: var(--text-base);
+    line-height: 1.5;
+    color: var(--color-text-muted);
+}
+
+/* Dictionary. */
+.filter-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+    margin-top: var(--space-3);
+}
+.recent:empty {
+    display: none;
+}
+.dictionary {
+    margin-top: var(--space-3);
+}
+.dictionary li {
+    padding: var(--space-3) 0;
+    border-top: var(--border-width) solid var(--color-border);
+}
+.dictionary li.is-highlighted {
+    margin: 0 calc(-1 * var(--space-3));
+    padding-inline: var(--space-3);
+    border-radius: var(--radius-md);
+    background: var(--color-accent-soft);
+}
+.dictionary-term {
+    margin-right: var(--space-2);
+    font-size: var(--text-base);
+    font-weight: var(--weight-medium);
+}
+.dictionary .tags {
+    display: inline-flex;
+    margin: 0;
+}
+.dictionary-text {
+    margin: var(--space-1) 0 0;
+    font-family: var(--font-reading);
+    font-size: var(--text-base);
+    line-height: 1.5;
+    color: var(--color-text-muted);
+}
+
+/* Definition popover (positioned by popover.ts). */
+.pop {
+    position: fixed;
+    z-index: 20;
+}
+.popover-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-2);
+}
+.popover-close {
+    width: 32px;
+    min-height: 32px;
+    padding: 0;
+    color: var(--color-text-muted);
+}
+.popover-title {
+    margin: 0 0 var(--space-1);
+    font-size: var(--text-title-sm);
+    font-weight: var(--weight-bold);
+    line-height: var(--leading-tight);
+}
+.popover-text {
+    margin: 0 0 var(--space-2);
+    font-family: var(--font-reading);
+    font-size: var(--text-base);
+    line-height: 1.5;
+}
+.pop .chip-row {
+    margin-bottom: var(--space-2);
+}
+
+/* ---------- Narrow screens: stack the panel below ---------- */
+@media (max-width: 900px) {
+    .app {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+    }
+    .stage {
+        flex: none;
+        height: 62vh;
+        min-height: 340px;
+    }
+    .panel {
+        min-height: auto;
+    }
+    .view {
+        overflow: visible;
+    }
+    .map-section {
+        grid-template-columns: 1fr;
+    }
+    .map-parts {
+        grid-column: 1;
+    }
+}
+
+/* ---------- Phones: full-screen model with a bottom sheet ---------- */
+@media (max-width: 760px) {
+    html,
+    body {
+        overflow: hidden;
+    }
+    .app {
+        display: block;
+        height: 100%;
+        padding: 0;
+    }
+    .app-header {
+        position: fixed;
+        top: calc(env(safe-area-inset-top, 0px) + var(--space-3));
+        left: var(--space-4);
+        right: var(--space-4);
+        z-index: 6;
+    }
+    .brand {
+        font-size: var(--text-base);
+        color: var(--stage-text);
+    }
+    .stats {
+        display: none;
+    }
+    .workspace {
+        position: fixed;
+        inset: 0;
+        display: block;
+        overflow: hidden;
+    }
+    .stage {
+        position: absolute;
+        inset: 0;
+        height: 100%;
+        min-height: 0;
+        border-radius: 0;
+    }
+    .toolbar {
+        top: calc(env(safe-area-inset-top, 0px) + 56px);
+        left: var(--space-3);
+        right: var(--space-3);
+    }
+    .more-button {
+        display: inline-flex;
+    }
+    .toolbar-more {
+        position: absolute;
+        top: 52px;
+        left: 0;
+        right: 0;
+        display: none;
+        flex-direction: column;
+        gap: var(--space-2);
+        padding: var(--space-3);
+        border: var(--border-width) solid var(--stage-line);
+        border-radius: var(--radius-md);
+        background: var(--stage-overlay);
+    }
+    .toolbar-more.open {
+        display: flex;
+    }
+    .toolbar-more .slider {
+        justify-content: space-between;
+        width: 100%;
+    }
+    .toolbar-more .button {
+        justify-content: flex-start;
+        width: 100%;
+    }
+    .toolbar-more .slider input {
+        width: 60%;
+    }
+    .stage-hint {
+        display: none;
+    }
+    .stage-legend {
+        top: calc(env(safe-area-inset-top, 0px) + 104px);
+        bottom: auto;
+    }
+    .panel {
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 10;
+        height: 150px;
+        padding-bottom: env(safe-area-inset-bottom, 0px);
+        border-bottom: 0;
+        border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+        box-shadow: var(--shadow-sheet);
+        transition: height 280ms var(--ease-out);
+    }
+    .panel.dragging {
+        transition: none;
+    }
+    .grab {
+        display: flex;
+        justify-content: center;
+        padding: var(--space-2) 0 var(--space-1);
+        cursor: grab;
+        touch-action: none;
+    }
+    .grab span {
+        width: 40px;
+        height: 5px;
+        border-radius: 3px;
+        background: var(--color-border-strong);
+    }
+    #tab-browse {
+        display: block;
+    }
+    .view {
+        overflow: auto;
+        padding: var(--space-4) var(--space-4) var(--space-6);
+        overscroll-behavior: contain;
+    }
+    .closer {
+        aspect-ratio: 16 / 9;
+    }
+    .pop {
+        top: auto !important;
+        left: var(--space-3) !important;
+        right: var(--space-3);
+        bottom: calc(env(safe-area-inset-bottom, 0px) + var(--space-3));
+        z-index: 40;
+        width: auto;
+    }
+    /* The sheet covers the bottom; keep messages near the top. */
+    .stage-status {
+        top: calc(env(safe-area-inset-top, 0px) + 64px);
+        max-height: calc(
+            100% - env(safe-area-inset-top, 0px) - 64px -
+                var(--sheet-h, 150px) - 16px
+        );
+        overflow-y: auto;
+        transform: translateX(-50%);
+    }
+}

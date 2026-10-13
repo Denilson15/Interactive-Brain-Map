@@ -124,9 +124,14 @@ function visibleAspect(): number {
     return w / visibleHeight;
 }
 
-/** Pulls the camera back on narrow screens so the brain still fits. */
+/**
+ * Pulls the camera back on narrow screens so the brain still fits. The
+ * brain needs roughly a 1.15:1 frame; phones get extra side margin so it
+ * doesn't touch the screen edges.
+ */
 function fit(): number {
-    return Math.max(1, 1.15 / visibleAspect());
+    const frame = isPhoneLayout() ? 1.45 : 1.15;
+    return Math.max(1, frame / visibleAspect());
 }
 
 export const selKey = (): string => keyOf(state.sel, state.selSide);
@@ -387,7 +392,7 @@ function labelEl(key: string): LabelButton {
     button.className = "lbl";
     button.type = "button";
     button.hidden = true;
-    button.innerHTML = `<i></i><span>${esc(node.short || node.name)}</span>`;
+    button.innerHTML = `<span class="swatch"></span><span>${esc(node.short || node.name)}</span>`;
     button.addEventListener("click", () => {
         if (state.mode === "condition") {
             callbacks.onSelect(id, viewSide());
@@ -486,7 +491,7 @@ function updateLabels(): void {
         const el = isCondition ? labelEl(item.o.id) : labelEl(item.o.key);
         const labelKey = isCondition ? item.o.id : item.o.key;
         if (el.hidden) el.hidden = false;
-        el.style.setProperty("--c", item.o.c);
+        el.style.setProperty("--swatch", item.o.c);
         el.classList.toggle("sub", !!item.o.sub);
         el.classList.toggle(
             "on",

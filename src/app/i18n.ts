@@ -11,23 +11,23 @@ const UI_EN = {
     tabPsych: "Psychology",
     tabDisease: "Diseases",
     tabGloss: "Dictionary",
-    up: "↑ Up a level",
+    up: "Up a level",
     upTitle: "Go up one level (Esc)",
     spread: "Spread",
     opacity: "Opacity",
     brightness: "Brightness",
     labels: "Labels",
-    reset: "Reset",
-    controls: "Controls ▾",
+    reset: "Reset view",
+    controls: "Controls",
     hint:
-        "Drag to rotate · scroll or pinch to zoom · " +
-        "click a section to open it · Esc goes back up",
+        "Drag to rotate. Scroll or pinch to zoom. Select a part to open " +
+        "it; press Esc to go back up.",
     glossSearch: "Search terms, regions and conditions",
     glossPh: "e.g. synapse, putamen, PTSD",
     browseEyebrow: "Every section of the brain",
     stats:
-        "{p} brain parts · {d} disorders · {s} diseases · " +
-        "{e} dictionary entries",
+        "{p} brain parts, {d} disorders, {s} diseases and {e} dictionary " +
+        "entries",
     primary: "Primary",
     alsoInvolved: "Also involved",
     backToAnatomy: "Back to anatomy",
@@ -78,8 +78,8 @@ const UI_EN = {
     noteDisease:
         "Choose a disease to see its full write-up and the brain areas " +
         "it affects.",
-    allDisorders: "← All disorders",
-    allDiseases: "← All diseases",
+    allDisorders: "All disorders",
+    allDiseases: "All diseases",
     alsoCalled: "Also called {s}",
     secOverview: "Overview",
     secBrain: "Brain areas highlighted on the model",
@@ -107,17 +107,17 @@ const UI_EN = {
     tDisease: "Disease",
     entriesOf: "{n} of {t} entries",
     nothingMatches: "Nothing matches “{q}”.",
-    showOnModel: "Show on the model →",
-    openEntry: "Open full entry →",
+    showOnModel: "Show on the model",
+    openEntry: "Open full entry",
     dictionary: "Dictionary",
-    close: "Close ✕",
-    seeInDict: "See in dictionary →",
+    close: "Close",
+    seeInDict: "See in the dictionary",
     brainRegion: "Brain region",
-    openHighlight: "Open full entry and highlight →",
+    openHighlight: "Open and highlight on the model",
     notInDict:
         "This isn't in the dictionary. It's likely an everyday word " +
         "rather than a brain or medical term.",
-    browseDict: "Browse the dictionary →",
+    browseDict: "Browse the dictionary",
     loadingTitle: "Loading the 3D brain",
     loadingNote: "You can read and search while it loads.",
     errWebglTitle: "The 3D view can't start on this device",

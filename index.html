@@ -14,12 +14,28 @@
     </head>
     <body data-stage="loading">
         <div class="app">
-            <header class="top">
-                <h1 data-i18n="title">Interactive Brain Map</h1>
-                <p id="stats"></p>
+            <header class="app-header">
+                <div class="app-brand">
+                    <h1 class="brand" data-i18n="title">
+                        Interactive Brain Map
+                    </h1>
+                    <p class="stats" id="stats"></p>
+                </div>
+                <div
+                    class="segmented lang"
+                    role="group"
+                    aria-label="Language / Idioma"
+                >
+                    <button type="button" data-lang="en" aria-pressed="true">
+                        EN
+                    </button>
+                    <button type="button" data-lang="es" aria-pressed="false">
+                        ES
+                    </button>
+                </div>
             </header>
 
-            <section class="left">
+            <section class="workspace">
                 <div class="stage" id="stage">
                     <canvas
                         id="brain"
@@ -29,69 +45,99 @@
                     <div class="tip" id="tip" hidden></div>
                     <div class="toolbar">
                         <button
-                            class="tb"
+                            class="button button--stage"
                             id="upBtn"
+                            type="button"
                             title="Go up one level (Esc)"
-                            data-i18n="up"
                             data-i18n-title="upTitle"
                         >
-                            ↑ Up a level
+                            <svg
+                                class="icon"
+                                viewBox="0 0 24 24"
+                                aria-hidden="true"
+                            >
+                                <path d="M12 19V5M5 12l7-7 7 7" />
+                            </svg>
+                            <span data-i18n="up">Up a level</span>
                         </button>
                         <button
-                            class="tb more-btn"
+                            class="button button--stage more-button"
                             id="moreBtn"
+                            type="button"
                             aria-expanded="false"
                             aria-controls="tbMore"
-                            data-i18n="controls"
                         >
-                            Controls ▾
+                            <span data-i18n="controls">Controls</span>
+                            <svg
+                                class="icon"
+                                viewBox="0 0 24 24"
+                                aria-hidden="true"
+                            >
+                                <path d="m6 9 6 6 6-6" />
+                            </svg>
                         </button>
-                        <div class="tb-more" id="tbMore">
-                            <label class="tb spread" for="spread"
-                                ><span data-i18n="spread">Spread</span>
+                        <div class="toolbar-more" id="tbMore">
+                            <label class="slider" for="spread">
+                                <span data-i18n="spread">Spread</span>
                                 <input
                                     id="spread"
                                     type="range"
                                     min="0"
                                     max="100"
                                     value="0"
-                            /></label>
-                            <label class="tb spread" for="opac"
-                                ><span data-i18n="opacity">Opacity</span>
+                                />
+                            </label>
+                            <label class="slider" for="opac">
+                                <span data-i18n="opacity">Opacity</span>
                                 <input
                                     id="opac"
                                     type="range"
                                     min="0"
                                     max="100"
                                     value="20"
-                            /></label>
-                            <label class="tb spread" for="bright"
-                                ><span data-i18n="brightness">Brightness</span>
+                                />
+                            </label>
+                            <label class="slider" for="bright">
+                                <span data-i18n="brightness">Brightness</span>
                                 <input
                                     id="bright"
                                     type="range"
                                     min="0"
                                     max="100"
                                     value="50"
-                            /></label>
+                                />
+                            </label>
                             <button
-                                class="tb"
+                                class="button button--stage"
                                 id="lblBtn"
+                                type="button"
                                 aria-pressed="true"
                                 data-i18n="labels"
                             >
                                 Labels
                             </button>
-                            <button class="tb" id="resetBtn" data-i18n="reset">
-                                Reset
+                            <button
+                                class="button button--stage"
+                                id="resetBtn"
+                                type="button"
+                            >
+                                <svg
+                                    class="icon"
+                                    viewBox="0 0 24 24"
+                                    aria-hidden="true"
+                                >
+                                    <path d="M3 12a9 9 0 1 0 3-6.7L3 8" />
+                                    <path d="M3 3v5h5" />
+                                </svg>
+                                <span data-i18n="reset">Reset view</span>
                             </button>
                         </div>
                     </div>
-                    <div class="hint" id="hint" data-i18n="hint">
-                        Drag to rotate · scroll or pinch to zoom · click a
-                        section to open it · Esc goes back up
-                    </div>
-                    <div class="condbar" id="condbar" hidden></div>
+                    <p class="stage-hint" id="hint" data-i18n="hint">
+                        Drag to rotate. Scroll or pinch to zoom. Select a part
+                        to open it; press Esc to go back up.
+                    </p>
+                    <div class="stage-legend" id="condbar" hidden></div>
                     <!-- Shown from the first paint until the model is built.
                          Replaced by #stageError if the 3D view can't run. -->
                     <div class="stage-status" id="stageStatus" role="status">
@@ -123,7 +169,7 @@
                         hidden
                     ></div>
                 </div>
-                <div class="chips" id="chips"></div>
+                <div class="section-map" id="chips"></div>
             </section>
 
             <aside class="panel">
@@ -140,6 +186,7 @@
                     <button
                         class="tab"
                         role="tab"
+                        type="button"
                         id="tab-browse"
                         aria-selected="false"
                         data-i18n="tabBrowse"
@@ -149,6 +196,7 @@
                     <button
                         class="tab"
                         role="tab"
+                        type="button"
                         id="tab-region"
                         aria-selected="true"
                         data-i18n="tabRegion"
@@ -158,6 +206,7 @@
                     <button
                         class="tab"
                         role="tab"
+                        type="button"
                         id="tab-psych"
                         aria-selected="false"
                         data-i18n="tabPsych"
@@ -167,6 +216,7 @@
                     <button
                         class="tab"
                         role="tab"
+                        type="button"
                         id="tab-disease"
                         aria-selected="false"
                         data-i18n="tabDisease"
@@ -176,37 +226,19 @@
                     <button
                         class="tab"
                         role="tab"
+                        type="button"
                         id="tab-gloss"
                         aria-selected="false"
                         data-i18n="tabGloss"
                     >
                         Dictionary
                     </button>
-                    <div
-                        class="lang"
-                        role="group"
-                        aria-label="Language / Idioma"
-                    >
-                        <button
-                            type="button"
-                            data-lang="en"
-                            aria-pressed="true"
-                        >
-                            EN</button
-                        ><button
-                            type="button"
-                            data-lang="es"
-                            aria-pressed="false"
-                        >
-                            ES
-                        </button>
-                    </div>
                 </div>
                 <p class="notice" id="notice" role="status" hidden></p>
                 <div class="view" id="view-browse" role="tabpanel" hidden>
-                    <p class="eyebrow" data-i18n="browseEyebrow">
+                    <h2 class="section-title" data-i18n="browseEyebrow">
                         Every section of the brain
-                    </p>
+                    </h2>
                 </div>
                 <div class="view" id="view-region" role="tabpanel"></div>
                 <div class="view" id="view-psych" role="tabpanel" hidden></div>
@@ -217,7 +249,7 @@
                     hidden
                 ></div>
                 <div class="view" id="view-gloss" role="tabpanel" hidden>
-                    <label for="gq" class="eyebrow" data-i18n="glossSearch"
+                    <label for="gq" class="field" data-i18n="glossSearch"
                         >Search terms, regions and conditions</label
                     >
                     <input
@@ -228,15 +260,21 @@
                         data-i18n-ph="glossPh"
                         autocomplete="off"
                     />
-                    <div class="filters" id="gfilters"></div>
-                    <div class="recent" id="recent"></div>
-                    <p class="count" id="gcount"></p>
-                    <ul class="gl" id="glist"></ul>
+                    <div class="filter-row" id="gfilters"></div>
+                    <div class="filter-row recent" id="recent"></div>
+                    <p class="meta count" id="gcount"></p>
+                    <ul class="list dictionary" id="glist"></ul>
                 </div>
             </aside>
         </div>
 
-        <div class="pop" id="pop" role="dialog" aria-live="polite" hidden></div>
+        <div
+            class="popover pop"
+            id="pop"
+            role="dialog"
+            aria-live="polite"
+            hidden
+        ></div>
         <script type="module" src="/src/main.ts"></script>
     </body>
 </html>

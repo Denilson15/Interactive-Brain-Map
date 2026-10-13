@@ -13,7 +13,9 @@ test.describe("dictionary and definitions", () => {
         await app.locator("#gq").fill("putamen");
         await app.locator('#gfilters [data-f="Region"]').click();
         const entries = app.locator("#glist li");
-        await expect(entries.first().locator(".tag")).toContainText("Region");
+        await expect(entries.first().locator(".tag").first()).toContainText(
+            "Region",
+        );
         await entries.first().locator("[data-sub]").click();
         await expect(regionHeading(app)).toHaveText("Putamen");
     });

@@ -84,10 +84,10 @@ export function regionHeading(page: Page) {
     return page.locator("#view-region h2");
 }
 
-/** Breadcrumb trail of the Region panel, without the "›" separators. */
+/** Breadcrumb trail of the Region panel, as plain text items. */
 export async function breadcrumbs(page: Page): Promise<string[]> {
-    const items = page.locator("#view-region .crumbs > *");
-    return (await items.allTextContents()).filter((text) => text !== "›");
+    const items = page.locator("#view-region .breadcrumbs li");
+    return (await items.allTextContents()).map((text) => text.trim());
 }
 
 /** Display names for structure ids, read from the app's own data. */

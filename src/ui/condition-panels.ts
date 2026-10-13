@@ -6,6 +6,8 @@ import { t } from "../app/i18n";
 import { S } from "../app/structures";
 import type { Condition, ConditionKind } from "../app/types";
 import { esc, firstSentence } from "../app/util";
+import { ICONS } from "./icons";
+import { involvementSwatch } from "./region-panel";
 
 export const CONDITION_VIEWS: Record<ConditionKind, string> = {
     psych: "view-psych",
@@ -27,13 +29,13 @@ export function renderConditionList(kind: ConditionKind): void {
     const placeholder = kind === "psych" ? t("phPsych") : t("phDisease");
     const note = kind === "psych" ? t("notePsych") : t("noteDisease");
     view.innerHTML =
-        `<label class="eyebrow" for="q-${kind}">${label}</label>` +
+        `<label class="field" for="q-${kind}">${label}</label>` +
         `<input class="search" id="q-${kind}" type="search" ` +
         `placeholder="${esc(placeholder)}" autocomplete="off">` +
-        `<p class="count"></p><div class="clist"></div>` +
-        `<p class="note">${note}</p>`;
+        `<p class="meta count"></p><div class="condition-list"></div>` +
+        `<p class="meta panel-note">${note}</p>`;
     const input = view.querySelector<HTMLInputElement>(".search")!;
-    const list = view.querySelector<HTMLElement>(".clist")!;
+    const list = view.querySelector<HTMLElement>(".condition-list")!;
     const count = view.querySelector<HTMLElement>(".count")!;
 
     const draw = (): void => {
@@ -68,17 +70,20 @@ export function renderConditionList(kind: ConditionKind): void {
                     .map((c) => {
                         const alias = shortAlias(c);
                         return (
-                            `<li><button type="button" class="citem" ` +
-                            `data-cond="${c.key}"><span class="t">` +
-                            `${esc(c.name)}` +
-                            `${alias ? `<small>${esc(alias)}</small>` : ""}` +
-                            `</span><span class="d">` +
+                            `<li><button type="button" class="list-item" ` +
+                            `data-cond="${c.key}">` +
+                            `<span class="list-item-title">${esc(c.name)}` +
+                            `${alias ? ` <span class="meta">${esc(alias)}</span>` : ""}` +
+                            `</span><span class="list-item-text">` +
                             `${esc(firstSentence(c.summary))}</span>` +
                             `</button></li>`
                         );
                     })
                     .join("");
-                return `<h4>${esc(cat)}</h4><ul>${items}</ul>`;
+                return (
+                    `<h3 class="list-heading">${esc(cat)}</h3>` +
+                    `<ul class="list">${items}</ul>`
+                );
             })
             .join("");
     };
@@ -88,9 +93,9 @@ export function renderConditionList(kind: ConditionKind): void {
 
 function accordion(title: string, body: string, open: boolean): string {
     return (
-        `<details class="acc"${open ? " open" : ""}>` +
-        `<summary>${esc(title)}</summary>` +
-        `<div class="acc-b">${body}</div></details>`
+        `<details class="accordion"${open ? " open" : ""}>` +
+        `<summary>${esc(title)}${ICONS.chevronDown}</summary>` +
+        `<div class="accordion-body">${body}</div></details>`
     );
 }
 
@@ -101,7 +106,7 @@ export function renderConditionDetail(c: Condition): void {
         .slice()
         .sort((a, b) => (a[1] === b[1] ? 0 : a[1] === "p" ? -1 : 1));
     const paragraph = (text: string) =>
-        `<p class="para">${linkify(text, seen)}</p>`;
+        `<p class="reading">${linkify(text, seen)}</p>`;
     const paragraphs = (text: string | string[] | undefined) =>
         ([] as string[])
             .concat(text ?? [])
@@ -109,43 +114,45 @@ export function renderConditionDetail(c: Condition): void {
             .join("");
 
     let h =
-        `<button type="button" class="back" data-back="${c.kind}">` +
+        `<button type="button" class="button button--quiet back" ` +
+        `data-back="${c.kind}">${ICONS.arrowLeft}` +
         `${c.kind === "psych" ? t("allDisorders") : t("allDiseases")}` +
         `</button>`;
     h +=
-        `<p class="eyebrow" style="--c:var(--hot)"><i></i>${esc(c.cat)}</p>` +
-        `<h2>${esc(c.name)}</h2>`;
+        `<ul class="tags"><li class="tag">${esc(c.cat)}</li></ul>` +
+        `<h2 class="title">${esc(c.name)}</h2>`;
     const alias = shortAlias(c);
-    if (alias)
-        h += `<p class="alias">${esc(t("alsoCalled", { s: alias }))}</p>`;
+    if (alias) {
+        h += `<p class="meta alias">${esc(t("alsoCalled", { s: alias }))}</p>`;
+    }
 
-    h += `<div class="accs">`;
+    h += `<div class="accordions">`;
     h += accordion(
         t("secOverview"),
         (c.overview || [c.summary]).map(paragraph).join(""),
         true,
     );
     let areaList =
-        `<div class="key"><span><i style="background:var(--hot)"></i>` +
-        `${t("primary")}</span><span><i style="background:var(--warm)"></i>` +
-        `${t("alsoInvolved")}</span></div><ul class="areas">`;
+        `<p class="meta involvement-key">` +
+        `${involvementSwatch("p")}${t("primary")}` +
+        `${involvementSwatch("s")}${t("alsoInvolved")}</p>` +
+        `<ul class="areas">`;
     for (const [id, lv, note] of areas) {
         const node = S[id];
         const region = node.isTop
             ? ""
-            : `<small>${esc(S[node.topId!].name)}</small>`;
+            : ` <span class="meta">${esc(S[node.topId!].name)}</span>`;
         areaList +=
-            `<li><span class="sw" style="background:` +
-            `${lv === "p" ? "var(--hot)" : "var(--warm)"}"></span>` +
-            `<button type="button" class="go" data-focus="${id}">` +
+            `<li>${involvementSwatch(lv)}` +
+            `<button type="button" class="area-name" data-focus="${id}">` +
             `${esc(node.name)}${region}</button>` +
-            `<p>${linkify(note, seen)}</p></li>`;
+            `<p class="area-note">${linkify(note, seen)}</p></li>`;
     }
     areaList += `</ul>`;
     h += accordion(t("secBrain"), areaList, true);
     h += accordion(
         t("secSymptoms"),
-        `<ul class="fx" style="--c:var(--hot)">` +
+        `<ul class="reading-list">` +
             c.symptoms.map((s) => `<li>${linkify(s, seen)}</li>`).join("") +
             `</ul>`,
         false,
@@ -167,11 +174,11 @@ export function renderConditionDetail(c: Condition): void {
     h += `</div>`;
     if (c.fact) {
         h +=
-            `<div class="fact"><b>` +
-            `${c.helpFact ? t("gettingHelp") : t("didYouKnow")}</b>` +
-            `${linkify(c.fact, seen)}</div>`;
+            `<div class="callout"><p class="callout-title">` +
+            `${c.helpFact ? t("gettingHelp") : t("didYouKnow")}</p>` +
+            `<p class="reading">${linkify(c.fact, seen)}</p></div>`;
     }
-    h += `<p class="note">${t("condNote")}</p>`;
+    h += `<p class="meta panel-note">${t("condNote")}</p>`;
     view.innerHTML = h;
     view.scrollTop = 0;
 }

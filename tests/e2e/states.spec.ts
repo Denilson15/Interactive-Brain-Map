@@ -39,13 +39,13 @@ test.describe("without WebGL", () => {
         await app.locator('#chips [data-node="hemiL"]').first().click();
         await expect(regionHeading(app)).toHaveText("Left hemisphere");
         await app
-            .locator('#view-region .subcard[data-node="frontal"]')
+            .locator('#view-region .card[data-node="frontal"]')
             .first()
             .click();
         await expect(regionHeading(app)).toHaveText("Frontal lobe");
 
         await app.locator("#tab-disease").click();
-        await app.locator("#view-disease .citem").first().click();
+        await app.locator("#view-disease .list-item").first().click();
         await expect(app.locator("#view-disease h2")).not.toBeEmpty();
 
         await app.locator("#tab-gloss").click();
@@ -81,14 +81,14 @@ test.describe("when a condition's write-up can't be downloaded", () => {
     test("shows the short version with a note", async ({ app }) => {
         await app.locator("#tab-psych").click();
         await app.locator("#view-psych .search").fill("OCD");
-        await app.locator("#view-psych .citem").first().click();
+        await app.locator("#view-psych .list-item").first().click();
         const view = app.locator("#view-psych");
         await expect(view.locator("h2")).toContainText("Obsessive");
         // The summary stands in for the long overview.
         const summary = await app.evaluate(
             () => (window as any).__atlas.CONDS["psych:ocd"].summary,
         );
-        await expect(view.locator(".acc").first()).toContainText(
+        await expect(view.locator(".accordion").first()).toContainText(
             summary.slice(0, 40),
         );
         await expect(app.locator("#notice")).toContainText(

@@ -15,8 +15,6 @@ import {
     stageCanvas,
     startRendering,
     viewSide,
-    HOT,
-    WARM,
 } from "../scene/stage";
 import {
     ensureSheetOpen,
@@ -45,7 +43,11 @@ import {
     resultForKey,
     showDefinition,
 } from "../ui/popover";
-import { initRegionPanel, renderRegion } from "../ui/region-panel";
+import {
+    initRegionPanel,
+    involvementSwatch,
+    renderRegion,
+} from "../ui/region-panel";
 import { initSectionMap, placeMap, renderMap } from "../ui/section-map";
 import {
     clearStageProblem,
@@ -195,10 +197,11 @@ function closeCondition(kind: ConditionKind): void {
 export function showTab(name: Tab): void {
     state.activeTab = name;
     for (const key of Object.keys(TAB_VIEWS) as Tab[]) {
-        document
-            .getElementById("tab-" + key)!
-            .setAttribute("aria-selected", String(key === name));
+        const tab = document.getElementById("tab-" + key)!;
+        tab.setAttribute("aria-selected", String(key === name));
         document.getElementById(TAB_VIEWS[key])!.hidden = key !== name;
+        // On narrow screens the tab bar scrolls; keep the active tab shown.
+        if (key === name) tab.scrollIntoView({ block: "nearest" });
     }
     // Condition tabs show their open condition on the model; the Region
     // tab always shows anatomy.
@@ -223,13 +226,13 @@ function updateConditionBar(): void {
     if (on) {
         const c = state.cond!;
         bar.innerHTML =
-            `<b>${esc(c.short || c.name)}</b>` +
-            `<span class="k"><i style="background:${HOT}"></i>` +
-            `${t("primary")}</span>` +
-            `<span class="k"><i style="background:${WARM}"></i>` +
-            `${t("alsoInvolved")}</span>` +
-            `<button type="button" id="exitCond">` +
-            `${t("backToAnatomy")}</button>`;
+            `<span class="stage-legend-name">${esc(c.short || c.name)}` +
+            `</span><span class="stage-legend-key">` +
+            `${involvementSwatch("p")}${t("primary")}</span>` +
+            `<span class="stage-legend-key">` +
+            `${involvementSwatch("s")}${t("alsoInvolved")}</span>` +
+            `<button type="button" class="button button--stage" ` +
+            `id="exitCond">${t("backToAnatomy")}</button>`;
     }
 }
 
@@ -498,6 +501,16 @@ export async function startApp(core: CoreContent): Promise<void> {
         if ((e.target as Element).id === "exitCond") showTab("region");
     });
     document.addEventListener("click", handleDocumentClick);
+
+    // The tab bar fades at its edge only while more tabs are hidden.
+    const tabBar = document.querySelector<HTMLElement>(".panel > .tabs")!;
+    const markTabOverflow = (): void => {
+        const atEnd =
+            tabBar.scrollLeft + tabBar.clientWidth >= tabBar.scrollWidth - 1;
+        tabBar.toggleAttribute("data-scrolled-end", atEnd);
+    };
+    tabBar.addEventListener("scroll", markTabOverflow, { passive: true });
+    new ResizeObserver(markTabOverflow).observe(tabBar);
 
     const relayout = (): void => {
         placeMap(() => showTab("region"));

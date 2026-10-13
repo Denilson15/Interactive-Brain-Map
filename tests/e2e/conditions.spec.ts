@@ -37,7 +37,7 @@ test.describe("psychology and disease conditions", () => {
         await expect(view.locator(".count")).toHaveText(/^51 of 51 /);
 
         await view.locator(".search").fill("OCD");
-        const item = view.locator(".citem").first();
+        const item = view.locator(".list-item").first();
         await expect(item).toContainText("Obsessive");
         await item.click();
         await expect(view.locator("h2")).toContainText("Obsessive");
@@ -47,7 +47,7 @@ test.describe("psychology and disease conditions", () => {
         await expect(condbar).toContainText("OCD");
 
         // A brain-area button moves the camera without errors.
-        await view.locator(".areas .go").first().click();
+        await view.locator(".areas .area-name").first().click();
 
         await condbar.getByRole("button").click();
         await expect(app.locator("#tab-region")).toHaveAttribute(
@@ -66,7 +66,7 @@ test.describe("psychology and disease conditions", () => {
         await expect(view.locator(".empty")).toBeVisible();
 
         await view.locator(".search").fill("Alzheimer");
-        await view.locator(".citem").first().click();
+        await view.locator(".list-item").first().click();
         await expect(view.locator("h2")).toHaveText("Alzheimer's disease");
         await view.locator(".back").click();
         await expect(view.locator(".search")).toBeVisible();
@@ -77,7 +77,7 @@ test.describe("psychology and disease conditions", () => {
             (window as any).__atlas.selectNode("dlpfc", "L"),
         );
         await expect(regionHeading(app)).not.toHaveText("Human brain");
-        const chip = app.locator("#view-region .chip.cond").first();
+        const chip = app.locator("#view-region .chip[data-cond]").first();
         await chip.click();
         await expect(app.locator("#tab-psych")).toHaveAttribute(
             "aria-selected",

@@ -47,6 +47,13 @@ function linkedConditions(id: string): Map<string, Involvement> {
 }
 
 /** Condition chips of one kind, primary links first, then by name. */
+/** A dot showing involvement: filled = primary, ring = also involved. */
+export function involvementSwatch(lv: Involvement): string {
+    const variant = lv === "p" ? "primary" : "secondary";
+    return `<span class="swatch swatch--${variant}"></span>`;
+}
+
+/** Condition chips of one kind, primary links first, then by name. */
 function conditionChips(
     links: Map<string, Involvement>,
     kind: ConditionKind,
@@ -61,26 +68,24 @@ function conditionChips(
         )
         .map(
             ({ c, lv }) =>
-                `<button type="button" class="chip cond" ` +
-                `data-cond="${c.key}" style="--c:${
-                    lv === "p" ? "var(--hot)" : "var(--warm)"
-                }"><i></i>${esc(c.short || c.name)}</button>`,
+                `<button type="button" class="chip" data-cond="${c.key}">` +
+                `${involvementSwatch(lv)}${esc(c.short || c.name)}</button>`,
         )
         .join("");
 }
 
-function subCard(node: StructureNode, side: Side, current: boolean): string {
+function partCard(node: StructureNode, side: Side, current: boolean): string {
     const cardSide = node.isHemi ? node.side : node.lat ? side : "";
     const count = node.isGroup
-        ? `<small>${t("nParts", { n: node.kids.length })}</small>`
+        ? `<span class="meta">${t("nParts", { n: node.kids.length })}</span>`
         : "";
     return (
-        `<button type="button" class="subcard" data-node="${node.id}" ` +
-        `data-side="${cardSide}" style="--c:${node.color}"` +
-        `${current ? ' aria-current="true"' : ""}>` +
-        `<span class="nm"><i></i>${esc(node.name)}${count}</span>` +
-        `<span class="ds">${esc(firstSentence(node.summary || ""))}</span>` +
-        `</button>`
+        `<button type="button" class="card" data-node="${node.id}" ` +
+        `data-side="${cardSide}"${current ? ' aria-current="true"' : ""}>` +
+        `<span class="card-title"><span class="swatch" ` +
+        `style="--swatch:${node.color}"></span>${esc(node.name)}${count}` +
+        `</span><span class="card-text">` +
+        `${esc(firstSentence(node.summary || ""))}</span></button>`
     );
 }
 
@@ -88,61 +93,74 @@ function breadcrumbs(): string {
     const path = pathKeys(state.sel, state.selSide).reverse();
     const items = path.map((key, i) => {
         const { id, side } = parseKey(key);
-        const name = S[id].name;
-        if (i === path.length - 1) return `<span>${esc(name)}</span>`;
+        const name = esc(S[id].name);
+        if (i === path.length - 1) {
+            return `<li aria-current="page">${name}</li>`;
+        }
         const crumbSide = side || (S[id].isHemi ? S[id].side : "");
         return (
-            `<button type="button" data-node="${id}" ` +
-            `data-side="${crumbSide}">${esc(name)}</button><span>›</span>`
+            `<li><button type="button" data-node="${id}" ` +
+            `data-side="${crumbSide}">${name}</button></li>`
         );
     });
-    return `<div class="crumbs">${items.join("")}</div>`;
+    return `<ol class="breadcrumbs">${items.join("")}</ol>`;
+}
+
+/** How a structure is classified, e.g. ["Left", "Cerebral cortex"]. */
+function classification(node: StructureNode, side: Side): string[] {
+    const tags: string[] = [];
+    if (node.lat && !node.isHemi)
+        tags.push(side === "L" ? t("left") : t("right"));
+    if (node.kind) tags.push(...node.kind.split(" · "));
+    else if (node.isGroup) tags.push(S[node.topId!].name, t("group"));
+    else if (node.isLeaf) {
+        tags.push(S[node.topId!].name);
+        if (groupOf[node.id]) tags.push(S[groupOf[node.id]].name);
+    }
+    return tags;
 }
 
 export function renderRegion(): void {
     const { sel, selSide } = state;
     const node = S[sel];
     const seen = new Set(["s:" + node.id]);
-    const sideName =
-        node.lat && !node.isHemi
-            ? selSide === "L"
-                ? t("left")
-                : t("right")
-            : "";
-    let kind =
-        node.kind ||
-        (node.isGroup
-            ? S[node.topId!].name + " · " + t("group")
-            : node.isLeaf
-              ? S[node.topId!].name +
-                (groupOf[node.id] ? " · " + S[groupOf[node.id]].name : "")
-              : "");
-    if (sideName) kind = sideName + " · " + kind;
 
     let h = breadcrumbs();
     h +=
-        `<p class="eyebrow" style="--c:${node.color}"><i></i>${esc(kind)}</p>` +
-        `<h2>${esc(node.name)}</h2>`;
+        `<ul class="tags">` +
+        classification(node, selSide)
+            .map((tag, i) => {
+                // The first tag carries the structure's color.
+                const dot =
+                    i === 0
+                        ? `<span class="swatch" style="--swatch:${node.color}">` +
+                          `</span>`
+                        : "";
+                return `<li class="tag">${dot}${esc(tag)}</li>`;
+            })
+            .join("") +
+        `</ul>`;
+    h += `<h2 class="title">${esc(node.name)}</h2>`;
     if (node.short && node.short !== node.name) {
         const alias = t("labelOnModel", { s: node.short });
-        h += `<p class="alias">${esc(alias)}</p>`;
+        h += `<p class="meta alias">${esc(alias)}</p>`;
     }
     if (node.where) {
         h +=
-            `<p class="where"><b>${t("where")}</b>` +
+            `<p class="where"><span class="where-label">${t("where")}</span> ` +
             `${linkify(node.where, seen)}</p>`;
     }
     h +=
-        `<div class="closer" id="closer"></div><p class="cap">` +
+        `<div class="closer" id="closer"></div><p class="meta closer-caption">` +
         `${isLeafNode(sel) ? t("capLeaf") : t("capGroup")}</p>`;
-    if (sel === "brain") h += `<p class="helpline">${t("help")}</p>`;
+    if (sel === "brain") h += `<p class="notice helpline">${t("help")}</p>`;
     if (node.summary) {
-        h += `<p class="summary">${linkify(node.summary, seen)}</p>`;
+        h += `<p class="reading">${linkify(node.summary, seen)}</p>`;
     }
     if (node.does) {
         h +=
-            `<h3>${t("whatItDoes")}</h3>` +
-            `<ul class="fx" style="--c:${node.color}">` +
+            `<h3 class="section-title">${t("whatItDoes")}</h3>` +
+            `<ul class="reading-list" style="--swatch:${node.color}">` +
             node.does.map((d) => `<li>${linkify(d, seen)}</li>`).join("") +
             `</ul>`;
     }
@@ -157,36 +175,43 @@ export function renderRegion(): void {
                   ? t("parts")
                   : t("sections");
         h +=
-            `<h3>${label} <span class="n">${node.kids.length}</span></h3>` +
-            `<div class="subgrid">` +
-            node.kids.map((c) => subCard(c, selSide, false)).join("") +
+            `<h3 class="section-title">${label} ` +
+            `<span class="meta">${node.kids.length}</span></h3>` +
+            `<div class="cards">` +
+            node.kids.map((c) => partCard(c, selSide, false)).join("") +
             `</div>`;
     }
     const damage = node.damage || node.clinical;
     if (damage) {
         h +=
-            `<h3>${node.clinical ? t("clinical") : t("damaged")}</h3>` +
-            `<p class="para">${linkify(damage, seen)}</p>`;
+            `<h3 class="section-title">` +
+            `${node.clinical ? t("clinical") : t("damaged")}</h3>` +
+            `<p class="reading">${linkify(damage, seen)}</p>`;
     }
     if (node.fact) {
         h +=
-            `<div class="fact"><b>${t("didYouKnow")}</b>` +
-            `${linkify(node.fact, seen)}</div>`;
+            `<div class="callout"><p class="callout-title">` +
+            `${t("didYouKnow")}</p><p class="reading">` +
+            `${linkify(node.fact, seen)}</p></div>`;
     }
     const links = linkedConditions(node.id);
     if (links.size) {
         const psych = conditionChips(links, "psych");
         const disease = conditionChips(links, "disease");
-        h += `<h3>${t("linked")}</h3>`;
+        h +=
+            `<h3 class="section-title">${t("linked")}</h3>` +
+            `<p class="meta involvement-key">` +
+            `${involvementSwatch("p")}${t("primary")}` +
+            `${involvementSwatch("s")}${t("alsoInvolved")}</p>`;
         if (psych) {
             h +=
-                `<p class="key" style="margin-top:8px">${t("psychology")}</p>` +
-                `<div class="links">${psych}</div>`;
+                `<h4 class="subsection-title">${t("psychology")}</h4>` +
+                `<div class="chip-row">${psych}</div>`;
         }
         if (disease) {
             h +=
-                `<p class="key" style="margin-top:10px">${t("diseases")}</p>` +
-                `<div class="links">${disease}</div>`;
+                `<h4 class="subsection-title">${t("diseases")}</h4>` +
+                `<div class="chip-row">${disease}</div>`;
         }
     }
     if (isLeafNode(sel)) {
@@ -197,10 +222,11 @@ export function renderRegion(): void {
                     ? parent.name
                     : parent.name.toLowerCase();
             h +=
-                `<h3>${esc(t("alsoIn", { name: parentName }))}</h3>` +
-                `<div class="subgrid">` +
+                `<h3 class="section-title">` +
+                `${esc(t("alsoIn", { name: parentName }))}</h3>` +
+                `<div class="cards">` +
                 parent.kids
-                    .map((c) => subCard(c, selSide, c.id === node.id))
+                    .map((c) => partCard(c, selSide, c.id === node.id))
                     .join("") +
                 `</div>`;
         }
