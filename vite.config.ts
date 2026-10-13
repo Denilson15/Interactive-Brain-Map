@@ -26,6 +26,13 @@ export default defineConfig({
     base: "./",
     build: {
         outDir: "dist",
+        rolldownOptions: {
+            // Two pages: the app, and the design system reference.
+            input: {
+                main: "index.html",
+                designSystem: "docs/design-system.html",
+            },
+        },
     },
     preview: {
         host: "127.0.0.1",

@@ -33,7 +33,11 @@ npm run preview   # serve the built site from dist/
 ## Project layout
 - `index.html` – page markup; Vite builds it into `dist/`
 - `src/main.ts` – entry point: fonts and styles, then content, then app
-- `src/styles.css` – all styles
+- `src/styles/` – the design system: `tokens.css` (type scale, colors,
+  spacing) and `components.css` (buttons, chips, cards and so on)
+- `src/styles.css` – app-specific styles
+- `docs/design-system.html` – a reference page for the tokens and
+  components, built and deployed with the site
 - `src/app/` – app logic without 3D:
   - `structures.ts` – the region tree (hemispheres → regions → groups →
     parts) and the keys that tell left and right apart
