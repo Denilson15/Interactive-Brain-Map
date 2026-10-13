@@ -1,0 +1,14 @@
+{
+    "name": "interactive-brain-map",
+    "version": "1.0.0",
+    "private": true,
+    "description": "Interactive 3D brain atlas for study and teaching.",
+    "scripts": {
+        "build": "python3 build.py",
+        "test:e2e": "playwright test"
+    },
+    "devDependencies": {
+        "@playwright/test": "1.56.1",
+        "three": "0.128.0"
+    }
+}
