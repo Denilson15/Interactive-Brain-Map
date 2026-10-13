@@ -114,5 +114,7 @@ selling or collecting real user data.
 - Clear names over clever ones; comment the non-obvious, not the
     obvious.
 - Use TypeScript when the project has real logic (state, data flow,
-    APIs, multiple contributors). Plain HTML/CSS/JS is fine for simple
-    static pages. Don't add a build step just for types.
+    APIs, multiple contributors); otherwise JavaScript is fine. This
+    is about type-checking only — it never limits styling or animation
+    tools (e.g. Tailwind, GSAP, Motion, modern CSS). Choose those for
+    the design, not the language.
