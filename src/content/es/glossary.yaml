@@ -1,0 +1,1933 @@
+# Spanish dictionary, keyed by the English term.
+
+cerebral cortex:
+    term: corteza cerebral
+    definition:
+        La capa externa del cerebro, delgada y plegada, de unos 2–4 mm de grosor
+        y formada principalmente por sustancia gris. Se encarga de la mayoría de
+        las funciones superiores, como el pensamiento, el lenguaje y la
+        percepción.
+    aka:
+        - corteza
+        - cortical
+        - corticales
+        - córtex
+cerebrum:
+    term: cerebro
+    definition:
+        La parte más grande del encéfalo, formada por los hemisferios izquierdo
+        y derecho y sus lóbulos.
+    aka:
+        - telencéfalo
+        - cerebral
+        - cerebrales
+hemisphere:
+    term: hemisferio
+    definition:
+        Una de las dos mitades del cerebro. Los dos hemisferios están unidos por
+        el cuerpo calloso, y cada uno controla principalmente el lado opuesto
+        del cuerpo.
+    aka:
+        - hemisferios
+        - hemisférico
+        - hemisférica
+lobe:
+    term: lóbulo
+    definition:
+        "Una de las grandes divisiones de cada hemisferio: frontal, parietal,
+        temporal y occipital, además de la ínsula, que queda oculta. Reciben el
+        nombre de los huesos del cráneo que los cubren."
+    aka:
+        - lóbulos
+gyrus:
+    term: circunvolución
+    definition:
+        Un pliegue elevado en la superficie del cerebro. Al plegarse en
+        circunvoluciones, cabe más corteza dentro del cráneo.
+    aka:
+        - circunvoluciones
+        - giro
+        - giros
+        - circunvolución precentral
+        - circunvolución poscentral
+sulcus:
+    term: surco
+    definition:
+        Una hendidura entre dos circunvoluciones. Los surcos muy profundos se
+        llaman cisuras.
+    aka:
+        - surcos
+        - cisura
+        - cisuras
+        - surco calcarino
+        - surco intraparietal
+central sulcus:
+    term: surco central
+    definition:
+        La hendidura profunda que separa el lóbulo frontal del lóbulo parietal;
+        delante de ella está la corteza motora y detrás la corteza
+        somatosensorial.
+    aka:
+        - cisura de rolando
+        - cisura central
+lateral sulcus:
+    term: surco lateral
+    definition:
+        La hendidura profunda a lo largo del costado del cerebro que separa el
+        lóbulo temporal de los lóbulos frontal y parietal. También se llama
+        cisura de Silvio.
+    aka:
+        - cisura de silvio
+        - cisura lateral
+brodmann area:
+    term: área de Brodmann
+    definition:
+        Una de las aproximadamente 52 regiones de la corteza definidas por
+        Korbinian Brodmann en 1909 según las diferencias en las capas celulares
+        vistas al microscopio. Todavía se usan como mapa; por ejemplo, el área
+        17 es V1.
+    aka:
+        - áreas de brodmann
+operculum:
+    term: opérculo
+    definition:
+        Las partes de los lóbulos frontal, parietal y temporal que se pliegan
+        sobre la ínsula y la cubren. En latín significa «tapa».
+    aka:
+        - opérculos
+        - opérculo frontal
+        - opercular
+diencephalon:
+    term: diencéfalo
+    definition:
+        La parte del prosencéfalo situada entre el cerebro y el tronco
+        encefálico, que contiene el tálamo, el hipotálamo y el epitálamo.
+    aka:
+        - diencefálico
+        - diencefálica
+forebrain:
+    term: prosencéfalo
+    definition:
+        La división anterior del encéfalo en desarrollo, que da lugar al cerebro
+        y al diencéfalo.
+    aka:
+        - cerebro anterior
+hindbrain:
+    term: rombencéfalo
+    definition:
+        La división posterior del encéfalo en desarrollo, que da lugar a la
+        protuberancia, el bulbo raquídeo y el cerebelo.
+    aka:
+        - cerebro posterior
+subcortical:
+    term: subcortical
+    definition:
+        Por debajo de la corteza. Se usa para estructuras profundas como los
+        ganglios basales, el tálamo y la amígdala.
+    aka:
+        - subcorticales
+anterior:
+    term: anterior
+    definition: Hacia adelante.
+    aka:
+        - anteriores
+posterior:
+    term: posterior
+    definition: Hacia atrás.
+    aka:
+        - posteriores
+superior:
+    term: superior
+    definition: Hacia arriba.
+    aka:
+        - superiores
+inferior:
+    term: inferior
+    definition: Hacia abajo.
+    aka:
+        - inferiores
+medial:
+    term: medial
+    definition:
+        Hacia la línea media, la línea central que divide el cuerpo en izquierda
+        y derecha.
+    aka:
+        - mediales
+lateral:
+    term: lateral
+    definition: Hacia el costado, alejándose de la línea media.
+    aka:
+        - laterales
+dorsal:
+    term: dorsal
+    definition:
+        Hacia la espalda o la parte superior. En el cerebro, dorsal suele
+        significar hacia la parte superior de la cabeza.
+    aka:
+        - dorsales
+ventral:
+    term: ventral
+    definition:
+        Hacia el vientre o la parte inferior. En el cerebro, ventral suele
+        significar hacia la base.
+    aka:
+        - ventrales
+midline:
+    term: línea media
+    definition:
+        La línea central imaginaria que divide el cerebro y el cuerpo en mitades
+        izquierda y derecha.
+contralateral:
+    term: contralateral
+    definition:
+        En el lado opuesto. La mayor parte del cerebro controla y percibe el
+        lado contralateral del cuerpo.
+    aka:
+        - contralaterales
+        - contralateralmente
+ipsilateral:
+    term: ipsilateral
+    definition:
+        En el mismo lado. Cada mitad del cerebelo controla el lado ipsilateral
+        del cuerpo.
+    aka:
+        - ipsilaterales
+        - homolateral
+decussation:
+    term: decusación
+    definition:
+        Un punto donde las fibras nerviosas cruzan de un lado del cerebro o de
+        la médula espinal al otro.
+    aka:
+        - decusaciones
+        - decusación piramidal
+        - decusan
+        - decusa
+homunculus:
+    term: homúnculo
+    definition:
+        Un mapa del cuerpo distribuido a lo largo de la corteza motora o
+        somatosensorial. Las partes que requieren un control o una sensibilidad
+        finos, como las manos y los labios, ocupan mucho más espacio.
+    aka:
+        - homúnculo motor
+        - homúnculo sensorial
+        - homúnculos
+tonotopic:
+    term: tonotópico
+    definition:
+        Organizado según la frecuencia del sonido, como las teclas de un piano.
+        El sistema auditivo es tonotópico.
+    aka:
+        - tonotópica
+        - tonotópicos
+        - tonotópicas
+        - tonotópicamente
+        - tonotopía
+visual field:
+    term: campo visual
+    definition:
+        Toda el área que puedes ver sin mover los ojos. Cada mitad la procesa el
+        hemisferio opuesto.
+    aka:
+        - campos visuales
+optic chiasm:
+    term: quiasma óptico
+    definition:
+        El cruce en forma de X situado justo encima de la hipófisis, donde las
+        fibras de la mitad interna de cada retina cruzan al otro lado.
+    aka:
+        - quiasma
+optic tract:
+    term: tracto óptico
+    definition:
+        Las fibras nerviosas que llevan las señales visuales desde el quiasma
+        óptico hasta el núcleo geniculado lateral (NGL).
+    aka:
+        - cintilla óptica
+        - tractos ópticos
+optic radiations:
+    term: radiaciones ópticas
+    definition:
+        Haces de fibras que llevan las señales visuales desde el núcleo
+        geniculado lateral (NGL) hasta la corteza visual primaria.
+    aka:
+        - radiación óptica
+corticospinal tract:
+    term: tracto corticoespinal
+    definition:
+        La vía principal que lleva las órdenes de movimiento desde la corteza
+        motora hasta la médula espinal. La mayoría de sus fibras se cruzan en el
+        bulbo raquídeo.
+    aka:
+        - vía corticoespinal
+        - vía piramidal
+        - corticoespinal
+arcuate fasciculus:
+    term: fascículo arqueado
+    definition:
+        Un haz curvo de sustancia blanca que conecta el área de Broca con el
+        área de Wernicke.
+    aka:
+        - fascículo arcuato
+meninges:
+    term: meninges
+    definition:
+        "Tres membranas protectoras que cubren el encéfalo y la médula espinal:
+        la duramadre, la aracnoides y la piamadre."
+    aka:
+        - meníngeo
+        - meníngea
+        - meníngeos
+        - meníngeas
+subarachnoid space:
+    term: espacio subaracnoideo
+    definition:
+        El espacio lleno de líquido entre la aracnoides y la piamadre, por el
+        que circulan el LCR y grandes vasos sanguíneos.
+    aka:
+        - subaracnoideo
+        - subaracnoidea
+choroid plexus:
+    term: plexo coroideo
+    definition:
+        Tejido de los ventrículos que produce el líquido cefalorraquídeo.
+    aka:
+        - plexos coroideos
+cerebrospinal fluid:
+    term: líquido cefalorraquídeo
+    definition:
+        El líquido transparente que llena los ventrículos y rodea el encéfalo y
+        la médula espinal, amortiguándolos y eliminando desechos.
+    aka:
+        - lcr
+spinal cord:
+    term: médula espinal
+    definition:
+        El haz de nervios que recorre la columna vertebral y transmite señales
+        entre el encéfalo y el cuerpo.
+    aka:
+        - médula
+        - espinal
+        - espinales
+cranial nerves:
+    term: nervios craneales
+    definition:
+        Doce pares de nervios que salen directamente del encéfalo en lugar de la
+        médula espinal. Inervan la cabeza, la cara, los sentidos y algunos
+        órganos.
+    aka:
+        - nervio craneal
+        - pares craneales
+        - par craneal
+vestibular system:
+    term: sistema vestibular
+    definition:
+        Los órganos del equilibrio del oído interno y los circuitos cerebrales
+        que procesan sus señales.
+    aka:
+        - vestibular
+        - vestibulares
+vestibulo-ocular reflex:
+    term: reflejo vestíbulo-ocular
+    definition:
+        Un reflejo que mueve los ojos en sentido opuesto al movimiento de la
+        cabeza para que la mirada se mantenga estable.
+    aka:
+        - reflejo vestibuloocular
+        - rvo
+folia:
+    term: folias
+    definition:
+        Los pliegues delgados, con forma de hoja, de la superficie del cerebelo.
+    aka:
+        - folia
+        - folium
+        - láminas cerebelosas
+striatum:
+    term: cuerpo estriado
+    definition:
+        El núcleo caudado, el putamen y el núcleo accumbens en conjunto. Es la
+        principal estación de entrada de los ganglios basales.
+    aka:
+        - estriado
+        - estriatal
+        - estriatales
+        - estriado asociativo
+limbic system:
+    term: sistema límbico
+    definition:
+        Un grupo de estructuras conectadas, como el hipocampo, la amígdala, la
+        corteza cingulada y partes del tálamo y del hipotálamo, que intervienen
+        en la emoción, la motivación y la memoria.
+    aka:
+        - límbico
+        - límbica
+        - límbicos
+        - límbicas
+papez circuit:
+    term: circuito de Papez
+    definition:
+        Un circuito de memoria que va del hipocampo, a través del fórnix, a los
+        cuerpos mamilares, el tálamo anterior y la corteza cingulada, y vuelve
+        al hipocampo.
+prefrontal cortex:
+    term: corteza prefrontal
+    definition:
+        La parte anterior del lóbulo frontal, situada delante de las áreas
+        motoras; es fundamental para la planificación, la toma de decisiones, el
+        juicio y la conducta social.
+    aka:
+        - prefrontal
+        - prefrontales
+        - cpf
+reticular formation:
+    term: formación reticular
+    definition:
+        Una red de neuronas que recorre el tronco encefálico y controla el nivel
+        de activación, el estado de alerta y el paso entre el sueño y la
+        vigilia.
+    aka:
+        - sustancia reticular
+        - reticular
+superior colliculus:
+    term: colículo superior
+    definition:
+        Una prominencia en la parte posterior del mesencéfalo que controla los
+        movimientos reflejos de los ojos y la cabeza hacia lo que vemos.
+    aka:
+        - colículos superiores
+        - tubérculo cuadrigémino superior
+inferior colliculus:
+    term: colículo inferior
+    definition:
+        Una prominencia en la parte posterior del mesencéfalo que procesa el
+        sonido antes de que llegue al tálamo.
+    aka:
+        - colículos inferiores
+        - tubérculo cuadrigémino inferior
+sella turcica:
+    term: silla turca
+    definition:
+        Una cavidad en forma de silla de montar en la base del cráneo que aloja
+        la hipófisis.
+dorsal stream:
+    term: vía dorsal
+    definition:
+        La vía visual que asciende hacia el lóbulo parietal y determina dónde
+        están las cosas y cómo actuar sobre ellas. A menudo se la llama la vía
+        del «dónde».
+    aka:
+        - corriente dorsal
+        - vía del dónde
+ventral stream:
+    term: vía ventral
+    definition:
+        La vía visual que desciende hacia el lóbulo temporal e identifica qué
+        son las cosas. A menudo se la llama la vía del «qué».
+    aka:
+        - corriente ventral
+        - vía del qué
+default mode network:
+    term: red neuronal por defecto
+    definition:
+        Un conjunto de regiones cerebrales, entre ellas la corteza cingulada
+        posterior, el precúneo y la corteza prefrontal medial, que está más
+        activo durante el reposo, la ensoñación y el pensamiento sobre uno
+        mismo.
+    aka:
+        - red por defecto
+        - modo por defecto
+        - red de modo por defecto
+salience network:
+    term: red de saliencia
+    definition:
+        Una red centrada en la ínsula anterior y la corteza cingulada anterior
+        (CCA) que detecta lo que es importante y dirige la atención hacia ello.
+    aka:
+        - red de prominencia
+        - saliencia
+mesolimbic pathway:
+    term: vía mesolímbica
+    definition:
+        Neuronas dopaminérgicas que van del área tegmental ventral (ATV) al
+        núcleo accumbens. Es fundamental para la recompensa y la motivación.
+    aka:
+        - mesolímbica
+        - mesolímbico
+        - mesolímbicos
+        - mesolímbicas
+mesocortical pathway:
+    term: vía mesocortical
+    definition:
+        Neuronas dopaminérgicas que van del área tegmental ventral (ATV) a la
+        corteza prefrontal. Es importante para la motivación y la cognición.
+    aka:
+        - mesocortical
+        - mesocorticales
+nigrostriatal pathway:
+    term: vía nigroestriada
+    definition:
+        Neuronas dopaminérgicas que van de la sustancia negra al cuerpo
+        estriado. Es esencial para el movimiento y se pierde en la enfermedad de
+        Parkinson.
+    aka:
+        - nigroestriada
+        - nigroestriatal
+        - vía nigroestriatal
+hpa axis:
+    term: eje HHA
+    definition:
+        "El eje hipotálamo-hipófisis-suprarrenal: el principal sistema hormonal
+        del estrés, en el que el hipotálamo envía señales a la hipófisis, que a
+        su vez indica a las glándulas suprarrenales que liberen cortisol."
+    aka:
+        - eje hipotálamo-hipófisis-suprarrenal
+        - eje hipotálamo-hipófisis-adrenal
+        - hha
+reward circuit:
+    term: circuito de recompensa
+    definition:
+        La red cerebral que genera el deseo y el aprendizaje a partir de las
+        recompensas, centrada en la dopamina que va del ATV al núcleo accumbens
+        y a la corteza prefrontal.
+    aka:
+        - sistema de recompensa
+        - vía de recompensa
+neuron:
+    term: neurona
+    definition:
+        Una célula nerviosa. Las neuronas se transmiten señales eléctricas y
+        químicas entre sí; el cerebro humano tiene aproximadamente 86 mil
+        millones de ellas.
+    aka:
+        - neuronas
+        - neuronal
+        - neuronales
+        - célula nerviosa
+        - células nerviosas
+glial cells:
+    term: células gliales
+    definition:
+        Células del sistema nervioso que no son neuronas y que sostienen,
+        aíslan, nutren y protegen a las neuronas. Entre ellas están los
+        astrocitos, los oligodendrocitos y la microglía.
+    aka:
+        - glía
+        - glial
+        - célula glial
+        - neuroglía
+axon:
+    term: axón
+    definition:
+        La fibra larga que una neurona usa para enviar señales a otras células.
+        Muchos están envueltos en mielina, que acelera las señales.
+    aka:
+        - axones
+        - axonal
+        - axonales
+myelin:
+    term: mielina
+    definition:
+        Una capa grasa aislante que rodea muchos axones. Hace que las señales
+        nerviosas viajen mucho más rápido y le da a la sustancia blanca su color
+        pálido.
+    aka:
+        - mielinizado
+        - mielinizada
+        - mielinizados
+        - mielinizadas
+        - mielínico
+        - mielínica
+synapse:
+    term: sinapsis
+    definition:
+        La unión donde una neurona transmite una señal a otra, normalmente
+        liberando neurotransmisores.
+    aka:
+        - sináptico
+        - sináptica
+        - sinápticos
+        - sinápticas
+neurotransmitter:
+    term: neurotransmisor
+    definition:
+        Un mensajero químico liberado en una sinapsis, como la dopamina, la
+        serotonina o el glutamato.
+    aka:
+        - neurotransmisores
+        - neuromoduladores
+        - neuromodulador
+dopamine:
+    term: dopamina
+    definition:
+        Un neurotransmisor que interviene en el movimiento, la motivación, el
+        aprendizaje por recompensa y la atención, producido principalmente en la
+        sustancia negra y el área tegmental ventral (ATV).
+    aka:
+        - dopaminérgico
+        - dopaminérgica
+        - dopaminérgicos
+        - dopaminérgicas
+serotonin:
+    term: serotonina
+    definition:
+        Un neurotransmisor que interviene en el estado de ánimo, el sueño, el
+        apetito y el control de los impulsos, producido principalmente en los
+        núcleos del rafe.
+    aka:
+        - serotoninérgico
+        - serotoninérgica
+        - serotoninérgicos
+        - serotoninérgicas
+        - 5-ht
+norepinephrine:
+    term: norepinefrina
+    definition:
+        Un neurotransmisor y hormona que interviene en el estado de alerta, la
+        atención y la respuesta al estrés, producido principalmente en el locus
+        coeruleus. También se llama noradrenalina.
+    aka:
+        - noradrenalina
+        - noradrenérgico
+        - noradrenérgica
+        - noradrenérgicos
+        - noradrenérgicas
+acetylcholine:
+    term: acetilcolina
+    definition:
+        Un neurotransmisor que usan los nervios para activar los músculos y, en
+        el cerebro, para la atención, el aprendizaje y la memoria.
+    aka:
+        - colinérgico
+        - colinérgica
+        - colinérgicos
+        - colinérgicas
+glutamate:
+    term: glutamato
+    definition:
+        El principal neurotransmisor excitador del cerebro, que hace que las
+        neuronas tengan más probabilidad de dispararse.
+    aka:
+        - glutamatérgico
+        - glutamatérgica
+        - glutamatérgicos
+        - glutamatérgicas
+gaba:
+    term: GABA
+    definition:
+        El principal neurotransmisor inhibidor del cerebro, que hace que las
+        neuronas tengan menos probabilidad de dispararse.
+    aka:
+        - gabaérgico
+        - gabaérgica
+        - gabaérgicos
+        - gabaérgicas
+        - ácido gamma-aminobutírico
+melatonin:
+    term: melatonina
+    definition:
+        Una hormona liberada por la glándula pineal durante la noche que señala
+        la oscuridad al cuerpo y ayuda a regular el horario del sueño.
+cortisol:
+    term: cortisol
+    definition:
+        La principal hormona del estrés, liberada por las glándulas
+        suprarrenales. Eleva el azúcar en sangre y ayuda al cuerpo a responder
+        al estrés.
+oxytocin:
+    term: oxitocina
+    definition:
+        Una hormona producida en el hipotálamo que interviene en el parto, la
+        lactancia y el vínculo social.
+vasopressin:
+    term: vasopresina
+    definition:
+        Una hormona producida en el hipotálamo que ayuda a los riñones a retener
+        agua e influye en la conducta social.
+    aka:
+        - hormona antidiurética
+        - adh
+orexin:
+    term: orexina
+    definition:
+        Un neuropéptido producido en el hipotálamo lateral que promueve la
+        vigilia. También se llama hipocretina.
+    aka:
+        - hipocretina
+        - orexinas
+        - orexinérgico
+        - orexinérgica
+crh:
+    term: CRH
+    definition:
+        "Hormona liberadora de corticotropina: la libera el hipotálamo para
+        iniciar la cascada de hormonas del estrés."
+    aka:
+        - hormona liberadora de corticotropina
+        - crf
+acth:
+    term: ACTH
+    definition:
+        "Hormona adrenocorticotropa: la libera la hipófisis para indicar a las
+        glándulas suprarrenales que produzcan cortisol."
+    aka:
+        - hormona adrenocorticotropa
+        - corticotropina
+leptin:
+    term: leptina
+    definition:
+        Una hormona producida por las células grasas que informa al cerebro
+        sobre las reservas de energía a largo plazo y reduce el hambre.
+ghrelin:
+    term: grelina
+    definition:
+        Una hormona producida por el estómago que aumenta antes de las comidas e
+        incrementa el hambre.
+neuromelanin:
+    term: neuromelanina
+    definition:
+        Un pigmento oscuro presente en algunas neuronas de dopamina y
+        noradrenalina, que da su color a la sustancia negra y al locus
+        coeruleus.
+purkinje cells:
+    term: células de Purkinje
+    definition:
+        Neuronas grandes de la corteza cerebelosa que constituyen la única
+        salida de la corteza cerebelosa.
+    aka:
+        - célula de purkinje
+upper motor neuron:
+    term: motoneurona superior
+    definition:
+        Una neurona de la corteza motora cuyo axón desciende hasta el tronco
+        encefálico o la médula espinal.
+    aka:
+        - motoneuronas superiores
+        - neurona motora superior
+        - neuronas motoras superiores
+        - primera motoneurona
+lower motor neuron:
+    term: motoneurona inferior
+    definition:
+        Una neurona del tronco encefálico o de la médula espinal que se conecta
+        directamente con los músculos.
+    aka:
+        - motoneuronas inferiores
+        - neurona motora inferior
+        - neuronas motoras inferiores
+        - segunda motoneurona
+mirror neurons:
+    term: neuronas espejo
+    definition:
+        Neuronas que se activan tanto cuando realizas una acción como cuando ves
+        a otra persona realizarla.
+    aka:
+        - neurona espejo
+place cells:
+    term: células de lugar
+    definition:
+        Neuronas del hipocampo que se activan cuando estás en un lugar concreto,
+        ayudando a formar un mapa mental.
+    aka:
+        - célula de lugar
+grid cells:
+    term: células de red
+    definition:
+        Neuronas de la corteza entorrinal que se activan en los puntos de una
+        cuadrícula hexagonal repetida a medida que te desplazas por el espacio.
+    aka:
+        - célula de red
+        - células de rejilla
+        - célula de rejilla
+head direction cells:
+    term: células de dirección de la cabeza
+    definition:
+        Neuronas que se activan cuando tu cabeza apunta en una dirección
+        concreta, como una brújula interna.
+    aka:
+        - célula de dirección de la cabeza
+white matter:
+    term: sustancia blanca
+    definition:
+        Tejido cerebral formado principalmente por axones mielinizados.
+        Transporta señales entre regiones, de forma parecida a un cableado.
+    aka:
+        - materia blanca
+gray matter:
+    term: sustancia gris
+    definition:
+        Tejido cerebral formado principalmente por cuerpos celulares de neuronas
+        y sinapsis, donde ocurre la mayor parte del procesamiento de
+        información.
+    aka:
+        - materia gris
+nucleus:
+    term: núcleo
+    definition:
+        En anatomía cerebral, un grupo de cuerpos celulares de neuronas situado
+        en la profundidad del cerebro que trabajan juntos en una función
+        concreta.
+    aka:
+        - núcleos
+relay:
+    term: relevo
+    definition:
+        En el cerebro, una estación que recibe señales y las transmite a su
+        destino, a menudo filtrándolas por el camino.
+    aka:
+        - relevos
+        - estación de relevo
+        - retransmisión
+hormone:
+    term: hormona
+    definition:
+        Un mensajero químico liberado al torrente sanguíneo que actúa sobre
+        órganos distantes, como el cortisol, la insulina o la adrenalina.
+    aka:
+        - hormonas
+        - hormonal
+        - hormonales
+endocrine system:
+    term: sistema endocrino
+    definition: La red de glándulas del cuerpo que liberan hormonas a la sangre.
+    aka:
+        - endocrino
+        - endocrina
+        - endocrinos
+        - endocrinas
+executive function:
+    term: función ejecutiva
+    definition:
+        "Un conjunto de habilidades mentales para gestionar la propia conducta:
+        planificar, enfocar la atención, cambiar entre tareas, mantener
+        instrucciones en mente y controlar los impulsos."
+    aka:
+        - funciones ejecutivas
+working memory:
+    term: memoria de trabajo
+    definition:
+        Mantener y usar información durante unos segundos, como recordar un
+        número de teléfono mientras lo marcas.
+    aka:
+        - memoria operativa
+        - memoria de trabajo fonológica
+        - memoria de trabajo verbal
+response inhibition:
+    term: inhibición de respuesta
+    definition:
+        La capacidad de detener una acción que ya se ha planeado o iniciado.
+    aka:
+        - inhibición de la respuesta
+        - control inhibitorio
+cognitive flexibility:
+    term: flexibilidad cognitiva
+    definition: La capacidad de cambiar entre tareas, reglas o formas de pensar.
+metacognition:
+    term: metacognición
+    definition:
+        Pensar sobre el propio pensamiento, como juzgar cuánta confianza se
+        tiene en una respuesta.
+    aka:
+        - metacognitivo
+        - metacognitiva
+        - metacognitivos
+        - metacognitivas
+theory of mind:
+    term: teoría de la mente
+    definition:
+        La capacidad de entender que otras personas tienen sus propias
+        creencias, deseos e intenciones, que pueden ser distintos de los tuyos.
+interoception:
+    term: interocepción
+    definition:
+        El sentido del estado interno del propio cuerpo, como los latidos del
+        corazón, la respiración, el hambre y la temperatura.
+    aka:
+        - interoceptivo
+        - interoceptiva
+        - interoceptivos
+        - interoceptivas
+proprioception:
+    term: propiocepción
+    definition:
+        El sentido de dónde están las partes del cuerpo y cómo se mueven,
+        incluso con los ojos cerrados.
+    aka:
+        - propioceptivo
+        - propioceptiva
+        - propioceptivos
+        - propioceptivas
+body schema:
+    term: esquema corporal
+    definition:
+        El modelo interno que tiene el cerebro de la posición y la disposición
+        del cuerpo, que usa para planificar el movimiento.
+voluntary movement:
+    term: movimiento voluntario
+    definition:
+        Un movimiento que eliges hacer, como alcanzar una taza, a diferencia de
+        un reflejo automático.
+    aka:
+        - movimientos voluntarios
+coordination:
+    term: coordinación
+    definition:
+        El trabajo conjunto, fluido y bien sincronizado de los músculos que se
+        necesita para un movimiento preciso.
+    aka:
+        - coordinado
+        - coordinada
+        - coordinados
+        - coordinadas
+motor learning:
+    term: aprendizaje motor
+    definition:
+        Mejorar un movimiento mediante la práctica, como aprender a andar en
+        bicicleta o a escribir a máquina.
+    aka:
+        - habilidades motoras
+        - habilidad motora
+        - aprendizaje procedimental
+declarative memory:
+    term: memoria declarativa
+    definition:
+        La memoria de hechos y sucesos que puedes recordar conscientemente y
+        expresar con palabras. También se llama memoria explícita.
+    aka:
+        - memoria explícita
+        - memorias declarativas
+        - declarativa
+episodic memory:
+    term: memoria episódica
+    definition:
+        La memoria de sucesos personales concretos, con su momento y su lugar.
+    aka:
+        - memoria autobiográfica
+        - episódica
+semantic memory:
+    term: memoria semántica
+    definition:
+        La memoria de hechos generales y del significado de las palabras y los
+        conceptos.
+    aka:
+        - semántica
+long-term memory:
+    term: memoria a largo plazo
+    definition:
+        La memoria que se almacena durante mucho tiempo, desde horas hasta toda
+        la vida.
+    aka:
+        - memorias a largo plazo
+memory consolidation:
+    term: consolidación de la memoria
+    definition:
+        El proceso de estabilizar un recuerdo nuevo para que perdure. Gran parte
+        ocurre durante el sueño.
+    aka:
+        - consolidación
+        - consolidación de memoria
+pattern separation:
+    term: separación de patrones
+    definition:
+        Almacenar experiencias parecidas como recuerdos distintos para que no se
+        confundan.
+fear conditioning:
+    term: condicionamiento del miedo
+    definition:
+        Aprendizaje de que una señal neutra predice algo malo, de modo que la
+        propia señal empieza a provocar miedo.
+    aka:
+        - condicionamiento de miedo
+        - miedo condicionado
+fear extinction:
+    term: extinción del miedo
+    definition:
+        Aprendizaje de que una señal temida ahora es segura. Crea un nuevo
+        recuerdo de seguridad en lugar de borrar el miedo antiguo.
+    aka:
+        - extinción
+        - extinción de miedo
+reward prediction error:
+    term: error de predicción de la recompensa
+    definition:
+        La diferencia entre la recompensa que esperabas y la que obtuviste. Las
+        neuronas dopaminérgicas la señalan y es lo que impulsa el aprendizaje.
+    aka:
+        - errores de predicción de la recompensa
+        - error de predicción de recompensa
+        - errores de predicción
+homeostasis:
+    term: homeostasis
+    definition:
+        Proceso por el que el cuerpo mantiene estables sus condiciones internas,
+        como la temperatura, el equilibrio hídrico y el azúcar en sangre.
+    aka:
+        - homeostático
+        - homeostática
+        - homeostáticos
+        - homeostáticas
+circadian rhythm:
+    term: ritmo circadiano
+    definition:
+        El reloj interno del cuerpo, de aproximadamente 24 horas, que regula el
+        momento del sueño, el estado de alerta, las hormonas y la temperatura
+        corporal.
+    aka:
+        - ritmos circadianos
+        - circadiano
+        - circadiana
+        - circadianos
+        - circadianas
+rem sleep:
+    term: sueño REM
+    definition:
+        "Sueño de movimientos oculares rápidos: la fase de los sueños vívidos,
+        durante la cual la mayoría de los músculos quedan paralizados
+        temporalmente."
+    aka:
+        - REM
+        - fase REM
+        - sueño MOR
+sleep spindles:
+    term: husos del sueño
+    definition:
+        Breves ráfagas de ondas cerebrales durante el sueño, generadas con ayuda
+        del tálamo, relacionadas con la protección del sueño y la consolidación
+        de los recuerdos.
+    aka:
+        - huso del sueño
+        - husos de sueño
+        - huso de sueño
+        - husos
+readiness potential:
+    term: potencial de preparación
+    definition:
+        Aumento lento de la actividad cerebral, medido con EEG, que comienza
+        antes de un movimiento elegido por uno mismo.
+    aka:
+        - potencial preparatorio
+        - Bereitschaftspotential
+fight-or-flight response:
+    term: respuesta de lucha o huida
+    definition:
+        "La reacción rápida del cuerpo ante el peligro: corazón acelerado,
+        respiración más rápida y una oleada de hormonas del estrés como la
+        adrenalina."
+    aka:
+        - lucha o huida
+        - lucha-o-huida
+        - respuesta de lucha-huida
+consciousness:
+    term: consciencia
+    definition:
+        El estado de estar despierto y ser consciente de uno mismo y del
+        entorno.
+    aka:
+        - conciencia
+        - consciente
+        - conscientes
+        - conscientemente
+neuroplasticity:
+    term: neuroplasticidad
+    definition:
+        La capacidad del cerebro de cambiar sus conexiones y su organización en
+        respuesta a la experiencia, el aprendizaje o una lesión.
+    aka:
+        - plasticidad
+        - plasticidad cerebral
+        - plasticidad neuronal
+        - plástico
+        - plástica
+neurogenesis:
+    term: neurogénesis
+    definition: El nacimiento de nuevas neuronas.
+    aka:
+        - neurogénesis adulta
+        - neurogénesis en adultos
+autonomic:
+    term: autónomo
+    definition:
+        Describe las funciones automáticas del cuerpo, como la frecuencia
+        cardíaca, la respiración, la digestión y la presión arterial, que
+        funcionan sin esfuerzo consciente.
+    aka:
+        - autónoma
+        - autónomos
+        - autónomas
+        - sistema nervioso autónomo
+        - SNA
+        - autonómico
+        - autonómica
+aphasia:
+    term: afasia
+    definition:
+        Trastorno del lenguaje causado por daño cerebral que afecta al habla, la
+        comprensión, la lectura o la escritura.
+    aka:
+        - afasias
+        - afásico
+        - afásica
+        - afasia expresiva
+        - afasia receptiva
+        - afasia de conducción
+        - afasia progresiva primaria
+        - afasias progresivas primarias
+apraxia:
+    term: apraxia
+    definition:
+        Dificultad para realizar movimientos hábiles e intencionados a pesar de
+        que la fuerza y la comprensión están intactas.
+    aka:
+        - apraxias
+        - apráxico
+        - apráxica
+        - apraxia ideomotora
+agnosia:
+    term: agnosia
+    definition:
+        Incapacidad para reconocer objetos, caras o sonidos aunque los sentidos
+        funcionen con normalidad.
+    aka:
+        - agnosias
+        - agnosia visual
+prosopagnosia:
+    term: prosopagnosia
+    definition:
+        "Ceguera para las caras: dificultad para reconocer rostros, incluidos
+        los conocidos."
+    aka:
+        - ceguera facial
+        - ceguera para las caras
+        - prosopagnósico
+        - prosopagnósica
+achromatopsia:
+    term: acromatopsia
+    definition:
+        Pérdida de la visión del color. La acromatopsia cerebral se debe a un
+        daño en el área del color V4.
+    aka:
+        - acromatopsia cerebral
+akinetopsia:
+    term: acinetopsia
+    definition:
+        "Ceguera al movimiento: incapacidad para percibir el movimiento de forma
+        fluida, causada por daño en V5/MT."
+    aka:
+        - aquinetopsia
+        - ceguera al movimiento
+hemianopia:
+    term: hemianopsia
+    definition:
+        Pérdida de la visión en la mitad del campo visual. La hemianopsia
+        homónima afecta a la misma mitad en ambos ojos.
+    aka:
+        - hemianopía
+        - hemianopsia homónima
+        - hemianopsias
+quadrantanopia:
+    term: cuadrantanopsia
+    definition: Pérdida de la visión en un cuarto del campo visual.
+    aka:
+        - cuadrantanopía
+        - cuadrantanopsias
+hemispatial neglect:
+    term: heminegligencia espacial
+    definition:
+        Trastorno, generalmente tras un daño en el lóbulo parietal derecho, en
+        el que la persona no se percata de lo que hay en un lado del espacio,
+        típicamente el izquierdo.
+    aka:
+        - heminegligencia
+        - negligencia
+        - negligencia espacial
+        - negligencia hemiespacial
+        - heminatención
+blindsight:
+    term: visión ciega
+    definition:
+        Capacidad poco común de algunas personas con daño en la corteza visual
+        para responder a cosas situadas en su zona ciega sin verlas
+        conscientemente.
+    aka:
+        - visión residual
+amnesia:
+    term: amnesia
+    definition:
+        Pérdida de memoria. La amnesia anterógrada es la incapacidad de formar
+        nuevos recuerdos; la amnesia retrógrada es la pérdida de recuerdos
+        anteriores a una lesión.
+    aka:
+        - amnesias
+        - amnésico
+        - amnésica
+        - amnesia anterógrada
+        - amnesia retrógrada
+confabulation:
+    term: confabulación
+    definition:
+        Producción de recuerdos falsos sin intención de engañar, a menudo para
+        llenar lagunas de memoria.
+    aka:
+        - confabulaciones
+        - confabular
+ataxia:
+    term: ataxia
+    definition:
+        Movimiento torpe y descoordinado, a menudo con marcha inestable, causado
+        generalmente por daño en el cerebelo o en sus conexiones.
+    aka:
+        - ataxias
+        - atáxico
+        - atáxica
+        - ataxia troncal
+        - ataxia óptica
+dysmetria:
+    term: dismetría
+    definition:
+        Pasarse o quedarse corto al intentar alcanzar un objetivo, un signo de
+        daño cerebeloso.
+    aka:
+        - dismétrico
+        - dismétrica
+intention tremor:
+    term: temblor intencional
+    definition:
+        Temblor que empeora a medida que la mano se acerca a un objetivo, típico
+        del daño cerebeloso.
+    aka:
+        - temblor de intención
+tremor:
+    term: temblor
+    definition: Sacudida involuntaria y rítmica de una parte del cuerpo.
+    aka:
+        - temblores
+        - temblor en reposo
+        - temblor de reposo
+nystagmus:
+    term: nistagmo
+    definition: Movimientos oculares involuntarios, repetitivos y en sacudidas.
+    aka:
+        - nistagmus
+vertigo:
+    term: vértigo
+    definition:
+        Sensación de que todo gira, generalmente por un problema en el oído
+        interno o en sus conexiones cerebrales.
+    aka:
+        - vértigos
+hemiparesis:
+    term: hemiparesia
+    definition: Debilidad en un lado del cuerpo.
+    aka:
+        - hemiplejia
+        - hemiplejía
+        - hemiparético
+        - hemiparética
+spasticity:
+    term: espasticidad
+    definition:
+        Rigidez y tensión muscular causadas por daño en las vías motoras del
+        cerebro o la médula espinal.
+    aka:
+        - espástico
+        - espástica
+        - espásticos
+        - espásticas
+rigidity:
+    term: rigidez
+    definition:
+        Rigidez de los músculos que se opone al movimiento en cualquier
+        dirección, típica de la enfermedad de Parkinson.
+    aka:
+        - rígido
+        - rígida
+bradykinesia:
+    term: bradicinesia
+    definition:
+        Lentitud de los movimientos y reducción progresiva de su amplitud, un
+        signo central de la enfermedad de Parkinson.
+    aka:
+        - bradiquinesia
+chorea:
+    term: corea
+    definition:
+        Movimientos involuntarios, irregulares y como de danza, típicos de la
+        enfermedad de Huntington.
+    aka:
+        - coreico
+        - coreica
+        - coreicos
+        - movimientos coreicos
+hemiballismus:
+    term: hemibalismo
+    definition:
+        Movimientos violentos, como de lanzamiento, de las extremidades de un
+        lado, generalmente por daño en el núcleo subtalámico.
+    aka:
+        - balismo
+myoclonus:
+    term: mioclonía
+    definition: Sacudidas musculares repentinas, breves y como descargas.
+    aka:
+        - mioclonías
+        - mioclono
+        - mioclónico
+        - mioclónica
+parkinsonism:
+    term: parkinsonismo
+    definition:
+        Combinación de lentitud, rigidez, temblor y problemas de equilibrio,
+        presente en la enfermedad de Parkinson y en otros trastornos.
+    aka:
+        - parkinsonismos
+        - parkinsoniano
+        - parkinsoniana
+fasciculations:
+    term: fasciculaciones
+    definition:
+        Pequeñas contracciones visibles de las fibras musculares bajo la piel.
+    aka:
+        - fasciculación
+cataplexy:
+    term: cataplejía
+    definition:
+        Debilidad muscular repentina y breve desencadenada por emociones
+        intensas, como la risa, que se observa en la narcolepsia tipo 1.
+    aka:
+        - cataplejia
+        - cataplético
+        - catapléjico
+sleep paralysis:
+    term: parálisis del sueño
+    definition:
+        Estar brevemente incapaz de moverse o hablar al quedarse dormido o al
+        despertar.
+    aka:
+        - parálisis de sueño
+tic:
+    term: tic
+    definition: Movimiento o sonido repentino, rápido y repetitivo.
+    aka:
+        - tics
+        - tics motores
+        - tics vocales
+        - tic motor
+        - tic vocal
+premonitory urge:
+    term: impulso premonitorio
+    definition:
+        La sensación incómoda que se acumula antes de un tic y que se alivia al
+        realizarlo.
+    aka:
+        - impulsos premonitorios
+        - urgencia premonitoria
+        - sensación premonitoria
+coprolalia:
+    term: coprolalia
+    definition:
+        Decir de forma involuntaria palabrotas o palabras socialmente
+        inapropiadas; se da en una minoría de las personas con síndrome de
+        Tourette.
+seizure:
+    term: crisis epiléptica
+    definition:
+        Descarga repentina de actividad eléctrica anormal en el cerebro que
+        puede alterar el movimiento, la consciencia o las sensaciones.
+    aka:
+        - crisis epilépticas
+        - convulsión
+        - convulsiones
+        - crisis
+        - convulsivo
+        - convulsiva
+aura:
+    term: aura
+    definition:
+        Sensación de aviso antes de una migraña o una crisis epiléptica, como
+        luces destellantes, hormigueo o un olor extraño.
+    aka:
+        - auras
+focal epilepsy:
+    term: epilepsia focal
+    definition:
+        Epilepsia en la que las crisis comienzan en una zona concreta del
+        cerebro.
+    aka:
+        - crisis focales
+        - crisis focal
+        - epilepsias focales
+cortical spreading depression:
+    term: depresión cortical propagada
+    definition:
+        Onda lenta de actividad cerebral intensa seguida de silencio que se
+        desplaza por la corteza; se cree que causa el aura de la migraña.
+    aka:
+        - depresión propagada cortical
+        - depresión cortical diseminada
+coma:
+    term: coma
+    definition:
+        Estado prolongado de inconsciencia profunda del que la persona no puede
+        ser despertada.
+    aka:
+        - comatoso
+        - comatosa
+dementia:
+    term: demencia
+    definition:
+        Deterioro de la memoria y el pensamiento lo bastante grave como para
+        interferir en la vida diaria. Tiene muchas causas; la más frecuente es
+        la enfermedad de Alzheimer.
+    aka:
+        - demencias
+locked-in syndrome:
+    term: síndrome de enclaustramiento
+    definition:
+        Trastorno, generalmente causado por daño en la protuberancia, en el que
+        la persona está despierta y consciente pero apenas puede mover nada
+        excepto los ojos.
+    aka:
+        - síndrome de cautiverio
+        - síndrome del cautiverio
+        - locked-in
+split-brain:
+    term: cerebro dividido
+    definition:
+        Describe a personas a las que se les ha seccionado el cuerpo calloso,
+        generalmente para tratar una epilepsia grave, de modo que los dos
+        hemisferios comparten poca información.
+    aka:
+        - cerebro escindido
+        - cerebros divididos
+akinetic mutism:
+    term: mutismo acinético
+    definition:
+        Estado en el que la persona está despierta pero rara vez se mueve o
+        habla, generalmente por daño en la corteza cingulada anterior o en zonas
+        cercanas.
+    aka:
+        - mutismo aquinético
+psychosis:
+    term: psicosis
+    definition:
+        Pérdida de contacto con la realidad, que suele incluir alucinaciones o
+        delirios.
+    aka:
+        - psicótico
+        - psicótica
+        - psicóticos
+        - psicóticas
+hallucination:
+    term: alucinación
+    definition: Percibir algo que no está presente, como oír voces.
+    aka:
+        - alucinaciones
+        - alucinaciones auditivas
+        - alucinaciones visuales
+delusion:
+    term: delirio
+    definition:
+        Creencia falsa y fija que persiste a pesar de pruebas claras en su
+        contra.
+    aka:
+        - delirios
+        - idea delirante
+        - ideas delirantes
+        - delirante
+        - delirantes
+positive symptoms:
+    term: síntomas positivos
+    definition:
+        En la esquizofrenia, experiencias que se añaden a la vida normal, como
+        alucinaciones, delirios y pensamiento desorganizado.
+    aka:
+        - síntoma positivo
+negative symptoms:
+    term: síntomas negativos
+    definition:
+        En la esquizofrenia, reducciones de funciones normales, como la
+        motivación, el placer, el habla y la expresión emocional.
+    aka:
+        - síntoma negativo
+mania:
+    term: manía
+    definition:
+        Período de estado de ánimo anormalmente elevado o irritable, con mucha
+        energía, menor necesidad de dormir y conductas de riesgo, que dura al
+        menos una semana.
+    aka:
+        - maníaco
+        - maníaca
+        - maníacos
+        - maníacas
+        - episodio maníaco
+hypomania:
+    term: hipomanía
+    definition: Forma más leve y breve de manía que no causa un deterioro grave.
+    aka:
+        - hipomaníaco
+        - hipomaníaca
+        - episodio hipomaníaco
+anhedonia:
+    term: anhedonia
+    definition: Capacidad reducida para sentir placer o interés.
+    aka:
+        - anhedónico
+        - anhedónica
+rumination:
+    term: rumiación
+    definition:
+        Dar vueltas repetidamente a pensamientos o problemas negativos sin
+        llegar a una solución.
+    aka:
+        - rumiaciones
+        - rumiar
+        - rumiativo
+        - rumiativa
+obsession:
+    term: obsesión
+    definition:
+        Pensamiento, imagen o impulso no deseado e intrusivo que provoca
+        ansiedad.
+    aka:
+        - obsesiones
+        - obsesivo
+        - obsesiva
+        - obsesivos
+        - obsesivas
+compulsion:
+    term: compulsión
+    definition:
+        Conducta o acto mental repetitivo que se realiza para reducir la
+        ansiedad o evitar un resultado temido.
+    aka:
+        - compulsiones
+        - compulsivo
+        - compulsiva
+        - compulsivos
+        - compulsivas
+dissociation:
+    term: disociación
+    definition:
+        Desconexión entre pensamientos, recuerdos, sentimientos, entorno o
+        identidad.
+    aka:
+        - disociativo
+        - disociativa
+        - disociativos
+        - disociativas
+hypervigilance:
+    term: hipervigilancia
+    definition: Estar constantemente en alerta ante el peligro.
+    aka:
+        - hipervigilante
+        - hipervigilantes
+impulsivity:
+    term: impulsividad
+    definition: Actuar rápidamente sin pensar en las consecuencias.
+    aka:
+        - impulsivo
+        - impulsiva
+        - impulsivos
+        - impulsivas
+empathy:
+    term: empatía
+    definition:
+        La capacidad de comprender y compartir los sentimientos de otra persona.
+    aka:
+        - empático
+        - empática
+        - empáticos
+        - empáticas
+psychopathy:
+    term: psicopatía
+    definition:
+        Constructo de personalidad caracterizado por emociones superficiales,
+        falta de empatía y de remordimiento, y conducta manipuladora o
+        antisocial.
+    aka:
+        - psicopático
+        - psicopática
+        - rasgos psicopáticos
+        - rasgos de insensibilidad emocional
+        - rasgos insensibles y no emocionales
+comorbidity:
+    term: comorbilidad
+    definition: Tener dos o más trastornos al mismo tiempo.
+    aka:
+        - comorbilidades
+        - comórbido
+        - comórbida
+        - comórbidos
+        - comórbidas
+        - concurrente
+        - concurrentes
+heritability:
+    term: heredabilidad
+    definition:
+        La proporción de las diferencias en un rasgo dentro de una población que
+        puede explicarse por diferencias genéticas.
+    aka:
+        - heredable
+        - heredables
+        - hereditario
+        - hereditaria
+prevalence:
+    term: prevalencia
+    definition:
+        La proporción de una población que tiene un trastorno en un momento dado
+        o a lo largo de la vida.
+    aka:
+        - prevalencias
+atrophy:
+    term: atrofia
+    definition:
+        Reducción del tamaño de un tejido, como la pérdida de volumen cerebral
+        por muerte neuronal.
+    aka:
+        - atrofias
+        - atrófico
+        - atrófica
+lesion:
+    term: lesión
+    definition: Zona de tejido dañado o anormal.
+    aka:
+        - lesiones
+neurodegenerative:
+    term: neurodegenerativo
+    definition:
+        Describe enfermedades en las que las neuronas mueren gradualmente con el
+        tiempo, como el Alzheimer y el Parkinson.
+    aka:
+        - neurodegenerativa
+        - neurodegenerativos
+        - neurodegenerativas
+        - neurodegeneración
+amyloid-beta:
+    term: beta-amiloide
+    definition:
+        Fragmento de proteína que se agrupa formando placas entre las neuronas
+        en la enfermedad de Alzheimer.
+    aka:
+        - amiloide
+        - amiloide beta
+        - β-amiloide
+        - placas de amiloide
+        - placas amiloides
+        - placas
+tau:
+    term: tau
+    definition:
+        Proteína que normalmente estabiliza el esqueleto interno de las
+        neuronas. En enfermedades como el Alzheimer se pliega mal y forma
+        ovillos.
+    aka:
+        - proteína tau
+        - ovillos de tau
+        - ovillos neurofibrilares
+        - ovillos
+alpha-synuclein:
+    term: alfa-sinucleína
+    definition:
+        Proteína que se agrupa formando cuerpos de Lewy en la enfermedad de
+        Parkinson y en la demencia con cuerpos de Lewy.
+    aka:
+        - alfa sinucleína
+        - α-sinucleína
+        - sinucleína
+lewy bodies:
+    term: cuerpos de Lewy
+    definition:
+        Agregados anormales de la proteína alfa-sinucleína dentro de las
+        neuronas.
+    aka:
+        - cuerpo de Lewy
+tdp-43:
+    term: TDP-43
+    definition:
+        Proteína que forma agregados anormales en la mayoría de los casos de ELA
+        y en muchos casos de demencia frontotemporal.
+    aka:
+        - TDP43
+prion:
+    term: prion
+    definition:
+        Proteína mal plegada que puede forzar a las proteínas normales a
+        plegarse mal también, propagándose por el cerebro.
+    aka:
+        - priones
+        - prión
+        - priónico
+        - priónica
+demyelination:
+    term: desmielinización
+    definition:
+        Daño o pérdida de la vaina de mielina que recubre las fibras nerviosas.
+    aka:
+        - desmielinizante
+        - desmielinizantes
+autoimmune:
+    term: autoinmune
+    definition:
+        Describe un trastorno en el que el sistema inmunitario ataca por error
+        los propios tejidos del cuerpo.
+    aka:
+        - autoinmunes
+        - autoinmunidad
+inflammation:
+    term: inflamación
+    definition:
+        La respuesta del sistema inmunitario a una lesión o infección, que puede
+        dañar los tejidos si persiste.
+    aka:
+        - neuroinflamación
+        - inflamatorio
+        - inflamatoria
+        - inflamatorios
+        - inflamatorias
+ischemia:
+    term: isquemia
+    definition:
+        Reducción del flujo sanguíneo a un tejido, que lo priva de oxígeno.
+    aka:
+        - isquémico
+        - isquémica
+        - isquémicos
+        - isquémicas
+hemorrhage:
+    term: hemorragia
+    definition: Sangrado por la rotura de un vaso sanguíneo.
+    aka:
+        - hemorragias
+        - hemorrágico
+        - hemorrágica
+atherosclerosis:
+    term: aterosclerosis
+    definition:
+        Acumulación de placa grasa en el interior de las arterias, que las
+        estrecha.
+    aka:
+        - arteriosclerosis
+        - aterosclerótico
+        - aterosclerótica
+atrial fibrillation:
+    term: fibrilación auricular
+    definition:
+        Ritmo cardíaco irregular que favorece la formación de coágulos en el
+        corazón, los cuales pueden viajar al cerebro.
+    aka:
+        - FA
+diffuse axonal injury:
+    term: lesión axonal difusa
+    definition:
+        Desgarro generalizado de fibras nerviosas largas causado por una
+        aceleración y rotación rápidas del cerebro.
+    aka:
+        - daño axonal difuso
+        - LAD
+diabetes insipidus:
+    term: diabetes insípida
+    definition:
+        Trastorno poco común en el que el cuerpo no puede retener agua, lo que
+        provoca micción abundante y sed intensa. No guarda relación con la
+        diabetes del azúcar en sangre.
+thiamine:
+    term: tiamina
+    definition:
+        Vitamina B1. Su deficiencia grave daña el cerebro y causa el síndrome de
+        Wernicke-Korsakoff.
+    aka:
+        - vitamina B1
+autosomal dominant:
+    term: autosómico dominante
+    definition:
+        Patrón de herencia en el que una sola copia de un gen alterado basta
+        para causar un trastorno, lo que da a cada hijo un 50 % de probabilidad.
+    aka:
+        - autosómica dominante
+        - herencia autosómica dominante
+autosomal recessive:
+    term: autosómico recesivo
+    definition:
+        Patrón de herencia en el que se necesitan dos copias de un gen alterado,
+        una de cada progenitor, para causar un trastorno.
+    aka:
+        - autosómica recesiva
+        - herencia autosómica recesiva
+cag repeat:
+    term: repetición CAG
+    definition:
+        Secuencia de ADN de tres letras que se repite. Demasiadas repeticiones
+        en ciertos genes causan enfermedades como la de Huntington y algunas
+        ataxias.
+    aka:
+        - repeticiones CAG
+        - expansiones de repeticiones
+        - expansión de repeticiones
+        - expansión de tripletes
+apoe ε4:
+    term: APOE ε4
+    definition:
+        Una variante del gen APOE que aumenta el riesgo de enfermedad de
+        Alzheimer. Una copia multiplica el riesgo aproximadamente por tres; dos
+        copias lo elevan mucho más.
+    aka:
+        - APOE4
+        - APOE
+        - apolipoproteína E
+stroke:
+    term: accidente cerebrovascular
+    definition:
+        Daño cerebral causado cuando un vaso sanguíneo obstruido o roto
+        interrumpe el suministro de sangre a una parte del cerebro.
+    aka:
+        - accidentes cerebrovasculares
+        - ictus
+        - ACV
+        - derrame cerebral
+        - infarto cerebral
+ssri:
+    term: ISRS
+    definition:
+        "Inhibidor selectivo de la recaptación de serotonina: una clase
+        frecuente de antidepresivo, como la sertralina o la fluoxetina, que
+        aumenta la señalización de la serotonina."
+    aka:
+        - inhibidor selectivo de la recaptación de serotonina
+        - inhibidores selectivos de la recaptación de serotonina
+snri:
+    term: IRSN
+    definition:
+        "Inhibidor de la recaptación de serotonina y noradrenalina: una clase de
+        antidepresivo que aumenta la señalización tanto de la serotonina como de
+        la noradrenalina."
+    aka:
+        - inhibidor de la recaptación de serotonina y noradrenalina
+        - inhibidores de la recaptación de serotonina y noradrenalina
+        - IRSNa
+antipsychotic:
+    term: antipsicótico
+    definition:
+        Medicamento que reduce los síntomas psicóticos, principalmente
+        bloqueando los receptores D2 de dopamina.
+    aka:
+        - antipsicóticos
+        - antipsicótica
+        - antipsicóticas
+        - neuroléptico
+        - neurolépticos
+mood stabilizer:
+    term: estabilizador del ánimo
+    definition:
+        Medicamento, como el litio, que reduce los episodios afectivos en el
+        trastorno bipolar.
+    aka:
+        - estabilizadores del ánimo
+        - estabilizador del estado de ánimo
+        - estabilizadores del estado de ánimo
+        - eutimizante
+        - eutimizantes
+cbt:
+    term: TCC
+    definition:
+        "Terapia cognitivo-conductual: una psicoterapia estructurada que
+        modifica pensamientos y conductas poco útiles."
+    aka:
+        - terapia cognitivo-conductual
+        - terapia cognitivo conductual
+        - terapia cognitiva conductual
+dbt:
+    term: TDC
+    definition:
+        "Terapia dialéctica conductual: una terapia basada en la TCC que enseña
+        habilidades de atención plena (mindfulness), regulación emocional,
+        tolerancia al malestar y relaciones interpersonales."
+    aka:
+        - terapia dialéctica conductual
+        - terapia dialéctico-conductual
+        - DBT
+exposure therapy:
+    term: terapia de exposición
+    definition:
+        Terapia en la que la persona se enfrenta de forma gradual y segura a
+        situaciones temidas para que el cerebro aprenda que son seguras.
+    aka:
+        - exposición con prevención de respuesta
+        - EPR
+        - exposición
+deep brain stimulation:
+    term: estimulación cerebral profunda
+    definition:
+        Cirugía que coloca electrodos en estructuras cerebrales concretas y
+        emite impulsos eléctricos para modificar la actividad anormal.
+    aka:
+        - ECP
+        - DBS
+transcranial magnetic stimulation:
+    term: estimulación magnética transcraneal
+    definition:
+        Tratamiento no invasivo que utiliza pulsos magnéticos para estimular una
+        zona de la corteza.
+    aka:
+        - EMT
+        - EMTr
+        - TMS
+        - rTMS
+        - estimulación magnética transcraneal repetitiva
+electroconvulsive therapy:
+    term: terapia electroconvulsiva
+    definition:
+        Tratamiento para la depresión grave que induce una crisis epiléptica
+        breve y controlada bajo anestesia.
+    aka:
+        - TEC
+        - electroshock
+mri:
+    term: RM
+    definition:
+        "Resonancia magnética: una prueba que usa imanes y ondas de radio para
+        obtener imágenes detalladas del cerebro."
+    aka:
+        - resonancia magnética
+        - RMN
+        - resonancia
+fmri:
+    term: RMf
+    definition:
+        "Resonancia magnética funcional: mide los cambios de oxígeno en la
+        sangre para mostrar qué zonas del cerebro están activas."
+    aka:
+        - resonancia magnética funcional
+        - RMNf
+        - fMRI
+diffusion mri:
+    term: RM de difusión
+    definition:
+        Técnica de resonancia magnética que sigue el movimiento del agua a lo
+        largo de las fibras para cartografiar la sustancia blanca.
+    aka:
+        - resonancia magnética de difusión
+        - imagen por tensor de difusión
+        - tensor de difusión
+        - DTI
+        - ITD
+pet:
+    term: PET
+    definition:
+        "Tomografía por emisión de positrones: una prueba que usa un trazador
+        radiactivo para medir el metabolismo o detectar proteínas como el
+        amiloide."
+    aka:
+        - tomografía por emisión de positrones
+        - TEP
+        - PET-TC
+eeg:
+    term: EEG
+    definition:
+        "Electroencefalografía: registro de la actividad eléctrica del cerebro
+        mediante electrodos colocados en el cuero cabelludo."
+    aka:
+        - electroencefalografía
+        - electroencefalograma
+        - electroencefalogramas

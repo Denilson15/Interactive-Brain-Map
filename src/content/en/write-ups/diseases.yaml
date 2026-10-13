@@ -1,0 +1,1302 @@
+# Long-form write-ups for diseases, keyed by id. Loaded only when a
+# visitor opens a condition; fields replace the short versions.
+
+alzheimers:
+    overview:
+        - Alzheimer's disease is a progressive neurodegenerative disease and the
+          most common cause of dementia, accounting for an estimated 60–80% of
+          cases. It slowly destroys memory, thinking and eventually the ability
+          to carry out everyday tasks.
+        - Two abnormal proteins define it. Amyloid-beta clumps into plaques
+          between neurons, and tau, which normally stabilizes the internal
+          skeleton of neurons, misfolds and forms tangles inside them. Amyloid
+          builds up first, 15–20 years before symptoms; tau spreads along
+          connected networks and tracks closely with symptoms and neuron loss.
+          Inflammation from microglia and damage to small blood vessels add to
+          the injury.
+        - "Because tau typically spreads from the medial temporal lobe outward,
+          the disease follows a recognizable order: first recent memory, then
+          language, spatial skills and judgment, and finally basic functions
+          such as walking and swallowing."
+    brain:
+        - area: entorhinal
+          level: primary
+          note:
+              The gateway to the hippocampus is usually the first cortical area
+              to develop tau tangles. Losing it cuts off the flow of new
+              information into memory and disrupts grid cells, which may explain
+              why getting lost is an early sign.
+        - area: hippocampus
+          level: primary
+          note:
+              Forms new memories. Early shrinkage, visible on MRI, causes the
+              hallmark difficulty remembering recent conversations and events
+              while older memories remain.
+        - area: pcc
+          level: primary
+          note:
+              A hub of the default mode network. Reduced metabolism here is one
+              of the earliest PET findings, linked to problems with orientation
+              and autobiographical memory.
+        - area: precuneus
+          level: primary
+          note:
+              One of the first areas to accumulate amyloid; reduced function
+              affects visual imagery and self-awareness.
+        - area: lc
+          level: secondary
+          note:
+              Tau often appears here years before it appears anywhere else. Loss
+              of norepinephrine may contribute to attention problems, mood
+              changes and inflammation.
+        - area: angular
+          level: secondary
+          note:
+              As the disease spreads into parietal cortex, people have trouble
+              with spatial tasks, reading, writing and numbers.
+        - area: temporal
+          level: secondary
+          note:
+              Atrophy spreads through the temporal lobe, causing word-finding
+              difficulty and loss of knowledge.
+        - area: latvent
+          level: secondary
+          note:
+              Enlarge as surrounding tissue shrinks, a visible marker of brain
+              atrophy on scans.
+        - area: frontal
+          level: secondary
+          note:
+              Frontal involvement in later stages affects judgment, planning and
+              behavior.
+    symptoms:
+        - Forgetting recent conversations and events
+        - Repeating questions and stories
+        - Getting lost in familiar places
+        - Trouble with planning, money and complex tasks
+        - Word-finding difficulty
+        - Misplacing things and being unable to retrace steps
+        - Mood and personality changes, withdrawal, anxiety
+        - "In later stages: loss of speech, mobility and swallowing, and need
+          for full-time care"
+    diagnosis:
+        "Diagnosis combines history from the person and family, cognitive
+        testing (such as the MoCA), and tests to rule out other causes like
+        thyroid disease, B12 deficiency, depression and medication effects. MRI
+        shows patterns of atrophy. Biomarkers now allow diagnosis during life:
+        amyloid and tau PET scans, cerebrospinal fluid tests, and increasingly
+        accurate blood tests for phosphorylated tau (such as p-tau217)."
+    types:
+        - "Preclinical: amyloid and tau present, no symptoms."
+        - "Mild cognitive impairment due to Alzheimer's: noticeable memory
+          problems, independence preserved."
+        - "Mild dementia: help needed with complex tasks such as finances."
+        - "Moderate dementia: help with daily activities, confusion, behavior
+          changes."
+        - "Severe dementia: loss of communication and mobility."
+        - Early-onset Alzheimer's (before 65) accounts for about 5–10% of cases;
+          atypical variants begin with visual (posterior cortical atrophy),
+          language or behavioral symptoms.
+    causes:
+        - Age is the strongest risk factor. The APOE ε4 variant raises risk
+          about 3-fold with one copy and much more with two. Rare mutations in
+          APP, PSEN1 or PSEN2 cause early-onset familial disease, and Down
+          syndrome raises risk because chromosome 21 carries APP.
+        - The Lancet Commission estimates that up to about 45% of dementia cases
+          worldwide might be delayed or prevented by addressing modifiable risk
+          factors, including hearing loss, high blood pressure, diabetes,
+          smoking, physical inactivity, low education, depression, social
+          isolation, excessive alcohol, air pollution, high LDL cholesterol and
+          untreated vision loss.
+    treatment:
+        - Cholinesterase inhibitors (donepezil, rivastigmine, galantamine) and
+          memantine modestly improve symptoms for a time.
+        - Anti-amyloid antibodies, lecanemab and donanemab, remove plaques and
+          slow decline by roughly a quarter to a third over 18 months in early
+          disease. They require confirmed amyloid, regular MRI monitoring and
+          carry a risk of brain swelling or bleeding (ARIA), higher in APOE ε4
+          carriers.
+        - "Non-drug care is central: exercise, social engagement, hearing aids,
+          managing blood pressure and diabetes, a safe home, caregiver support
+          and advance care planning."
+    course:
+        Alzheimer's progresses over an average of about 8–10 years after
+        diagnosis, with wide variation. People often live well for years in the
+        early stages. Death usually results from complications like pneumonia.
+parkinsons:
+    overview:
+        - "Parkinson's disease is a progressive neurodegenerative disorder best
+          known for its movement symptoms: slowness, stiffness, tremor and
+          balance problems. These arise when dopamine-producing neurons in the
+          substantia nigra die, depriving the striatum of the dopamine it needs
+          to release movement."
+        - It is much more than a movement disorder. Clumps of alpha-synuclein
+          called Lewy bodies spread through the nervous system, often starting
+          in the gut and lower brainstem or the olfactory bulb years before
+          movement symptoms. Loss of smell, constipation, acting out dreams,
+          depression and anxiety can precede diagnosis by a decade or more.
+    brain:
+        - area: sn
+          level: primary
+          note:
+              Contains the dopamine neurons that supply the striatum. Their
+              death removes the signal that enables smooth, well-scaled
+              movement, causing slowness and stiffness. Symptoms appear after a
+              large share of these neurons has been lost.
+        - area: putamen
+          level: primary
+          note:
+              The motor part of the striatum loses its dopamine input first and
+              most severely, so the basal ganglia cannot release movement
+              normally.
+        - area: gp
+          level: secondary
+          note:
+              Without dopamine, its output becomes overactive and holds back
+              movement via the thalamus.
+        - area: stn
+          level: secondary
+          note:
+              Becomes overactive in Parkinson's and is the main deep brain
+              stimulation target.
+        - area: olfactory
+          level: secondary
+          note: Among the first areas affected, explaining early loss of smell.
+        - area: medulla
+          level: secondary
+          note:
+              In the Braak staging model, Lewy pathology starts in the lower
+              brainstem, linked to constipation and autonomic problems.
+        - area: lc
+          level: secondary
+          note:
+              Loss of norepinephrine neurons contributes to depression,
+              attention problems and low blood pressure on standing.
+        - area: pons
+          level: secondary
+          note:
+              Involvement of REM sleep circuits removes muscle paralysis during
+              dreams, causing REM sleep behavior disorder.
+    symptoms:
+        - Resting tremor, often starting in one hand
+        - "Bradykinesia: slowness and shrinking movements"
+        - Rigidity
+        - Shuffling walk, freezing and balance problems
+        - Soft voice, small handwriting, reduced facial expression
+        - Loss of smell, constipation, acting out dreams
+        - Depression, anxiety, apathy
+        - "Later: cognitive decline, hallucinations"
+    diagnosis:
+        Diagnosis is clinical, based on bradykinesia plus tremor or rigidity,
+        with good response to levodopa supporting it. A DaTscan can show loss of
+        dopamine terminals. A newer skin or spinal fluid test (seed
+        amplification assay) can detect abnormal alpha-synuclein.
+    types:
+        - Tremor-dominant and postural instability/gait difficulty subtypes have
+          different courses.
+        - Young-onset Parkinson's begins before 50 and is more often genetic.
+        - Related "atypical parkinsonisms" include multiple system atrophy,
+          progressive supranuclear palsy and Lewy body dementia.
+    causes:
+        - Age is the main risk factor. About 10–15% of cases are linked to genes
+          such as LRRK2, GBA1 and SNCA. Pesticide exposure, some solvents, head
+          injury and rural living raise risk; smoking and caffeine are
+          associated with lower risk.
+    treatment:
+        - Levodopa (with carbidopa) is the most effective medication. Others
+          include dopamine agonists, MAO-B inhibitors and COMT inhibitors. Over
+          years, motor fluctuations and dyskinesias can develop.
+        - Deep brain stimulation of the subthalamic nucleus or globus pallidus
+          helps selected patients, and focused ultrasound is an option for
+          tremor. Exercise, physical therapy, speech therapy and treatment of
+          non-motor symptoms are essential.
+    course:
+        Parkinson's progresses slowly over many years. Most people have many
+        years of good function with treatment; later stages can bring falls,
+        swallowing problems and dementia.
+huntingtons:
+    overview:
+        - Huntington's disease is an inherited neurodegenerative disorder caused
+          by an expanded CAG repeat in the HTT gene. The resulting mutant
+          huntingtin protein is toxic to neurons, especially the medium spiny
+          neurons of the striatum.
+        - It causes a triad of movement problems (most famously chorea),
+          cognitive decline and psychiatric symptoms, usually starting between
+          ages 30 and 50. Because it is autosomal dominant, each child of an
+          affected parent has a 50% chance of inheriting it, and genetic testing
+          raises complex personal decisions.
+    brain:
+        - area: caudate
+          level: primary
+          note:
+              Suffers the earliest and most severe neuron loss. The indirect
+              pathway that suppresses unwanted movement fails first, releasing
+              chorea.
+        - area: putamen
+          level: primary
+          note: Severe neuron loss disrupts motor control.
+        - area: gp
+          level: secondary
+          note: Disrupted basal ganglia output adds to movement problems.
+        - area: latvent
+          level: secondary
+          note: Enlarge as the caudate shrinks, a classic imaging sign.
+        - area: dlpfc
+          level: secondary
+          note:
+              Cortical thinning and loss of frontostriatal circuits cause
+              executive problems and apathy.
+    symptoms:
+        - "Chorea: involuntary, dance-like movements"
+        - Clumsiness and balance problems
+        - Difficulty planning, organizing and multitasking
+        - Depression, irritability, apathy and compulsive behaviors
+        - "Later: rigidity, difficulty swallowing and speaking"
+    diagnosis:
+        Diagnosis is confirmed by genetic testing for the CAG repeat; 40 or more
+        repeats cause the disease. Predictive testing for at-risk relatives
+        follows careful genetic counseling.
+    causes:
+        - An expanded CAG repeat in HTT, inherited in an autosomal dominant
+          pattern. Longer repeats cause earlier onset and can lengthen further
+          when passed from fathers.
+    treatment:
+        - There is no cure yet. Tetrabenazine, deutetrabenazine and valbenazine
+          reduce chorea; antidepressants and antipsychotics treat psychiatric
+          symptoms. Physical, occupational and speech therapy and genetic
+          counseling are important. Gene-silencing therapies are in clinical
+          trials.
+    course: The disease progresses over about 15–20 years after symptoms begin.
+als:
+    overview:
+        - ALS is a progressive disease that destroys both upper motor neurons in
+          the motor cortex and lower motor neurons in the brainstem and spinal
+          cord. Without these neurons, muscles weaken and waste away, eventually
+          affecting speech, swallowing and breathing.
+        - Thinking is often preserved, but up to half of people develop some
+          cognitive or behavioral changes, and about 10–15% develop
+          frontotemporal dementia, reflecting shared genetics and TDP-43
+          pathology.
+    brain:
+        - area: m1
+          level: primary
+          note:
+              Upper motor neurons here degenerate, causing stiffness, brisk
+              reflexes and weakness.
+        - area: medulla
+          level: primary
+          note:
+              Motor nuclei for the tongue and throat degenerate, causing slurred
+              speech and difficulty swallowing (bulbar symptoms).
+        - area: pons
+          level: secondary
+          note: Motor nuclei for chewing and facial movement are affected.
+        - area: premotor
+          level: secondary
+          note: Frontal involvement on the ALS–frontotemporal dementia spectrum.
+    symptoms:
+        - Weakness in a hand, arm or leg
+        - Muscle twitches and cramps
+        - Stiffness and brisk reflexes
+        - Slurred speech and trouble swallowing
+        - Breathing weakness
+        - Emotional lability (uncontrollable laughing or crying) in some
+    diagnosis:
+        Diagnosis is clinical, supported by electromyography (EMG) showing lower
+        motor neuron loss and by ruling out mimics with MRI and blood tests.
+    causes:
+        - About 90% of cases are sporadic; 10% are familial, most often from
+          C9orf72, SOD1, TARDBP or FUS genes. TDP-43 clumps appear in most
+          cases.
+    treatment:
+        - Riluzole and edaravone modestly slow progression; tofersen treats
+          SOD1-related ALS. Multidisciplinary care, noninvasive ventilation and
+          feeding tubes extend survival and quality of life.
+    course:
+        Median survival is about 2–5 years from symptom onset, though about 10%
+        live 10 years or more.
+ftd:
+    overview:
+        - Frontotemporal dementia is a group of disorders in which neurons in
+          the frontal and temporal lobes degenerate. It often begins between
+          ages 45 and 65 and is one of the most common dementias in people under
+          65.
+        - Unlike Alzheimer's, memory is often relatively spared early on.
+          Instead, the first signs are changes in personality, behavior or
+          language, which are frequently mistaken for psychiatric illness or
+          midlife crisis.
+    brain:
+        - area: vmpfc
+          level: primary
+          note:
+              Atrophy in the behavioral variant removes social and emotional
+              regulation, causing disinhibition and poor judgment.
+        - area: ofc
+          level: primary
+          note:
+              Atrophy is linked to compulsions, changes in eating and impulsive
+              decisions.
+        - area: antinsula
+          level: primary
+          note:
+              Early loss is linked to reduced empathy and awareness of others'
+              feelings.
+        - area: acc
+          level: secondary
+          note: Damage contributes to apathy.
+        - area: tpole
+          level: primary
+          note:
+              Atrophy in the semantic variant erodes the meaning of words and
+              objects.
+        - area: broca
+          level: secondary
+          note:
+              Atrophy in the nonfluent variant makes speech halting and
+              effortful.
+    symptoms:
+        - Disinhibition and socially inappropriate behavior
+        - Apathy and loss of empathy
+        - Compulsive behaviors and changes in eating
+        - Difficulty planning
+        - Losing word meanings (semantic variant)
+        - Halting, effortful speech (nonfluent variant)
+    diagnosis:
+        Diagnosis uses clinical criteria, neuropsychological testing, MRI
+        showing frontal and/or temporal atrophy, and sometimes PET and genetic
+        testing.
+    types:
+        - Behavioral variant FTD.
+        - Semantic variant primary progressive aphasia.
+        - Nonfluent/agrammatic variant primary progressive aphasia.
+        - Overlaps with ALS, progressive supranuclear palsy and corticobasal
+          syndrome.
+    causes:
+        - Abnormal tau or TDP-43 proteins. Up to about a third of cases are
+          inherited, most often through C9orf72, MAPT or GRN genes.
+    treatment:
+        - No disease-modifying treatment yet. SSRIs can reduce behavioral
+          symptoms; speech therapy and caregiver support are central.
+    course:
+        Progression varies, with average survival of about 6–11 years after
+        symptom onset.
+dlb:
+    overview:
+        - Dementia with Lewy bodies is caused by alpha-synuclein clumps (Lewy
+          bodies) spreading through the cortex and brainstem. It combines
+          dementia with fluctuating alertness, vivid visual hallucinations, REM
+          sleep behavior disorder and parkinsonism.
+        - It is often misdiagnosed as Alzheimer's or Parkinson's. Getting it
+          right matters because people with DLB can have severe, sometimes
+          life-threatening reactions to many antipsychotic medications.
+    brain:
+        - area: v2v3
+          level: primary
+          note:
+              Reduced activity in visual association cortex is linked to
+              detailed visual hallucinations.
+        - area: sn
+          level: secondary
+          note: Dopamine neuron loss causes parkinsonism.
+        - area: pons
+          level: secondary
+          note: Involvement of REM sleep circuits causes dream enactment.
+        - area: lc
+          level: secondary
+          note: Early brainstem involvement.
+        - area: pcc
+          level: secondary
+          note:
+              Relatively spared compared with the precuneus, producing the
+              "cingulate island sign" on scans.
+    symptoms:
+        - Fluctuating attention and alertness
+        - Detailed visual hallucinations
+        - Acting out dreams
+        - Parkinson-like stiffness and slowness
+        - Problems with visual-spatial tasks
+    diagnosis:
+        Clinical criteria plus supportive tests such as DaTscan, sleep studies
+        showing REM sleep without paralysis and cardiac MIBG scans.
+    causes:
+        - Mostly unknown; age is the main risk factor. Variants in GBA and APOE
+          raise risk.
+    treatment:
+        - Cholinesterase inhibitors often help cognition and hallucinations.
+          Antipsychotics must be used with great care. Levodopa can help
+          movement but may worsen hallucinations.
+    course:
+        Progressive, with average survival of about 5–8 years after diagnosis.
+vascdem:
+    overview:
+        - Vascular dementia is cognitive decline caused by reduced blood flow to
+          the brain, through major strokes, many small silent strokes, or damage
+          to small vessels in the white matter. It often causes slowed thinking
+          and problems with planning before memory loss, and it frequently
+          occurs together with Alzheimer's (mixed dementia).
+    brain:
+        - area: callosum
+          level: secondary
+          note:
+              White matter damage disconnects brain regions, slowing processing.
+        - area: latvent
+          level: secondary
+          note: White matter changes cluster around the ventricles on MRI.
+        - area: caudate
+          level: secondary
+          note:
+              Small (lacunar) strokes often hit deep nuclei, disrupting
+              frontal-subcortical circuits.
+        - area: thalamus
+          level: secondary
+          note: Thalamic lacunes can cause memory problems.
+        - area: dlpfc
+          level: secondary
+          note: Disconnection of frontal circuits causes executive slowing.
+    symptoms:
+        - Slowed thinking
+        - Trouble with planning and organizing
+        - Step-like decline after strokes
+        - Walking problems
+        - Mood changes, especially apathy and depression
+    diagnosis:
+        Requires cognitive decline with evidence of cerebrovascular disease on
+        MRI and a plausible link between them.
+    causes:
+        - High blood pressure, diabetes, smoking, high cholesterol, atrial
+          fibrillation and previous strokes.
+    treatment:
+        - Control vascular risk factors and prevent further strokes.
+          Cholinesterase inhibitors have small benefits.
+    course:
+        Often stepwise, with the course strongly influenced by risk factor
+        control.
+psp:
+    overview:
+        - Progressive supranuclear palsy is a tau disorder that damages the
+          brainstem, basal ganglia and frontal lobes. It is often mistaken for
+          Parkinson's at first but causes early falls, trunk stiffness and
+          difficulty moving the eyes, especially looking down.
+    brain:
+        - area: midbrain
+          level: primary
+          note:
+              Atrophy produces the "hummingbird sign" on MRI and damages
+              vertical gaze centers.
+        - area: stn
+          level: secondary
+          note: Neuron loss.
+        - area: gp
+          level: secondary
+          note: Neuron loss.
+        - area: dentate
+          level: secondary
+          note: Degeneration of cerebellar output.
+        - area: frontal
+          level: secondary
+          note: Frontal involvement causes apathy and executive problems.
+    symptoms:
+        - Early, unexplained backward falls
+        - Difficulty moving the eyes up and down
+        - Stiff, upright posture
+        - Slurred speech and swallowing trouble
+        - Apathy and slowed thinking
+    diagnosis: Clinical criteria supported by MRI showing midbrain atrophy.
+    causes:
+        - Abnormal tau accumulation; the cause is unknown.
+    treatment:
+        - No disease-modifying treatment. Physical, speech and occupational
+          therapy help.
+    course: Progressive over about 6–9 years.
+cjd:
+    overview:
+        - CJD is a rare, rapidly progressive and fatal prion disease. Misfolded
+          prion proteins force normal proteins to misfold, causing neuron death
+          and tiny holes in brain tissue (spongiform change). Most people die
+          within a year of symptom onset.
+    brain:
+        - area: caudate
+          level: primary
+          note: Bright signal on diffusion MRI is a diagnostic clue.
+        - area: putamen
+          level: primary
+          note: Bright signal on diffusion MRI.
+        - area: frontal
+          level: secondary
+          note: Cortical ribboning on MRI across the cortex.
+        - area: parietal
+          level: secondary
+          note: Cortical involvement.
+        - area: pulvinar
+          level: secondary
+          note: The pulvinar sign is characteristic of variant CJD.
+    symptoms:
+        - Rapidly worsening dementia
+        - Myoclonus
+        - Problems with coordination and vision
+        - Behavior changes
+    diagnosis:
+        MRI, EEG and the RT-QuIC test on spinal fluid, which detects misfolded
+        prions with high accuracy.
+    types:
+        - Sporadic (about 85%).
+        - Genetic (10–15%), from PRNP mutations.
+        - Acquired, including iatrogenic and variant CJD linked to BSE.
+    causes:
+        - Misfolded prion protein, arising spontaneously, inherited or acquired.
+    treatment:
+        - No cure; care focuses on comfort. Strict sterilization prevents spread
+          through surgical instruments.
+    course: Rapid; most people die within a year.
+ms:
+    overview:
+        - Multiple sclerosis is a chronic autoimmune disease in which immune
+          cells attack myelin, the insulation around nerve fibers, in the brain,
+          spinal cord and optic nerves. Inflamed areas form plaques (lesions)
+          where signals slow or fail, causing symptoms that depend on location.
+        - Most people start with relapsing-remitting MS, with attacks followed
+          by recovery. Over time, ongoing nerve fiber loss can cause gradual
+          progression. Modern disease-modifying therapies have dramatically
+          reduced relapses and disability.
+    brain:
+        - area: callosum
+          level: primary
+          note:
+              Lesions in the corpus callosum, often oriented perpendicular to
+              the ventricles ("Dawson's fingers"), are characteristic and slow
+              communication between hemispheres.
+        - area: latvent
+          level: primary
+          note:
+              Lesions cluster in white matter around the ventricles, where small
+              veins enter the brain, disrupting many pathways at once.
+        - area: pons
+          level: secondary
+          note:
+              Brainstem lesions cause double vision, dizziness and facial
+              numbness.
+        - area: cerebhemi
+          level: secondary
+          note: Cerebellar lesions cause tremor and poor coordination.
+    symptoms:
+        - Vision loss or pain in one eye (optic neuritis)
+        - Numbness, tingling or weakness
+        - Fatigue
+        - Balance problems and dizziness
+        - Bladder problems
+        - Thinking and memory difficulties
+        - Symptoms worsening with heat (Uhthoff phenomenon)
+    diagnosis:
+        The McDonald criteria use MRI lesions disseminated in space and time,
+        and may use spinal fluid oligoclonal bands, after ruling out mimics.
+    types:
+        - Clinically isolated syndrome.
+        - Relapsing-remitting MS (most common at onset).
+        - Secondary progressive MS.
+        - Primary progressive MS (about 10–15%).
+    causes:
+        - Genetic susceptibility combined with environment. Epstein-Barr virus
+          infection appears to be a near-necessary trigger. Low vitamin D,
+          smoking and adolescent obesity raise risk.
+    treatment:
+        - Disease-modifying therapies (such as ocrelizumab, natalizumab,
+          ofatumumab and others) reduce relapses and new lesions. Steroids
+          shorten relapses. Rehabilitation and symptom treatment help daily
+          life.
+    course:
+        Highly variable; many people with modern treatment maintain good
+        function for decades.
+ischemic:
+    overview:
+        - An ischemic stroke happens when a blood clot or narrowed artery cuts
+          off blood flow to part of the brain. Without oxygen and glucose,
+          neurons in the core die within minutes, while a surrounding area
+          called the penumbra can be saved if blood flow is restored quickly.
+        - Symptoms depend on which artery is blocked. The middle cerebral
+          artery, which supplies much of the outer brain, is the most commonly
+          affected. Ischemic strokes account for about 85% of strokes.
+    brain:
+        - area: m1
+          level: primary
+          note:
+              Middle cerebral artery strokes often damage the motor cortex,
+              causing weakness on the opposite side of the body.
+        - area: s1
+          level: primary
+          note: Damage causes loss of sensation on the opposite side.
+        - area: broca
+          level: secondary
+          note: Left-sided strokes can cause expressive aphasia.
+        - area: wernicke
+          level: secondary
+          note: Left-sided strokes can cause receptive aphasia.
+        - area: putamen
+          level: secondary
+          note: Small deep lacunar strokes can cause pure motor weakness.
+        - area: ventthal
+          level: secondary
+          note: Thalamic strokes cause sensory loss or chronic pain.
+    symptoms:
+        - Sudden face drooping
+        - Arm or leg weakness on one side
+        - Speech difficulty or confusion
+        - Sudden vision loss
+        - Sudden dizziness or loss of balance
+    diagnosis:
+        Emergency CT or MRI distinguishes ischemic from hemorrhagic stroke; CT
+        angiography finds large-vessel blockages.
+    causes:
+        - Atherosclerosis, clots from the heart in atrial fibrillation and small
+          vessel disease. Risk factors include high blood pressure, diabetes,
+          smoking, high cholesterol and inactivity.
+    treatment:
+        - Clot-dissolving medication (alteplase or tenecteplase), usually within
+          4.5 hours, and mechanical thrombectomy for large-vessel blockages, up
+          to 24 hours in selected patients. Then rehabilitation and secondary
+          prevention.
+    course:
+        Recovery is fastest in the first three months but can continue for years
+        through neuroplasticity and rehabilitation.
+ich:
+    overview:
+        - A hemorrhagic stroke happens when a blood vessel inside the brain
+          bursts. Leaking blood damages tissue directly, raises pressure inside
+          the skull and triggers inflammation. It accounts for about 10–15% of
+          strokes but a larger share of stroke deaths.
+    brain:
+        - area: putamen
+          level: primary
+          note:
+              The most common site of bleeds from high blood pressure, damaging
+              motor pathways.
+        - area: thalamus
+          level: primary
+          note:
+              Another common site, causing sensory loss and reduced
+              consciousness.
+        - area: pons
+          level: secondary
+          note: Pontine bleeds are often severe.
+        - area: cerebhemi
+          level: secondary
+          note: Cerebellar bleeds may need urgent surgery.
+    symptoms:
+        - Sudden severe headache
+        - Weakness or numbness on one side
+        - Vomiting
+        - Decreased consciousness
+        - Seizures
+    diagnosis: Emergency CT shows the bleed.
+    causes:
+        - Long-standing high blood pressure, cerebral amyloid angiopathy in
+          older adults, blood thinners and vascular malformations.
+    treatment:
+        - Rapid blood pressure lowering, reversing blood thinners and sometimes
+          surgery.
+    course:
+        Mortality is high in the first month; survivors often improve with
+        rehabilitation.
+sah:
+    overview:
+        - A brain aneurysm is a weak, bulging spot in an artery wall, usually at
+          the base of the brain. If it ruptures, blood fills the subarachnoid
+          space around the brain, causing a sudden, severe headache. It is a
+          medical emergency.
+    brain:
+        - area: ventricles
+          level: secondary
+          note: Blood can block CSF flow and cause hydrocephalus.
+        - area: ofc
+          level: secondary
+          note:
+              Rupture of an anterior communicating artery aneurysm can damage
+              the underside of the frontal lobe.
+        - area: hypothalamus
+          level: secondary
+          note: Can be affected, disturbing sodium and hormone balance.
+    symptoms:
+        - Sudden "worst headache of my life"
+        - Stiff neck
+        - Nausea and vomiting
+        - Sensitivity to light
+        - Loss of consciousness
+    diagnosis:
+        CT scan, with lumbar puncture if CT is negative, and angiography to find
+        the aneurysm.
+    causes:
+        - High blood pressure, smoking, family history and some inherited
+          conditions.
+    treatment:
+        - Securing the aneurysm by coiling or clipping; nimodipine; managing
+          hydrocephalus.
+    course:
+        About a third of people die, and many survivors have lasting cognitive
+        effects.
+epilepsy:
+    overview:
+        - Epilepsy is a tendency to have repeated, unprovoked seizures, which
+          are bursts of abnormal, synchronized electrical activity in the brain.
+          Seizures can be focal, starting in one area, or generalized, involving
+          both hemispheres from the start.
+        - Temporal lobe epilepsy is the most common focal type in adults. Its
+          seizures often begin with an aura such as déjà vu, fear or a rising
+          sensation in the stomach.
+    brain:
+        - area: hippocampus
+          level: primary
+          note:
+              Hippocampal sclerosis creates a scarred, hyperexcitable circuit
+              that repeatedly generates seizures; it is the most common cause of
+              drug-resistant temporal lobe epilepsy.
+        - area: amygdala
+          level: secondary
+          note: Seizures here cause fear and emotional auras.
+        - area: entorhinal
+          level: secondary
+          note: Part of the seizure network.
+        - area: temporal
+          level: secondary
+          note: The most common lobe for focal seizures.
+        - area: antthal
+          level: secondary
+          note:
+              A deep brain stimulation target that can interrupt seizure spread.
+    symptoms:
+        - Staring spells or brief lapses in awareness
+        - Jerking movements
+        - Auras such as déjà vu, fear or a rising stomach sensation
+        - Odd smells or tastes
+        - Confusion after a seizure
+    diagnosis:
+        EEG, video EEG monitoring and MRI help identify seizure type and origin.
+    causes:
+        - Genetics, brain injury, stroke, infection, tumors, developmental
+          malformations and hippocampal sclerosis. In about half of cases no
+          cause is found.
+    treatment:
+        - "Antiseizure medications control seizures in about two-thirds of
+          people. For drug-resistant epilepsy: surgery, laser ablation, vagus
+          nerve stimulation, deep brain stimulation and the ketogenic diet."
+    course: Many people become seizure-free with treatment.
+migraine:
+    overview:
+        - Migraine is a common neurological disorder with recurring attacks of
+          moderate to severe, often one-sided, throbbing headache, with nausea
+          and sensitivity to light and sound. About a third of people have aura.
+        - "An attack is a brain event with phases: prodrome, aura, headache and
+          postdrome. The trigeminovascular system releases CGRP, which drives
+          inflammation and pain."
+    brain:
+        - area: v1
+          level: secondary
+          note:
+              Cortical spreading depression across visual cortex is thought to
+              cause aura.
+        - area: hypothalamus
+          level: secondary
+          note: Activity during the prodrome may explain yawning and cravings.
+        - area: pons
+          level: secondary
+          note: Brainstem nuclei are active during attacks.
+        - area: ventthal
+          level: secondary
+          note:
+              Thalamic sensitization contributes to light sensitivity and skin
+              pain.
+    symptoms:
+        - "Prodrome: yawning, cravings, mood changes"
+        - "Aura: zigzag lights or blind spots"
+        - Throbbing headache lasting 4–72 hours
+        - Nausea and vomiting
+        - Sensitivity to light, sound and smell
+        - "Postdrome: feeling drained"
+    diagnosis:
+        Clinical diagnosis using criteria such as the International
+        Classification of Headache Disorders.
+    causes:
+        - Strong genetic component. Triggers include stress, sleep changes,
+          hormonal shifts and skipped meals.
+    treatment:
+        - "Acute: pain relievers, triptans, gepants and ditans. Prevention:
+          CGRP-targeting antibodies, gepants, beta-blockers, topiramate,
+          amitriptyline and Botox for chronic migraine."
+    course: Often improves with age and after menopause.
+cluster:
+    overview:
+        - Cluster headache causes excruciating, one-sided pain around the eye,
+          lasting 15 minutes to 3 hours, often at the same time each day, during
+          "cluster" periods that last weeks to months and then go into
+          remission. It is often described as one of the most painful conditions
+          known.
+        - Its clockwork timing, both daily and seasonal, points to the brain's
+          internal clock. Unlike people with migraine, who lie still, people
+          with cluster headache are typically restless and pace during attacks.
+    brain:
+        - area: hypothalamus
+          level: primary
+          note:
+              The posterior hypothalamus becomes active during attacks and may
+              switch them on, which explains their regular timing and the
+              autonomic symptoms like tearing and a runny nose.
+        - area: scn
+          level: secondary
+          note:
+              The master clock may set the circadian and seasonal timing of
+              attacks.
+    symptoms:
+        - Severe stabbing pain around one eye
+        - Tearing, red eye and runny nose on the same side
+        - Drooping eyelid and small pupil
+        - Restlessness and pacing
+        - Attacks with clockwork timing
+    diagnosis:
+        Clinical diagnosis based on attack pattern; MRI rules out other causes.
+    causes:
+        - Unknown; smoking, alcohol during clusters and a family history are
+          associated.
+    treatment:
+        - High-flow oxygen and injected or nasal triptans stop attacks.
+          Verapamil, galcanezumab and short courses of steroids prevent them.
+          Nerve stimulation is an option for chronic cases.
+    course:
+        Episodic in most people, with remissions lasting months to years; about
+        10–20% have the chronic form.
+tbi:
+    overview:
+        - A traumatic brain injury is damage caused by an external force, such
+          as a fall, crash, sports impact or blast. A concussion is a mild TBI.
+          The brain moves inside the skull, bruising its surface where it
+          strikes bony ridges and stretching long nerve fibers.
+        - "After impact, a cascade of chemical changes follows: ion imbalances,
+          energy crisis and inflammation, which is why the brain is vulnerable
+          for days to weeks and why rest followed by gradual return to activity
+          is recommended."
+    brain:
+        - area: ofc
+          level: primary
+          note:
+              The underside of the frontal lobe scrapes against the bony floor
+              of the skull, causing bruising that can change judgment, impulse
+              control and personality.
+        - area: tpole
+          level: primary
+          note:
+              The front of the temporal lobe hits the skull's middle fossa,
+              affecting memory and emotion.
+        - area: callosum
+          level: secondary
+          note:
+              Rotational forces shear long axons (diffuse axonal injury),
+              slowing processing speed.
+        - area: brainstem
+          level: secondary
+          note:
+              Severe rotational forces can injure the brainstem, affecting
+              consciousness.
+    symptoms:
+        - Headache and dizziness
+        - Confusion and memory problems
+        - Nausea
+        - Sensitivity to light and noise
+        - Trouble concentrating and sleeping
+        - Mood changes and irritability
+    diagnosis:
+        The Glasgow Coma Scale grades severity; CT or MRI detects bleeding or
+        swelling. Concussion is a clinical diagnosis, as scans are usually
+        normal.
+    types:
+        - Mild (concussion), moderate and severe TBI.
+    causes:
+        - Falls, motor vehicle crashes, assaults, sports and military blasts.
+    treatment:
+        - "Concussion: brief relative rest, then gradual return to activity and
+          school or work. Moderate to severe TBI: emergency care, controlling
+          pressure inside the skull, then rehabilitation."
+    course:
+        Most concussions resolve within weeks; some people have persistent
+        symptoms. Moderate and severe TBI recovery can take months to years.
+cte:
+    overview:
+        - CTE is a progressive tau disease linked to years of repeated head
+          impacts, including many that never cause concussion symptoms. It has
+          been found in contact-sport athletes and military veterans and can
+          currently only be confirmed after death.
+        - Its signature is tau building up around small blood vessels at the
+          bottoms of the sulci, the places most strained by impacts.
+    brain:
+        - area: frontal
+          level: primary
+          note:
+              Tau collects around blood vessels at the depths of frontal sulci,
+              affecting judgment and impulse control.
+        - area: amygdala
+          level: secondary
+          note: Tau in later stages is linked to mood changes and aggression.
+        - area: hippocampus
+          level: secondary
+          note: Involvement in later stages causes memory loss.
+        - area: thalamus
+          level: secondary
+          note: Involved in later stages.
+        - area: callosum
+          level: secondary
+          note: Thinning of white matter.
+    symptoms:
+        - Memory problems
+        - Impulsivity and aggression
+        - Depression and apathy
+        - Confusion
+        - Later dementia and parkinsonism
+    diagnosis:
+        Confirmed only by brain examination after death; "traumatic
+        encephalopathy syndrome" criteria describe likely cases in life.
+    causes:
+        - Years of repeated head impacts.
+    treatment:
+        - No specific treatment; symptoms are managed. Reducing head impacts is
+          the main prevention.
+    course: Progressive over years to decades.
+meningitis:
+    overview:
+        - Meningitis is inflammation of the meninges, the membranes covering the
+          brain and spinal cord, usually caused by infection. Bacterial
+          meningitis can kill within hours and is a medical emergency; viral
+          meningitis is more common and usually milder.
+        - The meninges are not shown in this model; the highlighted areas show
+          common complications.
+    brain:
+        - area: ventricles
+          level: secondary
+          note: Inflammation can block CSF flow and cause hydrocephalus.
+        - area: frontal
+          level: secondary
+          note:
+              Inflammation can spread to the brain surface
+              (meningoencephalitis).
+    symptoms:
+        - Fever
+        - Severe headache
+        - Stiff neck
+        - Sensitivity to light
+        - Confusion
+        - Rash in meningococcal infection
+    diagnosis: Lumbar puncture to analyze spinal fluid, plus blood cultures.
+    causes:
+        - Bacteria, viruses and less often fungi.
+    treatment:
+        - "Bacterial: urgent IV antibiotics and steroids. Viral: supportive
+          care. Vaccines prevent many bacterial types."
+    course: Bacterial meningitis can leave hearing loss or cognitive problems.
+hsve:
+    overview:
+        - Herpes simplex encephalitis is infection and inflammation of the brain
+          by herpes simplex virus, usually HSV-1. It typically targets the
+          medial temporal lobes, insula and orbitofrontal cortex, the limbic
+          regions, and without treatment it is often fatal.
+    brain:
+        - area: hippocampus
+          level: primary
+          note: Destruction of the hippocampus causes lasting memory loss.
+        - area: entorhinal
+          level: primary
+          note: Medial temporal damage disrupts memory input.
+        - area: amygdala
+          level: primary
+          note: Limbic damage can change emotion and behavior.
+        - area: antinsula
+          level: secondary
+          note: Often involved.
+        - area: ofc
+          level: secondary
+          note: Often involved, affecting behavior.
+    symptoms:
+        - Fever and headache
+        - Confusion and personality change
+        - Seizures
+        - Memory problems
+        - Smell or taste hallucinations
+    diagnosis:
+        MRI showing temporal lobe changes and PCR testing of spinal fluid for
+        HSV.
+    causes:
+        - HSV-1 reaching the brain, possibly via the olfactory or trigeminal
+          nerves.
+    treatment:
+        - Urgent IV acyclovir, started as soon as it is suspected.
+    course: Many survivors have lasting memory or behavior problems.
+gbm:
+    overview:
+        - Glioblastoma is the most common and aggressive primary brain cancer in
+          adults. It grows from glial cells and infiltrates surrounding brain
+          tissue, so it cannot be completely removed.
+    brain:
+        - area: frontal
+          level: primary
+          note: One of the most common locations.
+        - area: temporal
+          level: primary
+          note: One of the most common locations.
+        - area: callosum
+          level: secondary
+          note:
+              Tumors that cross it to both sides are called "butterfly gliomas."
+    symptoms:
+        - Headaches, often worse in the morning
+        - Seizures
+        - Personality or memory changes
+        - Weakness, speech or vision problems depending on location
+        - Nausea
+    diagnosis:
+        MRI followed by biopsy or surgery; molecular markers such as IDH and
+        MGMT status guide treatment and prognosis.
+    causes:
+        - Mostly unknown; prior radiation to the head is a known risk factor.
+    treatment:
+        - Surgery, then radiation and temozolomide chemotherapy; tumor-treating
+          fields for some patients.
+    course: Median survival is about 15 months with treatment.
+meningioma:
+    overview:
+        - Meningiomas grow from the meninges. They are the most common primary
+          brain tumor; most are slow-growing and benign and cause symptoms by
+          pressing on nearby brain tissue.
+    brain:
+        - area: frontal
+          level: secondary
+          note: Convexity and falx meningiomas often press on the frontal lobes.
+        - area: olfactory
+          level: secondary
+          note: Olfactory groove meningiomas cause loss of smell.
+    diagnosis: MRI typically shows a well-defined tumor attached to the dura.
+    causes:
+        - Mostly unknown; prior radiation and NF2 raise risk.
+    treatment:
+        - Observation, surgery or radiation.
+    course: Usually good outcomes.
+pitadenoma:
+    overview:
+        - Pituitary adenomas are usually benign tumors of the pituitary gland.
+          Some release too much hormone; larger ones press on the optic chiasm
+          above, causing loss of peripheral vision.
+    brain:
+        - area: pituitary
+          level: primary
+          note:
+              The tumor's origin, which may overproduce or underproduce
+              hormones.
+        - area: hypothalamus
+          level: secondary
+          note: Large tumors can press upward on it.
+    diagnosis: MRI and hormone blood tests; visual field testing.
+    causes:
+        - Mostly unknown; a few are part of inherited syndromes.
+    treatment:
+        - Medications, surgery through the nose, or radiation.
+    course: Usually good outcomes.
+hydrocephalus:
+    overview:
+        - Hydrocephalus is a buildup of cerebrospinal fluid that enlarges the
+          ventricles and raises pressure on the brain. It can be present at
+          birth or develop later.
+        - "Normal pressure hydrocephalus in older adults causes a classic triad:
+          walking problems, urinary incontinence and cognitive decline, and is
+          one of the few treatable causes of dementia."
+    brain:
+        - area: latvent
+          level: primary
+          note: Enlarge as fluid builds up, stretching nearby white matter.
+        - area: thirdvent
+          level: primary
+          note: Enlarges.
+        - area: aqueduct
+          level: primary
+          note: The most common site of blockage.
+        - area: fourthvent
+          level: secondary
+          note: Enlarges if blockage is further downstream.
+    diagnosis:
+        CT or MRI shows enlarged ventricles; a lumbar drain trial predicts
+        response in normal pressure hydrocephalus.
+    causes:
+        - Blocked CSF flow, poor absorption after bleeding or infection, or
+          unknown causes.
+    treatment:
+        - A shunt to drain CSF or endoscopic third ventriculostomy.
+    course: Outcomes depend on cause and timing.
+cp:
+    overview:
+        - Cerebral palsy is a group of lifelong movement and posture disorders
+          caused by damage to the developing brain before, during or soon after
+          birth. The damage does not worsen, though its effects change with
+          growth.
+    brain:
+        - area: m1
+          level: primary
+          note: Damage to motor areas or their pathways causes spastic types.
+        - area: latvent
+          level: secondary
+          note:
+              Periventricular white matter injury is common in premature babies.
+        - area: putamen
+          level: secondary
+          note: Damage causes dyskinetic types.
+        - area: thalamus
+          level: secondary
+          note: Often damaged alongside the basal ganglia.
+        - area: cerebhemi
+          level: secondary
+          note: Damage causes ataxic types.
+    diagnosis: Clinical assessment and MRI, often confirmed by age 2.
+    causes:
+        - Premature birth, low birth weight, infections in pregnancy, lack of
+          oxygen and strokes in the baby.
+    treatment:
+        - Physical, occupational and speech therapy; botulinum toxin and
+          baclofen; orthopedic surgery; assistive devices.
+    course: Lifelong; many people lead independent lives.
+et:
+    overview:
+        - Essential tremor causes rhythmic shaking, mainly of both hands during
+          action. It is the most common movement disorder and often runs in
+          families.
+    brain:
+        - area: cerebhemi
+          level: primary
+          note:
+              Cerebellar circuit dysfunction produces the oscillation that
+              drives tremor.
+        - area: dentate
+          level: primary
+          note: Abnormal cerebellar output.
+        - area: ventthal
+          level: primary
+          note:
+              The ventral intermediate nucleus relays the tremor signal and is
+              the treatment target.
+    diagnosis: Clinical diagnosis.
+    causes:
+        - Strongly familial in about half of cases.
+    treatment:
+        - Propranolol and primidone; deep brain stimulation or focused
+          ultrasound for severe cases.
+    course: Slowly progressive.
+dystonia:
+    overview:
+        - Dystonia causes sustained or intermittent muscle contractions
+          producing twisting movements and abnormal postures. It can be focal,
+          such as cervical dystonia or writer's cramp, or generalized.
+    brain:
+        - area: putamen
+          level: primary
+          note:
+              Abnormal basal ganglia signaling disrupts selection of muscle
+              activity.
+        - area: gp
+          level: primary
+          note:
+              The internal globus pallidus is the deep brain stimulation target.
+        - area: cerebhemi
+          level: secondary
+          note: Cerebellar circuits are increasingly implicated.
+        - area: s1
+          level: secondary
+          note: Altered sensory body maps.
+    diagnosis: Clinical diagnosis; genetic testing in early-onset cases.
+    causes:
+        - Genetics, brain injury, medications or unknown.
+    treatment:
+        - Botulinum toxin injections; medications; deep brain stimulation.
+    course: Varies by type.
+ataxia:
+    overview:
+        - This group of inherited diseases, including the spinocerebellar
+          ataxias and Friedreich's ataxia, causes progressive loss of
+          coordination as the cerebellum and its connections degenerate.
+    brain:
+        - area: cerebhemi
+          level: primary
+          note: Degeneration causes limb clumsiness.
+        - area: vermis
+          level: primary
+          note: Degeneration causes unsteady walking.
+        - area: dentate
+          level: secondary
+          note: Degeneration, especially in Friedreich's ataxia.
+        - area: pons
+          level: secondary
+          note: Involved in several SCA types.
+    diagnosis: MRI and genetic testing.
+    causes:
+        - Gene mutations, often repeat expansions.
+    treatment:
+        - Physical and speech therapy; omaveloxolone for Friedreich's ataxia.
+    course: Progressive over years to decades.
+wks:
+    overview:
+        - Wernicke-Korsakoff syndrome is brain damage caused by thiamine
+          deficiency. The acute stage (Wernicke encephalopathy) causes
+          confusion, eye movement problems and unsteadiness; untreated, it can
+          lead to Korsakoff syndrome, with severe lasting memory loss and
+          confabulation.
+    brain:
+        - area: mammillary
+          level: primary
+          note: Shrinkage disrupts the Papez memory circuit.
+        - area: mdthal
+          level: primary
+          note: Damage contributes to amnesia.
+        - area: antthal
+          level: secondary
+          note: Disrupts the memory circuit.
+        - area: fornix
+          level: secondary
+          note: Memory circuit disconnection.
+        - area: vermis
+          level: secondary
+          note: Damage causes unsteady walking.
+        - area: midbrain
+          level: secondary
+          note: Damage near the aqueduct affects eye movements.
+    diagnosis:
+        Clinical diagnosis; MRI may show changes around the third ventricle and
+        aqueduct.
+    causes:
+        - Thiamine deficiency from heavy alcohol use, malnutrition, vomiting or
+          bariatric surgery.
+    treatment:
+        - Urgent high-dose IV thiamine.
+    course:
+        Early treatment can reverse Wernicke symptoms; Korsakoff memory loss
+        often persists.
+wilson:
+    overview:
+        - Wilson's disease is an inherited disorder in which the body cannot
+          remove copper, which builds up in the liver and brain, causing liver
+          disease, movement disorders and psychiatric symptoms.
+    brain:
+        - area: putamen
+          level: primary
+          note:
+              Copper deposits are most prominent here, disrupting movement
+              control.
+        - area: gp
+          level: secondary
+          note: Copper damage.
+        - area: caudate
+          level: secondary
+          note: Copper damage.
+        - area: midbrain
+          level: secondary
+          note: Can produce the "face of the giant panda" sign on MRI.
+        - area: pons
+          level: secondary
+          note: Involved in some cases.
+    diagnosis:
+        Blood ceruloplasmin, urine copper, eye exam for Kayser-Fleischer rings,
+        liver biopsy and genetic testing.
+    causes:
+        - ATP7B mutations, inherited in an autosomal recessive pattern.
+    treatment:
+        - Lifelong chelation (penicillamine or trientine) or zinc, and a
+          low-copper diet.
+    course: With early treatment, life expectancy can be near normal.

@@ -45,11 +45,19 @@ import {
 } from "../ui/popover";
 import { initRegionPanel, renderRegion } from "../ui/region-panel";
 import { initSectionMap, placeMap, renderMap } from "../ui/section-map";
-import { CONDS, DISEASES, PSYCH, buildConditions } from "./conditions";
+import {
+    CONDS,
+    DISEASES,
+    PSYCH,
+    buildConditions,
+    hasWriteUps,
+    mergeWriteUps,
+} from "./conditions";
 import {
     applyContentLanguage,
     glossaryIn,
     loadSpanish,
+    loadWriteUps,
     type CoreContent,
 } from "./content";
 import { buildIndex, type IndexEntry } from "./dictionary-index";
@@ -68,6 +76,8 @@ const TAB_VIEWS: Record<Tab, string> = {
 };
 
 let content: CoreContent;
+/** Spanish content while Spanish is shown, otherwise null. */
+let spanishContent: SpanishData | null = null;
 
 interface SelectOptions {
     /** Fly the camera to the structure (default true). */
@@ -130,9 +140,20 @@ function setCondition(c: Condition): void {
     }
 }
 
-export function openCondition(key: string): void {
+/** Loads and merges the long write-ups the first time they're needed. */
+async function ensureWriteUps(): Promise<void> {
+    if (hasWriteUps()) return;
+    const writeUps = await loadWriteUps();
+    if (hasWriteUps()) return;
+    mergeWriteUps(writeUps);
+    // Merged text is English; lay the current language back over it.
+    applyContentLanguage(spanishContent);
+}
+
+export async function openCondition(key: string): Promise<void> {
     const c = CONDS[key];
     if (!c) return;
+    await ensureWriteUps();
     hidePopover();
     state.openCond[c.kind] = c;
     renderConditionDetail(c);
@@ -225,6 +246,7 @@ function setStaticText(): void {
 
 /** Rebuilds everything that depends on the content language. */
 function applyContent(es: SpanishData | null): void {
+    spanishContent = es;
     applyContentLanguage(es);
     const glossary = glossaryIn(content.glossary, es);
     buildIndex(glossary);
@@ -349,7 +371,7 @@ function handleDocumentClick(e: MouseEvent): void {
         return;
     }
     if (data.cond) {
-        openCondition(data.cond);
+        void openCondition(data.cond);
         return;
     }
     if (data.focus) {
@@ -382,7 +404,7 @@ function handleDocumentClick(e: MouseEvent): void {
 export async function startApp(core: CoreContent): Promise<void> {
     content = core;
     buildStructureTree(core.atlas, core.hierarchy);
-    buildConditions(core.psych, core.diseases, core.extensions);
+    buildConditions(core.psych, core.diseases);
 
     const es = currentLang() === "es" ? await loadSpanish() : null;
     useSpanishUi(es);
@@ -426,6 +448,13 @@ export async function startApp(core: CoreContent): Promise<void> {
     selectNode("brain", "L", { focus: false });
     updateConditionBar();
     startRendering();
+
+    // Fetch the condition write-ups once the page is idle, so opening a
+    // condition is instant without delaying the first view.
+    // (Safari has no requestIdleCallback; a short delay does the same.)
+    const prefetch = () => void ensureWriteUps();
+    if ("requestIdleCallback" in window) window.requestIdleCallback(prefetch);
+    else setTimeout(prefetch, 1500);
 
     // Test and debugging hook; the end-to-end tests drive the app with it.
     (window as unknown as { __atlas: unknown }).__atlas = {

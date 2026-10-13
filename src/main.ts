@@ -12,4 +12,4 @@ import "./styles.css";
 import { loadCoreContent } from "./app/content";
 import { startApp } from "./app/controller";
 
-void loadCoreContent().then(startApp);
+void startApp(loadCoreContent());

@@ -1,0 +1,118 @@
+# Spanish interface text, keyed like UI_EN in src/app/i18n.ts.
+
+title: Mapa Interactivo del Cerebro
+tabBrowse: Explorar
+tabRegion: Región
+tabPsych: Psicología
+tabDisease: Enfermedades
+tabGloss: Diccionario
+up: ↑ Subir un nivel
+upTitle: Subir un nivel (Esc)
+spread: Separar
+opacity: Opacidad
+brightness: Brillo
+labels: Etiquetas
+reset: Restablecer
+controls: Controles ▾
+hint:
+    Arrastra para girar · desplaza o pellizca para acercar · haz clic en una
+    sección para abrirla · Esc para subir
+glossSearch: Busca términos, regiones y afecciones
+glossPh: p. ej. sinapsis, putamen, TEPT
+browseEyebrow: Todas las secciones del cerebro
+stats:
+    "{p} partes del cerebro · {d} trastornos · {s} enfermedades · {e} entradas
+    de diccionario"
+primary: Principal
+alsoInvolved: También implicada
+backToAnatomy: Volver a la anatomía
+hindbrain: Rombencéfalo
+otherParts: Otras partes
+parts: Partes
+nParts: "{n} partes"
+left: Izquierdo
+right: Derecho
+leftOf: "{name} (lado izquierdo)"
+rightOf: "{name} (lado derecho)"
+group: Grupo
+labelOnModel: "Etiqueta en el modelo: {s}"
+where: Ubicación
+capLeaf:
+    "Primer plano: esta parte en color dentro de un cerebro transparente.
+    Arrastra para girarlo."
+capGroup:
+    Primer plano con cada sección en su propio color. Arrastra para girarlo.
+help:
+    Haz clic en una sección del modelo, en su etiqueta o en un botón debajo del
+    modelo para bajar un nivel. Haz clic en un espacio vacío o pulsa Esc para
+    subir. Usa Separar para apartar las partes. Las palabras con subrayado
+    punteado abren una definición; también puedes seleccionar cualquier palabra
+    para buscarla.
+whatItDoes: Qué hace
+mainDivisions: Divisiones principales
+lobes: Lóbulos
+structures: Estructuras
+sections: Secciones
+clinical: Relevancia clínica
+damaged: Cuando se daña
+didYouKnow: ¿Sabías que…?
+gettingHelp: Buscar ayuda
+linked: Afecciones relacionadas
+psychology: Psicología
+diseases: Enfermedades
+alsoIn: "También en: {name}"
+searchDisorders: Buscar trastornos
+searchDiseases: Buscar enfermedades
+phPsych: p. ej. límite, TOC, ansiedad
+phDisease: p. ej. Alzheimer, ictus, temblor
+countOf: "{n} de {t} {noun}"
+disordersNoun: trastornos
+diseasesNoun: enfermedades
+noMatch: Ningún resultado de {noun} coincide con «{q}».
+notePsych:
+    Organizados según las categorías del DSM-5-TR. Elige un trastorno para ver
+    la descripción completa y las áreas cerebrales que la investigación
+    relaciona con él.
+noteDisease:
+    Elige una enfermedad para ver la descripción completa y las áreas cerebrales
+    que afecta.
+allDisorders: ← Todos los trastornos
+allDiseases: ← Todas las enfermedades
+alsoCalled: También llamado {s}
+secOverview: Descripción general
+secBrain: Áreas cerebrales resaltadas en el modelo
+secSymptoms: Signos y síntomas
+secDiagnosis: Cómo se diagnostica
+secTypesD: Tipos y etapas
+secTypesP: Tipos y presentaciones
+secCauses: Causas y factores de riesgo
+secTreatment: Tratamiento
+secCourse: Evolución y pronóstico
+secCommon: Frecuencia
+condNote:
+    Los hallazgos cerebrales describen diferencias promedio observadas en grupos
+    de investigación. No sirven para diagnosticar a una persona, y los cambios
+    cerebrales pueden ser causa, consecuencia o ambas. Esto es material de
+    estudio, no consejo médico.
+fAll: Todo
+fTerm: Términos
+fRegion: Regiones
+fPsych: Psicología
+fDisease: Enfermedades
+tTerm: Término
+tRegion: Región
+tPsych: Psicología
+tDisease: Enfermedad
+entriesOf: "{n} de {t} entradas"
+nothingMatches: Nada coincide con «{q}».
+showOnModel: Ver en el modelo →
+openEntry: Abrir la ficha completa →
+dictionary: Diccionario
+close: Cerrar ✕
+seeInDict: Ver en el diccionario →
+brainRegion: Región cerebral
+openHighlight: Abrir la ficha y resaltar →
+notInDict:
+    Esto no está en el diccionario. Probablemente es una palabra común y no un
+    término cerebral o médico.
+browseDict: Explorar el diccionario →

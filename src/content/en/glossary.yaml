@@ -1,0 +1,1108 @@
+# Dictionary terms. `aka` lists other names that should also link to
+# the term when they appear in the text.
+
+- term: cerebral cortex
+  definition:
+      The thin, folded outer layer of the cerebrum, about 2–4 mm thick and made
+      mostly of gray matter. It handles most higher functions such as thought,
+      language and perception.
+  aka:
+      - cortex
+      - cortical
+- term: cerebrum
+  definition:
+      The largest part of the brain, made of the left and right hemispheres and
+      their lobes.
+- term: hemisphere
+  definition:
+      One half of the cerebrum. The two hemispheres are linked by the corpus
+      callosum, and each mostly controls the opposite side of the body.
+  aka:
+      - hemispheres
+- term: lobe
+  definition:
+      "One of the major divisions of each hemisphere: frontal, parietal,
+      temporal and occipital, plus the hidden insula. They are named after the
+      skull bones that cover them."
+  aka:
+      - lobes
+- term: gyrus
+  definition:
+      A raised ridge on the surface of the brain. Folding into gyri packs more
+      cortex into the skull.
+  aka:
+      - gyri
+      - precentral gyrus
+      - postcentral gyrus
+- term: sulcus
+  definition: A groove between two gyri. Very deep sulci are called fissures.
+  aka:
+      - sulci
+      - fissure
+      - calcarine sulcus
+      - intraparietal sulcus
+- term: central sulcus
+  definition:
+      The deep groove separating the frontal lobe from the parietal lobe, with
+      the motor cortex in front of it and the somatosensory cortex behind it.
+- term: lateral sulcus
+  definition:
+      The deep groove along the side of the brain that separates the temporal
+      lobe from the frontal and parietal lobes. Also called the Sylvian fissure.
+  aka:
+      - sylvian fissure
+- term: brodmann area
+  definition:
+      One of about 52 regions of the cortex defined by Korbinian Brodmann in
+      1909 based on differences in cell layers under the microscope. Still used
+      as a map, for example area 17 is V1.
+  aka:
+      - brodmann areas
+- term: operculum
+  definition:
+      The parts of the frontal, parietal and temporal lobes that fold over and
+      cover the insula. Latin for "lid".
+  aka:
+      - frontal operculum
+- term: diencephalon
+  definition:
+      The part of the forebrain between the cerebrum and the brainstem,
+      containing the thalamus, hypothalamus and epithalamus.
+- term: forebrain
+  definition:
+      The front division of the developing brain, which becomes the cerebrum and
+      diencephalon.
+- term: hindbrain
+  definition:
+      The back division of the developing brain, which becomes the pons, medulla
+      and cerebellum.
+- term: subcortical
+  definition:
+      Below the cortex. Used for deep structures such as the basal ganglia,
+      thalamus and amygdala.
+- term: anterior
+  definition: Toward the front.
+- term: posterior
+  definition: Toward the back.
+- term: superior
+  definition: Toward the top.
+- term: inferior
+  definition: Toward the bottom.
+- term: medial
+  definition:
+      Toward the midline, the center line that splits the body into left and
+      right.
+- term: lateral
+  definition: Toward the side, away from the midline.
+- term: dorsal
+  definition:
+      Toward the back or top. In the brain, dorsal usually means toward the top
+      of the head.
+- term: ventral
+  definition:
+      Toward the belly or bottom. In the brain, ventral usually means toward the
+      base.
+- term: midline
+  definition:
+      The imaginary center line that divides the brain and body into left and
+      right halves.
+- term: contralateral
+  definition:
+      On the opposite side. Most of the cerebrum controls and senses the
+      contralateral side of the body.
+- term: ipsilateral
+  definition:
+      On the same side. Each half of the cerebellum controls the ipsilateral
+      side of the body.
+- term: decussation
+  definition:
+      A point where nerve fibers cross from one side of the brain or spinal cord
+      to the other.
+  aka:
+      - pyramidal decussation
+- term: homunculus
+  definition:
+      A map of the body laid out across the motor or somatosensory cortex. Parts
+      that need fine control or sensitivity, like the hands and lips, get much
+      more space.
+  aka:
+      - motor homunculus
+      - sensory homunculus
+- term: tonotopic
+  definition:
+      Organized by sound frequency, like the keys of a piano. The auditory
+      system is tonotopic.
+  aka:
+      - tonotopically
+- term: visual field
+  definition:
+      The whole area you can see without moving your eyes. Each half of it is
+      handled by the opposite hemisphere.
+- term: optic chiasm
+  definition:
+      The X-shaped crossing just above the pituitary where fibers from the inner
+      half of each retina cross to the other side.
+- term: optic tract
+  definition:
+      The nerve fibers carrying visual signals from the optic chiasm to the
+      lateral geniculate nucleus.
+- term: optic radiations
+  definition:
+      Fiber bundles carrying visual signals from the lateral geniculate nucleus
+      to the primary visual cortex.
+- term: corticospinal tract
+  definition:
+      The main pathway carrying movement commands from the motor cortex down to
+      the spinal cord. Most of its fibers cross in the medulla.
+- term: arcuate fasciculus
+  definition:
+      A curved bundle of white matter linking Broca's area and Wernicke's area.
+- term: meninges
+  definition:
+      "Three protective membranes that cover the brain and spinal cord: the dura
+      mater, arachnoid mater and pia mater."
+  aka:
+      - meninges
+- term: subarachnoid space
+  definition:
+      The fluid-filled space between the arachnoid and pia mater, through which
+      CSF and large blood vessels run.
+- term: choroid plexus
+  definition: Tissue in the ventricles that produces cerebrospinal fluid.
+- term: cerebrospinal fluid
+  definition:
+      The clear fluid that fills the ventricles and surrounds the brain and
+      spinal cord, cushioning them and removing waste.
+  aka:
+      - csf
+- term: spinal cord
+  definition:
+      The bundle of nerves running down the spine that carries signals between
+      the brain and the body.
+- term: cranial nerves
+  definition:
+      Twelve pairs of nerves that come straight from the brain rather than the
+      spinal cord. They serve the head, face, senses and some organs.
+  aka:
+      - cranial nerve
+- term: vestibular system
+  definition:
+      The balance organs of the inner ear and the brain circuits that process
+      their signals.
+  aka:
+      - vestibular
+- term: vestibulo-ocular reflex
+  definition:
+      A reflex that moves your eyes opposite to your head movement so your gaze
+      stays steady.
+- term: folia
+  definition: The thin, leaf-like folds on the surface of the cerebellum.
+  aka:
+      - folium
+- term: striatum
+  definition:
+      The caudate nucleus, putamen and nucleus accumbens together. The main
+      input station of the basal ganglia.
+  aka:
+      - striatal
+      - associative striatum
+- term: limbic system
+  definition:
+      A group of connected structures, including the hippocampus, amygdala,
+      cingulate cortex and parts of the thalamus and hypothalamus, involved in
+      emotion, motivation and memory.
+  aka:
+      - limbic
+- term: papez circuit
+  definition:
+      A memory loop running from the hippocampus through the fornix, mammillary
+      bodies, anterior thalamus and cingulate cortex and back.
+- term: prefrontal cortex
+  definition:
+      The front part of the frontal lobe, in front of the motor areas, central
+      to planning, decision-making, judgment and social behavior.
+  aka:
+      - prefrontal
+- term: reticular formation
+  definition:
+      A network of neurons running through the brainstem that controls arousal,
+      alertness and the switch between sleep and waking.
+- term: superior colliculus
+  definition:
+      A bump on the back of the midbrain that controls reflexive eye and head
+      movements toward things you see.
+  aka:
+      - superior colliculi
+- term: inferior colliculus
+  definition:
+      A bump on the back of the midbrain that processes sound before it reaches
+      the thalamus.
+  aka:
+      - inferior colliculi
+- term: sella turcica
+  definition:
+      A saddle-shaped pocket in the skull base that holds the pituitary gland.
+- term: dorsal stream
+  definition:
+      The visual pathway running up into the parietal lobe that works out where
+      things are and how to act on them. Often called the "where" pathway.
+- term: ventral stream
+  definition:
+      The visual pathway running down into the temporal lobe that identifies
+      what things are. Often called the "what" pathway.
+- term: default mode network
+  definition:
+      A set of brain regions, including the posterior cingulate, precuneus and
+      medial prefrontal cortex, that is most active during rest, daydreaming and
+      thinking about yourself.
+  aka:
+      - default mode
+- term: salience network
+  definition:
+      A network centered on the anterior insula and anterior cingulate that
+      detects what is important and switches attention toward it.
+- term: mesolimbic pathway
+  definition:
+      Dopamine neurons running from the ventral tegmental area to the nucleus
+      accumbens. Central to reward and motivation.
+  aka:
+      - mesolimbic
+- term: mesocortical pathway
+  definition:
+      Dopamine neurons running from the ventral tegmental area to the prefrontal
+      cortex. Important for motivation and cognition.
+  aka:
+      - mesocortical
+- term: nigrostriatal pathway
+  definition:
+      Dopamine neurons running from the substantia nigra to the striatum.
+      Essential for movement and lost in Parkinson's disease.
+- term: hpa axis
+  definition:
+      "The hypothalamic-pituitary-adrenal axis: the body's main stress-hormone
+      system, in which the hypothalamus signals the pituitary, which signals the
+      adrenal glands to release cortisol."
+  aka:
+      - hypothalamic-pituitary-adrenal axis
+- term: reward circuit
+  definition:
+      The brain network that produces wanting and learning from rewards,
+      centered on dopamine from the VTA to the nucleus accumbens and prefrontal
+      cortex.
+  aka:
+      - reward system
+- term: neuron
+  definition:
+      A nerve cell. Neurons pass electrical and chemical signals to one another;
+      the human brain has roughly 86 billion of them.
+  aka:
+      - neurons
+      - nerve cell
+- term: glial cells
+  definition:
+      Non-neuron cells in the nervous system that support, insulate, feed and
+      protect neurons. They include astrocytes, oligodendrocytes and microglia.
+  aka:
+      - glia
+      - glial
+- term: axon
+  definition:
+      The long fiber a neuron uses to send signals to other cells. Many are
+      wrapped in myelin, which speeds signals up.
+  aka:
+      - axons
+- term: myelin
+  definition:
+      A fatty insulating layer around many axons. It makes nerve signals travel
+      much faster and gives white matter its pale color.
+  aka:
+      - myelinated
+- term: synapse
+  definition:
+      The junction where one neuron passes a signal to another, usually by
+      releasing neurotransmitters.
+  aka:
+      - synapses
+      - synaptic
+- term: neurotransmitter
+  definition:
+      A chemical messenger released at a synapse, such as dopamine, serotonin or
+      glutamate.
+  aka:
+      - neurotransmitters
+      - neuromodulators
+      - neuromodulator
+- term: dopamine
+  definition:
+      A neurotransmitter involved in movement, motivation, reward learning and
+      attention, made mainly in the substantia nigra and ventral tegmental area.
+- term: serotonin
+  definition:
+      A neurotransmitter involved in mood, sleep, appetite and impulse control,
+      made mainly in the raphe nuclei.
+- term: norepinephrine
+  definition:
+      A neurotransmitter and hormone involved in alertness, attention and the
+      stress response, made mainly in the locus coeruleus. Also called
+      noradrenaline.
+  aka:
+      - noradrenaline
+- term: acetylcholine
+  definition:
+      A neurotransmitter used by nerves to activate muscles and, in the brain,
+      for attention, learning and memory.
+- term: glutamate
+  definition:
+      The brain's main excitatory neurotransmitter, which makes neurons more
+      likely to fire.
+- term: gaba
+  definition:
+      The brain's main inhibitory neurotransmitter, which makes neurons less
+      likely to fire.
+- term: melatonin
+  definition:
+      A hormone released by the pineal gland at night that signals darkness to
+      the body and helps time sleep.
+- term: cortisol
+  definition:
+      The main stress hormone, released by the adrenal glands. It raises blood
+      sugar and helps the body respond to stress.
+- term: oxytocin
+  definition:
+      A hormone made in the hypothalamus involved in childbirth, breastfeeding
+      and social bonding.
+- term: vasopressin
+  definition:
+      A hormone made in the hypothalamus that helps the kidneys hold on to water
+      and influences social behavior.
+- term: orexin
+  definition:
+      A neuropeptide made in the lateral hypothalamus that promotes wakefulness.
+      Also called hypocretin.
+  aka:
+      - hypocretin
+- term: crh
+  definition:
+      "Corticotropin-releasing hormone: released by the hypothalamus to start
+      the stress-hormone cascade."
+- term: acth
+  definition:
+      "Adrenocorticotropic hormone: released by the pituitary to tell the
+      adrenal glands to make cortisol."
+- term: leptin
+  definition:
+      A hormone made by fat cells that signals the brain about long-term energy
+      stores and reduces hunger.
+- term: ghrelin
+  definition:
+      A hormone made by the stomach that rises before meals and increases
+      hunger.
+- term: neuromelanin
+  definition:
+      A dark pigment in some dopamine and norepinephrine neurons, which gives
+      the substantia nigra and locus coeruleus their color.
+- term: purkinje cells
+  definition:
+      Large neurons in the cerebellar cortex that are the only output of the
+      cerebellar cortex.
+  aka:
+      - purkinje cell
+- term: upper motor neuron
+  definition:
+      A neuron in the motor cortex whose axon runs down to the brainstem or
+      spinal cord.
+  aka:
+      - upper motor neurons
+- term: lower motor neuron
+  definition:
+      A neuron in the brainstem or spinal cord that connects directly to
+      muscles.
+  aka:
+      - lower motor neurons
+- term: mirror neurons
+  definition:
+      Neurons that fire both when you perform an action and when you watch
+      someone else perform it.
+  aka:
+      - mirror neuron
+- term: place cells
+  definition:
+      Neurons in the hippocampus that fire when you are in a specific location,
+      helping form a mental map.
+  aka:
+      - place cell
+- term: grid cells
+  definition:
+      Neurons in the entorhinal cortex that fire at the points of a repeating
+      hexagonal grid as you move through space.
+  aka:
+      - grid cell
+- term: head direction cells
+  definition:
+      Neurons that fire when your head points in a particular direction, like an
+      internal compass.
+- term: white matter
+  definition:
+      Brain tissue made mostly of myelinated axons. It carries signals between
+      regions, much like wiring.
+- term: gray matter
+  definition:
+      Brain tissue made mostly of neuron cell bodies and synapses, where most
+      information processing happens.
+  aka:
+      - grey matter
+- term: nucleus
+  definition:
+      In brain anatomy, a cluster of neuron cell bodies deep in the brain that
+      work together on a particular job.
+  aka:
+      - nuclei
+- term: relay
+  definition:
+      In the brain, a station that receives signals and passes them on to their
+      destination, often filtering them along the way.
+- term: hormone
+  definition:
+      A chemical messenger released into the bloodstream that acts on distant
+      organs, such as cortisol, insulin or adrenaline.
+  aka:
+      - hormones
+- term: endocrine system
+  definition: The body's network of glands that release hormones into the blood.
+  aka:
+      - endocrine
+- term: executive function
+  definition:
+      "A set of mental skills for managing your own behavior: planning, focusing
+      attention, switching between tasks, keeping instructions in mind and
+      controlling impulses."
+  aka:
+      - executive functions
+- term: working memory
+  definition:
+      Holding and using information for a few seconds, like keeping a phone
+      number in mind while you dial it.
+  aka:
+      - phonological working memory
+      - verbal working memory
+- term: response inhibition
+  definition:
+      The ability to stop an action that has already been planned or started.
+- term: cognitive flexibility
+  definition: The ability to switch between tasks, rules or ways of thinking.
+- term: metacognition
+  definition:
+      Thinking about your own thinking, such as judging how confident you are in
+      an answer.
+- term: theory of mind
+  definition:
+      The ability to understand that other people have their own beliefs,
+      desires and intentions that may differ from yours.
+- term: interoception
+  definition:
+      Your sense of the internal state of your body, such as heartbeat,
+      breathing, hunger and temperature.
+- term: proprioception
+  definition:
+      Your sense of where your body parts are and how they are moving, even with
+      your eyes closed.
+- term: body schema
+  definition:
+      The brain's internal model of the body's position and layout, used to plan
+      movement.
+- term: voluntary movement
+  definition:
+      Movement you choose to make, like reaching for a cup, as opposed to an
+      automatic reflex.
+- term: coordination
+  definition:
+      The smooth, well-timed teamwork of muscles needed for accurate movement.
+- term: motor learning
+  definition:
+      Getting better at a movement through practice, like learning to ride a
+      bike or type.
+  aka:
+      - motor skills
+      - motor skill
+      - procedural learning
+- term: declarative memory
+  definition:
+      Memory for facts and events that you can consciously recall and put into
+      words. Also called explicit memory.
+  aka:
+      - explicit memory
+      - declarative memories
+- term: episodic memory
+  definition: Memory for specific personal events, with their time and place.
+  aka:
+      - autobiographical memory
+- term: semantic memory
+  definition: Memory for general facts and the meanings of words and concepts.
+- term: long-term memory
+  definition: Memory stored for a long time, from hours to a lifetime.
+  aka:
+      - long-term memories
+- term: memory consolidation
+  definition:
+      The process of stabilizing a new memory so it lasts. Much of it happens
+      during sleep.
+  aka:
+      - consolidation
+- term: pattern separation
+  definition:
+      Storing similar experiences as distinct memories so they are not confused.
+- term: fear conditioning
+  definition:
+      Learning that a neutral cue predicts something bad, so the cue itself
+      starts to cause fear.
+- term: fear extinction
+  definition:
+      Learning that a feared cue is now safe. It creates a new safety memory
+      rather than erasing the old fear.
+  aka:
+      - extinction
+- term: reward prediction error
+  definition:
+      The difference between the reward you expected and the reward you got.
+      Dopamine neurons signal it, and it drives learning.
+  aka:
+      - reward prediction errors
+- term: homeostasis
+  definition:
+      The body's process of keeping internal conditions such as temperature,
+      water balance and blood sugar steady.
+- term: circadian rhythm
+  definition:
+      The body's roughly 24-hour internal clock, which times sleep, alertness,
+      hormones and body temperature.
+  aka:
+      - circadian rhythms
+      - circadian
+- term: rem sleep
+  definition:
+      "Rapid eye movement sleep: the stage of vivid dreaming, during which most
+      muscles are temporarily paralyzed."
+  aka:
+      - rem
+- term: sleep spindles
+  definition:
+      Short bursts of brain waves during sleep, generated with help from the
+      thalamus, linked to protecting sleep and strengthening memories.
+  aka:
+      - sleep spindle
+- term: readiness potential
+  definition:
+      A slow build-up of brain activity, measured with EEG, that begins before a
+      self-chosen movement.
+- term: fight-or-flight response
+  definition:
+      "The body's fast reaction to danger: a racing heart, quicker breathing and
+      a surge of stress hormones such as adrenaline."
+  aka:
+      - fight-or-flight
+      - fight or flight
+- term: consciousness
+  definition:
+      The state of being awake and aware of yourself and your surroundings.
+  aka:
+      - conscious
+      - consciously
+- term: neuroplasticity
+  definition:
+      The brain's ability to change its connections and organization in response
+      to experience, learning or injury.
+  aka:
+      - plasticity
+- term: neurogenesis
+  definition: The birth of new neurons.
+  aka:
+      - adult neurogenesis
+- term: autonomic
+  definition:
+      Describes the automatic body functions, like heart rate, breathing,
+      digestion and blood pressure, that run without conscious effort.
+  aka:
+      - autonomic nervous system
+- term: aphasia
+  definition:
+      A language disorder caused by brain damage that affects speaking,
+      understanding, reading or writing.
+  aka:
+      - expressive aphasia
+      - receptive aphasia
+      - conduction aphasia
+      - primary progressive aphasia
+      - primary progressive aphasias
+- term: apraxia
+  definition:
+      Difficulty carrying out skilled, purposeful movements even though strength
+      and understanding are intact.
+  aka:
+      - ideomotor apraxia
+- term: agnosia
+  definition:
+      Inability to recognize objects, faces or sounds even though the senses
+      work normally.
+  aka:
+      - visual agnosia
+- term: prosopagnosia
+  definition:
+      "Face blindness: difficulty recognizing faces, including familiar ones."
+  aka:
+      - face blindness
+- term: achromatopsia
+  definition:
+      Loss of color vision. Cerebral achromatopsia is caused by damage to the
+      color area V4.
+  aka:
+      - cerebral achromatopsia
+- term: akinetopsia
+  definition:
+      "Motion blindness: inability to perceive movement smoothly, caused by
+      damage to V5/MT."
+- term: hemianopia
+  definition:
+      Loss of vision in half of the visual field. Homonymous hemianopia affects
+      the same half in both eyes.
+  aka:
+      - homonymous hemianopia
+- term: quadrantanopia
+  definition: Loss of vision in one quarter of the visual field.
+- term: hemispatial neglect
+  definition:
+      A condition, usually after damage to the right parietal lobe, in which a
+      person fails to notice things on one side of space, typically the left.
+  aka:
+      - neglect
+- term: blindsight
+  definition:
+      A rare ability of some people with visual cortex damage to respond to
+      things in their blind area without consciously seeing them.
+- term: amnesia
+  definition:
+      Memory loss. Anterograde amnesia is the inability to form new memories;
+      retrograde amnesia is loss of memories from before an injury.
+  aka:
+      - anterograde amnesia
+      - retrograde amnesia
+- term: confabulation
+  definition:
+      Producing false memories without intending to deceive, often to fill gaps
+      in memory.
+- term: ataxia
+  definition:
+      Clumsy, uncoordinated movement, often with unsteady walking, usually
+      caused by damage to the cerebellum or its connections.
+  aka:
+      - truncal ataxia
+      - optic ataxia
+- term: dysmetria
+  definition:
+      Overshooting or undershooting when reaching for a target, a sign of
+      cerebellar damage.
+- term: intention tremor
+  definition:
+      A tremor that gets worse as the hand approaches a target, typical of
+      cerebellar damage.
+- term: tremor
+  definition: An involuntary, rhythmic shaking of a body part.
+  aka:
+      - resting tremor
+- term: nystagmus
+  definition: Involuntary, repetitive jerking movements of the eyes.
+- term: vertigo
+  definition:
+      A spinning sensation, usually from a problem in the inner ear or its brain
+      connections.
+- term: hemiparesis
+  definition: Weakness on one side of the body.
+  aka:
+      - hemiplegia
+- term: spasticity
+  definition:
+      Muscle stiffness and tightness caused by damage to motor pathways in the
+      brain or spinal cord.
+- term: rigidity
+  definition:
+      Stiffness of the muscles that resists movement in any direction, typical
+      of Parkinson's disease.
+- term: bradykinesia
+  definition:
+      Slowness of movement and gradual shrinking of movement size, a core sign
+      of Parkinson's disease.
+- term: chorea
+  definition:
+      Involuntary, irregular, dance-like movements, typical of Huntington's
+      disease.
+- term: hemiballismus
+  definition:
+      Violent, flinging movements of the limbs on one side, usually from damage
+      to the subthalamic nucleus.
+- term: myoclonus
+  definition: Sudden, brief, shock-like muscle jerks.
+- term: parkinsonism
+  definition:
+      A combination of slowness, stiffness, tremor and balance problems, seen in
+      Parkinson's disease and several other conditions.
+- term: fasciculations
+  definition: Small, visible twitches of muscle fibers under the skin.
+  aka:
+      - fasciculation
+- term: cataplexy
+  definition:
+      Sudden, brief muscle weakness triggered by strong emotions such as
+      laughter, seen in narcolepsy type 1.
+- term: sleep paralysis
+  definition:
+      Being briefly unable to move or speak while falling asleep or waking up.
+- term: tic
+  definition: A sudden, rapid, repetitive movement or sound.
+  aka:
+      - tics
+      - motor tics
+      - vocal tics
+- term: premonitory urge
+  definition:
+      The uncomfortable feeling that builds before a tic and is relieved by
+      doing it.
+- term: coprolalia
+  definition:
+      Involuntary swearing or socially inappropriate words, seen in a minority
+      of people with Tourette's syndrome.
+- term: seizure
+  definition:
+      A sudden burst of abnormal electrical activity in the brain that can
+      change movement, awareness or feeling.
+  aka:
+      - seizures
+- term: aura
+  definition:
+      A warning sensation before a migraine or seizure, such as flashing lights,
+      tingling or a strange smell.
+  aka:
+      - auras
+- term: focal epilepsy
+  definition:
+      Epilepsy in which seizures start in one particular area of the brain.
+  aka:
+      - focal seizures
+      - focal seizure
+- term: cortical spreading depression
+  definition:
+      A slow wave of intense brain activity followed by quiet that moves across
+      the cortex, thought to cause migraine aura.
+- term: coma
+  definition:
+      A long-lasting state of deep unconsciousness in which a person cannot be
+      woken.
+- term: dementia
+  definition:
+      A decline in memory and thinking severe enough to interfere with daily
+      life. It has many causes, the most common being Alzheimer's disease.
+- term: locked-in syndrome
+  definition:
+      A condition, usually caused by damage to the pons, in which a person is
+      awake and aware but can move almost nothing except the eyes.
+- term: split-brain
+  definition:
+      Describes people whose corpus callosum has been cut, usually to treat
+      severe epilepsy, so the two hemispheres share little information.
+  aka:
+      - split brain
+- term: akinetic mutism
+  definition:
+      A state in which a person is awake but rarely moves or speaks, usually
+      from damage to the anterior cingulate or nearby areas.
+- term: psychosis
+  definition:
+      A loss of contact with reality, usually involving hallucinations or
+      delusions.
+  aka:
+      - psychotic
+- term: hallucination
+  definition: Perceiving something that is not there, such as hearing voices.
+  aka:
+      - hallucinations
+      - auditory hallucinations
+      - visual hallucinations
+- term: delusion
+  definition:
+      A fixed false belief that persists despite clear evidence against it.
+  aka:
+      - delusions
+- term: positive symptoms
+  definition:
+      In schizophrenia, experiences added to normal life, such as
+      hallucinations, delusions and disorganized thinking.
+- term: negative symptoms
+  definition:
+      In schizophrenia, reductions in normal functions, such as motivation,
+      pleasure, speech and emotional expression.
+- term: mania
+  definition:
+      A period of abnormally elevated or irritable mood with high energy,
+      reduced need for sleep and risky behavior, lasting at least a week.
+  aka:
+      - manic
+- term: hypomania
+  definition:
+      A milder, shorter form of mania that does not cause severe impairment.
+  aka:
+      - hypomanic
+- term: anhedonia
+  definition: Reduced ability to feel pleasure or interest.
+- term: rumination
+  definition:
+      Repetitively going over negative thoughts or problems without reaching a
+      solution.
+- term: obsession
+  definition: An unwanted, intrusive thought, image or urge that causes anxiety.
+  aka:
+      - obsessions
+- term: compulsion
+  definition:
+      A repetitive behavior or mental act done to reduce anxiety or prevent a
+      feared outcome.
+  aka:
+      - compulsions
+- term: dissociation
+  definition:
+      A disconnection between thoughts, memories, feelings, surroundings or
+      identity.
+  aka:
+      - dissociative
+- term: hypervigilance
+  definition: Being constantly on alert for danger.
+- term: impulsivity
+  definition: Acting quickly without thinking through consequences.
+  aka:
+      - impulsive
+- term: empathy
+  definition:
+      The ability to understand and share the feelings of another person.
+- term: psychopathy
+  definition:
+      A personality construct marked by shallow emotion, lack of empathy and
+      remorse, and manipulative or antisocial behavior.
+  aka:
+      - psychopathic traits
+      - callous-unemotional traits
+- term: comorbidity
+  definition: Having two or more conditions at the same time.
+  aka:
+      - co-occurring
+- term: heritability
+  definition:
+      The share of differences in a trait across a population that can be
+      explained by genetic differences.
+  aka:
+      - heritable
+- term: prevalence
+  definition:
+      The share of a population that has a condition at a given time or over a
+      lifetime.
+- term: atrophy
+  definition:
+      Shrinking of tissue, such as loss of brain volume from neuron death.
+- term: lesion
+  definition: An area of damaged or abnormal tissue.
+  aka:
+      - lesions
+- term: neurodegenerative
+  definition:
+      Describes diseases in which neurons gradually die over time, such as
+      Alzheimer's and Parkinson's.
+  aka:
+      - neurodegeneration
+- term: amyloid-beta
+  definition:
+      A protein fragment that clumps into plaques between neurons in Alzheimer's
+      disease.
+  aka:
+      - amyloid
+      - amyloid plaques
+      - plaques
+- term: tau
+  definition:
+      A protein that normally stabilizes the internal skeleton of neurons. In
+      diseases like Alzheimer's it misfolds and forms tangles.
+  aka:
+      - tau tangles
+      - neurofibrillary tangles
+      - tangles
+- term: alpha-synuclein
+  definition:
+      A protein that clumps into Lewy bodies in Parkinson's disease and Lewy
+      body dementia.
+- term: lewy bodies
+  definition: Abnormal clumps of alpha-synuclein protein inside neurons.
+  aka:
+      - lewy body
+- term: tdp-43
+  definition:
+      A protein that forms abnormal clumps in most cases of ALS and many cases
+      of frontotemporal dementia.
+- term: prion
+  definition:
+      A misfolded protein that can force normal proteins to misfold too,
+      spreading through the brain.
+  aka:
+      - prions
+- term: demyelination
+  definition: Damage to or loss of the myelin coating around nerve fibers.
+  aka:
+      - demyelinating
+- term: autoimmune
+  definition:
+      Describes a condition where the immune system mistakenly attacks the
+      body's own tissues.
+- term: inflammation
+  definition:
+      The immune system's response to injury or infection, which can damage
+      tissue if it persists.
+  aka:
+      - neuroinflammation
+- term: ischemia
+  definition: Reduced blood flow to tissue, depriving it of oxygen.
+  aka:
+      - ischemic
+- term: hemorrhage
+  definition: Bleeding from a ruptured blood vessel.
+- term: atherosclerosis
+  definition: Buildup of fatty plaque inside arteries, narrowing them.
+- term: atrial fibrillation
+  definition:
+      An irregular heart rhythm that lets clots form in the heart, which can
+      travel to the brain.
+- term: diffuse axonal injury
+  definition:
+      Widespread tearing of long nerve fibers caused by rapid acceleration and
+      rotation of the brain.
+- term: diabetes insipidus
+  definition:
+      A rare condition in which the body cannot hold on to water, causing heavy
+      urination and intense thirst. It is unrelated to blood-sugar diabetes.
+- term: thiamine
+  definition:
+      Vitamin B1. Severe deficiency damages the brain, causing
+      Wernicke-Korsakoff syndrome.
+  aka:
+      - vitamin b1
+- term: autosomal dominant
+  definition:
+      An inheritance pattern where one copy of a changed gene is enough to cause
+      a condition, giving each child a 50% chance.
+- term: autosomal recessive
+  definition:
+      An inheritance pattern where two copies of a changed gene, one from each
+      parent, are needed to cause a condition.
+- term: cag repeat
+  definition:
+      A repeated three-letter DNA sequence. Too many repeats in certain genes
+      cause diseases such as Huntington's and some ataxias.
+  aka:
+      - repeat expansions
+      - repeat expansion
+- term: apoe ε4
+  definition:
+      A version of the APOE gene that raises the risk of Alzheimer's disease.
+      One copy roughly triples risk; two copies raise it much more.
+  aka:
+      - apoe4
+      - apoe
+- term: stroke
+  definition:
+      Brain damage caused when a blocked or burst blood vessel cuts off the
+      blood supply to part of the brain.
+  aka:
+      - strokes
+- term: ssri
+  definition:
+      "Selective serotonin reuptake inhibitor: a common class of antidepressant,
+      such as sertraline or fluoxetine, that increases serotonin signaling."
+  aka:
+      - ssris
+- term: snri
+  definition:
+      "Serotonin-norepinephrine reuptake inhibitor: an antidepressant class that
+      increases both serotonin and norepinephrine signaling."
+  aka:
+      - snris
+- term: antipsychotic
+  definition:
+      A medication that reduces psychotic symptoms, mainly by blocking dopamine
+      D2 receptors.
+  aka:
+      - antipsychotics
+- term: mood stabilizer
+  definition:
+      A medication, such as lithium, that reduces mood episodes in bipolar
+      disorder.
+  aka:
+      - mood stabilizers
+- term: cbt
+  definition:
+      "Cognitive behavioral therapy: a structured talk therapy that changes
+      unhelpful thoughts and behaviors."
+  aka:
+      - cognitive behavioral therapy
+- term: dbt
+  definition:
+      "Dialectical behavior therapy: a CBT-based therapy teaching mindfulness,
+      emotion regulation, distress tolerance and relationship skills."
+  aka:
+      - dialectical behavior therapy
+- term: exposure therapy
+  definition:
+      A therapy in which a person gradually and safely faces feared situations
+      so the brain learns they are safe.
+  aka:
+      - exposure and response prevention
+      - erp
+- term: deep brain stimulation
+  definition:
+      Surgery that places electrodes in specific brain structures and delivers
+      electrical pulses to change abnormal activity.
+  aka:
+      - dbs
+- term: transcranial magnetic stimulation
+  definition:
+      A noninvasive treatment that uses magnetic pulses to stimulate an area of
+      cortex.
+  aka:
+      - tms
+      - rtms
+- term: electroconvulsive therapy
+  definition:
+      A treatment for severe depression that induces a brief controlled seizure
+      under anesthesia.
+  aka:
+      - ect
+- term: mri
+  definition:
+      "Magnetic resonance imaging: a scan using magnets and radio waves to make
+      detailed pictures of the brain."
+  aka:
+      - mri scan
+- term: fmri
+  definition:
+      "Functional MRI: measures changes in blood oxygen to show which brain
+      areas are active."
+- term: diffusion mri
+  definition:
+      An MRI technique that tracks water movement along fibers to map white
+      matter.
+  aka:
+      - diffusion tensor imaging
+      - dti
+- term: pet
+  definition:
+      "Positron emission tomography: a scan using a radioactive tracer to
+      measure metabolism or detect proteins like amyloid."
+  aka:
+      - pet scan
+      - pet scans
+- term: eeg
+  definition:
+      "Electroencephalography: recording the brain's electrical activity through
+      electrodes on the scalp."

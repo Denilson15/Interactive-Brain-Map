@@ -2,12 +2,13 @@ import { test, expect, regionHeading } from "./fixtures";
 
 test.describe("psychology and disease conditions", () => {
     test("every condition opens its full write-up", async ({ app }) => {
-        const problems = await app.evaluate(() => {
+        const problems = await app.evaluate(async () => {
             const { CONDS, openCondition } = (window as any).__atlas;
             const found: string[] = [];
             for (const key of Object.keys(CONDS)) {
                 const condition = CONDS[key];
-                openCondition(key);
+                // Resolves once the write-ups have loaded and it's shown.
+                await openCondition(key);
                 const view = document.getElementById(
                     condition.kind === "psych" ? "view-psych" : "view-disease",
                 )!;

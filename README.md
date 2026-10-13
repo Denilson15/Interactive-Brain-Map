@@ -18,6 +18,9 @@ npm run preview   # serve the built site from dist/
   site in `dist/` and will let rarely used content load on demand.
 - [TypeScript](https://www.typescriptlang.org) – type-checks the code
   before it runs, catching mistakes in how data flows through the app.
+- [yaml](https://eemeli.org/yaml/) – reads the content files at build
+  time (a small plugin in `vite.config.ts`), so the browser gets plain
+  JavaScript and never parses YAML.
 - [Fontsource](https://fontsource.org) – the three typefaces (Bricolage
   Grotesque, Source Serif 4, IBM Plex Mono; SIL Open Font License) as
   npm packages, so fonts are served with the site instead of from Google.
@@ -46,8 +49,11 @@ npm run preview   # serve the built site from dist/
   - `stage.ts` – renderer, camera, highlighting, picking, labels
 - `src/ui/` – the panels: region, conditions, dictionary, popover,
   section map and the phone bottom sheet
-- `src/*.js` – the content (regions, conditions, dictionary) and its
-  Spanish translation (`es_*.js`); Spanish loads only when chosen
+- `src/content/` – all study content as YAML, easy to review and edit:
+  - `en/` – regions and parts, the hierarchy, disorders, diseases and the
+    dictionary; `en/write-ups/` holds the long condition write-ups,
+    loaded the first time a condition is opened
+  - `es/` – the Spanish translation, loaded only when Spanish is chosen
 
 ## Run the tests
 End-to-end tests use [Playwright](https://playwright.dev), which drives a

@@ -3,11 +3,11 @@ node_modules/
 package-lock.json
 playwright-report/
 test-results/
-# Legacy content scripts, converted to YAML in the next commit.
-src/*.js
 # Rewritten from scratch in the design-system step.
 src/styles.css
 README.md
 # Project files edited by hand or compared byte-for-byte by tests.
 CLAUDE.md
 tests/**/__snapshots__/
+# Long category names are deliberately wrapped onto a second line.
+src/content/es/categories.yaml
