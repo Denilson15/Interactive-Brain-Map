@@ -1,12 +1,15 @@
 import { test as base, expect, type Page } from "@playwright/test";
 
-// Web fonts still load from Google Fonts until they are self-hosted.
-// Tests block them so they run offline; the app falls back to system
-// fonts, which doesn't affect behavior.
-async function blockExternalFonts(page: Page): Promise<void> {
-    await page.route(/fonts\.(googleapis|gstatic)\.com/, (route) =>
-        route.abort(),
-    );
+// The site makes no third-party requests: fonts and three.js are bundled.
+// Tests record any request that leaves the local server so a stray CDN
+// or tracking call fails the test instead of slipping in unnoticed.
+function recordExternalRequests(page: Page, external: string[]): void {
+    page.on("request", (request) => {
+        const url = new URL(request.url());
+        if (url.protocol.startsWith("http") && url.hostname !== "127.0.0.1") {
+            external.push(request.url());
+        }
+    });
 }
 
 type Fixtures = {
@@ -31,7 +34,8 @@ export const test = base.extend<Fixtures>({
                 consoleWarnings.push(message.text());
             }
         });
-        await blockExternalFonts(page);
+        const external: string[] = [];
+        recordExternalRequests(page, external);
         await page.goto("/");
         // window.__atlas is set at the very end of app start-up.
         await page.waitForFunction(() => "__atlas" in window, null, {
@@ -39,6 +43,7 @@ export const test = base.extend<Fixtures>({
         });
         await use(page);
         expect(pageErrors, "uncaught page errors").toEqual([]);
+        expect(external, "requests to other servers").toEqual([]);
     },
 });
 

@@ -4,8 +4,8 @@
   --bg:#ECEFF3; --surface:#F8FAFC; --ink:#151B24; --muted:#5B6574; --line:#D2D9E1;
   --accent:#2C46C6; --accent-soft:#DFE4FA; --stage:#1A2029; --stage-ink:#E8EDF3;
   --hot:#E2412F; --warm:#D88A12;
-  --display:"Bricolage Grotesque",ui-sans-serif,system-ui,sans-serif;
-  --body:"Source Serif 4",Georgia,"Times New Roman",serif;
+  --display:"Bricolage Grotesque Variable","Bricolage Grotesque",ui-sans-serif,system-ui,sans-serif;
+  --body:"Source Serif 4 Variable","Source Serif 4",Georgia,"Times New Roman",serif;
   --mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
 }
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){

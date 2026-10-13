@@ -18,6 +18,9 @@ npm run preview   # serve the built site from dist/
   site in `dist/` and will let rarely used content load on demand.
 - [TypeScript](https://www.typescriptlang.org) – type-checks the code
   before it runs, catching mistakes in how data flows through the app.
+- [Fontsource](https://fontsource.org) – the three typefaces (Bricolage
+  Grotesque, Source Serif 4, IBM Plex Mono; SIL Open Font License) as
+  npm packages, so fonts are served with the site instead of from Google.
 - [Prettier](https://prettier.io) – formats code automatically to the
   house style (4-space indent, 80 columns), so style is never a review
   topic.
