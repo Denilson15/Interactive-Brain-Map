@@ -9,6 +9,12 @@
     },
     "devDependencies": {
         "@playwright/test": "1.56.1",
+        "@types/three": "0.128.0",
+        "prettier": "3.9.10",
+        "typescript": "7.0.2",
+        "vite": "8.3.4"
+    },
+    "dependencies": {
         "three": "0.128.0"
     }
 }
