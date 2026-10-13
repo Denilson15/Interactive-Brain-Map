@@ -15,6 +15,20 @@ Open `index.html` in a browser. No install needed (three.js loads from a CDN).
 - `src/es_*.js` – Spanish translations (interface, anatomy, conditions, dictionary), layered over the English content
 - `build.py` – combines `src/` into `index.html` (`python3 build.py`)
 
+## Run the tests
+End-to-end tests use [Playwright](https://playwright.dev), which drives a
+real browser, so they check what a visitor actually sees: every
+drill-down level, conditions, the dictionary, language switching and the
+phone layout.
+
+```sh
+npm install
+npx playwright install chromium
+npm run test:e2e
+```
+
+The same tests run on GitHub Actions for every push and pull request.
+
 ## Deploy with GitHub Pages
 Settings → Pages → Source: "Deploy from a branch" → `main` / root.
 
