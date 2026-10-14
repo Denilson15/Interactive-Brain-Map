@@ -11,6 +11,15 @@
             content="Interactive 3D brain map for studying neuroscience, psychology and medicine."
         />
         <title>Interactive Brain Map</title>
+        <script>
+            // Returning visitors skip the intro; decided before first
+            // paint so it never flashes. Storage may be unavailable.
+            try {
+                if (localStorage.getItem("ibm-intro-seen")) {
+                    document.documentElement.dataset.introSeen = "";
+                }
+            } catch (e) {}
+        </script>
     </head>
     <body data-stage="loading">
         <div class="app">
@@ -21,17 +30,36 @@
                     </h1>
                     <p class="stats" id="stats"></p>
                 </div>
-                <div
-                    class="segmented lang"
-                    role="group"
-                    aria-label="Language / Idioma"
-                >
-                    <button type="button" data-lang="en" aria-pressed="true">
-                        EN
+                <div class="header-actions">
+                    <button
+                        class="button button--quiet about-button"
+                        id="aboutBtn"
+                        type="button"
+                        aria-controls="intro"
+                        data-i18n="about"
+                    >
+                        About
                     </button>
-                    <button type="button" data-lang="es" aria-pressed="false">
-                        ES
-                    </button>
+                    <div
+                        class="segmented lang"
+                        role="group"
+                        aria-label="Language / Idioma"
+                    >
+                        <button
+                            type="button"
+                            data-lang="en"
+                            aria-pressed="true"
+                        >
+                            EN
+                        </button>
+                        <button
+                            type="button"
+                            data-lang="es"
+                            aria-pressed="false"
+                        >
+                            ES
+                        </button>
+                    </div>
                 </div>
             </header>
 
@@ -156,6 +184,49 @@
                         to open it; press Esc to go back up.
                     </p>
                     <div class="stage-legend" id="condbar" hidden></div>
+                    <!-- First-visit introduction. Plain HTML so it shows at
+                         once (and is readable without JavaScript). -->
+                    <section
+                        class="intro"
+                        id="intro"
+                        aria-labelledby="introTitle"
+                    >
+                        <h2 class="intro-title" id="introTitle">
+                            <span data-i18n="introTitle"
+                                >Explore the human brain in 3D</span
+                            >
+                        </h2>
+                        <p class="intro-lead" data-i18n="introLead">
+                            An interactive atlas for students, teachers and
+                            anyone curious about how the brain is built and what
+                            changes when illness affects it.
+                        </p>
+                        <ul class="intro-points">
+                            <li id="introPoint1">
+                                Take it apart, from the hemispheres down to 79
+                                parts
+                            </li>
+                            <li id="introPoint2">
+                                See which areas 81 psychological and
+                                neurological conditions involve
+                            </li>
+                            <li id="introPoint3">
+                                Look up any term in a 415-entry dictionary
+                            </li>
+                        </ul>
+                        <button
+                            class="button button--primary intro-cta"
+                            id="introCta"
+                            type="button"
+                            data-i18n="introCta"
+                        >
+                            Explore the brain
+                        </button>
+                        <p class="intro-meta" data-i18n="introMeta">
+                            Free, no sign-up, in English and Spanish. A study
+                            reference, not medical advice.
+                        </p>
+                    </section>
                     <!-- Shown from the first paint until the model is built.
                          Replaced by #stageError if the 3D view can't run. -->
                     <div class="stage-status" id="stageStatus" role="status">

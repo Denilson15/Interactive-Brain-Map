@@ -30,6 +30,8 @@ type Options = {
     withoutWebGL: boolean;
     /** Make requests for matching files fail (e.g. a lazy chunk). */
     failDownloads: RegExp | null;
+    /** Visit as a first-time visitor, who sees the intro. */
+    firstVisit: boolean;
 };
 
 type Fixtures = {
@@ -43,6 +45,7 @@ type Fixtures = {
 export const test = base.extend<Fixtures & Options>({
     withoutWebGL: [false, { option: true }],
     failDownloads: [null, { option: true }],
+    firstVisit: [false, { option: true }],
     pageErrors: async ({}, use) => {
         await use([]);
     },
@@ -50,10 +53,23 @@ export const test = base.extend<Fixtures & Options>({
         await use([]);
     },
     app: async (
-        { page, pageErrors, consoleWarnings, withoutWebGL, failDownloads },
+        {
+            page,
+            pageErrors,
+            consoleWarnings,
+            withoutWebGL,
+            failDownloads,
+            firstVisit,
+        },
         use,
     ) => {
         if (withoutWebGL) await page.addInitScript(disableWebGL);
+        // Most tests act as returning visitors, so the intro stays closed.
+        if (!firstVisit) {
+            await page.addInitScript(() =>
+                localStorage.setItem("ibm-intro-seen", "1"),
+            );
+        }
         if (failDownloads) {
             await page.route(failDownloads, (route) => route.abort());
         }

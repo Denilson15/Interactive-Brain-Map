@@ -121,6 +121,21 @@ const UI_EN = {
         "This isn't in the dictionary. It's likely an everyday word " +
         "rather than a brain or medical term.",
     browseDict: "Browse the dictionary",
+    about: "About",
+    introTitle: "Explore the human brain in 3D",
+    introLead:
+        "An interactive atlas for students, teachers and anyone curious " +
+        "about how the brain is built and what changes when illness " +
+        "affects it.",
+    introPoint1: "Take it apart, from the hemispheres down to {p} parts",
+    introPoint2:
+        "See which areas {c} psychological and neurological conditions " +
+        "involve",
+    introPoint3: "Look up any term in a {e}-entry dictionary",
+    introCta: "Explore the brain",
+    introMeta:
+        "Free, no sign-up, in English and Spanish. A study reference, " +
+        "not medical advice.",
     loadingTitle: "Loading the 3D brain",
     loadingNote: "You can read and search while it loads.",
     errWebglTitle: "The 3D view can't start on this device",

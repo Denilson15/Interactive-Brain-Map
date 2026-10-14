@@ -105,6 +105,16 @@ input {
     border-color: var(--color-text-muted);
     background: var(--color-sunken);
 }
+/* The main action on a screen; at most one per view. */
+.button--primary {
+    border-color: var(--color-accent);
+    background: var(--color-accent);
+    color: var(--color-on-accent);
+}
+.button--primary:hover {
+    border-color: var(--color-accent-hover);
+    background: var(--color-accent-hover);
+}
 /* Text-only actions inside panels ("Show on the model"). */
 .button--quiet {
     min-height: 32px;

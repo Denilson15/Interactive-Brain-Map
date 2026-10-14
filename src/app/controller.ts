@@ -43,6 +43,7 @@ import {
     resultForKey,
     showDefinition,
 } from "../ui/popover";
+import { closeIntro, initIntro, isIntroOpen } from "../ui/intro";
 import {
     initRegionPanel,
     involvementSwatch,
@@ -264,6 +265,17 @@ function setStaticText(): void {
     document.querySelectorAll<HTMLElement>("[data-lang]").forEach((b) => {
         b.setAttribute("aria-pressed", String(b.dataset.lang === lang));
     });
+    const counts = {
+        p: content.atlas.subs.length,
+        c: PSYCH.length + DISEASES.length,
+        e: DICT.length,
+    };
+    for (const n of [1, 2, 3]) {
+        document.getElementById("introPoint" + n)!.textContent = t(
+            "introPoint" + n,
+            counts,
+        );
+    }
     document.getElementById("stats")!.textContent = t("stats", {
         p: content.atlas.subs.length,
         d: PSYCH.length,
@@ -372,6 +384,10 @@ function initToolbar(): void {
     });
     document.addEventListener("keydown", (e) => {
         if (e.key !== "Escape") return;
+        if (isIntroOpen()) {
+            closeIntro();
+            return;
+        }
         if (isPopoverOpen()) {
             hidePopover();
             return;
@@ -489,6 +505,7 @@ export async function startApp(core: CoreContent): Promise<void> {
     applyContent(es);
 
     initStageStatus();
+    initIntro();
     bindStageElements();
     initBottomSheet();
     initRegionPanel(selectFromButton);

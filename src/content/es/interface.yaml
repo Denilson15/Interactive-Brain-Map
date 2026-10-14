@@ -143,3 +143,17 @@ dismiss: Cerrar
 errWriteUp: >-
     No se pudo descargar la descripción completa, así que esta es la versión
     breve. Revisa tu conexión y vuelve a abrir la afección.
+about: Acerca de
+introTitle: Explora el cerebro humano en 3D
+introLead: >-
+    Un atlas interactivo para estudiantes, docentes y cualquier persona con
+    curiosidad por cómo está construido el cerebro y qué cambia cuando una
+    enfermedad lo afecta.
+introPoint1: Desármalo, desde los hemisferios hasta {p} partes
+introPoint2: >-
+    Descubre qué áreas intervienen en {c} afecciones psicológicas y neurológicas
+introPoint3: Busca cualquier término en un diccionario de {e} entradas
+introCta: Explorar el cerebro
+introMeta: >-
+    Gratis, sin registro, en español e inglés. Material de estudio, no consejo
+    médico.
