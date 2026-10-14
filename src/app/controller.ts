@@ -248,7 +248,7 @@ function openInGlossary(key: string): void {
 function setStaticText(): void {
     const lang = currentLang();
     document.documentElement.lang = lang;
-    document.title = t("title");
+    document.title = t("pageTitle");
     document.querySelectorAll<HTMLElement>("[data-i18n]").forEach((el) => {
         el.textContent = t(el.dataset.i18n!);
     });

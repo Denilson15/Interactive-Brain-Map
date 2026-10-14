@@ -6,6 +6,7 @@ export type Lang = "en" | "es";
 
 const UI_EN = {
     title: "Interactive Brain Map",
+    pageTitle: "Interactive Brain Map: explore the human brain in 3D",
     tabBrowse: "Browse",
     tabRegion: "Region",
     tabPsych: "Psychology",

@@ -35,7 +35,7 @@ npm run preview   # serve the built site from dist/
 - `src/main.ts` – entry point: fonts and styles, then content, then app
 - `src/styles/` – the design system: `tokens.css` (type scale, colors,
   spacing) and `components.css` (buttons, chips, cards and so on)
-- `src/styles.css` – app-specific styles
+- `src/styles/layout.css` – app-specific layout and styles
 - `docs/design-system.html` – a reference page for the tokens and
   components, built and deployed with the site
 - `src/app/` – app logic without 3D:
@@ -58,6 +58,14 @@ npm run preview   # serve the built site from dist/
     dictionary; `en/write-ups/` holds the long condition write-ups,
     loaded the first time a condition is opened
   - `es/` – the Spanish translation, loaded only when Spanish is chosen
+- `public/` – files copied into the site as they are: the favicon, the
+  phone home-screen icon and the 1200×630 link-preview image
+- `.env` – the site's public address (`VITE_SITE_URL`); link previews,
+  the canonical URL, `robots.txt` and `sitemap.xml` are built from it
+- `scripts/make-social-assets.mjs` – regenerates the link-preview image
+  from the real 3D model, plus the PNG icons. Run `npm run build &&
+  npm run preview`, then `node scripts/make-social-assets.mjs` in a
+  second terminal. Re-run it when the design or the intro copy changes.
 
 ## Run the tests
 End-to-end tests use [Playwright](https://playwright.dev), which drives a

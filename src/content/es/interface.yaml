@@ -1,6 +1,7 @@
 # Spanish interface text, keyed like UI_EN in src/app/i18n.ts.
 
 title: Mapa Interactivo del Cerebro
+pageTitle: "Mapa Interactivo del Cerebro: explora el cerebro humano en 3D"
 tabBrowse: Explorar
 tabRegion: Región
 tabPsych: Psicología
