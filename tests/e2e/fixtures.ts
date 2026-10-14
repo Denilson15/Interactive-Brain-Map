@@ -30,6 +30,8 @@ type Options = {
     withoutWebGL: boolean;
     /** Make requests for matching files fail (e.g. a lazy chunk). */
     failDownloads: RegExp | null;
+    /** Visit as a first-time visitor, who sees the intro. */
+    firstVisit: boolean;
 };
 
 type Fixtures = {
@@ -43,6 +45,7 @@ type Fixtures = {
 export const test = base.extend<Fixtures & Options>({
     withoutWebGL: [false, { option: true }],
     failDownloads: [null, { option: true }],
+    firstVisit: [false, { option: true }],
     pageErrors: async ({}, use) => {
         await use([]);
     },
@@ -50,10 +53,23 @@ export const test = base.extend<Fixtures & Options>({
         await use([]);
     },
     app: async (
-        { page, pageErrors, consoleWarnings, withoutWebGL, failDownloads },
+        {
+            page,
+            pageErrors,
+            consoleWarnings,
+            withoutWebGL,
+            failDownloads,
+            firstVisit,
+        },
         use,
     ) => {
         if (withoutWebGL) await page.addInitScript(disableWebGL);
+        // Most tests act as returning visitors, so the intro stays closed.
+        if (!firstVisit) {
+            await page.addInitScript(() =>
+                localStorage.setItem("ibm-intro-seen", "1"),
+            );
+        }
         if (failDownloads) {
             await page.route(failDownloads, (route) => route.abort());
         }
@@ -84,10 +100,10 @@ export function regionHeading(page: Page) {
     return page.locator("#view-region h2");
 }
 
-/** Breadcrumb trail of the Region panel, without the "›" separators. */
+/** Breadcrumb trail of the Region panel, as plain text items. */
 export async function breadcrumbs(page: Page): Promise<string[]> {
-    const items = page.locator("#view-region .crumbs > *");
-    return (await items.allTextContents()).filter((text) => text !== "›");
+    const items = page.locator("#view-region .breadcrumbs li");
+    return (await items.allTextContents()).map((text) => text.trim());
 }
 
 /** Display names for structure ids, read from the app's own data. */

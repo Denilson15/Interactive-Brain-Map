@@ -1,28 +1,32 @@
 # Spanish interface text, keyed like UI_EN in src/app/i18n.ts.
 
 title: Mapa Interactivo del Cerebro
+pageTitle: "Mapa Interactivo del Cerebro: explora el cerebro humano en 3D"
 tabBrowse: Explorar
 tabRegion: Región
 tabPsych: Psicología
 tabDisease: Enfermedades
 tabGloss: Diccionario
-up: ↑ Subir un nivel
+up: Subir un nivel
 upTitle: Subir un nivel (Esc)
 spread: Separar
 opacity: Opacidad
 brightness: Brillo
 labels: Etiquetas
-reset: Restablecer
-controls: Controles ▾
-hint:
-    Arrastra para girar · desplaza o pellizca para acercar · haz clic en una
-    sección para abrirla · Esc para subir
+oneColor: Un solo color
+oneColorTitle: Mostrar todo el cerebro de un solo color
+capOneColor: Primer plano en un solo color. Arrastra para girarlo.
+reset: Restablecer la vista
+controls: Controles
+hint: >-
+    Arrastra para girar. Desplaza o pellizca para acercar. Selecciona una parte
+    para abrirla; pulsa Esc para subir.
 glossSearch: Busca términos, regiones y afecciones
 glossPh: p. ej. sinapsis, putamen, TEPT
 browseEyebrow: Todas las secciones del cerebro
-stats:
-    "{p} partes del cerebro · {d} trastornos · {s} enfermedades · {e} entradas
-    de diccionario"
+stats: >-
+    {p} partes del cerebro, {d} trastornos, {s} enfermedades y {e} entradas de
+    diccionario
 primary: Principal
 alsoInvolved: También implicada
 backToAnatomy: Volver a la anatomía
@@ -76,8 +80,8 @@ notePsych:
 noteDisease:
     Elige una enfermedad para ver la descripción completa y las áreas cerebrales
     que afecta.
-allDisorders: ← Todos los trastornos
-allDiseases: ← Todas las enfermedades
+allDisorders: Todos los trastornos
+allDiseases: Todas las enfermedades
 alsoCalled: También llamado {s}
 secOverview: Descripción general
 secBrain: Áreas cerebrales resaltadas en el modelo
@@ -105,17 +109,17 @@ tPsych: Psicología
 tDisease: Enfermedad
 entriesOf: "{n} de {t} entradas"
 nothingMatches: Nada coincide con «{q}».
-showOnModel: Ver en el modelo →
-openEntry: Abrir la ficha completa →
+showOnModel: Ver en el modelo
+openEntry: Abrir la ficha completa
 dictionary: Diccionario
-close: Cerrar ✕
-seeInDict: Ver en el diccionario →
+close: Cerrar
+seeInDict: Ver en el diccionario
 brainRegion: Región cerebral
-openHighlight: Abrir la ficha y resaltar →
+openHighlight: Abrir y resaltar en el modelo
 notInDict:
     Esto no está en el diccionario. Probablemente es una palabra común y no un
     término cerebral o médico.
-browseDict: Explorar el diccionario →
+browseDict: Explorar el diccionario
 loadingTitle: Cargando el cerebro en 3D
 loadingNote: Puedes leer y buscar mientras se carga.
 errWebglTitle: La vista 3D no puede iniciarse en este dispositivo
@@ -140,3 +144,17 @@ dismiss: Cerrar
 errWriteUp: >-
     No se pudo descargar la descripción completa, así que esta es la versión
     breve. Revisa tu conexión y vuelve a abrir la afección.
+about: Acerca de
+introTitle: Explora el cerebro humano en 3D
+introLead: >-
+    Un atlas interactivo para estudiantes, docentes y cualquier persona con
+    curiosidad por cómo está construido el cerebro y qué cambia cuando una
+    enfermedad lo afecta.
+introPoint1: Desármalo, desde los hemisferios hasta {p} partes
+introPoint2: >-
+    Descubre qué áreas intervienen en {c} afecciones psicológicas y neurológicas
+introPoint3: Busca cualquier término en un diccionario de {e} entradas
+introCta: Explorar el cerebro
+introMeta: >-
+    Gratis, sin registro, en español e inglés. Material de estudio, no consejo
+    médico.

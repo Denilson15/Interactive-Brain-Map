@@ -3,8 +3,6 @@ node_modules/
 package-lock.json
 playwright-report/
 test-results/
-# Rewritten from scratch in the design-system step.
-src/styles.css
 README.md
 # Project files edited by hand or compared byte-for-byte by tests.
 CLAUDE.md

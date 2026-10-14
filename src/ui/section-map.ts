@@ -19,8 +19,9 @@ function chip(
 ): string {
     return (
         `<button type="button" class="chip${cls ? " " + cls : ""}" ` +
-        `data-node="${id}" data-side="${side || ""}" style="--c:${color}" ` +
-        `aria-pressed="${pressed}"><i></i>${esc(label)}</button>`
+        `data-node="${id}" data-side="${side || ""}" ` +
+        `aria-pressed="${pressed}"><span class="swatch" ` +
+        `style="--swatch:${color}"></span>${esc(label)}</button>`
     );
 }
 
@@ -42,14 +43,16 @@ export function renderMap(): void {
             keyOf(k.id, (k.lat ? kidSide : "L") as Side);
         const active =
             (headKey && inPath(headKey)) || kids.some((k) => inPath(kidKey(k)));
+        // The heading selects the whole group where one exists.
         const head = headId
-            ? `<button type="button" class="sec-t" data-node="${headId}" ` +
+            ? `<button type="button" class="map-title" data-node="${headId}" ` +
               `data-side="${headSide || ""}" ` +
               `aria-pressed="${headKey === sk}">${esc(title)}</button>`
-            : `<span class="sec-t">${esc(title)}</span>`;
+            : `<span class="map-title">${esc(title)}</span>`;
         let h =
-            `<div class="sec${active ? " open" : ""}" style="--c:${color}">` +
-            `<div class="sec-h">${head}</div><div class="sec-row">`;
+            `<div class="map-section${active ? " is-open" : ""}" ` +
+            `style="--swatch:${color}">` +
+            `<h2 class="map-heading">${head}</h2><div class="chip-row">`;
         h += kids
             .map((k) =>
                 chip(
@@ -66,7 +69,7 @@ export function renderMap(): void {
         // Expand the region on the selection path to show its parts.
         const open = kids.find((k) => inPath(kidKey(k)));
         if (open && open.kids && open.kids.length) {
-            h += `<div class="sub-map" style="--c:${open.color}">`;
+            h += `<div class="map-parts" style="--swatch:${open.color}">`;
             const groups = open.kids.filter((k) => k.isGroup);
             const singles = open.kids.filter((k) => !k.isGroup);
             const partChips = (parts: StructureNode[]) =>
@@ -78,24 +81,25 @@ export function renderMap(): void {
                             l.short || l.name,
                             l.color,
                             inPath(keyOf(l.id, kidSide as Side)),
-                            "sm",
+                            "chip--small",
                         ),
                     )
                     .join("");
             for (const g of groups) {
                 h +=
-                    `<div class="grp"><button type="button" class="grp-t" ` +
-                    `data-node="${g.id}" data-side="${g.lat ? kidSide : ""}" ` +
+                    `<div class="map-group"><button type="button" ` +
+                    `class="map-group-title" data-node="${g.id}" ` +
+                    `data-side="${g.lat ? kidSide : ""}" ` +
                     `aria-pressed="${keyOf(g.id, kidSide as Side) === sk}">` +
                     `${esc(g.name)}</button>` +
-                    `<div class="grp-row">${partChips(g.kids)}</div></div>`;
+                    `<div class="chip-row">${partChips(g.kids)}</div></div>`;
             }
             if (singles.length) {
                 const label = groups.length ? t("otherParts") : t("parts");
                 h +=
-                    `<div class="grp"><span class="grp-t plain">${label}` +
-                    `</span><div class="grp-row">${partChips(singles)}</div>` +
-                    `</div>`;
+                    `<div class="map-group"><span class="map-group-label">` +
+                    `${label}</span>` +
+                    `<div class="chip-row">${partChips(singles)}</div></div>`;
             }
             h += "</div>";
         }
@@ -126,7 +130,7 @@ export function renderMap(): void {
 /** Puts the map in the Browse tab on phones, under the model otherwise. */
 export function placeMap(onLeaveBrowse: () => void): void {
     const browseView = document.getElementById("view-browse")!;
-    const desktopHome = document.querySelector<HTMLElement>(".left")!;
+    const desktopHome = document.querySelector<HTMLElement>(".workspace")!;
     const phone = isPhoneLayout();
     if (phone && mapEl.parentElement !== browseView) {
         browseView.appendChild(mapEl);

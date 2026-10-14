@@ -53,6 +53,11 @@ import {
 export const HOT = "#FF5A47";
 export const WARM = "#FFB23E";
 const GHOST = new Color(0x8fa3bd);
+/**
+ * The color for "One color" mode: the soft peach the model already uses
+ * for V5/MT, close to the look of unstained brain tissue.
+ */
+export const ONE_COLOR = "#e5ad9e";
 const HOT_COLOR = new Color(HOT);
 const WARM_COLOR = new Color(WARM);
 
@@ -124,9 +129,14 @@ function visibleAspect(): number {
     return w / visibleHeight;
 }
 
-/** Pulls the camera back on narrow screens so the brain still fits. */
+/**
+ * Pulls the camera back on narrow screens so the brain still fits. The
+ * brain needs roughly a 1.15:1 frame; phones get extra side margin so it
+ * doesn't touch the screen edges.
+ */
 function fit(): number {
-    return Math.max(1, 1.15 / visibleAspect());
+    const frame = isPhoneLayout() ? 1.45 : 1.15;
+    return Math.max(1, frame / visibleAspect());
 }
 
 export const selKey = (): string => keyOf(state.sel, state.selSide);
@@ -186,14 +196,22 @@ export function applyView(): void {
             if (inSelection) {
                 useSolid = true;
                 const ck = isLeafNode(sel) ? sk : childIn(m, sk);
-                col = new Color(colorOfKey(ck || sk));
+                col = new Color(
+                    state.oneColor ? ONE_COLOR : colorOfKey(ck || sk),
+                );
                 op = 1;
                 emissive = isLeafNode(sel) ? 0.3 : 0.06;
             } else {
                 const inLabelParent = lk !== "brain" && path.includes(lk);
                 const ck = inLabelParent ? childIn(m, lk) : null;
                 col = new Color(
-                    ck ? colorOfKey(ck) : u.top ? S[u.top].color : "#9FB3D1",
+                    state.oneColor
+                        ? ONE_COLOR
+                        : ck
+                          ? colorOfKey(ck)
+                          : u.top
+                            ? S[u.top].color
+                            : "#9FB3D1",
                 );
                 op =
                     u.layer === "cortex"
@@ -387,7 +405,7 @@ function labelEl(key: string): LabelButton {
     button.className = "lbl";
     button.type = "button";
     button.hidden = true;
-    button.innerHTML = `<i></i><span>${esc(node.short || node.name)}</span>`;
+    button.innerHTML = `<span class="swatch"></span><span>${esc(node.short || node.name)}</span>`;
     button.addEventListener("click", () => {
         if (state.mode === "condition") {
             callbacks.onSelect(id, viewSide());
@@ -486,7 +504,7 @@ function updateLabels(): void {
         const el = isCondition ? labelEl(item.o.id) : labelEl(item.o.key);
         const labelKey = isCondition ? item.o.id : item.o.key;
         if (el.hidden) el.hidden = false;
-        el.style.setProperty("--c", item.o.c);
+        el.style.setProperty("--swatch", item.o.c);
         el.classList.toggle("sub", !!item.o.sub);
         el.classList.toggle(
             "on",
@@ -550,7 +568,13 @@ export function showCloseUp(id: string, side: Side): void {
     const meshes = node.lat || node.isHemi ? meshesOf(id, side) : node.meshes;
     for (const m of meshes) {
         const ck = isLeafNode(id) ? key : childIn(m, key);
-        const c = new Color(ck ? colorOfKey(ck) : S[m.userData.leaf].color);
+        const c = new Color(
+            state.oneColor
+                ? ONE_COLOR
+                : ck
+                  ? colorOfKey(ck)
+                  : S[m.userData.leaf].color,
+        );
         closeUpGroup.add(
             new Mesh(
                 m.geometry,

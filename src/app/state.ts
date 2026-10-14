@@ -22,6 +22,11 @@ export const state = {
         Condition | null
     >,
     showLabels: true,
+    /**
+     * Show the whole brain in one natural color instead of region colors.
+     * Off on every visit; condition highlights keep their colors.
+     */
+    oneColor: false,
     /** Tree key under the mouse pointer. */
     hovered: null as string | null,
     activeTab: "region" as Tab,

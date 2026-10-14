@@ -63,7 +63,7 @@ function problemHtml(problem: StageProblem): string {
             `<p class="stage-status-title">${esc(t("errWebglTitle"))}</p>` +
             `<p class="stage-status-note">${esc(t("errWebglBody"))}</p>` +
             `<p class="stage-status-note">${esc(t("errWebglFix"))}</p>` +
-            `<button type="button" class="stage-action" data-reload>` +
+            `<button type="button" class="button button--stage stage-action" data-reload>` +
             `${esc(t("tryAgain"))}</button>`
         );
     }
@@ -71,14 +71,14 @@ function problemHtml(problem: StageProblem): string {
         return (
             `<p class="stage-status-title">${esc(t("errBuildTitle"))}</p>` +
             `<p class="stage-status-note">${esc(t("errBuildBody"))}</p>` +
-            `<button type="button" class="stage-action" data-reload>` +
+            `<button type="button" class="button button--stage stage-action" data-reload>` +
             `${esc(t("reloadPage"))}</button>`
         );
     }
     return (
         `<p class="stage-status-title">${esc(t("errLostTitle"))}</p>` +
         `<p class="stage-status-note">${esc(t("errLostBody"))}</p>` +
-        `<button type="button" class="stage-action" data-reload>` +
+        `<button type="button" class="button button--stage stage-action" data-reload>` +
         `${esc(t("reloadPage"))}</button>`
     );
 }
@@ -117,6 +117,7 @@ export function refreshStageStatusText(): void {
 export function showNotice(message: string): void {
     notice.innerHTML =
         `<span>${esc(message)}</span>` +
-        `<button type="button" data-dismiss>${esc(t("dismiss"))}</button>`;
+        `<button type="button" class="button button--quiet" data-dismiss>` +
+        `${esc(t("dismiss"))}</button>`;
     notice.hidden = false;
 }

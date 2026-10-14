@@ -1,0 +1,418 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="robots" content="noindex" />
+        <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+        <title>Design system · Interactive Brain Map</title>
+        <meta
+            name="description"
+            content="Tokens and components of the Interactive Brain Map."
+        />
+    </head>
+    <body>
+        <main class="doc">
+            <header class="doc-header">
+                <p class="meta"><a href="../">Interactive Brain Map</a></p>
+                <h1 class="doc-title">Design system</h1>
+                <p class="reading">
+                    The tokens and components the app is built from. This page
+                    uses the same stylesheets as the app, so it always shows
+                    what visitors see. Switch your device between light and dark
+                    mode to check both themes.
+                </p>
+            </header>
+
+            <section class="doc-section" aria-labelledby="principles">
+                <h2 class="doc-h2" id="principles">Principles</h2>
+                <ul class="reading-list">
+                    <li>
+                        A calm reference work. The interface stays quiet so the
+                        3D model and the region colors stand out.
+                    </li>
+                    <li>
+                        Color carries meaning. Region colors identify parts;
+                        interface chrome stays neutral so it never competes.
+                    </li>
+                    <li>
+                        Never color alone. Condition involvement also differs in
+                        shape: filled for primary, a ring for also involved.
+                    </li>
+                    <li>
+                        Tokens only. Components use the variables in
+                        <code>src/styles/tokens.css</code>; nothing hard-codes a
+                        color, size or space.
+                    </li>
+                </ul>
+            </section>
+
+            <section class="doc-section" aria-labelledby="type">
+                <h2 class="doc-h2" id="type">Typography</h2>
+                <p class="reading">
+                    Two families with separate jobs: Bricolage Grotesque for the
+                    interface and headings, Source Serif 4 for reading. One
+                    scale from the classical sizes of print; nothing smaller
+                    than 13px.
+                </p>
+                <div class="doc-type">
+                    <p
+                        class="doc-sample"
+                        style="font-size: var(--text-display)"
+                    >
+                        Display <span>--text-display, 36-48px</span>
+                    </p>
+                    <p class="doc-sample" style="font-size: var(--text-title)">
+                        Title <span>--text-title, 24-36px</span>
+                    </p>
+                    <p
+                        class="doc-sample"
+                        style="font-size: var(--text-title-sm)"
+                    >
+                        Small title <span>--text-title-sm, 21px</span>
+                    </p>
+                    <p class="reading doc-sample-reading">
+                        Reading text turns everyday experiences into long-term
+                        memory. <span>--text-reading, 18px serif</span>
+                    </p>
+                    <p class="doc-sample" style="font-size: var(--text-base)">
+                        Base <span>--text-base, 16px</span>
+                    </p>
+                    <p class="doc-sample" style="font-size: var(--text-ui)">
+                        Interface <span>--text-ui, 14px</span>
+                    </p>
+                    <p
+                        class="doc-sample"
+                        style="font-size: var(--text-caption)"
+                    >
+                        Caption <span>--text-caption, 13px</span>
+                    </p>
+                </div>
+            </section>
+
+            <section class="doc-section" aria-labelledby="color">
+                <h2 class="doc-h2" id="color">Color</h2>
+                <p class="reading">
+                    Named by purpose, not by hue. Values switch with the
+                    device's light or dark mode; the 3D stage is always dark.
+                </p>
+                <div
+                    class="doc-swatches"
+                    data-tokens="
+                    --color-page --color-surface --color-sunken
+                    --color-accent-soft --color-text --color-text-muted
+                    --color-border --color-border-strong --color-accent
+                    --color-involve-primary --color-involve-secondary"
+                ></div>
+                <h3 class="section-title">The 3D stage</h3>
+                <div
+                    class="doc-swatches doc-swatches--stage"
+                    data-tokens="
+                    --stage-bg --stage-text --stage-text-muted --stage-accent
+                    --stage-involve-primary --stage-involve-secondary"
+                ></div>
+            </section>
+
+            <section class="doc-section" aria-labelledby="space">
+                <h2 class="doc-h2" id="space">Spacing and shape</h2>
+                <p class="reading">
+                    A 4px grid. Corners get rounder as elements get larger: 6px
+                    for small controls, 10px for buttons and cards, 16px for
+                    panels.
+                </p>
+                <div class="doc-spaces">
+                    <span style="width: var(--space-1)">4</span>
+                    <span style="width: var(--space-2)">8</span>
+                    <span style="width: var(--space-3)">12</span>
+                    <span style="width: var(--space-4)">16</span>
+                    <span style="width: var(--space-5)">24</span>
+                    <span style="width: var(--space-6)">32</span>
+                    <span style="width: var(--space-7)">48</span>
+                    <span style="width: var(--space-8)">64</span>
+                </div>
+            </section>
+
+            <section class="doc-section" aria-labelledby="components">
+                <h2 class="doc-h2" id="components">Components</h2>
+
+                <article class="doc-component">
+                    <h3 class="section-title">Button</h3>
+                    <p class="meta">
+                        Actions. The quiet variant is for links inside panels;
+                        the stage variant sits over the 3D model.
+                    </p>
+                    <div class="doc-demo">
+                        <button class="button" type="button">
+                            Reload page
+                        </button>
+                        <button class="button button--quiet" type="button">
+                            Show on the model
+                        </button>
+                    </div>
+                    <div class="doc-demo doc-demo--stage">
+                        <button class="button button--stage" type="button">
+                            <svg
+                                class="icon"
+                                viewBox="0 0 24 24"
+                                aria-hidden="true"
+                            >
+                                <path d="M12 19V5M5 12l7-7 7 7" />
+                            </svg>
+                            Up a level
+                        </button>
+                        <button
+                            class="button button--stage"
+                            type="button"
+                            aria-pressed="true"
+                        >
+                            Labels
+                        </button>
+                        <label class="slider">
+                            Spread <input type="range" value="30" />
+                        </label>
+                    </div>
+                </article>
+
+                <article class="doc-component">
+                    <h3 class="section-title">Chip and swatch</h3>
+                    <p class="meta">
+                        Compact toggles and links. A swatch shows a region's
+                        color, or condition involvement by shape.
+                    </p>
+                    <div class="doc-demo">
+                        <button class="chip" type="button">
+                            <span
+                                class="swatch"
+                                style="--swatch: #5b8def"
+                            ></span>
+                            Frontal lobe
+                        </button>
+                        <button class="chip" type="button" aria-pressed="true">
+                            <span
+                                class="swatch"
+                                style="--swatch: #e6b547"
+                            ></span>
+                            Parietal lobe
+                        </button>
+                        <button class="chip" type="button">
+                            <span class="swatch swatch--primary"></span>
+                            Alzheimer's
+                        </button>
+                        <button class="chip" type="button">
+                            <span class="swatch swatch--secondary"></span>
+                            Depression
+                        </button>
+                    </div>
+                </article>
+
+                <article class="doc-component">
+                    <h3 class="section-title">Tags and breadcrumbs</h3>
+                    <p class="meta">
+                        Tags classify (not interactive). Breadcrumbs show where
+                        a part sits in the brain and lead back up.
+                    </p>
+                    <div class="doc-demo doc-demo--column">
+                        <ol class="breadcrumbs">
+                            <li><button type="button">Human brain</button></li>
+                            <li>
+                                <button type="button">Deep structures</button>
+                            </li>
+                            <li aria-current="page">Hippocampus</li>
+                        </ol>
+                        <ul class="tags">
+                            <li class="tag">
+                                <span
+                                    class="swatch"
+                                    style="--swatch: #c76bd1"
+                                ></span>
+                                Deep structure
+                            </li>
+                            <li class="tag">Limbic system</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="doc-component">
+                    <h3 class="section-title">Tabs and language switch</h3>
+                    <p class="meta">
+                        Tabs scroll sideways when they don't fit, with a fade at
+                        the edge so the hidden ones are discoverable.
+                    </p>
+                    <div class="doc-demo">
+                        <div class="tabs" role="tablist" aria-label="Example">
+                            <button class="tab" role="tab" type="button">
+                                Browse
+                            </button>
+                            <button
+                                class="tab"
+                                role="tab"
+                                type="button"
+                                aria-selected="true"
+                            >
+                                Region
+                            </button>
+                            <button class="tab" role="tab" type="button">
+                                Psychology
+                            </button>
+                        </div>
+                        <div
+                            class="segmented"
+                            role="group"
+                            aria-label="Language"
+                        >
+                            <button type="button" aria-pressed="true">
+                                EN
+                            </button>
+                            <button type="button" aria-pressed="false">
+                                ES
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="doc-component">
+                    <h3 class="section-title">Card</h3>
+                    <p class="meta">
+                        A part of the selected structure. The current one has a
+                        heavier outline.
+                    </p>
+                    <div class="cards">
+                        <button class="card" type="button" aria-current="true">
+                            <span class="card-title">
+                                <span
+                                    class="swatch"
+                                    style="--swatch: #c76bd1"
+                                ></span>
+                                Ammon's horn
+                            </span>
+                            <span class="card-text">
+                                The CA fields are the core hippocampal circuits.
+                            </span>
+                        </button>
+                        <button class="card" type="button">
+                            <span class="card-title">
+                                <span
+                                    class="swatch"
+                                    style="--swatch: #9a5bd6"
+                                ></span>
+                                Dentate gyrus
+                            </span>
+                            <span class="card-text">
+                                The entry point for signals from the entorhinal
+                                cortex.
+                            </span>
+                        </button>
+                    </div>
+                </article>
+
+                <article class="doc-component">
+                    <h3 class="section-title">Callout and notice</h3>
+                    <p class="meta">
+                        A callout highlights a fact in the content. A notice is
+                        a message about the app itself, and stays until
+                        dismissed.
+                    </p>
+                    <div class="callout">
+                        <p class="callout-title">Did you know</p>
+                        <p class="reading">
+                            London taxi drivers, who memorize thousands of
+                            streets, were found to have a larger rear
+                            hippocampus than average.
+                        </p>
+                    </div>
+                    <div class="notice">
+                        <span>
+                            The full write-up couldn't be downloaded, so this is
+                            the short version.
+                        </span>
+                        <button class="button button--quiet" type="button">
+                            Dismiss
+                        </button>
+                    </div>
+                </article>
+
+                <article class="doc-component">
+                    <h3 class="section-title">Accordion and list item</h3>
+                    <p class="meta">
+                        Accordions fold long write-ups into sections. List items
+                        open a condition.
+                    </p>
+                    <details class="accordion" open>
+                        <summary>
+                            Brain areas highlighted on the model
+                            <svg
+                                class="icon"
+                                viewBox="0 0 24 24"
+                                aria-hidden="true"
+                            >
+                                <path d="m6 9 6 6 6-6" />
+                            </svg>
+                        </summary>
+                        <div class="accordion-body">
+                            <p class="reading">Body text inside a section.</p>
+                        </div>
+                    </details>
+                    <details class="accordion">
+                        <summary>
+                            Signs and symptoms
+                            <svg
+                                class="icon"
+                                viewBox="0 0 24 24"
+                                aria-hidden="true"
+                            >
+                                <path d="m6 9 6 6 6-6" />
+                            </svg>
+                        </summary>
+                        <div class="accordion-body">
+                            <p class="reading">Folded content.</p>
+                        </div>
+                    </details>
+                    <ul class="list">
+                        <li>
+                            <button class="list-item" type="button">
+                                <span class="list-item-title">
+                                    Obsessive-compulsive disorder
+                                    <span class="meta">OCD</span>
+                                </span>
+                                <span class="list-item-text">
+                                    Intrusive thoughts and repetitive behaviors
+                                    a person feels driven to perform.
+                                </span>
+                            </button>
+                        </li>
+                    </ul>
+                </article>
+
+                <article class="doc-component">
+                    <h3 class="section-title">Search field</h3>
+                    <p class="meta">Always with a visible label.</p>
+                    <label class="field" for="doc-search"
+                        >Search diseases</label
+                    >
+                    <input
+                        class="search"
+                        id="doc-search"
+                        type="search"
+                        placeholder="e.g. Alzheimer's, stroke, tremor"
+                    />
+                </article>
+            </section>
+
+            <section class="doc-section" aria-labelledby="a11y">
+                <h2 class="doc-h2" id="a11y">Accessibility</h2>
+                <ul class="reading-list">
+                    <li>Text contrast at least 4.5:1; control edges 3:1.</li>
+                    <li>
+                        Touch targets grow to 40-44px on touch screens; the
+                        visible focus ring is never removed.
+                    </li>
+                    <li>
+                        Motion is short and functional, and turns off with the
+                        device's reduced-motion setting.
+                    </li>
+                </ul>
+            </section>
+        </main>
+        <script type="module" src="./design-system.ts"></script>
+    </body>
+</html>

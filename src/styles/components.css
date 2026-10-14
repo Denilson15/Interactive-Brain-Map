@@ -1,0 +1,525 @@
+/*
+ * Reusable components. Each uses only tokens from tokens.css.
+ * Layout (where things sit on the page) lives in layout.css.
+ */
+
+/* ---------- Base ---------- */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+[hidden] {
+    display: none !important;
+}
+html,
+body {
+    margin: 0;
+}
+body {
+    background: var(--color-page);
+    color: var(--color-text);
+    font-family: var(--font-ui);
+    font-size: var(--text-base);
+    line-height: var(--leading-ui);
+    -webkit-font-smoothing: antialiased;
+}
+button,
+input {
+    font: inherit;
+    color: inherit;
+}
+:focus-visible {
+    outline: 2px solid var(--color-focus);
+    outline-offset: 2px;
+}
+.icon {
+    width: 1.15em;
+    height: 1.15em;
+    flex: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    fill: none;
+}
+
+/* ---------- Text styles ---------- */
+.title {
+    margin: 0 0 var(--space-3);
+    font-size: var(--text-title);
+    font-weight: var(--weight-bold);
+    line-height: var(--leading-tight);
+    letter-spacing: -0.015em;
+    text-wrap: balance;
+}
+.section-title {
+    margin: var(--space-6) 0 var(--space-3);
+    font-size: var(--text-base);
+    font-weight: var(--weight-bold);
+    line-height: var(--leading-tight);
+}
+.reading {
+    margin: 0 0 var(--space-4);
+    font-family: var(--font-reading);
+    font-size: var(--text-reading);
+    line-height: var(--leading-reading);
+    max-width: 68ch;
+}
+.reading-list {
+    margin: 0 0 var(--space-4);
+    padding-left: 1.2em;
+    font-family: var(--font-reading);
+    font-size: var(--text-reading);
+    line-height: var(--leading-reading);
+}
+.reading-list li::marker {
+    color: var(--swatch, var(--color-text-muted));
+}
+.meta {
+    margin: 0;
+    font-size: var(--text-caption);
+    color: var(--color-text-muted);
+}
+
+/* ---------- Button ---------- */
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-2);
+    min-height: 40px;
+    padding: var(--space-2) var(--space-4);
+    border: var(--border-width) solid var(--color-border-strong);
+    border-radius: var(--radius-md);
+    background: var(--color-surface);
+    font-size: var(--text-ui);
+    font-weight: var(--weight-medium);
+    line-height: 1;
+    cursor: pointer;
+    transition:
+        background-color var(--duration-fast),
+        border-color var(--duration-fast);
+}
+.button:hover {
+    border-color: var(--color-text-muted);
+    background: var(--color-sunken);
+}
+/* The main action on a screen; at most one per view. */
+.button--primary {
+    border-color: var(--color-accent);
+    background: var(--color-accent);
+    color: var(--color-on-accent);
+}
+.button--primary:hover {
+    border-color: var(--color-accent-hover);
+    background: var(--color-accent-hover);
+}
+/* Text-only actions inside panels ("Show on the model"). */
+.button--quiet {
+    min-height: 32px;
+    padding: var(--space-1) 0;
+    border: 0;
+    background: none;
+    color: var(--color-accent);
+}
+.button--quiet:hover {
+    background: none;
+    color: var(--color-accent-hover);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+/* Buttons over the dark 3D stage. */
+.button--stage {
+    border-color: var(--stage-line);
+    background: var(--stage-overlay);
+    color: var(--stage-text);
+}
+.button--stage:hover {
+    border-color: var(--stage-line-strong);
+    background: var(--stage-overlay);
+}
+.button--stage[aria-pressed="true"] {
+    border-color: var(--stage-text);
+    background: var(--stage-text);
+    color: var(--stage-bg);
+}
+.button--icon {
+    padding: 0;
+    width: 40px;
+}
+
+/* ---------- Chip: toggles and links in compact lists ---------- */
+.chip {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    min-height: 32px;
+    padding: var(--space-1) var(--space-3);
+    border: var(--border-width) solid var(--color-border);
+    border-radius: var(--radius-full);
+    background: var(--color-surface);
+    font-size: var(--text-ui);
+    line-height: 1.2;
+    text-align: left;
+    cursor: pointer;
+    transition:
+        border-color var(--duration-fast),
+        background-color var(--duration-fast);
+}
+.chip:hover {
+    border-color: var(--color-border-strong);
+}
+.chip[aria-pressed="true"],
+.chip[aria-current="true"] {
+    border-color: var(--color-text);
+    background: var(--color-text);
+    color: var(--color-surface);
+}
+/* Colored dot identifying a region; the color is information. */
+.swatch {
+    width: 10px;
+    height: 10px;
+    flex: none;
+    border-radius: 50%;
+    background: var(--swatch);
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15);
+}
+/* Involvement in a condition: filled = primary, ring = secondary. */
+.swatch--primary {
+    background: var(--color-involve-primary);
+}
+.swatch--secondary {
+    background: transparent;
+    box-shadow: inset 0 0 0 2.5px var(--color-involve-secondary);
+}
+
+/* ---------- Tag: a small, non-interactive label ---------- */
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-1);
+    margin: 0 0 var(--space-2);
+    padding: 0;
+    list-style: none;
+}
+.tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 2px var(--space-2);
+    border-radius: var(--radius-sm);
+    background: var(--color-sunken);
+    color: var(--color-text-muted);
+    font-size: var(--text-caption);
+}
+
+/* ---------- Tabs ---------- */
+.tabs {
+    display: flex;
+    gap: var(--space-1);
+    overflow-x: auto;
+    scrollbar-width: none;
+    /* Fade the edge when tabs overflow, so more tabs are discoverable. */
+    mask-image: linear-gradient(
+        to right,
+        #000 calc(100% - var(--space-5)),
+        transparent
+    );
+}
+.tabs[data-scrolled-end] {
+    mask-image: none;
+}
+.tabs::-webkit-scrollbar {
+    display: none;
+}
+.tab {
+    flex: none;
+    min-height: 44px;
+    padding: var(--space-2) var(--space-3);
+    border: 0;
+    border-bottom: 2px solid transparent;
+    background: none;
+    color: var(--color-text-muted);
+    font-size: var(--text-ui);
+    font-weight: var(--weight-medium);
+    cursor: pointer;
+}
+.tab:hover {
+    color: var(--color-text);
+}
+.tab[aria-selected="true"] {
+    color: var(--color-text);
+    border-bottom-color: var(--color-accent);
+}
+
+/* ---------- Segmented control (language) ---------- */
+.segmented {
+    display: inline-flex;
+    padding: 2px;
+    border: var(--border-width) solid var(--color-border);
+    border-radius: var(--radius-full);
+    background: var(--color-surface);
+}
+.segmented button {
+    min-width: 40px;
+    min-height: 32px;
+    padding: 0 var(--space-3);
+    border: 0;
+    border-radius: var(--radius-full);
+    background: none;
+    color: var(--color-text-muted);
+    font-size: var(--text-ui);
+    font-weight: var(--weight-medium);
+    cursor: pointer;
+}
+.segmented button[aria-pressed="true"] {
+    background: var(--color-text);
+    color: var(--color-surface);
+}
+
+/* ---------- Slider (on the stage) ---------- */
+.slider {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-3);
+    min-height: 40px;
+    padding: 0 var(--space-3);
+    border: var(--border-width) solid var(--stage-line);
+    border-radius: var(--radius-md);
+    background: var(--stage-overlay);
+    color: var(--stage-text);
+    font-size: var(--text-ui);
+}
+.slider input {
+    width: 112px;
+    accent-color: var(--stage-accent);
+    cursor: pointer;
+}
+
+/* ---------- Card: a structure in a parts grid ---------- */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: var(--space-2);
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1);
+    min-width: 0;
+    padding: var(--space-3);
+    border: var(--border-width) solid var(--color-border);
+    border-radius: var(--radius-md);
+    background: var(--color-surface);
+    text-align: left;
+    cursor: pointer;
+    transition: border-color var(--duration-fast);
+}
+.card:hover {
+    border-color: var(--color-border-strong);
+}
+.card[aria-current="true"] {
+    border-color: var(--color-text);
+    box-shadow: inset 0 0 0 1px var(--color-text);
+}
+.card-title {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    font-size: var(--text-base);
+    font-weight: var(--weight-medium);
+    line-height: var(--leading-tight);
+}
+.card-title .meta {
+    margin-left: auto;
+}
+.card-text {
+    font-family: var(--font-reading);
+    font-size: var(--text-ui);
+    line-height: 1.45;
+    color: var(--color-text-muted);
+}
+
+/* ---------- Callout: a highlighted fact ---------- */
+.callout {
+    margin: var(--space-5) 0;
+    padding: var(--space-4);
+    border-radius: var(--radius-md);
+    background: var(--color-sunken);
+}
+.callout-title {
+    margin: 0 0 var(--space-1);
+    font-size: var(--text-ui);
+    font-weight: var(--weight-bold);
+}
+.callout .reading {
+    margin: 0;
+}
+
+/* ---------- Notice: a message about the app itself ---------- */
+.notice {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-3);
+    padding: var(--space-3);
+    border-radius: var(--radius-md);
+    background: var(--color-accent-soft);
+    font-size: var(--text-ui);
+    line-height: var(--leading-ui);
+}
+.notice > span {
+    flex: 1;
+}
+
+/* ---------- Breadcrumbs ---------- */
+.breadcrumbs {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--space-1) var(--space-2);
+    margin: 0 0 var(--space-4);
+    padding: 0;
+    list-style: none;
+    font-size: var(--text-ui);
+    color: var(--color-text-muted);
+}
+.breadcrumbs li {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+}
+.breadcrumbs li + li::before {
+    content: "/";
+    color: var(--color-border-strong);
+}
+.breadcrumbs button {
+    min-height: 32px;
+    padding: 0;
+    border: 0;
+    background: none;
+    color: var(--color-accent);
+    cursor: pointer;
+}
+.breadcrumbs button:hover {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+/* ---------- Accordion ---------- */
+.accordion {
+    border-top: var(--border-width) solid var(--color-border);
+}
+.accordion:last-child {
+    border-bottom: var(--border-width) solid var(--color-border);
+}
+.accordion > summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-3);
+    min-height: 48px;
+    padding: var(--space-2) 0;
+    font-size: var(--text-base);
+    font-weight: var(--weight-medium);
+    list-style: none;
+    cursor: pointer;
+}
+.accordion > summary::-webkit-details-marker {
+    display: none;
+}
+.accordion > summary .icon {
+    color: var(--color-text-muted);
+    transition: transform var(--duration-base) var(--ease-out);
+}
+.accordion[open] > summary .icon {
+    transform: rotate(180deg);
+}
+.accordion-body {
+    padding: 0 0 var(--space-4);
+}
+
+/* ---------- List item: a condition in a list ---------- */
+.list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.list-item {
+    display: block;
+    width: 100%;
+    padding: var(--space-3) 0;
+    border: 0;
+    border-top: var(--border-width) solid var(--color-border);
+    background: none;
+    text-align: left;
+    cursor: pointer;
+}
+.list-item-title {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: var(--space-2);
+    font-size: var(--text-base);
+    font-weight: var(--weight-medium);
+}
+.list-item:hover .list-item-title {
+    color: var(--color-accent);
+}
+.list-item-text {
+    display: block;
+    margin-top: 2px;
+    font-family: var(--font-reading);
+    font-size: var(--text-ui);
+    line-height: 1.45;
+    color: var(--color-text-muted);
+}
+
+/* ---------- Search field ---------- */
+.field {
+    display: block;
+    margin: 0 0 var(--space-2);
+    font-size: var(--text-ui);
+    font-weight: var(--weight-medium);
+}
+.search {
+    width: 100%;
+    min-height: 44px;
+    padding: var(--space-2) var(--space-3);
+    border: var(--border-width) solid var(--color-border-strong);
+    border-radius: var(--radius-sm);
+    background: var(--color-surface);
+    font-size: var(--text-base);
+}
+
+/* ---------- Popover ---------- */
+.popover {
+    width: min(340px, calc(100vw - var(--space-6)));
+    padding: var(--space-4);
+    border: var(--border-width) solid var(--color-border);
+    border-radius: var(--radius-md);
+    background: var(--color-surface);
+    box-shadow: var(--shadow-raised);
+}
+
+/* ---------- Touch devices get larger targets ---------- */
+@media (pointer: coarse) {
+    .button,
+    .slider {
+        min-height: var(--tap-target);
+    }
+    .chip,
+    .segmented button,
+    .breadcrumbs button {
+        min-height: 40px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0s !important;
+        animation-duration: 0s !important;
+    }
+}

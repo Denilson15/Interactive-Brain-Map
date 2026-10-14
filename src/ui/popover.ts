@@ -11,6 +11,7 @@ import { t } from "../app/i18n";
 import { S } from "../app/structures";
 import { capitalize, esc, firstSentence } from "../app/util";
 import { DICT, rememberTerm } from "./dictionary-panel";
+import { ICONS } from "./icons";
 
 let pop: HTMLElement;
 /** Where the popover is anchored, reused when it shows a suggestion. */
@@ -43,7 +44,8 @@ function place(rect: DOMRect): void {
 }
 
 const closeButton = (): string =>
-    `<button class="x" type="button" data-close>${t("close")}</button>`;
+    `<button class="button button--quiet popover-close" type="button" ` +
+    `data-close aria-label="${t("close")}">${ICONS.close}</button>`;
 
 /** Shows the definition for a lookup result next to `rect`. */
 export function showDefinition(
@@ -58,10 +60,10 @@ export function showDefinition(
         if (!term) return;
         rememberTerm(term.term);
         pop.innerHTML =
-            `<div class="row"><span class="kind">${t("dictionary")}</span>` +
-            `${closeButton()}</div><h4>${esc(capitalize(term.term))}</h4>` +
-            `<p>${esc(term.def)}</p><div class="row">` +
-            `<button class="lnk" type="button" ` +
+            `<div class="popover-row"><span class="meta">${t("dictionary")}</span>` +
+            `${closeButton()}</div><h4 class="popover-title">${esc(capitalize(term.term))}</h4>` +
+            `<p class="popover-text">${esc(term.def)}</p><div class="popover-row">` +
+            `<button class="button button--quiet" type="button" ` +
             `data-dict="g:${esc(term.term)}">` +
             `${t("seeInDict")}</button></div>`;
     } else if (entry && entry.t === "s") {
@@ -72,23 +74,23 @@ export function showDefinition(
         );
         const region =
             node.topId && node.topId !== node.id
-                ? " · " + esc(S[node.topId].name)
+                ? ", " + esc(S[node.topId].name)
                 : "";
         pop.innerHTML =
-            `<div class="row"><span class="kind">${t("brainRegion")}` +
+            `<div class="popover-row"><span class="meta">${t("brainRegion")}` +
             `${region}</span>${closeButton()}</div>` +
-            `<h4>${esc(node.name)}</h4>` +
-            `<p>${esc(intro ? intro[0] : node.summary || "")}</p>` +
-            `<div class="row"><button class="lnk" type="button" ` +
+            `<h4 class="popover-title">${esc(node.name)}</h4>` +
+            `<p class="popover-text">${esc(intro ? intro[0] : node.summary || "")}</p>` +
+            `<div class="popover-row"><button class="button button--quiet" type="button" ` +
             `data-sub="${node.id}">${t("showOnModel")}</button></div>`;
     } else if (entry && entry.t === "c") {
         const c = CONDS[entry.id];
         const kind = c.kind === "psych" ? t("tPsych") : t("tDisease");
         pop.innerHTML =
-            `<div class="row"><span class="kind">${kind} · ${esc(c.cat)}` +
-            `</span>${closeButton()}</div><h4>${esc(c.name)}</h4>` +
-            `<p>${esc(firstSentence(c.summary))}</p><div class="row">` +
-            `<button class="lnk" type="button" data-cond="${c.key}">` +
+            `<div class="popover-row"><span class="meta">${kind}, ${esc(c.cat)}` +
+            `</span>${closeButton()}</div><h4 class="popover-title">${esc(c.name)}</h4>` +
+            `<p class="popover-text">${esc(firstSentence(c.summary))}</p><div class="popover-row">` +
+            `<button class="button button--quiet" type="button" data-cond="${c.key}">` +
             `${t("openHighlight")}</button></div>`;
     } else {
         // Not in the dictionary: suggest entries sharing a longer word.
@@ -102,7 +104,7 @@ export function showDefinition(
             ),
         ).slice(0, 4);
         const chips = suggestions.length
-            ? `<div class="sugg">` +
+            ? `<div class="chip-row">` +
               suggestions
                   .map(
                       (d) =>
@@ -114,10 +116,10 @@ export function showDefinition(
               `</div>`
             : "";
         pop.innerHTML =
-            `<div class="row"><span class="kind">${t("dictionary")}</span>` +
-            `${closeButton()}</div><h4>“${esc(q)}”</h4>` +
-            `<p>${t("notInDict")}</p>${chips}<div class="row">` +
-            `<button class="lnk" type="button" data-browse>` +
+            `<div class="popover-row"><span class="meta">${t("dictionary")}</span>` +
+            `${closeButton()}</div><h4 class="popover-title">“${esc(q)}”</h4>` +
+            `<p class="popover-text">${t("notInDict")}</p>${chips}<div class="popover-row">` +
+            `<button class="button button--quiet" type="button" data-browse>` +
             `${t("browseDict")}</button></div>`;
     }
     place(rect);

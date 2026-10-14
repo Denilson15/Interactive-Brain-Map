@@ -1,0 +1,111 @@
+/* Layout for the design system page only; uses the app's tokens. */
+.doc {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: var(--space-7) var(--space-4) var(--space-8);
+}
+.doc a {
+    color: var(--color-accent);
+}
+.doc code {
+    font-size: 0.9em;
+}
+.doc-title {
+    margin: var(--space-2) 0 var(--space-4);
+    font-size: var(--text-display);
+    line-height: var(--leading-tight);
+    letter-spacing: -0.02em;
+}
+.doc-section {
+    margin-top: var(--space-8);
+}
+.doc-h2 {
+    margin: 0 0 var(--space-3);
+    font-size: var(--text-title);
+    line-height: var(--leading-tight);
+}
+.doc-sample {
+    margin: 0 0 var(--space-3);
+    font-weight: var(--weight-bold);
+    line-height: var(--leading-tight);
+}
+.doc-sample span,
+.doc-sample-reading span {
+    margin-left: var(--space-3);
+    font-family: var(--font-ui);
+    font-size: var(--text-caption);
+    font-weight: var(--weight-regular);
+    color: var(--color-text-muted);
+}
+.doc-swatches {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: var(--space-3);
+}
+.doc-swatch {
+    margin: 0;
+    font-size: var(--text-caption);
+    color: var(--color-text-muted);
+}
+.doc-swatch span {
+    display: block;
+    height: 56px;
+    margin-bottom: var(--space-2);
+    border: var(--border-width) solid var(--color-border);
+    border-radius: var(--radius-sm);
+}
+.doc-swatch code {
+    display: block;
+    color: var(--color-text);
+}
+.doc-spaces {
+    display: flex;
+    align-items: flex-end;
+    gap: var(--space-4);
+    font-size: var(--text-caption);
+    color: var(--color-text-muted);
+}
+.doc-spaces span {
+    display: block;
+    padding-top: var(--space-6);
+    background: linear-gradient(var(--color-accent), var(--color-accent)) top /
+        100% var(--space-5) no-repeat;
+}
+.doc-component {
+    padding: var(--space-5) 0;
+    border-top: var(--border-width) solid var(--color-border);
+}
+.doc-component .section-title {
+    margin-top: 0;
+}
+.doc-component > .meta {
+    margin-bottom: var(--space-4);
+}
+.doc-demo {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--space-3);
+}
+.doc-demo + .doc-demo {
+    margin-top: var(--space-3);
+}
+.doc-demo--column {
+    flex-direction: column;
+    align-items: flex-start;
+}
+.doc-demo--stage {
+    padding: var(--space-4);
+    border-radius: var(--radius-lg);
+    background: var(--stage-bg);
+}
+.doc-demo .tabs {
+    flex: 1;
+    border-bottom: var(--border-width) solid var(--color-border);
+}
+.doc-swatches--stage .doc-swatch span {
+    border-color: var(--stage-line);
+}
+.notice {
+    margin-top: var(--space-4);
+}

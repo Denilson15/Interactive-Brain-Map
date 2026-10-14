@@ -6,20 +6,125 @@
             name="viewport"
             content="width=device-width, initial-scale=1, viewport-fit=cover"
         />
+        <title>Interactive Brain Map: explore the human brain in 3D</title>
         <meta
             name="description"
-            content="Interactive 3D brain map for studying neuroscience, psychology and medicine."
+            content="A free 3D brain atlas for students and teachers. Take
+            the brain apart, see which areas 81 psychological and
+            neurological conditions involve, and look up 415 terms. In
+            English and Spanish."
         />
-        <title>Interactive Brain Map</title>
+        <link rel="canonical" href="%VITE_SITE_URL%" />
+        <meta name="theme-color" content="#161c24" />
+
+        <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+        <link rel="icon" href="favicon-32.png" sizes="32x32" />
+        <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+
+        <!-- Link previews (LinkedIn, Slack, iMessage, X). -->
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Interactive Brain Map" />
+        <meta property="og:url" content="%VITE_SITE_URL%" />
+        <meta
+            property="og:title"
+            content="Interactive Brain Map: explore the human brain in 3D"
+        />
+        <meta
+            property="og:description"
+            content="Take the brain apart, see which areas 81 conditions
+            involve, and look up 415 terms. Free, in English and Spanish."
+        />
+        <meta property="og:image" content="%VITE_SITE_URL%social-preview.jpg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta
+            property="og:image:alt"
+            content="A see-through 3D brain with its sections in different
+            colors, beside the headline Explore the human brain in 3D."
+        />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:locale:alternate" content="es_ES" />
+        <meta name="twitter:card" content="summary_large_image" />
+
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": ["WebApplication", "LearningResource"],
+                "name": "Interactive Brain Map",
+                "url": "%VITE_SITE_URL%",
+                "description": "Free 3D brain atlas for students and teachers.",
+                "applicationCategory": "EducationalApplication",
+                "operatingSystem": "Any (web browser with WebGL)",
+                "inLanguage": ["en", "es"],
+                "isAccessibleForFree": true,
+                "learningResourceType": "Interactive resource",
+                "educationalLevel": ["High school", "Higher education"],
+                "about": [
+                    { "@type": "Thing", "name": "Neuroanatomy" },
+                    { "@type": "Thing", "name": "Psychology" },
+                    { "@type": "Thing", "name": "Neurology" }
+                ],
+                "offers": {
+                    "@type": "Offer",
+                    "price": "0",
+                    "priceCurrency": "USD"
+                },
+                "image": "%VITE_SITE_URL%social-preview.jpg"
+            }
+        </script>
+        <script>
+            // Returning visitors skip the intro; decided before first
+            // paint so it never flashes. Storage may be unavailable.
+            try {
+                if (localStorage.getItem("ibm-intro-seen")) {
+                    document.documentElement.dataset.introSeen = "";
+                }
+            } catch (e) {}
+        </script>
     </head>
     <body data-stage="loading">
         <div class="app">
-            <header class="top">
-                <h1 data-i18n="title">Interactive Brain Map</h1>
-                <p id="stats"></p>
+            <header class="app-header">
+                <div class="app-brand">
+                    <h1 class="brand" data-i18n="title">
+                        Interactive Brain Map
+                    </h1>
+                    <p class="stats" id="stats"></p>
+                </div>
+                <div class="header-actions">
+                    <button
+                        class="button button--quiet about-button"
+                        id="aboutBtn"
+                        type="button"
+                        aria-controls="intro"
+                        data-i18n="about"
+                    >
+                        About
+                    </button>
+                    <div
+                        class="segmented lang"
+                        role="group"
+                        aria-label="Language / Idioma"
+                    >
+                        <button
+                            type="button"
+                            data-lang="en"
+                            aria-pressed="true"
+                        >
+                            EN
+                        </button>
+                        <button
+                            type="button"
+                            data-lang="es"
+                            aria-pressed="false"
+                        >
+                            ES
+                        </button>
+                    </div>
+                </div>
             </header>
 
-            <section class="left">
+            <section class="workspace">
                 <div class="stage" id="stage">
                     <canvas
                         id="brain"
@@ -29,69 +134,160 @@
                     <div class="tip" id="tip" hidden></div>
                     <div class="toolbar">
                         <button
-                            class="tb"
+                            class="button button--stage"
                             id="upBtn"
+                            type="button"
                             title="Go up one level (Esc)"
-                            data-i18n="up"
                             data-i18n-title="upTitle"
                         >
-                            ↑ Up a level
+                            <svg
+                                class="icon"
+                                viewBox="0 0 24 24"
+                                aria-hidden="true"
+                            >
+                                <path d="M12 19V5M5 12l7-7 7 7" />
+                            </svg>
+                            <span data-i18n="up">Up a level</span>
                         </button>
                         <button
-                            class="tb more-btn"
+                            class="button button--stage more-button"
                             id="moreBtn"
+                            type="button"
                             aria-expanded="false"
                             aria-controls="tbMore"
-                            data-i18n="controls"
                         >
-                            Controls ▾
+                            <span data-i18n="controls">Controls</span>
+                            <svg
+                                class="icon"
+                                viewBox="0 0 24 24"
+                                aria-hidden="true"
+                            >
+                                <path d="m6 9 6 6 6-6" />
+                            </svg>
                         </button>
-                        <div class="tb-more" id="tbMore">
-                            <label class="tb spread" for="spread"
-                                ><span data-i18n="spread">Spread</span>
+                        <div class="toolbar-more" id="tbMore">
+                            <label class="slider" for="spread">
+                                <span data-i18n="spread">Spread</span>
                                 <input
                                     id="spread"
                                     type="range"
                                     min="0"
                                     max="100"
                                     value="0"
-                            /></label>
-                            <label class="tb spread" for="opac"
-                                ><span data-i18n="opacity">Opacity</span>
+                                />
+                            </label>
+                            <label class="slider" for="opac">
+                                <span data-i18n="opacity">Opacity</span>
                                 <input
                                     id="opac"
                                     type="range"
                                     min="0"
                                     max="100"
                                     value="20"
-                            /></label>
-                            <label class="tb spread" for="bright"
-                                ><span data-i18n="brightness">Brightness</span>
+                                />
+                            </label>
+                            <label class="slider" for="bright">
+                                <span data-i18n="brightness">Brightness</span>
                                 <input
                                     id="bright"
                                     type="range"
                                     min="0"
                                     max="100"
                                     value="50"
-                            /></label>
+                                />
+                            </label>
                             <button
-                                class="tb"
+                                class="button button--stage"
                                 id="lblBtn"
+                                type="button"
                                 aria-pressed="true"
                                 data-i18n="labels"
                             >
                                 Labels
                             </button>
-                            <button class="tb" id="resetBtn" data-i18n="reset">
-                                Reset
+                            <button
+                                class="button button--stage one-color"
+                                id="oneColorBtn"
+                                type="button"
+                                aria-pressed="false"
+                                title="Show the whole brain in one color"
+                                data-i18n-title="oneColorTitle"
+                            >
+                                <span
+                                    class="one-color-dot"
+                                    aria-hidden="true"
+                                ></span>
+                                <span
+                                    class="one-color-label"
+                                    data-i18n="oneColor"
+                                    >One color</span
+                                >
+                            </button>
+                            <button
+                                class="button button--stage"
+                                id="resetBtn"
+                                type="button"
+                            >
+                                <svg
+                                    class="icon"
+                                    viewBox="0 0 24 24"
+                                    aria-hidden="true"
+                                >
+                                    <path d="M3 12a9 9 0 1 0 3-6.7L3 8" />
+                                    <path d="M3 3v5h5" />
+                                </svg>
+                                <span data-i18n="reset">Reset view</span>
                             </button>
                         </div>
                     </div>
-                    <div class="hint" id="hint" data-i18n="hint">
-                        Drag to rotate · scroll or pinch to zoom · click a
-                        section to open it · Esc goes back up
-                    </div>
-                    <div class="condbar" id="condbar" hidden></div>
+                    <p class="stage-hint" id="hint" data-i18n="hint">
+                        Drag to rotate. Scroll or pinch to zoom. Select a part
+                        to open it; press Esc to go back up.
+                    </p>
+                    <div class="stage-legend" id="condbar" hidden></div>
+                    <!-- First-visit introduction. Plain HTML so it shows at
+                         once (and is readable without JavaScript). -->
+                    <section
+                        class="intro"
+                        id="intro"
+                        aria-labelledby="introTitle"
+                    >
+                        <h2 class="intro-title" id="introTitle">
+                            <span data-i18n="introTitle"
+                                >Explore the human brain in 3D</span
+                            >
+                        </h2>
+                        <p class="intro-lead" data-i18n="introLead">
+                            An interactive atlas for students, teachers and
+                            anyone curious about how the brain is built and what
+                            changes when illness affects it.
+                        </p>
+                        <ul class="intro-points">
+                            <li id="introPoint1">
+                                Take it apart, from the hemispheres down to 79
+                                parts
+                            </li>
+                            <li id="introPoint2">
+                                See which areas 81 psychological and
+                                neurological conditions involve
+                            </li>
+                            <li id="introPoint3">
+                                Look up any term in a 415-entry dictionary
+                            </li>
+                        </ul>
+                        <button
+                            class="button button--primary intro-cta"
+                            id="introCta"
+                            type="button"
+                            data-i18n="introCta"
+                        >
+                            Explore the brain
+                        </button>
+                        <p class="intro-meta" data-i18n="introMeta">
+                            Free, no sign-up, in English and Spanish. A study
+                            reference, not medical advice.
+                        </p>
+                    </section>
                     <!-- Shown from the first paint until the model is built.
                          Replaced by #stageError if the 3D view can't run. -->
                     <div class="stage-status" id="stageStatus" role="status">
@@ -123,7 +319,7 @@
                         hidden
                     ></div>
                 </div>
-                <div class="chips" id="chips"></div>
+                <div class="section-map" id="chips"></div>
             </section>
 
             <aside class="panel">
@@ -140,6 +336,7 @@
                     <button
                         class="tab"
                         role="tab"
+                        type="button"
                         id="tab-browse"
                         aria-selected="false"
                         data-i18n="tabBrowse"
@@ -149,6 +346,7 @@
                     <button
                         class="tab"
                         role="tab"
+                        type="button"
                         id="tab-region"
                         aria-selected="true"
                         data-i18n="tabRegion"
@@ -158,6 +356,7 @@
                     <button
                         class="tab"
                         role="tab"
+                        type="button"
                         id="tab-psych"
                         aria-selected="false"
                         data-i18n="tabPsych"
@@ -167,6 +366,7 @@
                     <button
                         class="tab"
                         role="tab"
+                        type="button"
                         id="tab-disease"
                         aria-selected="false"
                         data-i18n="tabDisease"
@@ -176,37 +376,19 @@
                     <button
                         class="tab"
                         role="tab"
+                        type="button"
                         id="tab-gloss"
                         aria-selected="false"
                         data-i18n="tabGloss"
                     >
                         Dictionary
                     </button>
-                    <div
-                        class="lang"
-                        role="group"
-                        aria-label="Language / Idioma"
-                    >
-                        <button
-                            type="button"
-                            data-lang="en"
-                            aria-pressed="true"
-                        >
-                            EN</button
-                        ><button
-                            type="button"
-                            data-lang="es"
-                            aria-pressed="false"
-                        >
-                            ES
-                        </button>
-                    </div>
                 </div>
                 <p class="notice" id="notice" role="status" hidden></p>
                 <div class="view" id="view-browse" role="tabpanel" hidden>
-                    <p class="eyebrow" data-i18n="browseEyebrow">
+                    <h2 class="section-title" data-i18n="browseEyebrow">
                         Every section of the brain
-                    </p>
+                    </h2>
                 </div>
                 <div class="view" id="view-region" role="tabpanel"></div>
                 <div class="view" id="view-psych" role="tabpanel" hidden></div>
@@ -217,7 +399,7 @@
                     hidden
                 ></div>
                 <div class="view" id="view-gloss" role="tabpanel" hidden>
-                    <label for="gq" class="eyebrow" data-i18n="glossSearch"
+                    <label for="gq" class="field" data-i18n="glossSearch"
                         >Search terms, regions and conditions</label
                     >
                     <input
@@ -228,15 +410,21 @@
                         data-i18n-ph="glossPh"
                         autocomplete="off"
                     />
-                    <div class="filters" id="gfilters"></div>
-                    <div class="recent" id="recent"></div>
-                    <p class="count" id="gcount"></p>
-                    <ul class="gl" id="glist"></ul>
+                    <div class="filter-row" id="gfilters"></div>
+                    <div class="filter-row recent" id="recent"></div>
+                    <p class="meta count" id="gcount"></p>
+                    <ul class="list dictionary" id="glist"></ul>
                 </div>
             </aside>
         </div>
 
-        <div class="pop" id="pop" role="dialog" aria-live="polite" hidden></div>
+        <div
+            class="popover pop"
+            id="pop"
+            role="dialog"
+            aria-live="polite"
+            hidden
+        ></div>
         <script type="module" src="/src/main.ts"></script>
     </body>
 </html>
